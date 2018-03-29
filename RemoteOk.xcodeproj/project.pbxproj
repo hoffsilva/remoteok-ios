@@ -13,6 +13,10 @@
 		430E6D3A206C4FFA0093EA8B /* RemoteOk.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 430E6D38206C4FFA0093EA8B /* RemoteOk.xcdatamodeld */; };
 		430E6D3C206C4FFA0093EA8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 430E6D3B206C4FFA0093EA8B /* Assets.xcassets */; };
 		430E6D3F206C4FFA0093EA8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 430E6D3D206C4FFA0093EA8B /* LaunchScreen.storyboard */; };
+		430E6D4B206C60640093EA8B /* OportunityCDC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430E6D49206C60640093EA8B /* OportunityCDC.swift */; };
+		430E6D4C206C60640093EA8B /* OportunityCDP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430E6D4A206C60640093EA8B /* OportunityCDP.swift */; };
+		430E6D4F206C65A90093EA8B /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430E6D4E206C65A90093EA8B /* Connection.swift */; };
+		430E6D51206C736F0093EA8B /* JobOportunity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430E6D50206C736F0093EA8B /* JobOportunity.swift */; };
 		96B14212FB7FCFD275086D1B /* Pods_RemoteOk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11DF5B9A2E80982E1ED0E538 /* Pods_RemoteOk.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +30,10 @@
 		430E6D3B206C4FFA0093EA8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		430E6D3E206C4FFA0093EA8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		430E6D40206C4FFA0093EA8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		430E6D49206C60640093EA8B /* OportunityCDC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OportunityCDC.swift; sourceTree = "<group>"; };
+		430E6D4A206C60640093EA8B /* OportunityCDP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OportunityCDP.swift; sourceTree = "<group>"; };
+		430E6D4E206C65A90093EA8B /* Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
+		430E6D50206C736F0093EA8B /* JobOportunity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobOportunity.swift; sourceTree = "<group>"; };
 		549011949B0F36695879AAC6 /* Pods-RemoteOk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RemoteOk.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RemoteOk/Pods-RemoteOk.debug.xcconfig"; sourceTree = "<group>"; };
 		6C803A45ABA505F2553F6B5D /* Pods-RemoteOk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RemoteOk.release.xcconfig"; path = "Pods/Target Support Files/Pods-RemoteOk/Pods-RemoteOk.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,6 +79,10 @@
 		430E6D30206C4FFA0093EA8B /* RemoteOk */ = {
 			isa = PBXGroup;
 			children = (
+				430E6D4D206C63BB0093EA8B /* Network */,
+				430E6D48206C5E3F0093EA8B /* ViewModel */,
+				430E6D47206C5E340093EA8B /* View */,
+				430E6D46206C5E250093EA8B /* Model */,
 				430E6D31206C4FFA0093EA8B /* AppDelegate.swift */,
 				430E6D33206C4FFA0093EA8B /* ViewController.swift */,
 				430E6D35206C4FFA0093EA8B /* Main.storyboard */,
@@ -80,6 +92,38 @@
 				430E6D38206C4FFA0093EA8B /* RemoteOk.xcdatamodeld */,
 			);
 			path = RemoteOk;
+			sourceTree = "<group>";
+		};
+		430E6D46206C5E250093EA8B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				430E6D50206C736F0093EA8B /* JobOportunity.swift */,
+				430E6D4A206C60640093EA8B /* OportunityCDP.swift */,
+				430E6D49206C60640093EA8B /* OportunityCDC.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		430E6D47206C5E340093EA8B /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		430E6D48206C5E3F0093EA8B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		430E6D4D206C63BB0093EA8B /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				430E6D4E206C65A90093EA8B /* Connection.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		9E89E584AA4ED6AE9D4CEA2E /* Pods */ = {
@@ -217,8 +261,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				430E6D51206C736F0093EA8B /* JobOportunity.swift in Sources */,
+				430E6D4C206C60640093EA8B /* OportunityCDP.swift in Sources */,
+				430E6D4F206C65A90093EA8B /* Connection.swift in Sources */,
 				430E6D34206C4FFA0093EA8B /* ViewController.swift in Sources */,
 				430E6D32206C4FFA0093EA8B /* AppDelegate.swift in Sources */,
+				430E6D4B206C60640093EA8B /* OportunityCDC.swift in Sources */,
 				430E6D3A206C4FFA0093EA8B /* RemoteOk.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
