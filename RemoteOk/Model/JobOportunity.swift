@@ -7,7 +7,7 @@
 
 import Foundation
 
-public class JobOportunity {
+public class JobOportunity: Codable {
 
   // MARK: Declaration for string constants to be used to decode and also serialize.
   private struct SerializationKeys {

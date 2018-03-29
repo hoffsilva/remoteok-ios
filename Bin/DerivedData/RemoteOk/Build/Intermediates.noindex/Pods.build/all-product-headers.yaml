@@ -1,0 +1,33 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [
+    {
+      'type': 'directory',
+      'name': "/Users/hoff.silva/Documents/Personal/Git/remoteok-ios/Bin/DerivedData/RemoteOk/Build/Products/Debug-iphoneos/Pods_RemoteOk.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "Pods-RemoteOk-umbrella.h",
+          'external-contents': "/Users/hoff.silva/Documents/Personal/Git/remoteok-ios/Pods/Target Support Files/Pods-RemoteOk/Pods-RemoteOk-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "Pods_RemoteOk-Swift.h",
+          'external-contents': "/Users/hoff.silva/Documents/Personal/Git/remoteok-ios/Bin/DerivedData/RemoteOk/Build/Products/Debug-iphoneos/Pods_RemoteOk.framework/Headers/Pods_RemoteOk-Swift.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/hoff.silva/Documents/Personal/Git/remoteok-ios/Bin/DerivedData/RemoteOk/Build/Products/Debug-iphoneos/Pods_RemoteOk.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/hoff.silva/Documents/Personal/Git/remoteok-ios/Bin/DerivedData/RemoteOk/Build/Intermediates.noindex/Pods.build/Debug-iphoneos/Pods-RemoteOk.build/module.modulemap"
+        }
+      ]
+    }
+  ]
+}

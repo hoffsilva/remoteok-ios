@@ -10,7 +10,7 @@ import Foundation
 
 class Connection {
     
-    static func fetchData() {
+    static func fetchData(responseData: @escaping (Any) -> Swift.Void) {
         if !verifyConnection() {
 //            let alert = FCAlertView()
 //            alert.showAlert(withTitle: "Error", withSubtitle: "The internet connection has some problem", withCustomImage: nil, withDoneButtonTitle: nil, andButtons: nil)
@@ -29,8 +29,17 @@ class Connection {
         }
         
         let dataTask = session.dataTask(with: URL) { (data, response, error) in
+            guard let dataOportunities = data else {
+                return
+            }
             
-            let array = try? JSONSerialization.jsonObject(with: data as! Data, options: JSONSerialization.ReadingOptions.allowFragments) as! [JobOportunity]
+            let array = try? JSONSerialization.jsonObject(with:  dataOportunities, options: JSONSerialization.ReadingOptions.allowFragments) as! [AnyObject]
+            
+            guard let oportunities = array else {
+                return
+            }
+            
+            responseData(oportunities)
             
             print()
         }
