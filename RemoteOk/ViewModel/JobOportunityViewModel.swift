@@ -16,6 +16,7 @@ class JobOportunityViewModel {
     var arrayOfFavoriteOpportunity = [OportunityFavorite]()
     
     func loadJobsFromRemoteOK() {
+        deleteAllOpportunities()
         Connection.fetchData { (arrayOfJobOportunities) in
             for job in arrayOfJobOportunities as! Array<Any>{
                 let currentJob = JobOportunity()
@@ -62,8 +63,27 @@ class JobOportunityViewModel {
         do {
            arrayOfOpportunity = try managedContext.fetch(fetch)
         } catch let error as NSError {
-            print(error)
+            print("Error when try fetch all opportunities " + error.description)
         }
+    }
+    
+    func deleteAllOpportunities() {
+        var dataToDelete = [Opportunity]()
+        guard let model = managedContext.persistentStoreCoordinator?.managedObjectModel, let fetch = model.fetchRequestTemplate(forName: "allOportunities") as? NSFetchRequest<Opportunity> else {
+            return
+        }
+        
+        do {
+            dataToDelete = try managedContext.fetch(fetch)
+            for jobToDelete in dataToDelete {
+                managedContext.delete(jobToDelete)
+            }
+            try managedContext.save()
+        } catch let error as NSError {
+            print("Error when try delete all opportunities " + error.description)
+        }
+        
+        
     }
     
     func filterJobsBy(tag: String) {
@@ -95,7 +115,7 @@ class JobOportunityViewModel {
         do {
             try managedContext.save()
         } catch let error as NSError {
-            print(error)
+            print("Error when try delete favorite opportunity " + error.description)
         }
     }
     
@@ -107,7 +127,7 @@ class JobOportunityViewModel {
         do {
             arrayOfFavoriteOpportunity = try managedContext.fetch(fetch)
         } catch let error as NSError {
-            print(error)
+            print("Error when try delete all favorite opportunities " + error.description)
         }
     }
     
