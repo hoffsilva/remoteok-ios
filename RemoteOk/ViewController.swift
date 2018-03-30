@@ -9,10 +9,13 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    let jobViewModel = JobOportunityViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        Connection.fetchData()
+        //jobViewModel.loadJobs()
+        jobViewModel.getAllOpportunities()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
