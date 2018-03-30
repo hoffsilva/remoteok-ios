@@ -24,7 +24,7 @@ extension Opportunity {
     @NSManaged public var logo: String?
     @NSManaged public var position: String?
     @NSManaged public var slug: String?
-    @NSManaged public var tags: NSObject?
+    @NSManaged public var tags: [String]?
     @NSManaged public var url: String?
 
 }

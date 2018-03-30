@@ -25,7 +25,7 @@ class JobOportunityViewModel {
                 currentJob.slug = jobDictionary["slug"] as? String
                 currentJob.id = jobDictionary["id"] as? String
                 currentJob.epoch = jobDictionary["epoch"] as? String
-                currentJob.descriptionValue = jobDictionary["descriptionValue"] as? String
+                currentJob.descriptionValue = jobDictionary["description"] as? String
                 currentJob.date = jobDictionary["date"] as? String
                 currentJob.logo = jobDictionary["logo"] as? String
                 currentJob.tags = jobDictionary["tags"] as? [String]
@@ -49,7 +49,7 @@ class JobOportunityViewModel {
         job.desc = currentJob.descriptionValue
         job.date = currentJob.date
         job.logo = currentJob.logo
-        job.tags = currentJob.tags! as NSObject
+        job.tags = currentJob.tags! as [String]
         job.company = currentJob.company
         job.url = currentJob.url
         try! managedContext.save()
@@ -88,6 +88,8 @@ class JobOportunityViewModel {
     
     func filterJobsBy(tag: String) {
         
+        let fetchRequest = NSFetchRequest<Opportunity>(entityName: "Opportunity")
+        //fetchRequest
     }
     
     
@@ -104,7 +106,7 @@ class JobOportunityViewModel {
         jobFavorite.desc = job.desc
         jobFavorite.date = job.date
         jobFavorite.logo = job.logo
-        jobFavorite.tags = job.tags! as NSObject
+        jobFavorite.tags = job.tags! as [String]
         jobFavorite.company = job.company
         jobFavorite.url = job.url
         try! managedContext.save()
