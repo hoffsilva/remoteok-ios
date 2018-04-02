@@ -2,7 +2,7 @@
 //  OportunityFavorite+CoreDataProperties.swift
 //  
 //
-//  Created by Hoff Henry Pereira da Silva on 29/03/2018.
+//  Created by Hoff Henry Pereira da Silva on 30/03/2018.
 //
 //
 

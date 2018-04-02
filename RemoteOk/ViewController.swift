@@ -14,8 +14,8 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        jobViewModel.loadJobsFromRemoteOK()
-        //jobViewModel.getAllOpportunities()
+        //jobViewModel.loadJobsFromRemoteOK()
+        jobViewModel.getAllOpportunities()
         // Do any additional setup after loading the view, typically from a nib.
     }
 

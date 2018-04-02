@@ -2,16 +2,16 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:RemoteOk/Model/CoreData/OportunityFavorite+CoreDataClass.swift">
+      location = "group:RemoteOk/Opportunity+CoreDataClass.swift">
    </FileRef>
    <FileRef
-      location = "group:RemoteOk/Model/CoreData/OportunityFavorite+CoreDataProperties.swift">
+      location = "group:RemoteOk/Opportunity+CoreDataProperties.swift">
    </FileRef>
    <FileRef
-      location = "group:RemoteOk/Model/CoreData/Opportunity+CoreDataClass.swift">
+      location = "group:RemoteOk/OportunityFavorite+CoreDataClass.swift">
    </FileRef>
    <FileRef
-      location = "group:RemoteOk/Model/CoreData/Opportunity+CoreDataProperties.swift">
+      location = "group:RemoteOk/OportunityFavorite+CoreDataProperties.swift">
    </FileRef>
    <FileRef
       location = "group:RemoteOk.xcodeproj">

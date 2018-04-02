@@ -11,10 +11,11 @@
 		430E6D34206C4FFA0093EA8B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430E6D33206C4FFA0093EA8B /* ViewController.swift */; };
 		430E6D37206C4FFA0093EA8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 430E6D35206C4FFA0093EA8B /* Main.storyboard */; };
 		430E6D3A206C4FFA0093EA8B /* RemoteOk.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 430E6D38206C4FFA0093EA8B /* RemoteOk.xcdatamodeld */; };
-		430E6D3C206C4FFA0093EA8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 430E6D3B206C4FFA0093EA8B /* Assets.xcassets */; };
 		430E6D3F206C4FFA0093EA8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 430E6D3D206C4FFA0093EA8B /* LaunchScreen.storyboard */; };
 		430E6D4F206C65A90093EA8B /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430E6D4E206C65A90093EA8B /* Connection.swift */; };
 		430E6D51206C736F0093EA8B /* JobOportunity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430E6D50206C736F0093EA8B /* JobOportunity.swift */; };
+		4399FE372072F0ED0099E529 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4399FE362072F0ED0099E529 /* LaunchScreenViewController.swift */; };
+		43A9B25D206EED76003EB208 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43A9B25C206EED76003EB208 /* Assets.xcassets */; };
 		43B7BA43206E6AEA00DA3A39 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B7BA42206E6AEA00DA3A39 /* CoreDataStack.swift */; };
 		96B14212FB7FCFD275086D1B /* Pods_RemoteOk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11DF5B9A2E80982E1ED0E538 /* Pods_RemoteOk.framework */; };
 		CA869449206D68B30099F39D /* JobOportunityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA869448206D68B30099F39D /* JobOportunityViewModel.swift */; };
@@ -27,11 +28,12 @@
 		430E6D33206C4FFA0093EA8B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		430E6D36206C4FFA0093EA8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		430E6D39206C4FFA0093EA8B /* RemoteOk.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RemoteOk.xcdatamodel; sourceTree = "<group>"; };
-		430E6D3B206C4FFA0093EA8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		430E6D3E206C4FFA0093EA8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		430E6D40206C4FFA0093EA8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		430E6D4E206C65A90093EA8B /* Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
 		430E6D50206C736F0093EA8B /* JobOportunity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobOportunity.swift; sourceTree = "<group>"; };
+		4399FE362072F0ED0099E529 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
+		43A9B25C206EED76003EB208 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		43B7BA42206E6AEA00DA3A39 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		549011949B0F36695879AAC6 /* Pods-RemoteOk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RemoteOk.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RemoteOk/Pods-RemoteOk.debug.xcconfig"; sourceTree = "<group>"; };
 		6C803A45ABA505F2553F6B5D /* Pods-RemoteOk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RemoteOk.release.xcconfig"; path = "Pods/Target Support Files/Pods-RemoteOk/Pods-RemoteOk.release.xcconfig"; sourceTree = "<group>"; };
@@ -86,9 +88,9 @@
 				430E6D31206C4FFA0093EA8B /* AppDelegate.swift */,
 				430E6D33206C4FFA0093EA8B /* ViewController.swift */,
 				430E6D35206C4FFA0093EA8B /* Main.storyboard */,
-				430E6D3B206C4FFA0093EA8B /* Assets.xcassets */,
 				430E6D3D206C4FFA0093EA8B /* LaunchScreen.storyboard */,
 				430E6D40206C4FFA0093EA8B /* Info.plist */,
+				43A9B25C206EED76003EB208 /* Assets.xcassets */,
 				430E6D38206C4FFA0093EA8B /* RemoteOk.xcdatamodeld */,
 				43B7BA42206E6AEA00DA3A39 /* CoreDataStack.swift */,
 			);
@@ -106,6 +108,7 @@
 		430E6D47206C5E340093EA8B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4399FE362072F0ED0099E529 /* LaunchScreenViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -198,7 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				430E6D3F206C4FFA0093EA8B /* LaunchScreen.storyboard in Resources */,
-				430E6D3C206C4FFA0093EA8B /* Assets.xcassets in Resources */,
+				43A9B25D206EED76003EB208 /* Assets.xcassets in Resources */,
 				430E6D37206C4FFA0093EA8B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,6 +266,7 @@
 			files = (
 				43B7BA43206E6AEA00DA3A39 /* CoreDataStack.swift in Sources */,
 				430E6D51206C736F0093EA8B /* JobOportunity.swift in Sources */,
+				4399FE372072F0ED0099E529 /* LaunchScreenViewController.swift in Sources */,
 				430E6D4F206C65A90093EA8B /* Connection.swift in Sources */,
 				CA869449206D68B30099F39D /* JobOportunityViewModel.swift in Sources */,
 				430E6D34206C4FFA0093EA8B /* ViewController.swift in Sources */,

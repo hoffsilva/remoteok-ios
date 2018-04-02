@@ -19,7 +19,7 @@ class JobOportunityViewModel {
         deleteAllOpportunities()
         Connection.fetchData { (arrayOfJobOportunities) in
             for job in arrayOfJobOportunities as! Array<Any>{
-                let currentJob = JobOportunity()
+                var currentJob = JobOportunity()
                 let jobDictionary = job as! [String:Any]
                 currentJob.position = jobDictionary["position"] as? String
                 currentJob.slug = jobDictionary["slug"] as? String
@@ -28,7 +28,14 @@ class JobOportunityViewModel {
                 currentJob.descriptionValue = jobDictionary["description"] as? String
                 currentJob.date = jobDictionary["date"] as? String
                 currentJob.logo = jobDictionary["logo"] as? String
-                currentJob.tags = jobDictionary["tags"] as? [String]
+                currentJob.tags = jobDictionary["tags"] as! [String]
+//                for tag in jobDictionary["tags"] as! [String] {
+//                    if let ta = tag as String {
+//                        currentJob.tags += "\(tag as String),"
+//                        print(tag)
+//                    }
+//                }
+                //currentJob.tags = jobDictionary["tags"] as? [String]
                 currentJob.company = jobDictionary["company"] as? String
                 currentJob.url = jobDictionary["url"] as? String
                 self.saveJobFromJSON(currentJob)
@@ -49,10 +56,15 @@ class JobOportunityViewModel {
         job.desc = currentJob.descriptionValue
         job.date = currentJob.date
         job.logo = currentJob.logo
-        job.tags = currentJob.tags! as [String]
+        job.tags = currentJob.tags
         job.company = currentJob.company
         job.url = currentJob.url
-        try! managedContext.save()
+        do {
+            try managedContext.save()
+        } catch let error as NSError {
+            print(error)
+        }
+        
     }
     
     func getAllOpportunities() {
@@ -106,10 +118,14 @@ class JobOportunityViewModel {
         jobFavorite.desc = job.desc
         jobFavorite.date = job.date
         jobFavorite.logo = job.logo
-        jobFavorite.tags = job.tags! as [String]
+        jobFavorite.tags = job.tags
         jobFavorite.company = job.company
         jobFavorite.url = job.url
-        try! managedContext.save()
+        do {
+            try managedContext.save()
+        } catch let error as NSError {
+             print("Error when try mark opportunity as favorite opportunity " + error.description)
+        }
     }
     
     func removeJobFromFavorite(_ job: OportunityFavorite) {
