@@ -15,6 +15,11 @@
 		430E6D4F206C65A90093EA8B /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430E6D4E206C65A90093EA8B /* Connection.swift */; };
 		430E6D51206C736F0093EA8B /* JobOportunity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430E6D50206C736F0093EA8B /* JobOportunity.swift */; };
 		4399FE372072F0ED0099E529 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4399FE362072F0ED0099E529 /* LaunchScreenViewController.swift */; };
+		4399FE3D2072FF620099E529 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 4399FE3A2072FF620099E529 /* logo.png */; };
+		4399FE3E2072FF620099E529 /* launchscreen.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4399FE3B2072FF620099E529 /* launchscreen.mp4 */; };
+		4399FE3F2072FF620099E529 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 4399FE3C2072FF620099E529 /* bg.png */; };
+		4399FE41207300D20099E529 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4399FE40207300D20099E529 /* Launch.storyboard */; };
+		4399FE43207306730099E529 /* Pacifico.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4399FE42207306730099E529 /* Pacifico.ttf */; };
 		43A9B25D206EED76003EB208 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43A9B25C206EED76003EB208 /* Assets.xcassets */; };
 		43B7BA43206E6AEA00DA3A39 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B7BA42206E6AEA00DA3A39 /* CoreDataStack.swift */; };
 		96B14212FB7FCFD275086D1B /* Pods_RemoteOk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11DF5B9A2E80982E1ED0E538 /* Pods_RemoteOk.framework */; };
@@ -33,6 +38,11 @@
 		430E6D4E206C65A90093EA8B /* Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
 		430E6D50206C736F0093EA8B /* JobOportunity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobOportunity.swift; sourceTree = "<group>"; };
 		4399FE362072F0ED0099E529 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
+		4399FE3A2072FF620099E529 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		4399FE3B2072FF620099E529 /* launchscreen.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = launchscreen.mp4; sourceTree = "<group>"; };
+		4399FE3C2072FF620099E529 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
+		4399FE40207300D20099E529 /* Launch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
+		4399FE42207306730099E529 /* Pacifico.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Pacifico.ttf; sourceTree = "<group>"; };
 		43A9B25C206EED76003EB208 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		43B7BA42206E6AEA00DA3A39 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		549011949B0F36695879AAC6 /* Pods-RemoteOk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RemoteOk.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RemoteOk/Pods-RemoteOk.debug.xcconfig"; sourceTree = "<group>"; };
@@ -81,6 +91,7 @@
 		430E6D30206C4FFA0093EA8B /* RemoteOk */ = {
 			isa = PBXGroup;
 			children = (
+				4399FE392072FF620099E529 /* media */,
 				430E6D4D206C63BB0093EA8B /* Network */,
 				430E6D48206C5E3F0093EA8B /* ViewModel */,
 				430E6D47206C5E340093EA8B /* View */,
@@ -93,6 +104,7 @@
 				43A9B25C206EED76003EB208 /* Assets.xcassets */,
 				430E6D38206C4FFA0093EA8B /* RemoteOk.xcdatamodeld */,
 				43B7BA42206E6AEA00DA3A39 /* CoreDataStack.swift */,
+				4399FE40207300D20099E529 /* Launch.storyboard */,
 			);
 			path = RemoteOk;
 			sourceTree = "<group>";
@@ -127,6 +139,17 @@
 				430E6D4E206C65A90093EA8B /* Connection.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		4399FE392072FF620099E529 /* media */ = {
+			isa = PBXGroup;
+			children = (
+				4399FE42207306730099E529 /* Pacifico.ttf */,
+				4399FE3A2072FF620099E529 /* logo.png */,
+				4399FE3B2072FF620099E529 /* launchscreen.mp4 */,
+				4399FE3C2072FF620099E529 /* bg.png */,
+			);
+			path = media;
 			sourceTree = "<group>";
 		};
 		9E89E584AA4ED6AE9D4CEA2E /* Pods */ = {
@@ -200,8 +223,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4399FE3D2072FF620099E529 /* logo.png in Resources */,
 				430E6D3F206C4FFA0093EA8B /* LaunchScreen.storyboard in Resources */,
+				4399FE3F2072FF620099E529 /* bg.png in Resources */,
+				4399FE3E2072FF620099E529 /* launchscreen.mp4 in Resources */,
+				4399FE41207300D20099E529 /* Launch.storyboard in Resources */,
 				43A9B25D206EED76003EB208 /* Assets.xcassets in Resources */,
+				4399FE43207306730099E529 /* Pacifico.ttf in Resources */,
 				430E6D37206C4FFA0093EA8B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

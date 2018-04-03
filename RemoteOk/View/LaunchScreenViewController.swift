@@ -16,29 +16,30 @@ class LaunchScreenViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         loadVideo()
+        print("")
     }
     
     private func loadVideo() {
         
-        //this line is important to prevent background music stop
         do {
             try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryAmbient)
         } catch { }
         
-        let path = NSBundle.mainBundle().pathForResource("your path", ofType:"mp4")
         
-        player = AVPlayer(URL: NSURL(fileURLWithPath: path!))
+        let path = Bundle.main.path(forResource: "launchscreen", ofType: "mp4")
+        
+        player = AVPlayer(url: URL(fileURLWithPath: path!))
+        
         let playerLayer = AVPlayerLayer(player: player)
         
         playerLayer.frame = self.view.frame
-        playerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
+        playerLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
         playerLayer.zPosition = -1
         
         self.view.layer.addSublayer(playerLayer)
         
-        player?.seekToTime(kCMTimeZero)
+        player?.seek(to: kCMTimeZero)
         player?.play()
     }
 
