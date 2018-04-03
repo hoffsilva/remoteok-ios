@@ -14,7 +14,7 @@ class LaunchScreenViewController: UIViewController {
 
     var player: AVPlayer?
     
-    
+    ///chamada do delegate de load do JSON aqui.
     
     override func viewDidLoad() {
         super.viewDidLoad()
