@@ -14,6 +14,8 @@ class LaunchScreenViewController: UIViewController {
 
     var player: AVPlayer?
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadVideo()
