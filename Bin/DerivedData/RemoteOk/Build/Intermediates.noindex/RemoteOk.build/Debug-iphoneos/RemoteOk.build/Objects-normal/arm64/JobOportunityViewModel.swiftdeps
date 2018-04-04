@@ -12,6 +12,7 @@ provides-dynamic-lookup:
 depends-top-level:
 - !private "+"
 - "AnyObject"
+- !private "Array"
 - "AssignmentPrecedence"
 - "CastingPrecedence"
 - "CoreDataStack"
@@ -21,6 +22,7 @@ depends-top-level:
 - !private "NSEntityDescription"
 - !private "NSError"
 - !private "NSFetchRequest"
+- !private "NSPredicate"
 - "OportunityFavorite"
 - "Opportunity"
 - "String"
@@ -44,6 +46,7 @@ depends-member:
 - !private ["s7CVarArgP", "managedObjectModel"]
 - !private ["s7CVarArgP", "persistentStoreCoordinator"]
 - !private ["s7CVarArgP", "position"]
+- !private ["s7CVarArgP", "predicate"]
 - !private ["s7CVarArgP", "save"]
 - !private ["s7CVarArgP", "slug"]
 - !private ["s7CVarArgP", "tags"]
@@ -68,6 +71,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "managedObjectModel"]
 - !private ["s28CustomDebugStringConvertibleP", "persistentStoreCoordinator"]
 - !private ["s28CustomDebugStringConvertibleP", "position"]
+- !private ["s28CustomDebugStringConvertibleP", "predicate"]
 - !private ["s28CustomDebugStringConvertibleP", "save"]
 - !private ["s28CustomDebugStringConvertibleP", "slug"]
 - !private ["s28CustomDebugStringConvertibleP", "tags"]
@@ -90,6 +94,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "managedObjectModel"]
 - !private ["s23CustomStringConvertibleP", "persistentStoreCoordinator"]
 - !private ["s23CustomStringConvertibleP", "position"]
+- !private ["s23CustomStringConvertibleP", "predicate"]
 - !private ["s23CustomStringConvertibleP", "save"]
 - !private ["s23CustomStringConvertibleP", "slug"]
 - !private ["s23CustomStringConvertibleP", "tags"]
@@ -132,6 +137,7 @@ depends-member:
 - !private ["s9EquatableP", "managedObjectModel"]
 - !private ["s9EquatableP", "persistentStoreCoordinator"]
 - !private ["s9EquatableP", "position"]
+- !private ["s9EquatableP", "predicate"]
 - !private ["s9EquatableP", "save"]
 - !private ["s9EquatableP", "slug"]
 - !private ["s9EquatableP", "tags"]
@@ -157,6 +163,7 @@ depends-member:
 - !private ["s8HashableP", "managedObjectModel"]
 - !private ["s8HashableP", "persistentStoreCoordinator"]
 - !private ["s8HashableP", "position"]
+- !private ["s8HashableP", "predicate"]
 - !private ["s8HashableP", "save"]
 - !private ["s8HashableP", "slug"]
 - !private ["s8HashableP", "tags"]
@@ -174,15 +181,18 @@ depends-member:
 - !private ["8RemoteOk13JobOportunityC", "url"]
 - ["8RemoteOk22JobOportunityViewModelC", "CoreDataStack"]
 - ["8RemoteOk22JobOportunityViewModelC", "JobOportunity"]
+- ["8RemoteOk22JobOportunityViewModelC", "JobOpportunityDelegate"]
 - !private ["8RemoteOk22JobOportunityViewModelC", "NSEntityDescription"]
 - !private ["8RemoteOk22JobOportunityViewModelC", "NSError"]
 - !private ["8RemoteOk22JobOportunityViewModelC", "NSFetchRequest"]
+- !private ["8RemoteOk22JobOportunityViewModelC", "NSPredicate"]
 - ["8RemoteOk22JobOportunityViewModelC", "OportunityFavorite"]
 - ["8RemoteOk22JobOportunityViewModelC", "Opportunity"]
 - ["8RemoteOk22JobOportunityViewModelC", "String"]
 - ["8RemoteOk22JobOportunityViewModelC", "arrayOfFavoriteOpportunity"]
 - ["8RemoteOk22JobOportunityViewModelC", "arrayOfOpportunity"]
 - ["8RemoteOk22JobOportunityViewModelC", "deinit"]
+- ["8RemoteOk22JobOportunityViewModelC", "delegate"]
 - ["8RemoteOk22JobOportunityViewModelC", "deleteAllOpportunities"]
 - ["8RemoteOk22JobOportunityViewModelC", "filterJobsBy"]
 - ["8RemoteOk22JobOportunityViewModelC", "getAllFavoriteOpportunities"]
@@ -193,7 +203,6 @@ depends-member:
 - !private ["8RemoteOk22JobOportunityViewModelC", "print"]
 - ["8RemoteOk22JobOportunityViewModelC", "removeJobFromFavorite"]
 - ["8RemoteOk22JobOportunityViewModelC", "saveJobFromJSON"]
-- ["8RemoteOk22JobOpportunityDelegateP", "JobOportunity"]
 - ["8RemoteOk22JobOpportunityDelegateP", "jobOpportunitiesLoaded"]
 - !private ["s25LosslessStringConvertibleP", "init"]
 - !private ["s10MirrorPathP", "init"]
@@ -205,16 +214,19 @@ depends-member:
 - !private ["So8NSCodingP", "fetchRequestTemplate"]
 - !private ["So8NSCodingP", "init"]
 - !private ["So8NSCodingP", "persistentStoreCoordinator"]
+- !private ["So8NSCodingP", "predicate"]
 - !private ["So8NSCodingP", "save"]
 - !private ["So9NSCopyingP", "description"]
 - !private ["So9NSCopyingP", "entity"]
 - !private ["So9NSCopyingP", "fetchRequestTemplate"]
 - !private ["So9NSCopyingP", "init"]
+- !private ["So9NSCopyingP", "predicate"]
 - !private ["So19NSEntityDescriptionC", "entity"]
 - !private ["So7NSErrorC", "description"]
 - !private ["So17NSFastEnumerationP", "entity"]
 - !private ["So17NSFastEnumerationP", "fetchRequestTemplate"]
 - !private ["So14NSFetchRequestC", "init"]
+- !private ["So14NSFetchRequestC", "predicate"]
 - !private ["So20NSFetchRequestResultP", "company"]
 - !private ["So20NSFetchRequestResultP", "date"]
 - !private ["So20NSFetchRequestResultP", "desc"]
@@ -262,6 +274,7 @@ depends-member:
 - !private ["So8NSObjectC", "managedObjectModel"]
 - !private ["So8NSObjectC", "persistentStoreCoordinator"]
 - !private ["So8NSObjectC", "position"]
+- !private ["So8NSObjectC", "predicate"]
 - !private ["So8NSObjectC", "save"]
 - !private ["So8NSObjectC", "slug"]
 - !private ["So8NSObjectC", "tags"]
@@ -282,6 +295,7 @@ depends-member:
 - !private ["So16NSObjectProtocolP", "managedObjectModel"]
 - !private ["So16NSObjectProtocolP", "persistentStoreCoordinator"]
 - !private ["So16NSObjectProtocolP", "position"]
+- !private ["So16NSObjectProtocolP", "predicate"]
 - !private ["So16NSObjectProtocolP", "save"]
 - !private ["So16NSObjectProtocolP", "slug"]
 - !private ["So16NSObjectProtocolP", "tags"]
@@ -289,7 +303,10 @@ depends-member:
 - ["So16NSObjectProtocolP", "viewContext"]
 - ["So21NSPersistentContainerC", "viewContext"]
 - !private ["So28NSPersistentStoreCoordinatorC", "managedObjectModel"]
+- !private ["So24NSPersistentStoreRequestC", "predicate"]
+- !private ["So11NSPredicateC", "init"]
 - !private ["So14NSSecureCodingP", "description"]
+- !private ["So14NSSecureCodingP", "init"]
 - ["8RemoteOk18OportunityFavoriteC", "deinit"]
 - !private ["8RemoteOk11OpportunityC", "company"]
 - !private ["8RemoteOk11OpportunityC", "date"]
@@ -332,6 +349,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "managedObjectModel"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "persistentStoreCoordinator"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "position"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "predicate"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "save"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "slug"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "tags"]
@@ -380,6 +398,8 @@ depends-nominal:
 - "So16NSObjectProtocolP"
 - "So21NSPersistentContainerC"
 - !private "So28NSPersistentStoreCoordinatorC"
+- !private "So24NSPersistentStoreRequestC"
+- !private "So11NSPredicateC"
 - !private "So14NSSecureCodingP"
 - "8RemoteOk18OportunityFavoriteC"
 - "8RemoteOk11OpportunityC"
@@ -442,4 +462,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/MetalKit.framework/Headers/MetalKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
-interface-hash: "59bd686bad51aa6a533c0ecaaa02067b"
+interface-hash: "593e444d67841849a0c651e4ee13ab0e"

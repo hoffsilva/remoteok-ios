@@ -11,10 +11,12 @@ import CoreData
 
 
 protocol JobOpportunityDelegate: class {
-    func jobOpportunitiesLoaded(array: [JobOportunity])
+    func jobOpportunitiesLoaded()
 }
 
 class JobOportunityViewModel {
+    
+    weak var delegate: JobOpportunityDelegate!
     
     var managedContext = CoreDataStack().persistentContainer.viewContext
     var arrayOfOpportunity = [Opportunity]()
@@ -75,10 +77,17 @@ class JobOportunityViewModel {
         
     }
     
-    func filterJobsBy(tag: String) {
+    func filterJobsBy(category: String) {
         
         let fetchRequest = NSFetchRequest<Opportunity>(entityName: "Opportunity")
-        //fetchRequest
+        fetchRequest.predicate = NSPredicate(format: "tags CONTAINS[c] %@", argumentArray: [ category])
+        do {
+            let results = try managedContext.fetch(fetchRequest)
+            arrayOfOpportunity = results
+            self.delegate.jobOpportunitiesLoaded()
+        } catch let error as NSError {
+            print(error)
+        }
     }
     
     

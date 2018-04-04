@@ -8,151 +8,272 @@ provides-member:
 provides-dynamic-lookup:
 - "didReceiveMemoryWarning"
 - "viewDidLoad"
+- "viewWillAppear"
 depends-top-level:
 - "AVPlayer"
+- "AssignmentPrecedence"
+- "Bool"
 - "JobOportunityViewModel"
+- "JobOpportunityDelegate"
+- !private "StringLiteralType"
 - "UIViewController"
 - "ViewController"
+- !private "print"
 depends-member:
+- !private ["s23BidirectionalCollectionP", "init"]
 - ["s7CVarArgP", "JobOportunityViewModel"]
 - ["s7CVarArgP", ""]
 - !private ["s7CVarArgP", "didReceiveMemoryWarning"]
 - !private ["s7CVarArgP", "init"]
+- ["s7CVarArgP", "jobOpportunitiesLoaded"]
 - !private ["s7CVarArgP", "jobViewModel"]
+- !private ["s7CVarArgP", "print"]
 - !private ["s7CVarArgP", "viewDidLoad"]
+- !private ["s7CVarArgP", "viewWillAppear"]
+- !private ["s10CollectionP", "init"]
+- !private ["s10ComparableP", "init"]
 - ["s28CustomDebugStringConvertibleP", "JobOportunityViewModel"]
 - ["s28CustomDebugStringConvertibleP", ""]
 - !private ["s28CustomDebugStringConvertibleP", "didReceiveMemoryWarning"]
 - !private ["s28CustomDebugStringConvertibleP", "init"]
+- ["s28CustomDebugStringConvertibleP", "jobOpportunitiesLoaded"]
 - !private ["s28CustomDebugStringConvertibleP", "jobViewModel"]
+- !private ["s28CustomDebugStringConvertibleP", "print"]
 - !private ["s28CustomDebugStringConvertibleP", "viewDidLoad"]
+- !private ["s28CustomDebugStringConvertibleP", "viewWillAppear"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "init"]
 - ["s23CustomStringConvertibleP", "JobOportunityViewModel"]
 - ["s23CustomStringConvertibleP", ""]
 - !private ["s23CustomStringConvertibleP", "didReceiveMemoryWarning"]
 - !private ["s23CustomStringConvertibleP", "init"]
+- ["s23CustomStringConvertibleP", "jobOpportunitiesLoaded"]
 - !private ["s23CustomStringConvertibleP", "jobViewModel"]
+- !private ["s23CustomStringConvertibleP", "print"]
 - !private ["s23CustomStringConvertibleP", "viewDidLoad"]
+- !private ["s23CustomStringConvertibleP", "viewWillAppear"]
+- !private ["s9DecodableP", "init"]
+- !private ["s9EncodableP", "init"]
 - ["s9EquatableP", "JobOportunityViewModel"]
 - ["s9EquatableP", ""]
 - !private ["s9EquatableP", "didReceiveMemoryWarning"]
 - !private ["s9EquatableP", "init"]
+- ["s9EquatableP", "jobOpportunitiesLoaded"]
 - !private ["s9EquatableP", "jobViewModel"]
+- !private ["s9EquatableP", "print"]
 - !private ["s9EquatableP", "viewDidLoad"]
+- !private ["s9EquatableP", "viewWillAppear"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
 - ["s8HashableP", "JobOportunityViewModel"]
 - ["s8HashableP", ""]
 - !private ["s8HashableP", "didReceiveMemoryWarning"]
 - !private ["s8HashableP", "init"]
+- ["s8HashableP", "jobOpportunitiesLoaded"]
 - !private ["s8HashableP", "jobViewModel"]
+- !private ["s8HashableP", "print"]
 - !private ["s8HashableP", "viewDidLoad"]
-- !private ["8RemoteOk22JobOportunityViewModelC", "getAllOpportunities"]
+- !private ["s8HashableP", "viewWillAppear"]
+- !private ["8RemoteOk22JobOportunityViewModelC", "arrayOfOpportunity"]
+- !private ["8RemoteOk22JobOportunityViewModelC", "delegate"]
+- !private ["8RemoteOk22JobOportunityViewModelC", "filterJobsBy"]
 - ["8RemoteOk22JobOportunityViewModelC", "init"]
+- ["8RemoteOk22JobOpportunityDelegateP", "JobOportunityViewModel"]
+- ["8RemoteOk22JobOpportunityDelegateP", ""]
+- ["8RemoteOk22JobOpportunityDelegateP", "jobOpportunitiesLoaded"]
+- !private ["8RemoteOk22JobOpportunityDelegateP", "jobViewModel"]
+- !private ["8RemoteOk22JobOpportunityDelegateP", "print"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s10MirrorPathP", "init"]
 - ["So8NSCodingP", "JobOportunityViewModel"]
 - ["So8NSCodingP", ""]
 - !private ["So8NSCodingP", "didReceiveMemoryWarning"]
 - !private ["So8NSCodingP", "init"]
+- ["So8NSCodingP", "jobOpportunitiesLoaded"]
 - !private ["So8NSCodingP", "jobViewModel"]
+- !private ["So8NSCodingP", "print"]
 - !private ["So8NSCodingP", "viewDidLoad"]
+- !private ["So8NSCodingP", "viewWillAppear"]
 - ["So26NSExtensionRequestHandlingP", "JobOportunityViewModel"]
 - ["So26NSExtensionRequestHandlingP", ""]
 - !private ["So26NSExtensionRequestHandlingP", "didReceiveMemoryWarning"]
 - !private ["So26NSExtensionRequestHandlingP", "init"]
+- ["So26NSExtensionRequestHandlingP", "jobOpportunitiesLoaded"]
 - !private ["So26NSExtensionRequestHandlingP", "jobViewModel"]
+- !private ["So26NSExtensionRequestHandlingP", "print"]
 - !private ["So26NSExtensionRequestHandlingP", "viewDidLoad"]
+- !private ["So26NSExtensionRequestHandlingP", "viewWillAppear"]
 - ["So8NSObjectC", "AVPlayer"]
+- ["So8NSObjectC", "Bool"]
 - ["So8NSObjectC", "JobOportunityViewModel"]
 - ["So8NSObjectC", "didReceiveMemoryWarning"]
 - ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "jobOpportunitiesLoaded"]
 - ["So8NSObjectC", "jobViewModel"]
 - ["So8NSObjectC", "player"]
+- !private ["So8NSObjectC", "print"]
 - ["So8NSObjectC", "viewDidLoad"]
+- ["So8NSObjectC", "viewWillAppear"]
 - ["So16NSObjectProtocolP", "JobOportunityViewModel"]
 - ["So16NSObjectProtocolP", ""]
 - !private ["So16NSObjectProtocolP", "didReceiveMemoryWarning"]
 - !private ["So16NSObjectProtocolP", "init"]
+- ["So16NSObjectProtocolP", "jobOpportunitiesLoaded"]
 - !private ["So16NSObjectProtocolP", "jobViewModel"]
+- !private ["So16NSObjectProtocolP", "print"]
 - !private ["So16NSObjectProtocolP", "viewDidLoad"]
+- !private ["So16NSObjectProtocolP", "viewWillAppear"]
+- !private ["s26RangeReplaceableCollectionP", "init"]
+- !private ["s8SequenceP", "init"]
+- !private ["SS", "init"]
+- !private ["s14StringProtocolP", "init"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
 - ["So21UIAppearanceContainerP", "JobOportunityViewModel"]
 - ["So21UIAppearanceContainerP", ""]
 - !private ["So21UIAppearanceContainerP", "didReceiveMemoryWarning"]
 - !private ["So21UIAppearanceContainerP", "init"]
+- ["So21UIAppearanceContainerP", "jobOpportunitiesLoaded"]
 - !private ["So21UIAppearanceContainerP", "jobViewModel"]
+- !private ["So21UIAppearanceContainerP", "print"]
 - !private ["So21UIAppearanceContainerP", "viewDidLoad"]
+- !private ["So21UIAppearanceContainerP", "viewWillAppear"]
 - ["So18UIContentContainerP", "JobOportunityViewModel"]
 - ["So18UIContentContainerP", ""]
 - !private ["So18UIContentContainerP", "didReceiveMemoryWarning"]
 - !private ["So18UIContentContainerP", "init"]
+- ["So18UIContentContainerP", "jobOpportunitiesLoaded"]
 - !private ["So18UIContentContainerP", "jobViewModel"]
+- !private ["So18UIContentContainerP", "print"]
 - !private ["So18UIContentContainerP", "viewDidLoad"]
+- !private ["So18UIContentContainerP", "viewWillAppear"]
 - ["So18UIFocusEnvironmentP", "JobOportunityViewModel"]
 - ["So18UIFocusEnvironmentP", ""]
 - !private ["So18UIFocusEnvironmentP", "didReceiveMemoryWarning"]
 - !private ["So18UIFocusEnvironmentP", "init"]
+- ["So18UIFocusEnvironmentP", "jobOpportunitiesLoaded"]
 - !private ["So18UIFocusEnvironmentP", "jobViewModel"]
+- !private ["So18UIFocusEnvironmentP", "print"]
 - !private ["So18UIFocusEnvironmentP", "viewDidLoad"]
+- !private ["So18UIFocusEnvironmentP", "viewWillAppear"]
 - ["So30UIPasteConfigurationSupportingP", "JobOportunityViewModel"]
 - ["So30UIPasteConfigurationSupportingP", ""]
 - !private ["So30UIPasteConfigurationSupportingP", "didReceiveMemoryWarning"]
 - !private ["So30UIPasteConfigurationSupportingP", "init"]
+- ["So30UIPasteConfigurationSupportingP", "jobOpportunitiesLoaded"]
 - !private ["So30UIPasteConfigurationSupportingP", "jobViewModel"]
+- !private ["So30UIPasteConfigurationSupportingP", "print"]
 - !private ["So30UIPasteConfigurationSupportingP", "viewDidLoad"]
+- !private ["So30UIPasteConfigurationSupportingP", "viewWillAppear"]
 - ["So11UIResponderC", "AVPlayer"]
+- ["So11UIResponderC", "Bool"]
 - ["So11UIResponderC", "JobOportunityViewModel"]
 - ["So11UIResponderC", "didReceiveMemoryWarning"]
 - ["So11UIResponderC", "init"]
+- ["So11UIResponderC", "jobOpportunitiesLoaded"]
 - ["So11UIResponderC", "jobViewModel"]
 - ["So11UIResponderC", "player"]
+- !private ["So11UIResponderC", "print"]
 - ["So11UIResponderC", "viewDidLoad"]
+- ["So11UIResponderC", "viewWillAppear"]
 - ["So30UIResponderStandardEditActionsP", "JobOportunityViewModel"]
 - ["So30UIResponderStandardEditActionsP", ""]
 - !private ["So30UIResponderStandardEditActionsP", "didReceiveMemoryWarning"]
 - !private ["So30UIResponderStandardEditActionsP", "init"]
+- ["So30UIResponderStandardEditActionsP", "jobOpportunitiesLoaded"]
 - !private ["So30UIResponderStandardEditActionsP", "jobViewModel"]
+- !private ["So30UIResponderStandardEditActionsP", "print"]
 - !private ["So30UIResponderStandardEditActionsP", "viewDidLoad"]
+- !private ["So30UIResponderStandardEditActionsP", "viewWillAppear"]
 - ["So16UIStateRestoringP", "JobOportunityViewModel"]
 - ["So16UIStateRestoringP", ""]
 - !private ["So16UIStateRestoringP", "didReceiveMemoryWarning"]
 - !private ["So16UIStateRestoringP", "init"]
+- ["So16UIStateRestoringP", "jobOpportunitiesLoaded"]
 - !private ["So16UIStateRestoringP", "jobViewModel"]
+- !private ["So16UIStateRestoringP", "print"]
 - !private ["So16UIStateRestoringP", "viewDidLoad"]
+- !private ["So16UIStateRestoringP", "viewWillAppear"]
 - ["So18UITraitEnvironmentP", "JobOportunityViewModel"]
 - ["So18UITraitEnvironmentP", ""]
 - !private ["So18UITraitEnvironmentP", "didReceiveMemoryWarning"]
 - !private ["So18UITraitEnvironmentP", "init"]
+- ["So18UITraitEnvironmentP", "jobOpportunitiesLoaded"]
 - !private ["So18UITraitEnvironmentP", "jobViewModel"]
+- !private ["So18UITraitEnvironmentP", "print"]
 - !private ["So18UITraitEnvironmentP", "viewDidLoad"]
+- !private ["So18UITraitEnvironmentP", "viewWillAppear"]
 - ["So16UIViewControllerC", "AVPlayer"]
+- ["So16UIViewControllerC", "Bool"]
 - ["So16UIViewControllerC", "JobOportunityViewModel"]
 - ["So16UIViewControllerC", ""]
 - ["So16UIViewControllerC", "didReceiveMemoryWarning"]
 - ["So16UIViewControllerC", "init"]
+- ["So16UIViewControllerC", "jobOpportunitiesLoaded"]
 - ["So16UIViewControllerC", "jobViewModel"]
 - ["So16UIViewControllerC", "player"]
+- !private ["So16UIViewControllerC", "print"]
 - ["So16UIViewControllerC", "viewDidLoad"]
+- ["So16UIViewControllerC", "viewWillAppear"]
 - ["8RemoteOk14ViewControllerC", "AVPlayer"]
+- ["8RemoteOk14ViewControllerC", "Bool"]
 - ["8RemoteOk14ViewControllerC", "JobOportunityViewModel"]
 - ["8RemoteOk14ViewControllerC", "deinit"]
 - ["8RemoteOk14ViewControllerC", "didReceiveMemoryWarning"]
 - ["8RemoteOk14ViewControllerC", "init"]
+- ["8RemoteOk14ViewControllerC", "jobOpportunitiesLoaded"]
 - ["8RemoteOk14ViewControllerC", "jobViewModel"]
 - ["8RemoteOk14ViewControllerC", "player"]
+- !private ["8RemoteOk14ViewControllerC", "print"]
 - ["8RemoteOk14ViewControllerC", "viewDidLoad"]
+- ["8RemoteOk14ViewControllerC", "viewWillAppear"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "JobOportunityViewModel"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "didReceiveMemoryWarning"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "jobOpportunitiesLoaded"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "jobViewModel"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "print"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "viewDidLoad"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "viewWillAppear"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s16_SwiftStringViewP", "init"]
 depends-nominal:
+- !private "s23BidirectionalCollectionP"
 - "s7CVarArgP"
+- !private "s10CollectionP"
+- !private "s10ComparableP"
 - "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
+- !private "s9DecodableP"
+- !private "s9EncodableP"
 - "s9EquatableP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
 - "s8HashableP"
 - "8RemoteOk22JobOportunityViewModelC"
+- "8RemoteOk22JobOpportunityDelegateP"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
 - "So8NSCodingP"
 - "So26NSExtensionRequestHandlingP"
 - "So8NSObjectC"
 - "So16NSObjectProtocolP"
+- !private "s26RangeReplaceableCollectionP"
+- !private "s8SequenceP"
+- !private "SS"
+- !private "s14StringProtocolP"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
 - "So21UIAppearanceContainerP"
 - "So18UIContentContainerP"
 - "So18UIFocusEnvironmentP"
@@ -163,7 +284,14 @@ depends-nominal:
 - "So18UITraitEnvironmentP"
 - "So16UIViewControllerC"
 - "8RemoteOk14ViewControllerC"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s33_ExpressibleByStringInterpolationP"
 - "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s16_SwiftStringViewP"
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.apinotesc"
@@ -206,4 +334,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/MetalKit.framework/Headers/MetalKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
-interface-hash: "08690260476ed592d705e9b3d0ac29ee"
+interface-hash: "49280cdd43ffc2321a23eaedcb8fbb79"

@@ -1,14 +1,14 @@
 version: "Apple Swift version 4.1 (swiftlang-902.0.48 clang-902.0.37.1)"
 options: "f496c968593d7dc1146718df8d45d01e"
-build_time: [1522861599, 709631000]
+build_time: [1522864327, 140875000]
 inputs:
   "/Users/hoff.silva/Documents/Personal/Git/remoteok-ios/RemoteOk/CoreDataStack.swift": [1522859439, 0]
   "/Users/hoff.silva/Documents/Personal/Git/remoteok-ios/RemoteOk/Model/JobOportunity.swift": [1522347728, 0]
   "/Users/hoff.silva/Documents/Personal/Git/remoteok-ios/RemoteOk/ViewModel/JobsDataViewModel.swift": [1522859439, 0]
-  "/Users/hoff.silva/Documents/Personal/Git/remoteok-ios/RemoteOk/View/LaunchScreenViewController.swift": [1522861597, 0]
+  "/Users/hoff.silva/Documents/Personal/Git/remoteok-ios/RemoteOk/View/LaunchScreenViewController.swift": [1522861702, 0]
   "/Users/hoff.silva/Documents/Personal/Git/remoteok-ios/RemoteOk/Network/Connection.swift": [1522348225, 0]
-  "/Users/hoff.silva/Documents/Personal/Git/remoteok-ios/RemoteOk/ViewModel/JobOportunityViewModel.swift": [1522859487, 0]
-  "/Users/hoff.silva/Documents/Personal/Git/remoteok-ios/RemoteOk/ViewController.swift": [1522859439, 0]
+  "/Users/hoff.silva/Documents/Personal/Git/remoteok-ios/RemoteOk/ViewModel/JobOportunityViewModel.swift": [1522864326, 0]
+  "/Users/hoff.silva/Documents/Personal/Git/remoteok-ios/RemoteOk/ViewController.swift": [1522863460, 0]
   "/Users/hoff.silva/Documents/Personal/Git/remoteok-ios/RemoteOk/AppDelegate.swift": [1522859439, 0]
   "/Users/hoff.silva/Documents/Personal/Git/remoteok-ios/Bin/DerivedData/RemoteOk/Build/Intermediates.noindex/RemoteOk.build/Debug-iphoneos/RemoteOk.build/DerivedSources/CoreDataGenerated/RemoteOk/Opportunity+CoreDataClass.swift": [1522859712, 0]
   "/Users/hoff.silva/Documents/Personal/Git/remoteok-ios/Bin/DerivedData/RemoteOk/Build/Intermediates.noindex/RemoteOk.build/Debug-iphoneos/RemoteOk.build/DerivedSources/CoreDataGenerated/RemoteOk/Opportunity+CoreDataProperties.swift": [1522859712, 0]

@@ -18,7 +18,6 @@ depends-top-level:
 - !private "DispatchQueue"
 - !private "Hero"
 - !private "HeroDefaultAnimationType"
-- !private "HeroModifier"
 - "JobOportunityViewModel"
 - "JobsDataDelegate"
 - "JobsDataViewModel"
@@ -65,7 +64,6 @@ depends-member:
 - !private ["s7CVarArgP", "DispatchQueue"]
 - !private ["s7CVarArgP", "Hero"]
 - !private ["s7CVarArgP", "HeroDefaultAnimationType"]
-- !private ["s7CVarArgP", "HeroModifier"]
 - ["s7CVarArgP", "JobOportunityViewModel"]
 - ["s7CVarArgP", "JobsDataViewModel"]
 - !private ["s7CVarArgP", "UIStoryboard"]
@@ -109,7 +107,6 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "DispatchQueue"]
 - !private ["s28CustomDebugStringConvertibleP", "Hero"]
 - !private ["s28CustomDebugStringConvertibleP", "HeroDefaultAnimationType"]
-- !private ["s28CustomDebugStringConvertibleP", "HeroModifier"]
 - ["s28CustomDebugStringConvertibleP", "JobOportunityViewModel"]
 - ["s28CustomDebugStringConvertibleP", "JobsDataViewModel"]
 - !private ["s28CustomDebugStringConvertibleP", "UIStoryboard"]
@@ -153,7 +150,6 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "DispatchQueue"]
 - !private ["s23CustomStringConvertibleP", "Hero"]
 - !private ["s23CustomStringConvertibleP", "HeroDefaultAnimationType"]
-- !private ["s23CustomStringConvertibleP", "HeroModifier"]
 - ["s23CustomStringConvertibleP", "JobOportunityViewModel"]
 - ["s23CustomStringConvertibleP", "JobsDataViewModel"]
 - !private ["s23CustomStringConvertibleP", "UIStoryboard"]
@@ -201,7 +197,6 @@ depends-member:
 - !private ["s9EquatableP", "DispatchQueue"]
 - !private ["s9EquatableP", "Hero"]
 - !private ["s9EquatableP", "HeroDefaultAnimationType"]
-- !private ["s9EquatableP", "HeroModifier"]
 - ["s9EquatableP", "JobOportunityViewModel"]
 - ["s9EquatableP", "JobsDataViewModel"]
 - !private ["s9EquatableP", "UIStoryboard"]
@@ -247,7 +242,6 @@ depends-member:
 - !private ["s8HashableP", "DispatchQueue"]
 - !private ["s8HashableP", "Hero"]
 - !private ["s8HashableP", "HeroDefaultAnimationType"]
-- !private ["s8HashableP", "HeroModifier"]
 - ["s8HashableP", "JobOportunityViewModel"]
 - ["s8HashableP", "JobsDataViewModel"]
 - !private ["s8HashableP", "UIStoryboard"]
@@ -283,9 +277,7 @@ depends-member:
 - !private ["s8HashableP", "zPosition"]
 - !private ["4HeroAAC", "shared"]
 - !private ["4Hero0A20DefaultAnimationTypeO", "fade"]
-- !private ["4Hero0A8ModifierC", "delay"]
 - !private ["4Hero0A22ProgressRunnerDelegateP", "defaultAnimation"]
-- !private ["4Hero0A17StringConvertibleP", "delay"]
 - !private ["4Hero0A17StringConvertibleP", "fade"]
 - !private ["4Hero0A10TransitionC", "defaultAnimation"]
 - ["8RemoteOk22JobOportunityViewModelC", "init"]
@@ -298,7 +290,6 @@ depends-member:
 - !private ["8RemoteOk16JobsDataDelegateP", "DispatchQueue"]
 - !private ["8RemoteOk16JobsDataDelegateP", "Hero"]
 - !private ["8RemoteOk16JobsDataDelegateP", "HeroDefaultAnimationType"]
-- !private ["8RemoteOk16JobsDataDelegateP", "HeroModifier"]
 - ["8RemoteOk16JobsDataDelegateP", "JobOportunityViewModel"]
 - ["8RemoteOk16JobsDataDelegateP", "JobsDataViewModel"]
 - !private ["8RemoteOk16JobsDataDelegateP", "UIStoryboard"]
@@ -326,7 +317,6 @@ depends-member:
 - !private ["8RemoteOk26LaunchScreenViewControllerC", "DispatchQueue"]
 - !private ["8RemoteOk26LaunchScreenViewControllerC", "Hero"]
 - !private ["8RemoteOk26LaunchScreenViewControllerC", "HeroDefaultAnimationType"]
-- !private ["8RemoteOk26LaunchScreenViewControllerC", "HeroModifier"]
 - ["8RemoteOk26LaunchScreenViewControllerC", "JobOportunityViewModel"]
 - ["8RemoteOk26LaunchScreenViewControllerC", "JobsDataViewModel"]
 - ["8RemoteOk26LaunchScreenViewControllerC", "String"]
@@ -357,7 +347,6 @@ depends-member:
 - !private ["So8NSCodingP", "DispatchQueue"]
 - !private ["So8NSCodingP", "Hero"]
 - !private ["So8NSCodingP", "HeroDefaultAnimationType"]
-- !private ["So8NSCodingP", "HeroModifier"]
 - ["So8NSCodingP", "JobOportunityViewModel"]
 - ["So8NSCodingP", "JobsDataViewModel"]
 - !private ["So8NSCodingP", "UIStoryboard"]
@@ -389,7 +378,6 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "DispatchQueue"]
 - !private ["So26NSExtensionRequestHandlingP", "Hero"]
 - !private ["So26NSExtensionRequestHandlingP", "HeroDefaultAnimationType"]
-- !private ["So26NSExtensionRequestHandlingP", "HeroModifier"]
 - ["So26NSExtensionRequestHandlingP", "JobOportunityViewModel"]
 - ["So26NSExtensionRequestHandlingP", "JobsDataViewModel"]
 - !private ["So26NSExtensionRequestHandlingP", "UIStoryboard"]
@@ -416,7 +404,6 @@ depends-member:
 - !private ["So8NSObjectC", "DispatchQueue"]
 - !private ["So8NSObjectC", "Hero"]
 - !private ["So8NSObjectC", "HeroDefaultAnimationType"]
-- !private ["So8NSObjectC", "HeroModifier"]
 - ["So8NSObjectC", "JobOportunityViewModel"]
 - ["So8NSObjectC", "JobsDataViewModel"]
 - ["So8NSObjectC", "String"]
@@ -459,7 +446,6 @@ depends-member:
 - !private ["So16NSObjectProtocolP", "DispatchQueue"]
 - !private ["So16NSObjectProtocolP", "Hero"]
 - !private ["So16NSObjectProtocolP", "HeroDefaultAnimationType"]
-- !private ["So16NSObjectProtocolP", "HeroModifier"]
 - ["So16NSObjectProtocolP", "JobOportunityViewModel"]
 - ["So16NSObjectProtocolP", "JobsDataViewModel"]
 - !private ["So16NSObjectProtocolP", "UIStoryboard"]
@@ -520,7 +506,6 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "DispatchQueue"]
 - !private ["So21UIAppearanceContainerP", "Hero"]
 - !private ["So21UIAppearanceContainerP", "HeroDefaultAnimationType"]
-- !private ["So21UIAppearanceContainerP", "HeroModifier"]
 - ["So21UIAppearanceContainerP", "JobOportunityViewModel"]
 - ["So21UIAppearanceContainerP", "JobsDataViewModel"]
 - !private ["So21UIAppearanceContainerP", "UIStoryboard"]
@@ -549,7 +534,6 @@ depends-member:
 - !private ["So18UIContentContainerP", "DispatchQueue"]
 - !private ["So18UIContentContainerP", "Hero"]
 - !private ["So18UIContentContainerP", "HeroDefaultAnimationType"]
-- !private ["So18UIContentContainerP", "HeroModifier"]
 - ["So18UIContentContainerP", "JobOportunityViewModel"]
 - ["So18UIContentContainerP", "JobsDataViewModel"]
 - !private ["So18UIContentContainerP", "UIStoryboard"]
@@ -580,7 +564,6 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "DispatchQueue"]
 - !private ["So18UIFocusEnvironmentP", "Hero"]
 - !private ["So18UIFocusEnvironmentP", "HeroDefaultAnimationType"]
-- !private ["So18UIFocusEnvironmentP", "HeroModifier"]
 - ["So18UIFocusEnvironmentP", "JobOportunityViewModel"]
 - ["So18UIFocusEnvironmentP", "JobsDataViewModel"]
 - !private ["So18UIFocusEnvironmentP", "UIStoryboard"]
@@ -612,7 +595,6 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "DispatchQueue"]
 - !private ["So30UIPasteConfigurationSupportingP", "Hero"]
 - !private ["So30UIPasteConfigurationSupportingP", "HeroDefaultAnimationType"]
-- !private ["So30UIPasteConfigurationSupportingP", "HeroModifier"]
 - ["So30UIPasteConfigurationSupportingP", "JobOportunityViewModel"]
 - ["So30UIPasteConfigurationSupportingP", "JobsDataViewModel"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIStoryboard"]
@@ -641,7 +623,6 @@ depends-member:
 - !private ["So11UIResponderC", "DispatchQueue"]
 - !private ["So11UIResponderC", "Hero"]
 - !private ["So11UIResponderC", "HeroDefaultAnimationType"]
-- !private ["So11UIResponderC", "HeroModifier"]
 - ["So11UIResponderC", "JobOportunityViewModel"]
 - ["So11UIResponderC", "JobsDataViewModel"]
 - ["So11UIResponderC", "String"]
@@ -671,7 +652,6 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "DispatchQueue"]
 - !private ["So30UIResponderStandardEditActionsP", "Hero"]
 - !private ["So30UIResponderStandardEditActionsP", "HeroDefaultAnimationType"]
-- !private ["So30UIResponderStandardEditActionsP", "HeroModifier"]
 - ["So30UIResponderStandardEditActionsP", "JobOportunityViewModel"]
 - ["So30UIResponderStandardEditActionsP", "JobsDataViewModel"]
 - !private ["So30UIResponderStandardEditActionsP", "UIStoryboard"]
@@ -700,7 +680,6 @@ depends-member:
 - !private ["So16UIStateRestoringP", "DispatchQueue"]
 - !private ["So16UIStateRestoringP", "Hero"]
 - !private ["So16UIStateRestoringP", "HeroDefaultAnimationType"]
-- !private ["So16UIStateRestoringP", "HeroModifier"]
 - ["So16UIStateRestoringP", "JobOportunityViewModel"]
 - ["So16UIStateRestoringP", "JobsDataViewModel"]
 - !private ["So16UIStateRestoringP", "UIStoryboard"]
@@ -730,7 +709,6 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "DispatchQueue"]
 - !private ["So18UITraitEnvironmentP", "Hero"]
 - !private ["So18UITraitEnvironmentP", "HeroDefaultAnimationType"]
-- !private ["So18UITraitEnvironmentP", "HeroModifier"]
 - ["So18UITraitEnvironmentP", "JobOportunityViewModel"]
 - ["So18UITraitEnvironmentP", "JobsDataViewModel"]
 - !private ["So18UITraitEnvironmentP", "UIStoryboard"]
@@ -761,7 +739,6 @@ depends-member:
 - !private ["So16UIViewControllerC", "DispatchQueue"]
 - !private ["So16UIViewControllerC", "Hero"]
 - !private ["So16UIViewControllerC", "HeroDefaultAnimationType"]
-- !private ["So16UIViewControllerC", "HeroModifier"]
 - ["So16UIViewControllerC", "JobOportunityViewModel"]
 - ["So16UIViewControllerC", "JobsDataViewModel"]
 - ["So16UIViewControllerC", "String"]
@@ -802,7 +779,6 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "DispatchQueue"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "Hero"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "HeroDefaultAnimationType"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "HeroModifier"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "JobOportunityViewModel"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "JobsDataViewModel"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UIStoryboard"]
@@ -867,7 +843,6 @@ depends-nominal:
 - "s8HashableP"
 - !private "4HeroAAC"
 - !private "4Hero0A20DefaultAnimationTypeO"
-- !private "4Hero0A8ModifierC"
 - !private "4Hero0A22ProgressRunnerDelegateP"
 - !private "4Hero0A17StringConvertibleP"
 - !private "4Hero0A10TransitionC"
