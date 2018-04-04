@@ -6,5 +6,5 @@ target 'RemoteOk' do
   use_frameworks!
 
   # Pods for RemoteOk
-
+    pod "Hero"
 end

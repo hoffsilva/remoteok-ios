@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '5975EE40E92AB72040C88A31C80DF4B9'
-               BlueprintName = 'Pods-RemoteOk'
+               BlueprintIdentifier = '83C26A1A65032AB1408D01604F119111'
+               BlueprintName = 'Hero'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'Pods-RemoteOk.framework'>
+               BuildableName = 'Hero.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
