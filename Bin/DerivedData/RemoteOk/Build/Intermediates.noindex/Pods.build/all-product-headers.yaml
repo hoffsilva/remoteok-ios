@@ -4,6 +4,33 @@
   'roots': [
     {
       'type': 'directory',
+      'name': "/Users/hoff.silva/Documents/Personal/Git/remoteok-ios/Bin/DerivedData/RemoteOk/Build/Products/Debug-iphoneos/Hero/Hero.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "Hero-Swift.h",
+          'external-contents': "/Users/hoff.silva/Documents/Personal/Git/remoteok-ios/Bin/DerivedData/RemoteOk/Build/Products/Debug-iphoneos/Hero/Hero.framework/Headers/Hero-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "Hero-umbrella.h",
+          'external-contents': "/Users/hoff.silva/Documents/Personal/Git/remoteok-ios/Pods/Target Support Files/Hero/Hero-umbrella.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/hoff.silva/Documents/Personal/Git/remoteok-ios/Bin/DerivedData/RemoteOk/Build/Products/Debug-iphoneos/Hero/Hero.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/hoff.silva/Documents/Personal/Git/remoteok-ios/Bin/DerivedData/RemoteOk/Build/Intermediates.noindex/Pods.build/Debug-iphoneos/Hero.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
       'name': "/Users/hoff.silva/Documents/Personal/Git/remoteok-ios/Bin/DerivedData/RemoteOk/Build/Products/Debug-iphoneos/Pods_RemoteOk.framework/Headers",
       'contents': [
         {

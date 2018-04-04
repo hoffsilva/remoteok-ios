@@ -20,27 +20,6 @@ class JobOportunityViewModel {
     var arrayOfOpportunity = [Opportunity]()
     var arrayOfFavoriteOpportunity = [OportunityFavorite]()
     
-//    func loadJobsFromRemoteOK() {
-//        deleteAllOpportunities()
-//        Connection.fetchData { (arrayOfJobOportunities) in
-//            for job in arrayOfJobOportunities as! Array<Any>{
-//                var currentJob = JobOportunity()
-//                let jobDictionary = job as! [String:Any]
-//                currentJob.position = jobDictionary["position"] as? String
-//                currentJob.slug = jobDictionary["slug"] as? String
-//                currentJob.id = jobDictionary["id"] as? String
-//                currentJob.epoch = jobDictionary["epoch"] as? String
-//                currentJob.descriptionValue = jobDictionary["description"] as? String
-//                currentJob.date = jobDictionary["date"] as? String
-//                currentJob.logo = jobDictionary["logo"] as? String
-//                currentJob.tags = jobDictionary["tags"] as! [String]
-//                currentJob.company = jobDictionary["company"] as? String
-//                currentJob.url = jobDictionary["url"] as? String
-//                self.saveJobFromJSON(currentJob)
-//            }
-//        }
-//    }
-    
     func saveJobFromJSON(_ currentJob: JobOportunity) {
         let jobToSave = NSEntityDescription.entity(forEntityName: "Opportunity", in: managedContext)
         guard let jts = jobToSave else {

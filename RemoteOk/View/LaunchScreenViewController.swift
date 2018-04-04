@@ -54,11 +54,10 @@ class LaunchScreenViewController: UIViewController {
         guard let str = storyboard.instantiateInitialViewController() else {
             return
         }
-        
         Hero.shared.defaultAnimation = HeroDefaultAnimationType.fade
-        hero_replaceViewController(with: str)
-        
-        //present(str, animated: true, completion: nil)
+        DispatchQueue.main.async {
+            self.hero_replaceViewController(with: str)
+        }
     }
 }
 
