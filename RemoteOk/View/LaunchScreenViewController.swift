@@ -9,6 +9,8 @@
 import UIKit
 import AVKit
 import AVFoundation
+import Hero
+
 
 class LaunchScreenViewController: UIViewController {
     
@@ -52,28 +54,16 @@ class LaunchScreenViewController: UIViewController {
         guard let str = storyboard.instantiateInitialViewController() else {
             return
         }
-        present(str, animated: true, completion: nil)
+        
+        Hero.shared.defaultAnimation = HeroDefaultAnimationType.fade
+        hero_replaceViewController(with: str)
+        
+        //present(str, animated: true, completion: nil)
     }
 }
 
 extension LaunchScreenViewController: JobsDataDelegate {
-    func loadJobDataSuccessful(array: Array<Any>) {
-        jobsOpportunityViewModel.deleteAllOpportunities()
-        for job in array{
-            let currentJob = JobOportunity()
-            let jobDictionary = job as! [String:Any]
-            currentJob.position = jobDictionary["position"] as? String
-            currentJob.slug = jobDictionary["slug"] as? String
-            currentJob.id = jobDictionary["id"] as? String
-            currentJob.epoch = jobDictionary["epoch"] as? String
-            currentJob.descriptionValue = jobDictionary["description"] as? String
-            currentJob.date = jobDictionary["date"] as? String
-            currentJob.logo = jobDictionary["logo"] as? String
-            currentJob.tags = jobDictionary["tags"] as? [String]
-            currentJob.company = jobDictionary["company"] as? String
-            currentJob.url = jobDictionary["url"] as? String
-            jobsOpportunityViewModel.saveJobFromJSON(currentJob)
-        }
+    func loadJobDataSuccessful() {
         callMainStoryboard()
     }
     
