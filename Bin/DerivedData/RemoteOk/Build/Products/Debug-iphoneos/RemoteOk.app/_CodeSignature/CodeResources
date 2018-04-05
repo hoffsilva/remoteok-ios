@@ -18,7 +18,7 @@
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
-		d/sN+5/Y7XEKTFCrJma3t0wBFSA=
+		E1YTsfuggT52172I7g1Nh72SOUc=
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/Info.plist</key>
 		<data>
@@ -26,11 +26,11 @@
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib</key>
 		<data>
-		0GQsAXQ0/3FZH4eoD/DQlqa5cKI=
+		szttDxDzZJzLNYVPA5tdP+2q3Yc=
 		</data>
 		<key>Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib</key>
 		<data>
-		wQK5D7JaBk9IctshCT6yvWhgn50=
+		3i0BCH9eWCDSb3U/aMKjxcnp0lc=
 		</data>
 		<key>Base.lproj/Main.storyboardc/Info.plist</key>
 		<data>
@@ -38,15 +38,15 @@
 		</data>
 		<key>Base.lproj/Main.storyboardc/R2b-dy-tNI-view-vb7-4q-WNm.nib</key>
 		<data>
-		hIMVu3Sr2Qt3aIGXITNsDhg4BFk=
+		JJaTi9juh6Mp2Ype2wZeCk1gzc0=
 		</data>
 		<key>Base.lproj/Main.storyboardc/gbG-kH-2Ya-view-Tmm-TS-MB9.nib</key>
 		<data>
-		Vc0kQdgUkE0PNk3ZCELenEbgqnc=
+		3fTsGJdWB4Wwjd4cxo/xj1b8Sd0=
 		</data>
 		<key>Base.lproj/Main.storyboardc/main.nib</key>
 		<data>
-		gFcxgY8sTTiSHOUeWHXsLSBsElA=
+		9JA4ZKKJQcGsttjuM31YTPWDTSA=
 		</data>
 		<key>Frameworks/Hero.framework/Hero</key>
 		<data>
@@ -292,11 +292,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			d/sN+5/Y7XEKTFCrJma3t0wBFSA=
+			E1YTsfuggT52172I7g1Nh72SOUc=
 			</data>
 			<key>hash2</key>
 			<data>
-			Yyq14dz8cGd8fbnWa/5rKHkSB9L9vCxjWFkNcdCuf8c=
+			kl84x/Ymy0p6hOYnUcG7vwr8uOd8nDhgNdFhdrCsZyE=
 			</data>
 		</dict>
 		<key>Base.lproj/LaunchScreen.storyboardc/Info.plist</key>
@@ -314,22 +314,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			0GQsAXQ0/3FZH4eoD/DQlqa5cKI=
+			szttDxDzZJzLNYVPA5tdP+2q3Yc=
 			</data>
 			<key>hash2</key>
 			<data>
-			o9TMcDOMQ8HbxQ9TbKsXSPYYpcUDCeiaP3HMSokidv8=
+			KVqrGc/YXb1vYr1NAAMjvyLcI4PyuxYtISSTigEzi80=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			wQK5D7JaBk9IctshCT6yvWhgn50=
+			3i0BCH9eWCDSb3U/aMKjxcnp0lc=
 			</data>
 			<key>hash2</key>
 			<data>
-			Qk8uFSFk85Lb9ua/Yzmzxu6jGTj/O4mGoeppji6onu4=
+			1qGnwJpWEMie3k5opkeUFhdOjXJfyMNie4vy5x5THdo=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/Info.plist</key>
@@ -347,33 +347,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			hIMVu3Sr2Qt3aIGXITNsDhg4BFk=
+			JJaTi9juh6Mp2Ype2wZeCk1gzc0=
 			</data>
 			<key>hash2</key>
 			<data>
-			HPGkXSB49o9TI+1oecWif5ocV30UY1uVz3sdx1S6sLo=
+			gxTXeDVvxxdqrGtSq1/QWfIigXMRoIOWWQTUAH1e2tc=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/gbG-kH-2Ya-view-Tmm-TS-MB9.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Vc0kQdgUkE0PNk3ZCELenEbgqnc=
+			3fTsGJdWB4Wwjd4cxo/xj1b8Sd0=
 			</data>
 			<key>hash2</key>
 			<data>
-			8ol/R3orEKubIx/PFbfD4hNFHmnmbNzhOGrdBEhOCxk=
+			DOsCwbnUC1FmiEM83PaFjlPIA5BOXprxjpE92y4l6FI=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/main.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			gFcxgY8sTTiSHOUeWHXsLSBsElA=
+			9JA4ZKKJQcGsttjuM31YTPWDTSA=
 			</data>
 			<key>hash2</key>
 			<data>
-			AincbbO6FbusOcY12OksEnw2wt2TaZPkk0Pz1lW2ZEM=
+			oRCjGLebEfGvJOFjujITio3Bz36mAW1bssGEdSZ9ToY=
 			</data>
 		</dict>
 		<key>Frameworks/Hero.framework/Hero</key>

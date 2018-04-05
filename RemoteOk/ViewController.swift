@@ -27,8 +27,9 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        jobViewModel.filterJobsBy(category: "marketing")
-        jobViewModel.filterJobsBy(category: "dev")
+        jobViewModel.filterJobsBy(tags: ["marketing"])
+        jobViewModel.getTags()
+      //  jobViewModel.filterJobsBy(category: "dev")
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,10 +39,14 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: JobOpportunityDelegate {
+    
     func jobOpportunitiesLoaded() {
         print(jobViewModel.arrayOfOpportunity)
     }
     
+    func tagsLoaded() {
+        print(jobViewModel.arrayOfTags)
+    }
     
 }
 

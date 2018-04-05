@@ -22,16 +22,26 @@ depends-top-level:
 - !private "NSEntityDescription"
 - !private "NSError"
 - !private "NSFetchRequest"
-- !private "NSPredicate"
 - "OportunityFavorite"
 - "Opportunity"
+- "Set"
 - "String"
 - !private "StringLiteralType"
 - !private "print"
 depends-member:
+- !private ["Sa", "append"]
+- !private ["Sa", "contains"]
 - ["Sa", "init"]
+- !private ["Sa", "sorted"]
+- !private ["s23BidirectionalCollectionP", "append"]
+- !private ["s23BidirectionalCollectionP", "contains"]
 - ["s23BidirectionalCollectionP", "init"]
+- !private ["s23BidirectionalCollectionP", "sorted"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "append"]
 - !private ["s7CVarArgP", "company"]
+- !private ["s7CVarArgP", "contains"]
 - !private ["s7CVarArgP", "date"]
 - !private ["s7CVarArgP", "delete"]
 - !private ["s7CVarArgP", "desc"]
@@ -42,21 +52,28 @@ depends-member:
 - !private ["s7CVarArgP", "fetchRequestTemplate"]
 - !private ["s7CVarArgP", "id"]
 - ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "insert"]
 - !private ["s7CVarArgP", "logo"]
 - !private ["s7CVarArgP", "managedObjectModel"]
 - !private ["s7CVarArgP", "persistentStoreCoordinator"]
 - !private ["s7CVarArgP", "position"]
-- !private ["s7CVarArgP", "predicate"]
 - !private ["s7CVarArgP", "save"]
 - !private ["s7CVarArgP", "slug"]
+- !private ["s7CVarArgP", "sorted"]
 - !private ["s7CVarArgP", "tags"]
 - !private ["s7CVarArgP", "url"]
 - ["s7CVarArgP", "viewContext"]
+- !private ["s10CollectionP", "append"]
+- !private ["s10CollectionP", "contains"]
 - ["s10CollectionP", "init"]
+- !private ["s10CollectionP", "insert"]
+- !private ["s10CollectionP", "sorted"]
 - !private ["s10ComparableP", "init"]
 - ["8RemoteOk13CoreDataStackC", "init"]
 - ["8RemoteOk13CoreDataStackC", "persistentContainer"]
+- !private ["s28CustomDebugStringConvertibleP", "append"]
 - !private ["s28CustomDebugStringConvertibleP", "company"]
+- !private ["s28CustomDebugStringConvertibleP", "contains"]
 - !private ["s28CustomDebugStringConvertibleP", "date"]
 - !private ["s28CustomDebugStringConvertibleP", "delete"]
 - !private ["s28CustomDebugStringConvertibleP", "desc"]
@@ -67,19 +84,29 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "fetchRequestTemplate"]
 - !private ["s28CustomDebugStringConvertibleP", "id"]
 - ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "insert"]
 - !private ["s28CustomDebugStringConvertibleP", "logo"]
 - !private ["s28CustomDebugStringConvertibleP", "managedObjectModel"]
 - !private ["s28CustomDebugStringConvertibleP", "persistentStoreCoordinator"]
 - !private ["s28CustomDebugStringConvertibleP", "position"]
-- !private ["s28CustomDebugStringConvertibleP", "predicate"]
 - !private ["s28CustomDebugStringConvertibleP", "save"]
 - !private ["s28CustomDebugStringConvertibleP", "slug"]
+- !private ["s28CustomDebugStringConvertibleP", "sorted"]
 - !private ["s28CustomDebugStringConvertibleP", "tags"]
 - !private ["s28CustomDebugStringConvertibleP", "url"]
 - ["s28CustomDebugStringConvertibleP", "viewContext"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
 - !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "append"]
+- !private ["s17CustomReflectableP", "contains"]
 - ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "insert"]
+- !private ["s17CustomReflectableP", "sorted"]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "append"]
 - !private ["s23CustomStringConvertibleP", "company"]
+- !private ["s23CustomStringConvertibleP", "contains"]
 - !private ["s23CustomStringConvertibleP", "date"]
 - !private ["s23CustomStringConvertibleP", "delete"]
 - !private ["s23CustomStringConvertibleP", "desc"]
@@ -90,39 +117,53 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "fetchRequestTemplate"]
 - !private ["s23CustomStringConvertibleP", "id"]
 - ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "insert"]
 - !private ["s23CustomStringConvertibleP", "logo"]
 - !private ["s23CustomStringConvertibleP", "managedObjectModel"]
 - !private ["s23CustomStringConvertibleP", "persistentStoreCoordinator"]
 - !private ["s23CustomStringConvertibleP", "position"]
-- !private ["s23CustomStringConvertibleP", "predicate"]
 - !private ["s23CustomStringConvertibleP", "save"]
 - !private ["s23CustomStringConvertibleP", "slug"]
+- !private ["s23CustomStringConvertibleP", "sorted"]
 - !private ["s23CustomStringConvertibleP", "tags"]
 - !private ["s23CustomStringConvertibleP", "url"]
 - ["s23CustomStringConvertibleP", "viewContext"]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
+- !private ["s9DecodableP", "append"]
 - !private ["s9DecodableP", "company"]
+- !private ["s9DecodableP", "contains"]
 - !private ["s9DecodableP", "date"]
 - !private ["s9DecodableP", "descriptionValue"]
 - !private ["s9DecodableP", "epoch"]
 - !private ["s9DecodableP", "id"]
 - ["s9DecodableP", "init"]
+- !private ["s9DecodableP", "insert"]
 - !private ["s9DecodableP", "logo"]
 - !private ["s9DecodableP", "position"]
 - !private ["s9DecodableP", "slug"]
+- !private ["s9DecodableP", "sorted"]
 - !private ["s9DecodableP", "tags"]
 - !private ["s9DecodableP", "url"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
+- !private ["s9EncodableP", "append"]
 - !private ["s9EncodableP", "company"]
+- !private ["s9EncodableP", "contains"]
 - !private ["s9EncodableP", "date"]
 - !private ["s9EncodableP", "descriptionValue"]
 - !private ["s9EncodableP", "epoch"]
 - !private ["s9EncodableP", "id"]
 - ["s9EncodableP", "init"]
+- !private ["s9EncodableP", "insert"]
 - !private ["s9EncodableP", "logo"]
 - !private ["s9EncodableP", "position"]
 - !private ["s9EncodableP", "slug"]
+- !private ["s9EncodableP", "sorted"]
 - !private ["s9EncodableP", "tags"]
 - !private ["s9EncodableP", "url"]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
+- !private ["s9EquatableP", "append"]
 - !private ["s9EquatableP", "company"]
+- !private ["s9EquatableP", "contains"]
 - !private ["s9EquatableP", "date"]
 - !private ["s9EquatableP", "delete"]
 - !private ["s9EquatableP", "desc"]
@@ -133,21 +174,28 @@ depends-member:
 - !private ["s9EquatableP", "fetchRequestTemplate"]
 - !private ["s9EquatableP", "id"]
 - ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "insert"]
 - !private ["s9EquatableP", "logo"]
 - !private ["s9EquatableP", "managedObjectModel"]
 - !private ["s9EquatableP", "persistentStoreCoordinator"]
 - !private ["s9EquatableP", "position"]
-- !private ["s9EquatableP", "predicate"]
 - !private ["s9EquatableP", "save"]
 - !private ["s9EquatableP", "slug"]
+- !private ["s9EquatableP", "sorted"]
 - !private ["s9EquatableP", "tags"]
 - !private ["s9EquatableP", "url"]
 - ["s9EquatableP", "viewContext"]
 - !private ["s5ErrorP", "description"]
+- !private ["s25ExpressibleByArrayLiteralP", "append"]
+- !private ["s25ExpressibleByArrayLiteralP", "contains"]
 - ["s25ExpressibleByArrayLiteralP", "init"]
+- !private ["s25ExpressibleByArrayLiteralP", "insert"]
+- !private ["s25ExpressibleByArrayLiteralP", "sorted"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s26ExpressibleByStringLiteralP", "init"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
 - !private ["s8HashableP", "company"]
 - !private ["s8HashableP", "date"]
 - !private ["s8HashableP", "delete"]
@@ -158,12 +206,12 @@ depends-member:
 - !private ["s8HashableP", "fetch"]
 - !private ["s8HashableP", "fetchRequestTemplate"]
 - !private ["s8HashableP", "id"]
-- !private ["s8HashableP", "init"]
+- ["s8HashableP", "init"]
+- !private ["s8HashableP", "insert"]
 - !private ["s8HashableP", "logo"]
 - !private ["s8HashableP", "managedObjectModel"]
 - !private ["s8HashableP", "persistentStoreCoordinator"]
 - !private ["s8HashableP", "position"]
-- !private ["s8HashableP", "predicate"]
 - !private ["s8HashableP", "save"]
 - !private ["s8HashableP", "slug"]
 - !private ["s8HashableP", "tags"]
@@ -185,18 +233,20 @@ depends-member:
 - !private ["8RemoteOk22JobOportunityViewModelC", "NSEntityDescription"]
 - !private ["8RemoteOk22JobOportunityViewModelC", "NSError"]
 - !private ["8RemoteOk22JobOportunityViewModelC", "NSFetchRequest"]
-- !private ["8RemoteOk22JobOportunityViewModelC", "NSPredicate"]
 - ["8RemoteOk22JobOportunityViewModelC", "OportunityFavorite"]
 - ["8RemoteOk22JobOportunityViewModelC", "Opportunity"]
+- ["8RemoteOk22JobOportunityViewModelC", "Set"]
 - ["8RemoteOk22JobOportunityViewModelC", "String"]
 - ["8RemoteOk22JobOportunityViewModelC", "arrayOfFavoriteOpportunity"]
 - ["8RemoteOk22JobOportunityViewModelC", "arrayOfOpportunity"]
+- ["8RemoteOk22JobOportunityViewModelC", "arrayOfTags"]
 - ["8RemoteOk22JobOportunityViewModelC", "deinit"]
 - ["8RemoteOk22JobOportunityViewModelC", "delegate"]
 - ["8RemoteOk22JobOportunityViewModelC", "deleteAllOpportunities"]
 - ["8RemoteOk22JobOportunityViewModelC", "filterJobsBy"]
 - ["8RemoteOk22JobOportunityViewModelC", "getAllFavoriteOpportunities"]
 - ["8RemoteOk22JobOportunityViewModelC", "getAllOpportunities"]
+- ["8RemoteOk22JobOportunityViewModelC", "getTags"]
 - ["8RemoteOk22JobOportunityViewModelC", "init"]
 - ["8RemoteOk22JobOportunityViewModelC", "managedContext"]
 - ["8RemoteOk22JobOportunityViewModelC", "markJobAsFavorite"]
@@ -204,29 +254,28 @@ depends-member:
 - ["8RemoteOk22JobOportunityViewModelC", "removeJobFromFavorite"]
 - ["8RemoteOk22JobOportunityViewModelC", "saveJobFromJSON"]
 - ["8RemoteOk22JobOpportunityDelegateP", "jobOpportunitiesLoaded"]
+- ["8RemoteOk22JobOpportunityDelegateP", "tagsLoaded"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
 - !private ["s25LosslessStringConvertibleP", "init"]
 - !private ["s10MirrorPathP", "init"]
+- !private ["s17MutableCollectionP", "append"]
+- !private ["s17MutableCollectionP", "contains"]
 - ["s17MutableCollectionP", "init"]
+- !private ["s17MutableCollectionP", "sorted"]
 - !private ["So8NSCodingP", "delete"]
 - !private ["So8NSCodingP", "description"]
 - !private ["So8NSCodingP", "entity"]
 - !private ["So8NSCodingP", "fetch"]
 - !private ["So8NSCodingP", "fetchRequestTemplate"]
-- !private ["So8NSCodingP", "init"]
 - !private ["So8NSCodingP", "persistentStoreCoordinator"]
-- !private ["So8NSCodingP", "predicate"]
 - !private ["So8NSCodingP", "save"]
 - !private ["So9NSCopyingP", "description"]
 - !private ["So9NSCopyingP", "entity"]
 - !private ["So9NSCopyingP", "fetchRequestTemplate"]
-- !private ["So9NSCopyingP", "init"]
-- !private ["So9NSCopyingP", "predicate"]
 - !private ["So19NSEntityDescriptionC", "entity"]
 - !private ["So7NSErrorC", "description"]
 - !private ["So17NSFastEnumerationP", "entity"]
 - !private ["So17NSFastEnumerationP", "fetchRequestTemplate"]
-- !private ["So14NSFetchRequestC", "init"]
-- !private ["So14NSFetchRequestC", "predicate"]
 - !private ["So20NSFetchRequestResultP", "company"]
 - !private ["So20NSFetchRequestResultP", "date"]
 - !private ["So20NSFetchRequestResultP", "desc"]
@@ -274,7 +323,6 @@ depends-member:
 - !private ["So8NSObjectC", "managedObjectModel"]
 - !private ["So8NSObjectC", "persistentStoreCoordinator"]
 - !private ["So8NSObjectC", "position"]
-- !private ["So8NSObjectC", "predicate"]
 - !private ["So8NSObjectC", "save"]
 - !private ["So8NSObjectC", "slug"]
 - !private ["So8NSObjectC", "tags"]
@@ -295,7 +343,6 @@ depends-member:
 - !private ["So16NSObjectProtocolP", "managedObjectModel"]
 - !private ["So16NSObjectProtocolP", "persistentStoreCoordinator"]
 - !private ["So16NSObjectProtocolP", "position"]
-- !private ["So16NSObjectProtocolP", "predicate"]
 - !private ["So16NSObjectProtocolP", "save"]
 - !private ["So16NSObjectProtocolP", "slug"]
 - !private ["So16NSObjectProtocolP", "tags"]
@@ -303,10 +350,7 @@ depends-member:
 - ["So16NSObjectProtocolP", "viewContext"]
 - ["So21NSPersistentContainerC", "viewContext"]
 - !private ["So28NSPersistentStoreCoordinatorC", "managedObjectModel"]
-- !private ["So24NSPersistentStoreRequestC", "predicate"]
-- !private ["So11NSPredicateC", "init"]
 - !private ["So14NSSecureCodingP", "description"]
-- !private ["So14NSSecureCodingP", "init"]
 - ["8RemoteOk18OportunityFavoriteC", "deinit"]
 - !private ["8RemoteOk11OpportunityC", "company"]
 - !private ["8RemoteOk11OpportunityC", "date"]
@@ -320,15 +364,36 @@ depends-member:
 - !private ["8RemoteOk11OpportunityC", "slug"]
 - !private ["8RemoteOk11OpportunityC", "tags"]
 - !private ["8RemoteOk11OpportunityC", "url"]
+- !private ["s22RandomAccessCollectionP", "append"]
+- !private ["s22RandomAccessCollectionP", "contains"]
 - ["s22RandomAccessCollectionP", "init"]
+- !private ["s22RandomAccessCollectionP", "sorted"]
+- !private ["s26RangeReplaceableCollectionP", "append"]
+- !private ["s26RangeReplaceableCollectionP", "contains"]
 - ["s26RangeReplaceableCollectionP", "init"]
+- !private ["s26RangeReplaceableCollectionP", "sorted"]
+- !private ["s8SequenceP", "append"]
+- !private ["s8SequenceP", "contains"]
 - ["s8SequenceP", "init"]
+- !private ["s8SequenceP", "insert"]
+- !private ["s8SequenceP", "sorted"]
+- ["s3SetV", "init"]
+- !private ["s3SetV", "insert"]
+- ["s10SetAlgebraP", "init"]
+- !private ["s10SetAlgebraP", "insert"]
 - !private ["SS", "init"]
 - !private ["s14StringProtocolP", "init"]
 - !private ["s16TextOutputStreamP", "init"]
 - !private ["s20TextOutputStreamableP", "init"]
+- !private ["s14_ArrayProtocolP", "append"]
+- !private ["s14_ArrayProtocolP", "contains"]
 - ["s14_ArrayProtocolP", "init"]
+- !private ["s14_ArrayProtocolP", "sorted"]
+- !private ["s24_DestructorSafeContainerP", "append"]
+- !private ["s24_DestructorSafeContainerP", "contains"]
 - ["s24_DestructorSafeContainerP", "init"]
+- !private ["s24_DestructorSafeContainerP", "sorted"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
 - !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
@@ -349,17 +414,22 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "managedObjectModel"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "persistentStoreCoordinator"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "position"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "predicate"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "save"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "slug"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "tags"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "url"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "viewContext"]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
+- !private ["s21_ObjectiveCBridgeableP", "append"]
+- !private ["s21_ObjectiveCBridgeableP", "contains"]
 - ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "insert"]
+- !private ["s21_ObjectiveCBridgeableP", "sorted"]
 - !private ["s16_SwiftStringViewP", "init"]
 depends-nominal:
 - "Sa"
 - "s23BidirectionalCollectionP"
+- !private "Sb"
 - "s7CVarArgP"
 - "s10CollectionP"
 - !private "s10ComparableP"
@@ -373,6 +443,7 @@ depends-nominal:
 - "s9EquatableP"
 - !private "s5ErrorP"
 - "s25ExpressibleByArrayLiteralP"
+- !private "s27ExpressibleByBooleanLiteralP"
 - !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
 - !private "s26ExpressibleByStringLiteralP"
 - !private "s33ExpressibleByUnicodeScalarLiteralP"
@@ -388,7 +459,6 @@ depends-nominal:
 - !private "So19NSEntityDescriptionC"
 - !private "So7NSErrorC"
 - !private "So17NSFastEnumerationP"
-- !private "So14NSFetchRequestC"
 - !private "So20NSFetchRequestResultP"
 - !private "So9NSLockingP"
 - !private "So15NSManagedObjectC"
@@ -398,20 +468,21 @@ depends-nominal:
 - "So16NSObjectProtocolP"
 - "So21NSPersistentContainerC"
 - !private "So28NSPersistentStoreCoordinatorC"
-- !private "So24NSPersistentStoreRequestC"
-- !private "So11NSPredicateC"
 - !private "So14NSSecureCodingP"
 - "8RemoteOk18OportunityFavoriteC"
 - "8RemoteOk11OpportunityC"
 - "s22RandomAccessCollectionP"
 - "s26RangeReplaceableCollectionP"
 - "s8SequenceP"
+- "s3SetV"
+- "s10SetAlgebraP"
 - !private "SS"
 - !private "s14StringProtocolP"
 - !private "s16TextOutputStreamP"
 - !private "s20TextOutputStreamableP"
 - "s14_ArrayProtocolP"
 - "s24_DestructorSafeContainerP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
 - !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
 - !private "s34_ExpressibleByBuiltinStringLiteralP"
 - !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
@@ -462,4 +533,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/MetalKit.framework/Headers/MetalKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
-interface-hash: "593e444d67841849a0c651e4ee13ab0e"
+interface-hash: "cbb3c3bf4922de26566a577b715e6934"

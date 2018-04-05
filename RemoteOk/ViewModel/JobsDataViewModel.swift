@@ -21,6 +21,7 @@ struct JobsDataViewModel {
     func loadJobsFromRemoteOK() {
         self.jobsOpportunityViewModel.deleteAllOpportunities()
         Connection.fetchData { (arrayOfJobOportunities) in
+            print((arrayOfJobOportunities as! Array<Any>).count)
             for job in arrayOfJobOportunities as! Array<Any>{
                 let currentJob = JobOportunity()
                 let jobDictionary = job as! [String:Any]

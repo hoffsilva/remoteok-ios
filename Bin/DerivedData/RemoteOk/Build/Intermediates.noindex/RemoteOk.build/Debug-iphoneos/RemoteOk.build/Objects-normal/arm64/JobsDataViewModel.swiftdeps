@@ -21,22 +21,31 @@ depends-top-level:
 - "JobsDataViewModel"
 - "String"
 - "StringLiteralType"
+- !private "print"
 depends-member:
+- !private ["Sa", "count"]
+- !private ["s23BidirectionalCollectionP", "count"]
 - !private ["s23BidirectionalCollectionP", "init"]
+- !private ["s7CVarArgP", "count"]
 - !private ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "subscript"]
+- !private ["s10CollectionP", "count"]
 - !private ["s10CollectionP", "init"]
 - !private ["s10CollectionP", "subscript"]
 - !private ["s10ComparableP", "init"]
 - !private ["8RemoteOk10ConnectionC", "fetchData"]
+- !private ["s28CustomDebugStringConvertibleP", "count"]
 - !private ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "subscript"]
 - !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "count"]
 - !private ["s17CustomReflectableP", "init"]
 - !private ["s17CustomReflectableP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "count"]
 - !private ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "subscript"]
 - !private ["s9DecodableP", "company"]
+- !private ["s9DecodableP", "count"]
 - !private ["s9DecodableP", "date"]
 - !private ["s9DecodableP", "descriptionValue"]
 - !private ["s9DecodableP", "epoch"]
@@ -50,6 +59,7 @@ depends-member:
 - !private ["s9DecodableP", "url"]
 - !private ["s10DictionaryV", "subscript"]
 - !private ["s9EncodableP", "company"]
+- !private ["s9EncodableP", "count"]
 - !private ["s9EncodableP", "date"]
 - !private ["s9EncodableP", "descriptionValue"]
 - !private ["s9EncodableP", "epoch"]
@@ -61,8 +71,10 @@ depends-member:
 - !private ["s9EncodableP", "subscript"]
 - !private ["s9EncodableP", "tags"]
 - !private ["s9EncodableP", "url"]
+- !private ["s9EquatableP", "count"]
 - !private ["s9EquatableP", "init"]
 - !private ["s9EquatableP", "subscript"]
+- !private ["s25ExpressibleByArrayLiteralP", "count"]
 - !private ["s30ExpressibleByDictionaryLiteralP", "subscript"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s26ExpressibleByStringLiteralP", "init"]
@@ -96,24 +108,33 @@ depends-member:
 - ["8RemoteOk17JobsDataViewModelV", "init"]
 - ["8RemoteOk17JobsDataViewModelV", "jobsOpportunityViewModel"]
 - ["8RemoteOk17JobsDataViewModelV", "loadJobsFromRemoteOK"]
+- !private ["8RemoteOk17JobsDataViewModelV", "print"]
 - !private ["s25LosslessStringConvertibleP", "init"]
 - !private ["s10MirrorPathP", "init"]
+- !private ["s17MutableCollectionP", "count"]
+- !private ["s22RandomAccessCollectionP", "count"]
+- !private ["s26RangeReplaceableCollectionP", "count"]
 - !private ["s26RangeReplaceableCollectionP", "init"]
+- !private ["s8SequenceP", "count"]
 - !private ["s8SequenceP", "init"]
 - !private ["s8SequenceP", "subscript"]
 - !private ["SS", "init"]
 - !private ["s14StringProtocolP", "init"]
 - !private ["s16TextOutputStreamP", "init"]
 - !private ["s20TextOutputStreamableP", "init"]
+- !private ["s14_ArrayProtocolP", "count"]
+- !private ["s24_DestructorSafeContainerP", "count"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
 - !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
 - !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "count"]
 - !private ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s21_ObjectiveCBridgeableP", "subscript"]
 - !private ["s16_SwiftStringViewP", "init"]
 depends-nominal:
+- !private "Sa"
 - !private "s23BidirectionalCollectionP"
 - !private "s7CVarArgP"
 - !private "s10CollectionP"
@@ -127,6 +148,7 @@ depends-nominal:
 - !private "s10DictionaryV"
 - !private "s9EncodableP"
 - !private "s9EquatableP"
+- !private "s25ExpressibleByArrayLiteralP"
 - !private "s30ExpressibleByDictionaryLiteralP"
 - !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
 - !private "s26ExpressibleByStringLiteralP"
@@ -138,12 +160,16 @@ depends-nominal:
 - "8RemoteOk17JobsDataViewModelV"
 - !private "s25LosslessStringConvertibleP"
 - !private "s10MirrorPathP"
+- !private "s17MutableCollectionP"
+- !private "s22RandomAccessCollectionP"
 - !private "s26RangeReplaceableCollectionP"
 - !private "s8SequenceP"
 - !private "SS"
 - !private "s14StringProtocolP"
 - !private "s16TextOutputStreamP"
 - !private "s20TextOutputStreamableP"
+- !private "s14_ArrayProtocolP"
+- !private "s24_DestructorSafeContainerP"
 - !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
 - !private "s34_ExpressibleByBuiltinStringLiteralP"
 - !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"

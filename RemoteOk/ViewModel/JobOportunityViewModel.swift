@@ -12,6 +12,7 @@ import CoreData
 
 protocol JobOpportunityDelegate: class {
     func jobOpportunitiesLoaded()
+    func tagsLoaded()
 }
 
 class JobOportunityViewModel {
@@ -21,6 +22,7 @@ class JobOportunityViewModel {
     var managedContext = CoreDataStack().persistentContainer.viewContext
     var arrayOfOpportunity = [Opportunity]()
     var arrayOfFavoriteOpportunity = [OportunityFavorite]()
+    var arrayOfTags : Set = Set<String>()
     
     func saveJobFromJSON(_ currentJob: JobOportunity) {
         let jobToSave = NSEntityDescription.entity(forEntityName: "Opportunity", in: managedContext)
@@ -77,21 +79,41 @@ class JobOportunityViewModel {
         
     }
     
-    func filterJobsBy(category: String) {
-        
+    func filterJobsBy(tags: [String]) {
         guard let model = managedContext.persistentStoreCoordinator?.managedObjectModel, let fetch = model.fetchRequestTemplate(forName: "allOportunities") as? NSFetchRequest<Opportunity> else {
             return
         }
-        
         do {
             let opportunities = try managedContext.fetch(fetch)
             arrayOfOpportunity = []
             for job in opportunities {
-                if (job.tags?.contains(category))! {
-                    arrayOfOpportunity.append(job)
+                let orderedTags = job.tags?.sorted()
+                let selectedTags = tags.sorted()
+                for tag in selectedTags {
+                    if (orderedTags?.contains(tag))! {
+                        arrayOfOpportunity.append(job)
+                    }
                 }
             }
             self.delegate.jobOpportunitiesLoaded()
+        } catch let error as NSError {
+            print("Error when try fetch all opportunities " + error.description)
+        }
+    }
+    
+    func getTags() {
+        guard let model = managedContext.persistentStoreCoordinator?.managedObjectModel, let fetch = model.fetchRequestTemplate(forName: "allOportunities") as? NSFetchRequest<Opportunity> else {
+            return
+        }
+        do {
+            let opportunities = try managedContext.fetch(fetch)
+            arrayOfTags = []
+            for job in opportunities {
+                for tag in job.tags! {
+                    arrayOfTags.insert(tag)
+                }
+            }
+            self.delegate.tagsLoaded()
         } catch let error as NSError {
             print("Error when try fetch all opportunities " + error.description)
         }
