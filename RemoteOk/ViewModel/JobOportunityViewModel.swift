@@ -79,14 +79,21 @@ class JobOportunityViewModel {
     
     func filterJobsBy(category: String) {
         
-        let fetchRequest = NSFetchRequest<Opportunity>(entityName: "Opportunity")
-        fetchRequest.predicate = NSPredicate(format: "tags CONTAINS[c] %@", argumentArray: [ category])
+        guard let model = managedContext.persistentStoreCoordinator?.managedObjectModel, let fetch = model.fetchRequestTemplate(forName: "allOportunities") as? NSFetchRequest<Opportunity> else {
+            return
+        }
+        
         do {
-            let results = try managedContext.fetch(fetchRequest)
-            arrayOfOpportunity = results
+            let opportunities = try managedContext.fetch(fetch)
+            arrayOfOpportunity = []
+            for job in opportunities {
+                if (job.tags?.contains(category))! {
+                    arrayOfOpportunity.append(job)
+                }
+            }
             self.delegate.jobOpportunitiesLoaded()
         } catch let error as NSError {
-            print(error)
+            print("Error when try fetch all opportunities " + error.description)
         }
     }
     
