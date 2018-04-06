@@ -1,0 +1,21 @@
+version: "Apple Swift version 4.1 (swiftlang-902.0.48 clang-902.0.37.1)"
+options: "c8b3db0cb00ca70b8a68ecc634f63e9c"
+build_time: [1523017957, 538256000]
+inputs:
+  "/Users/hoff.silva/Documents/Personal/Git/remoteok-ios/Pods/Alamofire/Source/AFError.swift": [1523017951, 0]
+  "/Users/hoff.silva/Documents/Personal/Git/remoteok-ios/Pods/Alamofire/Source/Alamofire.swift": [1523017951, 0]
+  "/Users/hoff.silva/Documents/Personal/Git/remoteok-ios/Pods/Alamofire/Source/DispatchQueue+Alamofire.swift": [1523017951, 0]
+  "/Users/hoff.silva/Documents/Personal/Git/remoteok-ios/Pods/Alamofire/Source/MultipartFormData.swift": [1523017951, 0]
+  "/Users/hoff.silva/Documents/Personal/Git/remoteok-ios/Pods/Alamofire/Source/NetworkReachabilityManager.swift": [1523017951, 0]
+  "/Users/hoff.silva/Documents/Personal/Git/remoteok-ios/Pods/Alamofire/Source/Notifications.swift": [1523017951, 0]
+  "/Users/hoff.silva/Documents/Personal/Git/remoteok-ios/Pods/Alamofire/Source/ParameterEncoding.swift": [1523017951, 0]
+  "/Users/hoff.silva/Documents/Personal/Git/remoteok-ios/Pods/Alamofire/Source/Request.swift": [1523017951, 0]
+  "/Users/hoff.silva/Documents/Personal/Git/remoteok-ios/Pods/Alamofire/Source/Response.swift": [1523017951, 0]
+  "/Users/hoff.silva/Documents/Personal/Git/remoteok-ios/Pods/Alamofire/Source/ResponseSerialization.swift": [1523017951, 0]
+  "/Users/hoff.silva/Documents/Personal/Git/remoteok-ios/Pods/Alamofire/Source/Result.swift": [1523017951, 0]
+  "/Users/hoff.silva/Documents/Personal/Git/remoteok-ios/Pods/Alamofire/Source/ServerTrustPolicy.swift": [1523017951, 0]
+  "/Users/hoff.silva/Documents/Personal/Git/remoteok-ios/Pods/Alamofire/Source/SessionDelegate.swift": [1523017951, 0]
+  "/Users/hoff.silva/Documents/Personal/Git/remoteok-ios/Pods/Alamofire/Source/SessionManager.swift": [1523017951, 0]
+  "/Users/hoff.silva/Documents/Personal/Git/remoteok-ios/Pods/Alamofire/Source/TaskDelegate.swift": [1523017951, 0]
+  "/Users/hoff.silva/Documents/Personal/Git/remoteok-ios/Pods/Alamofire/Source/Timeline.swift": [1523017951, 0]
+  "/Users/hoff.silva/Documents/Personal/Git/remoteok-ios/Pods/Alamofire/Source/Validation.swift": [1523017951, 0]

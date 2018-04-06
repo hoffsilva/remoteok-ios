@@ -11,8 +11,6 @@ provides-member:
 provides-dynamic-lookup:
 depends-top-level:
 - "AnyObject"
-- !private "Array"
-- !private "AssignmentPrecedence"
 - !private "CastingPrecedence"
 - !private "Connection"
 - !private "JobOportunity"
@@ -20,85 +18,35 @@ depends-top-level:
 - "JobsDataDelegate"
 - "JobsDataViewModel"
 - "String"
-- "StringLiteralType"
 - !private "print"
 depends-member:
 - !private ["Sa", "count"]
 - !private ["s23BidirectionalCollectionP", "count"]
-- !private ["s23BidirectionalCollectionP", "init"]
 - !private ["s7CVarArgP", "count"]
-- !private ["s7CVarArgP", "init"]
-- !private ["s7CVarArgP", "subscript"]
 - !private ["s10CollectionP", "count"]
-- !private ["s10CollectionP", "init"]
-- !private ["s10CollectionP", "subscript"]
-- !private ["s10ComparableP", "init"]
 - !private ["8RemoteOk10ConnectionC", "fetchData"]
 - !private ["s28CustomDebugStringConvertibleP", "count"]
-- !private ["s28CustomDebugStringConvertibleP", "init"]
-- !private ["s28CustomDebugStringConvertibleP", "subscript"]
-- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "result"]
+- !private ["s28CustomDebugStringConvertibleP", "value"]
 - !private ["s17CustomReflectableP", "count"]
-- !private ["s17CustomReflectableP", "init"]
-- !private ["s17CustomReflectableP", "subscript"]
 - !private ["s23CustomStringConvertibleP", "count"]
-- !private ["s23CustomStringConvertibleP", "init"]
-- !private ["s23CustomStringConvertibleP", "subscript"]
-- !private ["s9DecodableP", "company"]
+- !private ["s23CustomStringConvertibleP", "result"]
+- !private ["s23CustomStringConvertibleP", "value"]
+- !private ["9Alamofire12DataResponseV", "result"]
 - !private ["s9DecodableP", "count"]
-- !private ["s9DecodableP", "date"]
-- !private ["s9DecodableP", "descriptionValue"]
-- !private ["s9DecodableP", "epoch"]
-- !private ["s9DecodableP", "id"]
 - !private ["s9DecodableP", "init"]
-- !private ["s9DecodableP", "logo"]
-- !private ["s9DecodableP", "position"]
-- !private ["s9DecodableP", "slug"]
-- !private ["s9DecodableP", "subscript"]
-- !private ["s9DecodableP", "tags"]
-- !private ["s9DecodableP", "url"]
-- !private ["s10DictionaryV", "subscript"]
-- !private ["s9EncodableP", "company"]
 - !private ["s9EncodableP", "count"]
-- !private ["s9EncodableP", "date"]
-- !private ["s9EncodableP", "descriptionValue"]
-- !private ["s9EncodableP", "epoch"]
-- !private ["s9EncodableP", "id"]
 - !private ["s9EncodableP", "init"]
-- !private ["s9EncodableP", "logo"]
-- !private ["s9EncodableP", "position"]
-- !private ["s9EncodableP", "slug"]
-- !private ["s9EncodableP", "subscript"]
-- !private ["s9EncodableP", "tags"]
-- !private ["s9EncodableP", "url"]
 - !private ["s9EquatableP", "count"]
-- !private ["s9EquatableP", "init"]
-- !private ["s9EquatableP", "subscript"]
 - !private ["s25ExpressibleByArrayLiteralP", "count"]
-- !private ["s30ExpressibleByDictionaryLiteralP", "subscript"]
-- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
-- !private ["s26ExpressibleByStringLiteralP", "init"]
-- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
-- !private ["s8HashableP", "init"]
-- !private ["8RemoteOk13JobOportunityC", "company"]
-- !private ["8RemoteOk13JobOportunityC", "date"]
 - !private ["8RemoteOk13JobOportunityC", "deinit"]
-- !private ["8RemoteOk13JobOportunityC", "descriptionValue"]
-- !private ["8RemoteOk13JobOportunityC", "epoch"]
-- !private ["8RemoteOk13JobOportunityC", "id"]
 - !private ["8RemoteOk13JobOportunityC", "init"]
-- !private ["8RemoteOk13JobOportunityC", "logo"]
-- !private ["8RemoteOk13JobOportunityC", "position"]
-- !private ["8RemoteOk13JobOportunityC", "slug"]
-- !private ["8RemoteOk13JobOportunityC", "tags"]
-- !private ["8RemoteOk13JobOportunityC", "url"]
 - !private ["8RemoteOk22JobOportunityViewModelC", "deleteAllOpportunities"]
 - ["8RemoteOk22JobOportunityViewModelC", "init"]
 - !private ["8RemoteOk22JobOportunityViewModelC", "saveJobFromJSON"]
 - ["8RemoteOk16JobsDataDelegateP", "String"]
 - ["8RemoteOk16JobsDataDelegateP", "loadJobDataFailed"]
 - ["8RemoteOk16JobsDataDelegateP", "loadJobDataSuccessful"]
-- !private ["8RemoteOk17JobsDataViewModelV", "Array"]
 - !private ["8RemoteOk17JobsDataViewModelV", "Connection"]
 - !private ["8RemoteOk17JobsDataViewModelV", "JobOportunity"]
 - ["8RemoteOk17JobsDataViewModelV", "JobOportunityViewModel"]
@@ -109,78 +57,49 @@ depends-member:
 - ["8RemoteOk17JobsDataViewModelV", "jobsOpportunityViewModel"]
 - ["8RemoteOk17JobsDataViewModelV", "loadJobsFromRemoteOK"]
 - !private ["8RemoteOk17JobsDataViewModelV", "print"]
-- !private ["s25LosslessStringConvertibleP", "init"]
-- !private ["s10MirrorPathP", "init"]
 - !private ["s17MutableCollectionP", "count"]
 - !private ["s22RandomAccessCollectionP", "count"]
 - !private ["s26RangeReplaceableCollectionP", "count"]
-- !private ["s26RangeReplaceableCollectionP", "init"]
+- !private ["9Alamofire8ResponseP", "result"]
+- !private ["9Alamofire6ResultO", "value"]
 - !private ["s8SequenceP", "count"]
-- !private ["s8SequenceP", "init"]
-- !private ["s8SequenceP", "subscript"]
-- !private ["SS", "init"]
-- !private ["s14StringProtocolP", "init"]
-- !private ["s16TextOutputStreamP", "init"]
-- !private ["s20TextOutputStreamableP", "init"]
 - !private ["s14_ArrayProtocolP", "count"]
 - !private ["s24_DestructorSafeContainerP", "count"]
-- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
-- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
-- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
-- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
-- !private ["s33_ExpressibleByStringInterpolationP", "init"]
 - !private ["s21_ObjectiveCBridgeableP", "count"]
-- !private ["s21_ObjectiveCBridgeableP", "init"]
-- !private ["s21_ObjectiveCBridgeableP", "subscript"]
-- !private ["s16_SwiftStringViewP", "init"]
 depends-nominal:
 - !private "Sa"
 - !private "s23BidirectionalCollectionP"
 - !private "s7CVarArgP"
 - !private "s10CollectionP"
-- !private "s10ComparableP"
 - !private "8RemoteOk10ConnectionC"
 - !private "s28CustomDebugStringConvertibleP"
-- !private "s29CustomPlaygroundQuickLookableP"
 - !private "s17CustomReflectableP"
 - !private "s23CustomStringConvertibleP"
+- !private "9Alamofire12DataResponseV"
 - !private "s9DecodableP"
-- !private "s10DictionaryV"
 - !private "s9EncodableP"
 - !private "s9EquatableP"
 - !private "s25ExpressibleByArrayLiteralP"
-- !private "s30ExpressibleByDictionaryLiteralP"
-- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
-- !private "s26ExpressibleByStringLiteralP"
-- !private "s33ExpressibleByUnicodeScalarLiteralP"
-- !private "s8HashableP"
 - !private "8RemoteOk13JobOportunityC"
 - "8RemoteOk22JobOportunityViewModelC"
 - "8RemoteOk16JobsDataDelegateP"
 - "8RemoteOk17JobsDataViewModelV"
-- !private "s25LosslessStringConvertibleP"
-- !private "s10MirrorPathP"
 - !private "s17MutableCollectionP"
 - !private "s22RandomAccessCollectionP"
 - !private "s26RangeReplaceableCollectionP"
+- !private "9Alamofire8ResponseP"
+- !private "9Alamofire6ResultO"
 - !private "s8SequenceP"
-- !private "SS"
-- !private "s14StringProtocolP"
-- !private "s16TextOutputStreamP"
-- !private "s20TextOutputStreamableP"
 - !private "s14_ArrayProtocolP"
 - !private "s24_DestructorSafeContainerP"
-- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
-- !private "s34_ExpressibleByBuiltinStringLiteralP"
-- !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
-- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
-- !private "s33_ExpressibleByStringInterpolationP"
 - !private "s21_ObjectiveCBridgeableP"
-- !private "s16_SwiftStringViewP"
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.apinotesc"
+- "/Users/hoff.silva/Documents/Personal/Git/remoteok-ios/Bin/DerivedData/RemoteOk/Build/Products/Debug-iphoneos/SwiftyJSON/SwiftyJSON.framework/Modules/SwiftyJSON.swiftmodule/arm64.swiftmodule"
+- "/Users/hoff.silva/Documents/Personal/Git/remoteok-ios/Bin/DerivedData/RemoteOk/Build/Products/Debug-iphoneos/Alamofire/Alamofire.framework/Modules/Alamofire.swiftmodule/arm64.swiftmodule"
 - "/Users/hoff.silva/Documents/Personal/Git/remoteok-ios/Bin/DerivedData/RemoteOk/Build/Products/Debug-iphoneos/Hero/Hero.framework/Modules/Hero.swiftmodule/arm64.swiftmodule"
+- "/Users/hoff.silva/Documents/Personal/Git/remoteok-ios/Bin/DerivedData/RemoteOk/Build/Products/Debug-iphoneos/SwiftyPlistManager/SwiftyPlistManager.framework/Modules/SwiftyPlistManager.swiftmodule/arm64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ModelIO.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreMedia.swiftmodule"
@@ -200,9 +119,21 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/MetalKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
+- "/Users/hoff.silva/Documents/Personal/Git/remoteok-ios/Bin/DerivedData/RemoteOk/Build/Products/Debug-iphoneos/SwiftyJSON/SwiftyJSON.framework/Headers/SwiftyJSON-umbrella.h"
+- "/Users/hoff.silva/Documents/Personal/Git/remoteok-ios/Bin/DerivedData/RemoteOk/Build/Products/Debug-iphoneos/Alamofire/Alamofire.framework/Headers/Alamofire-umbrella.h"
 - "/Users/hoff.silva/Documents/Personal/Git/remoteok-ios/Bin/DerivedData/RemoteOk/Build/Products/Debug-iphoneos/Hero/Hero.framework/Headers/Hero-umbrella.h"
+- "/Users/hoff.silva/Documents/Personal/Git/remoteok-ios/Bin/DerivedData/RemoteOk/Build/Products/Debug-iphoneos/SwiftyPlistManager/SwiftyPlistManager.framework/Headers/SwiftyPlistManager-umbrella.h"
+- "/Users/hoff.silva/Documents/Personal/Git/remoteok-ios/Bin/DerivedData/RemoteOk/Build/Products/Debug-iphoneos/FCAlertView/FCAlertView.framework/Headers/FCAlertView-umbrella.h"
+- "/Users/hoff.silva/Documents/Personal/Git/remoteok-ios/Bin/DerivedData/RemoteOk/Build/Products/Debug-iphoneos/SwiftyJSON/SwiftyJSON.framework/Headers/SwiftyJSON-Swift.h"
+- "/Users/hoff.silva/Documents/Personal/Git/remoteok-ios/Bin/DerivedData/RemoteOk/Build/Products/Debug-iphoneos/Alamofire/Alamofire.framework/Headers/Alamofire-Swift.h"
 - "/Users/hoff.silva/Documents/Personal/Git/remoteok-ios/Bin/DerivedData/RemoteOk/Build/Products/Debug-iphoneos/Hero/Hero.framework/Headers/Hero-Swift.h"
+- "/Users/hoff.silva/Documents/Personal/Git/remoteok-ios/Bin/DerivedData/RemoteOk/Build/Products/Debug-iphoneos/SwiftyPlistManager/SwiftyPlistManager.framework/Headers/SwiftyPlistManager-Swift.h"
+- "/Users/hoff.silva/Documents/Personal/Git/remoteok-ios/Bin/DerivedData/RemoteOk/Build/Products/Debug-iphoneos/FCAlertView/FCAlertView.framework/Headers/FCAlertView.h"
+- "/Users/hoff.silva/Documents/Personal/Git/remoteok-ios/Bin/DerivedData/RemoteOk/Build/Products/Debug-iphoneos/SwiftyJSON/SwiftyJSON.framework/Modules/module.modulemap"
+- "/Users/hoff.silva/Documents/Personal/Git/remoteok-ios/Bin/DerivedData/RemoteOk/Build/Products/Debug-iphoneos/Alamofire/Alamofire.framework/Modules/module.modulemap"
 - "/Users/hoff.silva/Documents/Personal/Git/remoteok-ios/Bin/DerivedData/RemoteOk/Build/Products/Debug-iphoneos/Hero/Hero.framework/Modules/module.modulemap"
+- "/Users/hoff.silva/Documents/Personal/Git/remoteok-ios/Bin/DerivedData/RemoteOk/Build/Products/Debug-iphoneos/SwiftyPlistManager/SwiftyPlistManager.framework/Modules/module.modulemap"
+- "/Users/hoff.silva/Documents/Personal/Git/remoteok-ios/Bin/DerivedData/RemoteOk/Build/Products/Debug-iphoneos/FCAlertView/FCAlertView.framework/Modules/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/usr/include/objc/ObjectiveC.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/ModelIO.framework/Headers/ModelIO.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"

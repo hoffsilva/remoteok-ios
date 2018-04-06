@@ -1,0 +1,551 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "Plist"
+- "SwiftyPlistManagerError"
+- "SwiftyPlistManager"
+- "plistManagerPrint"
+provides-nominal:
+- "18SwiftyPlistManager0B0V"
+- "18SwiftyPlistManager0abC5ErrorO"
+- "18SwiftyPlistManagerAAC"
+provides-member:
+- ["18SwiftyPlistManager0B0V", ""]
+- ["18SwiftyPlistManager0abC5ErrorO", ""]
+- ["18SwiftyPlistManagerAAC", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "!"
+- !private "!="
+- !private "+="
+- "=="
+- !private "??"
+- !private "Array"
+- "AssignmentPrecedence"
+- "Bool"
+- "BooleanLiteralType"
+- !private "Bundle"
+- "CastingPrecedence"
+- !private "Dictionary"
+- "Error"
+- !private "FileManager"
+- "NSDictionary"
+- !private "NSError"
+- "NSMutableDictionary"
+- !private "NSSearchPathForDirectoriesInDomains"
+- !private "NSString"
+- "Plist"
+- "String"
+- !private "StringLiteralType"
+- "SwiftyPlistManager"
+- "SwiftyPlistManagerError"
+- !private "UnicodeScalarType"
+- "plistManagerPrint"
+- !private "print"
+- !private "type"
+depends-member:
+- !private ["Sa", "count"]
+- !private ["Sa", "enumerated"]
+- !private ["Sa", "init"]
+- !private ["Sa", "subscript"]
+- !private ["s23BidirectionalCollectionP", "count"]
+- !private ["s23BidirectionalCollectionP", "enumerated"]
+- !private ["s23BidirectionalCollectionP", "init"]
+- !private ["s23BidirectionalCollectionP", "subscript"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["So6BundleC", "main"]
+- !private ["So6BundleC", "path"]
+- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "allKeys"]
+- !private ["s7CVarArgP", "appendingPathComponent"]
+- !private ["s7CVarArgP", "copyItem"]
+- !private ["s7CVarArgP", "count"]
+- !private ["s7CVarArgP", "default"]
+- !private ["s7CVarArgP", "enumerated"]
+- !private ["s7CVarArgP", "fileExists"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "localizedDescription"]
+- !private ["s7CVarArgP", "main"]
+- !private ["s7CVarArgP", "path"]
+- !private ["s7CVarArgP", "removeAllObjects"]
+- !private ["s7CVarArgP", "removeObject"]
+- !private ["s7CVarArgP", "subscript"]
+- !private ["s7CVarArgP", "write"]
+- !private ["s10CollectionP", "count"]
+- !private ["s10CollectionP", "enumerated"]
+- !private ["s10CollectionP", "init"]
+- !private ["s10CollectionP", "subscript"]
+- !private ["s10ComparableP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "allKeys"]
+- !private ["s28CustomDebugStringConvertibleP", "appendingPathComponent"]
+- !private ["s28CustomDebugStringConvertibleP", "copyItem"]
+- !private ["s28CustomDebugStringConvertibleP", "count"]
+- !private ["s28CustomDebugStringConvertibleP", "default"]
+- !private ["s28CustomDebugStringConvertibleP", "enumerated"]
+- !private ["s28CustomDebugStringConvertibleP", "fileAlreadyEmpty"]
+- !private ["s28CustomDebugStringConvertibleP", "fileExists"]
+- !private ["s28CustomDebugStringConvertibleP", "fileUnavailable"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "keyValuePairAlreadyExists"]
+- !private ["s28CustomDebugStringConvertibleP", "keyValuePairDoesNotExist"]
+- !private ["s28CustomDebugStringConvertibleP", "localizedDescription"]
+- !private ["s28CustomDebugStringConvertibleP", "main"]
+- !private ["s28CustomDebugStringConvertibleP", "none"]
+- !private ["s28CustomDebugStringConvertibleP", "path"]
+- !private ["s28CustomDebugStringConvertibleP", "removeAllObjects"]
+- !private ["s28CustomDebugStringConvertibleP", "removeObject"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s28CustomDebugStringConvertibleP", "write"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- !private ["s29CustomPlaygroundQuickLookableP", "appendingPathComponent"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "allKeys"]
+- !private ["s17CustomReflectableP", "count"]
+- !private ["s17CustomReflectableP", "enumerated"]
+- !private ["s17CustomReflectableP", "fileAlreadyEmpty"]
+- !private ["s17CustomReflectableP", "fileUnavailable"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "keyValuePairAlreadyExists"]
+- !private ["s17CustomReflectableP", "keyValuePairDoesNotExist"]
+- !private ["s17CustomReflectableP", "none"]
+- !private ["s17CustomReflectableP", "removeAllObjects"]
+- !private ["s17CustomReflectableP", "removeObject"]
+- !private ["s17CustomReflectableP", "subscript"]
+- !private ["s17CustomReflectableP", "write"]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "allKeys"]
+- !private ["s23CustomStringConvertibleP", "appendingPathComponent"]
+- !private ["s23CustomStringConvertibleP", "copyItem"]
+- !private ["s23CustomStringConvertibleP", "count"]
+- !private ["s23CustomStringConvertibleP", "default"]
+- !private ["s23CustomStringConvertibleP", "enumerated"]
+- !private ["s23CustomStringConvertibleP", "fileExists"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "localizedDescription"]
+- !private ["s23CustomStringConvertibleP", "main"]
+- !private ["s23CustomStringConvertibleP", "path"]
+- !private ["s23CustomStringConvertibleP", "removeAllObjects"]
+- !private ["s23CustomStringConvertibleP", "removeObject"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "write"]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
+- !private ["s9DecodableP", "count"]
+- !private ["s9DecodableP", "enumerated"]
+- !private ["s9DecodableP", "fileAlreadyEmpty"]
+- !private ["s9DecodableP", "fileUnavailable"]
+- !private ["s9DecodableP", "init"]
+- !private ["s9DecodableP", "keyValuePairAlreadyExists"]
+- !private ["s9DecodableP", "keyValuePairDoesNotExist"]
+- !private ["s9DecodableP", "none"]
+- !private ["s9DecodableP", "subscript"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
+- !private ["s9EncodableP", "count"]
+- !private ["s9EncodableP", "enumerated"]
+- !private ["s9EncodableP", "fileAlreadyEmpty"]
+- !private ["s9EncodableP", "fileUnavailable"]
+- !private ["s9EncodableP", "init"]
+- !private ["s9EncodableP", "keyValuePairAlreadyExists"]
+- !private ["s9EncodableP", "keyValuePairDoesNotExist"]
+- !private ["s9EncodableP", "none"]
+- !private ["s9EncodableP", "subscript"]
+- ["s9EquatableP", ""]
+- ["s9EquatableP", "_code"]
+- ["s9EquatableP", "_domain"]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
+- ["s9EquatableP", "_getEmbeddedNSError"]
+- ["s9EquatableP", "_userInfo"]
+- !private ["s9EquatableP", "allKeys"]
+- !private ["s9EquatableP", "appendingPathComponent"]
+- !private ["s9EquatableP", "copyItem"]
+- !private ["s9EquatableP", "count"]
+- !private ["s9EquatableP", "default"]
+- !private ["s9EquatableP", "documentDirectory"]
+- !private ["s9EquatableP", "enumerated"]
+- !private ["s9EquatableP", "fileAlreadyEmpty"]
+- !private ["s9EquatableP", "fileDoesNotExist"]
+- !private ["s9EquatableP", "fileExists"]
+- !private ["s9EquatableP", "fileNotWritten"]
+- !private ["s9EquatableP", "fileUnavailable"]
+- ["s9EquatableP", "hashValue"]
+- !private ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "keyValuePairAlreadyExists"]
+- !private ["s9EquatableP", "keyValuePairDoesNotExist"]
+- !private ["s9EquatableP", "localizedDescription"]
+- !private ["s9EquatableP", "main"]
+- !private ["s9EquatableP", "none"]
+- !private ["s9EquatableP", "path"]
+- !private ["s9EquatableP", "removeAllObjects"]
+- !private ["s9EquatableP", "removeObject"]
+- !private ["s9EquatableP", "subscript"]
+- !private ["s9EquatableP", "userDomainMask"]
+- !private ["s9EquatableP", "write"]
+- ["s5ErrorP", ""]
+- ["s5ErrorP", "_code"]
+- ["s5ErrorP", "_domain"]
+- ["s5ErrorP", "_getEmbeddedNSError"]
+- ["s5ErrorP", "_userInfo"]
+- !private ["s5ErrorP", "fileAlreadyEmpty"]
+- !private ["s5ErrorP", "fileDoesNotExist"]
+- !private ["s5ErrorP", "fileNotWritten"]
+- !private ["s5ErrorP", "fileUnavailable"]
+- ["s5ErrorP", "hashValue"]
+- !private ["s5ErrorP", "keyValuePairAlreadyExists"]
+- !private ["s5ErrorP", "keyValuePairDoesNotExist"]
+- !private ["s5ErrorP", "localizedDescription"]
+- !private ["s25ExpressibleByArrayLiteralP", "count"]
+- !private ["s25ExpressibleByArrayLiteralP", "enumerated"]
+- !private ["s25ExpressibleByArrayLiteralP", "init"]
+- !private ["s25ExpressibleByArrayLiteralP", "subscript"]
+- !private ["s25ExpressibleByArrayLiteralP", "userDomainMask"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "allKeys"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "init"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "removeAllObjects"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "removeObject"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "subscript"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "write"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "appendingPathComponent"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s23ExpressibleByNilLiteralP", "fileAlreadyEmpty"]
+- !private ["s23ExpressibleByNilLiteralP", "fileUnavailable"]
+- !private ["s23ExpressibleByNilLiteralP", "keyValuePairAlreadyExists"]
+- !private ["s23ExpressibleByNilLiteralP", "keyValuePairDoesNotExist"]
+- !private ["s23ExpressibleByNilLiteralP", "none"]
+- !private ["s26ExpressibleByStringLiteralP", "appendingPathComponent"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "appendingPathComponent"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["So11FileManagerC", "copyItem"]
+- !private ["So11FileManagerC", "default"]
+- !private ["So11FileManagerC", "fileExists"]
+- ["s8HashableP", ""]
+- ["s8HashableP", "_code"]
+- ["s8HashableP", "_domain"]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
+- ["s8HashableP", "_getEmbeddedNSError"]
+- ["s8HashableP", "_userInfo"]
+- !private ["s8HashableP", "allKeys"]
+- !private ["s8HashableP", "appendingPathComponent"]
+- !private ["s8HashableP", "copyItem"]
+- !private ["s8HashableP", "default"]
+- !private ["s8HashableP", "documentDirectory"]
+- !private ["s8HashableP", "fileAlreadyEmpty"]
+- !private ["s8HashableP", "fileDoesNotExist"]
+- !private ["s8HashableP", "fileExists"]
+- !private ["s8HashableP", "fileNotWritten"]
+- !private ["s8HashableP", "fileUnavailable"]
+- ["s8HashableP", "hashValue"]
+- !private ["s8HashableP", "init"]
+- !private ["s8HashableP", "keyValuePairAlreadyExists"]
+- !private ["s8HashableP", "keyValuePairDoesNotExist"]
+- !private ["s8HashableP", "localizedDescription"]
+- !private ["s8HashableP", "main"]
+- !private ["s8HashableP", "path"]
+- !private ["s8HashableP", "removeAllObjects"]
+- !private ["s8HashableP", "removeObject"]
+- !private ["s8HashableP", "subscript"]
+- !private ["s8HashableP", "write"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["s17MutableCollectionP", "count"]
+- !private ["s17MutableCollectionP", "enumerated"]
+- !private ["s17MutableCollectionP", "init"]
+- !private ["s17MutableCollectionP", "subscript"]
+- !private ["So8NSCodingP", "allKeys"]
+- !private ["So8NSCodingP", "appendingPathComponent"]
+- !private ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "localizedDescription"]
+- !private ["So8NSCodingP", "removeAllObjects"]
+- !private ["So8NSCodingP", "removeObject"]
+- !private ["So8NSCodingP", "subscript"]
+- !private ["So8NSCodingP", "write"]
+- !private ["So9NSCopyingP", "allKeys"]
+- !private ["So9NSCopyingP", "appendingPathComponent"]
+- !private ["So9NSCopyingP", "init"]
+- !private ["So9NSCopyingP", "localizedDescription"]
+- !private ["So9NSCopyingP", "removeAllObjects"]
+- !private ["So9NSCopyingP", "removeObject"]
+- !private ["So9NSCopyingP", "subscript"]
+- !private ["So9NSCopyingP", "write"]
+- !private ["So12NSDictionaryC", "allKeys"]
+- !private ["So12NSDictionaryC", "init"]
+- !private ["So12NSDictionaryC", "removeAllObjects"]
+- !private ["So12NSDictionaryC", "removeObject"]
+- !private ["So12NSDictionaryC", "subscript"]
+- !private ["So12NSDictionaryC", "write"]
+- !private ["So7NSErrorC", "localizedDescription"]
+- !private ["So17NSFastEnumerationP", "allKeys"]
+- !private ["So17NSFastEnumerationP", "init"]
+- !private ["So17NSFastEnumerationP", "removeAllObjects"]
+- !private ["So17NSFastEnumerationP", "removeObject"]
+- !private ["So17NSFastEnumerationP", "subscript"]
+- !private ["So17NSFastEnumerationP", "write"]
+- !private ["So21NSItemProviderReadingP", "appendingPathComponent"]
+- !private ["So21NSItemProviderWritingP", "appendingPathComponent"]
+- !private ["So16NSMutableCopyingP", "allKeys"]
+- !private ["So16NSMutableCopyingP", "appendingPathComponent"]
+- !private ["So16NSMutableCopyingP", "init"]
+- !private ["So16NSMutableCopyingP", "removeAllObjects"]
+- !private ["So16NSMutableCopyingP", "removeObject"]
+- !private ["So16NSMutableCopyingP", "subscript"]
+- !private ["So16NSMutableCopyingP", "write"]
+- !private ["So19NSMutableDictionaryC", "allKeys"]
+- !private ["So19NSMutableDictionaryC", "init"]
+- !private ["So19NSMutableDictionaryC", "removeAllObjects"]
+- !private ["So19NSMutableDictionaryC", "removeObject"]
+- !private ["So19NSMutableDictionaryC", "subscript"]
+- !private ["So8NSObjectC", "allKeys"]
+- !private ["So8NSObjectC", "appendingPathComponent"]
+- !private ["So8NSObjectC", "copyItem"]
+- !private ["So8NSObjectC", "default"]
+- !private ["So8NSObjectC", "fileExists"]
+- !private ["So8NSObjectC", "localizedDescription"]
+- !private ["So8NSObjectC", "main"]
+- !private ["So8NSObjectC", "path"]
+- !private ["So8NSObjectC", "removeAllObjects"]
+- !private ["So8NSObjectC", "removeObject"]
+- !private ["So8NSObjectC", "subscript"]
+- !private ["So8NSObjectC", "write"]
+- !private ["So16NSObjectProtocolP", "allKeys"]
+- !private ["So16NSObjectProtocolP", "appendingPathComponent"]
+- !private ["So16NSObjectProtocolP", "copyItem"]
+- !private ["So16NSObjectProtocolP", "default"]
+- !private ["So16NSObjectProtocolP", "fileExists"]
+- !private ["So16NSObjectProtocolP", "init"]
+- !private ["So16NSObjectProtocolP", "localizedDescription"]
+- !private ["So16NSObjectProtocolP", "main"]
+- !private ["So16NSObjectProtocolP", "path"]
+- !private ["So16NSObjectProtocolP", "removeAllObjects"]
+- !private ["So16NSObjectProtocolP", "removeObject"]
+- !private ["So16NSObjectProtocolP", "subscript"]
+- !private ["So16NSObjectProtocolP", "write"]
+- !private ["So14NSSecureCodingP", "allKeys"]
+- !private ["So14NSSecureCodingP", "appendingPathComponent"]
+- !private ["So14NSSecureCodingP", "init"]
+- !private ["So14NSSecureCodingP", "localizedDescription"]
+- !private ["So14NSSecureCodingP", "removeAllObjects"]
+- !private ["So14NSSecureCodingP", "removeObject"]
+- !private ["So14NSSecureCodingP", "subscript"]
+- !private ["So14NSSecureCodingP", "write"]
+- !private ["So8NSStringC", "appendingPathComponent"]
+- !private ["s9OptionSetP", "userDomainMask"]
+- !private ["Sq", "fileAlreadyEmpty"]
+- !private ["Sq", "fileUnavailable"]
+- !private ["Sq", "keyValuePairAlreadyExists"]
+- !private ["Sq", "keyValuePairDoesNotExist"]
+- !private ["Sq", "none"]
+- !private ["18SwiftyPlistManager0B0V", "Bundle"]
+- !private ["18SwiftyPlistManager0B0V", "FileManager"]
+- ["18SwiftyPlistManager0B0V", "NSDictionary"]
+- !private ["18SwiftyPlistManager0B0V", "NSError"]
+- ["18SwiftyPlistManager0B0V", "NSMutableDictionary"]
+- !private ["18SwiftyPlistManager0B0V", "NSSearchPathForDirectoriesInDomains"]
+- !private ["18SwiftyPlistManager0B0V", "NSString"]
+- ["18SwiftyPlistManager0B0V", "String"]
+- !private ["18SwiftyPlistManager0B0V", "SwiftyPlistManagerError"]
+- ["18SwiftyPlistManager0B0V", "addValuesToPlistFile"]
+- ["18SwiftyPlistManager0B0V", "destPath"]
+- ["18SwiftyPlistManager0B0V", "getMutablePlistFile"]
+- ["18SwiftyPlistManager0B0V", "getValuesInPlistFile"]
+- ["18SwiftyPlistManager0B0V", "init"]
+- ["18SwiftyPlistManager0B0V", "name"]
+- !private ["18SwiftyPlistManager0B0V", "plistManagerPrint"]
+- ["18SwiftyPlistManager0B0V", "sourcePath"]
+- !private ["s22RandomAccessCollectionP", "count"]
+- !private ["s22RandomAccessCollectionP", "enumerated"]
+- !private ["s22RandomAccessCollectionP", "init"]
+- !private ["s22RandomAccessCollectionP", "subscript"]
+- !private ["s26RangeReplaceableCollectionP", "count"]
+- !private ["s26RangeReplaceableCollectionP", "enumerated"]
+- !private ["s26RangeReplaceableCollectionP", "init"]
+- !private ["s26RangeReplaceableCollectionP", "subscript"]
+- !private ["s16RawRepresentableP", "documentDirectory"]
+- !private ["s16RawRepresentableP", "userDomainMask"]
+- !private ["So11FileManagerC19SearchPathDirectoryO", "documentDirectory"]
+- !private ["So11FileManagerC20SearchPathDomainMaskV", "userDomainMask"]
+- !private ["s8SequenceP", "allKeys"]
+- !private ["s8SequenceP", "count"]
+- !private ["s8SequenceP", "enumerated"]
+- !private ["s8SequenceP", "init"]
+- !private ["s8SequenceP", "removeAllObjects"]
+- !private ["s8SequenceP", "removeObject"]
+- !private ["s8SequenceP", "subscript"]
+- !private ["s8SequenceP", "write"]
+- !private ["s10SetAlgebraP", "userDomainMask"]
+- !private ["SS", "init"]
+- !private ["s14StringProtocolP", "init"]
+- !private ["18SwiftyPlistManagerAAC", "Array"]
+- ["18SwiftyPlistManagerAAC", "Bool"]
+- ["18SwiftyPlistManagerAAC", "Plist"]
+- ["18SwiftyPlistManagerAAC", "String"]
+- ["18SwiftyPlistManagerAAC", "SwiftyPlistManager"]
+- ["18SwiftyPlistManagerAAC", "SwiftyPlistManagerError"]
+- ["18SwiftyPlistManagerAAC", "addNew"]
+- ["18SwiftyPlistManagerAAC", "deinit"]
+- ["18SwiftyPlistManagerAAC", "fetchValue"]
+- ["18SwiftyPlistManagerAAC", "getValue"]
+- ["18SwiftyPlistManagerAAC", "init"]
+- ["18SwiftyPlistManagerAAC", "keyAlreadyExists"]
+- ["18SwiftyPlistManagerAAC", "logAction"]
+- ["18SwiftyPlistManagerAAC", "logPlistManager"]
+- !private ["18SwiftyPlistManagerAAC", "plistManagerPrint"]
+- ["18SwiftyPlistManagerAAC", "removeAllKeyValuePairs"]
+- ["18SwiftyPlistManagerAAC", "removeKeyValuePair"]
+- ["18SwiftyPlistManagerAAC", "save"]
+- ["18SwiftyPlistManagerAAC", "shared"]
+- ["18SwiftyPlistManagerAAC", "start"]
+- !private ["18SwiftyPlistManagerAAC", "type"]
+- ["18SwiftyPlistManager0abC5ErrorO", "__derived_enum_equals"]
+- ["18SwiftyPlistManager0abC5ErrorO", "_code"]
+- ["18SwiftyPlistManager0abC5ErrorO", "_domain"]
+- ["18SwiftyPlistManager0abC5ErrorO", "_getEmbeddedNSError"]
+- ["18SwiftyPlistManager0abC5ErrorO", "_userInfo"]
+- ["18SwiftyPlistManager0abC5ErrorO", "deinit"]
+- ["18SwiftyPlistManager0abC5ErrorO", "fileAlreadyEmpty"]
+- ["18SwiftyPlistManager0abC5ErrorO", "fileDoesNotExist"]
+- ["18SwiftyPlistManager0abC5ErrorO", "fileNotWritten"]
+- ["18SwiftyPlistManager0abC5ErrorO", "fileUnavailable"]
+- ["18SwiftyPlistManager0abC5ErrorO", "hashValue"]
+- ["18SwiftyPlistManager0abC5ErrorO", "keyValuePairAlreadyExists"]
+- ["18SwiftyPlistManager0abC5ErrorO", "keyValuePairDoesNotExist"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["s14_ArrayProtocolP", "count"]
+- !private ["s14_ArrayProtocolP", "enumerated"]
+- !private ["s14_ArrayProtocolP", "init"]
+- !private ["s14_ArrayProtocolP", "subscript"]
+- !private ["s24_DestructorSafeContainerP", "count"]
+- !private ["s24_DestructorSafeContainerP", "enumerated"]
+- !private ["s24_DestructorSafeContainerP", "init"]
+- !private ["s24_DestructorSafeContainerP", "subscript"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "appendingPathComponent"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "allKeys"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "appendingPathComponent"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "copyItem"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "default"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "fileExists"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "localizedDescription"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "main"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "path"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "removeAllObjects"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "removeObject"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "subscript"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "write"]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
+- !private ["s21_ObjectiveCBridgeableP", "count"]
+- !private ["s21_ObjectiveCBridgeableP", "enumerated"]
+- !private ["s21_ObjectiveCBridgeableP", "fileAlreadyEmpty"]
+- !private ["s21_ObjectiveCBridgeableP", "fileUnavailable"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "keyValuePairAlreadyExists"]
+- !private ["s21_ObjectiveCBridgeableP", "keyValuePairDoesNotExist"]
+- !private ["s21_ObjectiveCBridgeableP", "none"]
+- !private ["s21_ObjectiveCBridgeableP", "subscript"]
+- !private ["s26_OptionalNilComparisonTypeV", "none"]
+- !private ["s16_SwiftStringViewP", "init"]
+depends-nominal:
+- !private "Sa"
+- !private "s23BidirectionalCollectionP"
+- !private "Sb"
+- !private "So6BundleC"
+- !private "s7CVarArgP"
+- !private "s10CollectionP"
+- !private "s10ComparableP"
+- !private "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
+- !private "s23CustomStringConvertibleP"
+- !private "s9DecodableP"
+- !private "s9EncodableP"
+- "s9EquatableP"
+- "s5ErrorP"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- !private "s30ExpressibleByDictionaryLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s23ExpressibleByNilLiteralP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "So11FileManagerC"
+- "s8HashableP"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
+- !private "s17MutableCollectionP"
+- !private "So8NSCodingP"
+- !private "So9NSCopyingP"
+- !private "So12NSDictionaryC"
+- !private "So7NSErrorC"
+- !private "So17NSFastEnumerationP"
+- !private "So21NSItemProviderReadingP"
+- !private "So21NSItemProviderWritingP"
+- !private "So16NSMutableCopyingP"
+- !private "So19NSMutableDictionaryC"
+- !private "So8NSObjectC"
+- !private "So16NSObjectProtocolP"
+- !private "So14NSSecureCodingP"
+- !private "So8NSStringC"
+- !private "s9OptionSetP"
+- !private "Sq"
+- "18SwiftyPlistManager0B0V"
+- !private "s22RandomAccessCollectionP"
+- !private "s26RangeReplaceableCollectionP"
+- !private "s16RawRepresentableP"
+- !private "So11FileManagerC19SearchPathDirectoryO"
+- !private "So11FileManagerC20SearchPathDomainMaskV"
+- !private "s8SequenceP"
+- !private "s10SetAlgebraP"
+- !private "SS"
+- !private "s14StringProtocolP"
+- "18SwiftyPlistManagerAAC"
+- "18SwiftyPlistManager0abC5ErrorO"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- !private "s14_ArrayProtocolP"
+- !private "s24_DestructorSafeContainerP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s33_ExpressibleByStringInterpolationP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- !private "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s26_OptionalNilComparisonTypeV"
+- !private "s16_SwiftStringViewP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
+- "/Users/hoff.silva/Documents/Personal/Git/remoteok-ios/Pods/Target Support Files/SwiftyPlistManager/SwiftyPlistManager-umbrella.h"
+- "/Users/hoff.silva/Documents/Personal/Git/remoteok-ios/Bin/DerivedData/RemoteOk/Build/Intermediates.noindex/Pods.build/Debug-iphoneos/SwiftyPlistManager.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+interface-hash: "b68f250e54b01f16c342dc53d28d0e41"

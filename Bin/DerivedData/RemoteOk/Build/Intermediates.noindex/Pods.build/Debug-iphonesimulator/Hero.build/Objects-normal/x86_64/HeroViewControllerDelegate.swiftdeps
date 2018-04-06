@@ -1,0 +1,277 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "HeroViewControllerDelegate"
+provides-nominal:
+- "4Hero0A22ViewControllerDelegateP"
+provides-member:
+- ["4Hero0A22ViewControllerDelegateP", ""]
+- ["4Hero0A10TransitionC", ""]
+- ["4Hero0A10TransitionC", "closureProcessForHeroDelegate"]
+provides-dynamic-lookup:
+- "heroDidCancelAnimatingFrom"
+- "heroDidCancelAnimatingTo"
+- "heroDidCancelTransition"
+- "heroDidEndAnimatingFrom"
+- "heroDidEndAnimatingTo"
+- "heroDidEndTransition"
+- "heroWillStartAnimatingFrom"
+- "heroWillStartAnimatingTo"
+- "heroWillStartTransition"
+depends-top-level:
+- "CastingPrecedence"
+- "HeroTransition"
+- "HeroViewControllerDelegate"
+- !private "UINavigationController"
+- !private "UITabBarController"
+- "UIViewController"
+- "Void"
+depends-member:
+- !private ["Sa", "subscript"]
+- !private ["s23BidirectionalCollectionP", "subscript"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "childViewControllers"]
+- !private ["s7CVarArgP", "closureProcessForHeroDelegate"]
+- !private ["s7CVarArgP", "isViewLoaded"]
+- !private ["s7CVarArgP", "selectedIndex"]
+- !private ["s7CVarArgP", "subscript"]
+- !private ["s7CVarArgP", "topViewController"]
+- !private ["s7CVarArgP", "viewControllers"]
+- !private ["s10CollectionP", "subscript"]
+- !private ["s28CustomDebugStringConvertibleP", "childViewControllers"]
+- !private ["s28CustomDebugStringConvertibleP", "closureProcessForHeroDelegate"]
+- !private ["s28CustomDebugStringConvertibleP", "isViewLoaded"]
+- !private ["s28CustomDebugStringConvertibleP", "selectedIndex"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s28CustomDebugStringConvertibleP", "topViewController"]
+- !private ["s28CustomDebugStringConvertibleP", "viewControllers"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "childViewControllers"]
+- !private ["s23CustomStringConvertibleP", "closureProcessForHeroDelegate"]
+- !private ["s23CustomStringConvertibleP", "isViewLoaded"]
+- !private ["s23CustomStringConvertibleP", "selectedIndex"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "topViewController"]
+- !private ["s23CustomStringConvertibleP", "viewControllers"]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
+- !private ["s9DecodableP", "subscript"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
+- !private ["s9EncodableP", "subscript"]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
+- !private ["s9EquatableP", "childViewControllers"]
+- !private ["s9EquatableP", "closureProcessForHeroDelegate"]
+- !private ["s9EquatableP", "isViewLoaded"]
+- !private ["s9EquatableP", "selectedIndex"]
+- !private ["s9EquatableP", "subscript"]
+- !private ["s9EquatableP", "topViewController"]
+- !private ["s9EquatableP", "viewControllers"]
+- !private ["s25ExpressibleByArrayLiteralP", "subscript"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
+- !private ["s8HashableP", "childViewControllers"]
+- !private ["s8HashableP", "closureProcessForHeroDelegate"]
+- !private ["s8HashableP", "isViewLoaded"]
+- !private ["s8HashableP", "selectedIndex"]
+- !private ["s8HashableP", "topViewController"]
+- !private ["s8HashableP", "viewControllers"]
+- !private ["4Hero0A22ProgressRunnerDelegateP", "closureProcessForHeroDelegate"]
+- ["4Hero0A10TransitionC", "HeroViewControllerDelegate"]
+- !private ["4Hero0A10TransitionC", "UINavigationController"]
+- !private ["4Hero0A10TransitionC", "UITabBarController"]
+- ["4Hero0A10TransitionC", "UIViewController"]
+- ["4Hero0A10TransitionC", "Void"]
+- ["4Hero0A10TransitionC", "closureProcessForHeroDelegate"]
+- ["4Hero0A22ViewControllerDelegateP", "UIViewController"]
+- ["4Hero0A22ViewControllerDelegateP", "heroDidCancelAnimatingFrom"]
+- ["4Hero0A22ViewControllerDelegateP", "heroDidCancelAnimatingTo"]
+- ["4Hero0A22ViewControllerDelegateP", "heroDidCancelTransition"]
+- ["4Hero0A22ViewControllerDelegateP", "heroDidEndAnimatingFrom"]
+- ["4Hero0A22ViewControllerDelegateP", "heroDidEndAnimatingTo"]
+- ["4Hero0A22ViewControllerDelegateP", "heroDidEndTransition"]
+- ["4Hero0A22ViewControllerDelegateP", "heroWillStartAnimatingFrom"]
+- ["4Hero0A22ViewControllerDelegateP", "heroWillStartAnimatingTo"]
+- ["4Hero0A22ViewControllerDelegateP", "heroWillStartTransition"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s17MutableCollectionP", "subscript"]
+- !private ["So8NSCodingP", "childViewControllers"]
+- !private ["So8NSCodingP", "isViewLoaded"]
+- !private ["So8NSCodingP", "selectedIndex"]
+- !private ["So8NSCodingP", "topViewController"]
+- !private ["So8NSCodingP", "viewControllers"]
+- !private ["So26NSExtensionRequestHandlingP", "childViewControllers"]
+- !private ["So26NSExtensionRequestHandlingP", "isViewLoaded"]
+- !private ["So26NSExtensionRequestHandlingP", "selectedIndex"]
+- !private ["So26NSExtensionRequestHandlingP", "topViewController"]
+- !private ["So26NSExtensionRequestHandlingP", "viewControllers"]
+- ["So8NSObjectC", "HeroViewControllerDelegate"]
+- !private ["So8NSObjectC", "UINavigationController"]
+- !private ["So8NSObjectC", "UITabBarController"]
+- ["So8NSObjectC", "UIViewController"]
+- ["So8NSObjectC", "Void"]
+- !private ["So8NSObjectC", "childViewControllers"]
+- ["So8NSObjectC", "closureProcessForHeroDelegate"]
+- !private ["So8NSObjectC", "isViewLoaded"]
+- !private ["So8NSObjectC", "selectedIndex"]
+- !private ["So8NSObjectC", "topViewController"]
+- !private ["So8NSObjectC", "viewControllers"]
+- !private ["So16NSObjectProtocolP", "childViewControllers"]
+- !private ["So16NSObjectProtocolP", "closureProcessForHeroDelegate"]
+- !private ["So16NSObjectProtocolP", "isViewLoaded"]
+- !private ["So16NSObjectProtocolP", "selectedIndex"]
+- !private ["So16NSObjectProtocolP", "topViewController"]
+- !private ["So16NSObjectProtocolP", "viewControllers"]
+- !private ["s22RandomAccessCollectionP", "subscript"]
+- !private ["s26RangeReplaceableCollectionP", "subscript"]
+- !private ["s8SequenceP", "subscript"]
+- !private ["So21UIAppearanceContainerP", "childViewControllers"]
+- !private ["So21UIAppearanceContainerP", "isViewLoaded"]
+- !private ["So21UIAppearanceContainerP", "selectedIndex"]
+- !private ["So21UIAppearanceContainerP", "topViewController"]
+- !private ["So21UIAppearanceContainerP", "viewControllers"]
+- !private ["So18UIContentContainerP", "childViewControllers"]
+- !private ["So18UIContentContainerP", "isViewLoaded"]
+- !private ["So18UIContentContainerP", "selectedIndex"]
+- !private ["So18UIContentContainerP", "topViewController"]
+- !private ["So18UIContentContainerP", "viewControllers"]
+- !private ["So18UIFocusEnvironmentP", "childViewControllers"]
+- !private ["So18UIFocusEnvironmentP", "isViewLoaded"]
+- !private ["So18UIFocusEnvironmentP", "selectedIndex"]
+- !private ["So18UIFocusEnvironmentP", "topViewController"]
+- !private ["So18UIFocusEnvironmentP", "viewControllers"]
+- !private ["So22UINavigationControllerC", "topViewController"]
+- !private ["So30UINavigationControllerDelegateP", "closureProcessForHeroDelegate"]
+- !private ["So30UIPasteConfigurationSupportingP", "childViewControllers"]
+- !private ["So30UIPasteConfigurationSupportingP", "isViewLoaded"]
+- !private ["So30UIPasteConfigurationSupportingP", "selectedIndex"]
+- !private ["So30UIPasteConfigurationSupportingP", "topViewController"]
+- !private ["So30UIPasteConfigurationSupportingP", "viewControllers"]
+- !private ["So11UIResponderC", "childViewControllers"]
+- !private ["So11UIResponderC", "isViewLoaded"]
+- !private ["So11UIResponderC", "selectedIndex"]
+- !private ["So11UIResponderC", "topViewController"]
+- !private ["So11UIResponderC", "viewControllers"]
+- !private ["So30UIResponderStandardEditActionsP", "childViewControllers"]
+- !private ["So30UIResponderStandardEditActionsP", "isViewLoaded"]
+- !private ["So30UIResponderStandardEditActionsP", "selectedIndex"]
+- !private ["So30UIResponderStandardEditActionsP", "topViewController"]
+- !private ["So30UIResponderStandardEditActionsP", "viewControllers"]
+- !private ["So16UIStateRestoringP", "childViewControllers"]
+- !private ["So16UIStateRestoringP", "isViewLoaded"]
+- !private ["So16UIStateRestoringP", "selectedIndex"]
+- !private ["So16UIStateRestoringP", "topViewController"]
+- !private ["So16UIStateRestoringP", "viewControllers"]
+- !private ["So18UITabBarControllerC", "selectedIndex"]
+- !private ["So18UITabBarControllerC", "viewControllers"]
+- !private ["So26UITabBarControllerDelegateP", "closureProcessForHeroDelegate"]
+- !private ["So16UITabBarDelegateP", "selectedIndex"]
+- !private ["So16UITabBarDelegateP", "viewControllers"]
+- !private ["So18UITraitEnvironmentP", "childViewControllers"]
+- !private ["So18UITraitEnvironmentP", "isViewLoaded"]
+- !private ["So18UITraitEnvironmentP", "selectedIndex"]
+- !private ["So18UITraitEnvironmentP", "topViewController"]
+- !private ["So18UITraitEnvironmentP", "viewControllers"]
+- !private ["So16UIViewControllerC", "childViewControllers"]
+- !private ["So16UIViewControllerC", "isViewLoaded"]
+- !private ["So16UIViewControllerC", "selectedIndex"]
+- !private ["So16UIViewControllerC", "topViewController"]
+- !private ["So16UIViewControllerC", "viewControllers"]
+- !private ["So37UIViewControllerAnimatedTransitioningP", "closureProcessForHeroDelegate"]
+- !private ["So40UIViewControllerInteractiveTransitioningP", "closureProcessForHeroDelegate"]
+- !private ["So37UIViewControllerTransitioningDelegateP", "closureProcessForHeroDelegate"]
+- !private ["s14_ArrayProtocolP", "subscript"]
+- !private ["s24_DestructorSafeContainerP", "subscript"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "childViewControllers"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "closureProcessForHeroDelegate"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "isViewLoaded"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "selectedIndex"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "topViewController"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "viewControllers"]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
+- !private ["s21_ObjectiveCBridgeableP", "subscript"]
+depends-nominal:
+- !private "Sa"
+- !private "s23BidirectionalCollectionP"
+- !private "Sb"
+- !private "s7CVarArgP"
+- !private "s10CollectionP"
+- !private "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
+- !private "s23CustomStringConvertibleP"
+- !private "s9DecodableP"
+- !private "s9EncodableP"
+- !private "s9EquatableP"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- !private "s8HashableP"
+- !private "4Hero0A22ProgressRunnerDelegateP"
+- "4Hero0A10TransitionC"
+- "4Hero0A22ViewControllerDelegateP"
+- !private "s25LosslessStringConvertibleP"
+- !private "s17MutableCollectionP"
+- !private "So8NSCodingP"
+- !private "So26NSExtensionRequestHandlingP"
+- "So8NSObjectC"
+- !private "So16NSObjectProtocolP"
+- !private "s22RandomAccessCollectionP"
+- !private "s26RangeReplaceableCollectionP"
+- !private "s8SequenceP"
+- !private "So21UIAppearanceContainerP"
+- !private "So18UIContentContainerP"
+- !private "So18UIFocusEnvironmentP"
+- !private "So22UINavigationControllerC"
+- !private "So30UINavigationControllerDelegateP"
+- !private "So30UIPasteConfigurationSupportingP"
+- !private "So11UIResponderC"
+- !private "So30UIResponderStandardEditActionsP"
+- !private "So16UIStateRestoringP"
+- !private "So18UITabBarControllerC"
+- !private "So26UITabBarControllerDelegateP"
+- !private "So16UITabBarDelegateP"
+- !private "So18UITraitEnvironmentP"
+- !private "So16UIViewControllerC"
+- !private "So37UIViewControllerAnimatedTransitioningP"
+- !private "So40UIViewControllerInteractiveTransitioningP"
+- !private "So37UIViewControllerTransitioningDelegateP"
+- !private "s14_ArrayProtocolP"
+- !private "s24_DestructorSafeContainerP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s21_ObjectiveCBridgeableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ModelIO.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/simd.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/MetalKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/hoff.silva/Documents/Personal/Git/remoteok-ios/Pods/Target Support Files/Hero/Hero-umbrella.h"
+- "/Users/hoff.silva/Documents/Personal/Git/remoteok-ios/Bin/DerivedData/RemoteOk/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Hero.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.3.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.3.sdk/System/Library/Frameworks/ModelIO.framework/Headers/ModelIO.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.3.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.3.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.3.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.3.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.3.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.3.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.3.sdk/System/Library/Frameworks/MetalKit.framework/Headers/MetalKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.3.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+interface-hash: "e9313883fdcd97e1dbab9d1dbc5e579c"

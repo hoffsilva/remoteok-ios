@@ -40,6 +40,8 @@
 		43EE8CD82074441B005BBE76 /* JobsDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EE8CD72074441B005BBE76 /* JobsDataViewModel.swift */; };
 		43EE8CDB20759A6F005BBE76 /* RemoteOk.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 43EE8CD920759A6F005BBE76 /* RemoteOk.xcdatamodeld */; };
 		96B14212FB7FCFD275086D1B /* Pods_RemoteOk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11DF5B9A2E80982E1ED0E538 /* Pods_RemoteOk.framework */; };
+		CA13F44F2077F048007676AB /* TagsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA13F44E2077F048007676AB /* TagsViewModel.swift */; };
+		CA13F4512077F2AC007676AB /* JobsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA13F4502077F2AC007676AB /* JobsListView.swift */; };
 		CA869449206D68B30099F39D /* JobOportunityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA869448206D68B30099F39D /* JobOportunityViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +83,8 @@
 		43EE8CDA20759A6F005BBE76 /* RemoteOk.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RemoteOk.xcdatamodel; sourceTree = "<group>"; };
 		549011949B0F36695879AAC6 /* Pods-RemoteOk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RemoteOk.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RemoteOk/Pods-RemoteOk.debug.xcconfig"; sourceTree = "<group>"; };
 		6C803A45ABA505F2553F6B5D /* Pods-RemoteOk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RemoteOk.release.xcconfig"; path = "Pods/Target Support Files/Pods-RemoteOk/Pods-RemoteOk.release.xcconfig"; sourceTree = "<group>"; };
+		CA13F44E2077F048007676AB /* TagsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TagsViewModel.swift; path = "/Users/hoff.silva/Documents/Personal/Git/remoteok-ios/RemoteOk/ViewModel/TagsViewModel.swift"; sourceTree = "<absolute>"; };
+		CA13F4502077F2AC007676AB /* JobsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsListView.swift; sourceTree = "<group>"; };
 		CA869448206D68B30099F39D /* JobOportunityViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobOportunityViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -165,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				4399FE362072F0ED0099E529 /* LaunchScreenViewController.swift */,
+				CA13F4502077F2AC007676AB /* JobsListView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -172,6 +177,7 @@
 		430E6D48206C5E3F0093EA8B /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				CA13F44E2077F048007676AB /* TagsViewModel.swift */,
 				CA869448206D68B30099F39D /* JobOportunityViewModel.swift */,
 				43EE8CD72074441B005BBE76 /* JobsDataViewModel.swift */,
 			);
@@ -383,7 +389,9 @@
 				430E6D51206C736F0093EA8B /* JobOportunity.swift in Sources */,
 				43EE8CD82074441B005BBE76 /* JobsDataViewModel.swift in Sources */,
 				4399FE372072F0ED0099E529 /* LaunchScreenViewController.swift in Sources */,
+				CA13F44F2077F048007676AB /* TagsViewModel.swift in Sources */,
 				43096EA22076F15B003702F0 /* ConstatsUtil.swift in Sources */,
+				CA13F4512077F2AC007676AB /* JobsListView.swift in Sources */,
 				430E6D4F206C65A90093EA8B /* Connection.swift in Sources */,
 				CA869449206D68B30099F39D /* JobOportunityViewModel.swift in Sources */,
 				430E6D34206C4FFA0093EA8B /* ViewController.swift in Sources */,

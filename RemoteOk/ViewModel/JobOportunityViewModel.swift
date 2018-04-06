@@ -12,7 +12,6 @@ import CoreData
 
 protocol JobOpportunityDelegate: class {
     func jobOpportunitiesLoaded()
-    func tagsLoaded()
 }
 
 class JobOportunityViewModel {
@@ -101,23 +100,7 @@ class JobOportunityViewModel {
         }
     }
     
-    func getTags() {
-        guard let model = managedContext.persistentStoreCoordinator?.managedObjectModel, let fetch = model.fetchRequestTemplate(forName: "allOportunities") as? NSFetchRequest<Opportunity> else {
-            return
-        }
-        do {
-            let opportunities = try managedContext.fetch(fetch)
-            arrayOfTags = []
-            for job in opportunities {
-                for tag in job.tags! {
-                    arrayOfTags.insert(tag)
-                }
-            }
-            self.delegate.tagsLoaded()
-        } catch let error as NSError {
-            print("Error when try fetch all opportunities " + error.description)
-        }
-    }
+    
     
     
     func markJobAsFavorite(_ job: Opportunity) {

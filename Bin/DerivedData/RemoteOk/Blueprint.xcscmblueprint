@@ -1,0 +1,23 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "641BA6CF2F1AF7943C37401F87CA103EBB3CA204",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "641BA6CF2F1AF7943C37401F87CA103EBB3CA204" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "9EEC72C0-C285-4B6F-A0EC-66412FD7C59B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "641BA6CF2F1AF7943C37401F87CA103EBB3CA204" : "remoteok-ios\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "RemoteOk",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "RemoteOk.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/hoffsilva\/remoteok-ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "641BA6CF2F1AF7943C37401F87CA103EBB3CA204"
+    }
+  ]
+}

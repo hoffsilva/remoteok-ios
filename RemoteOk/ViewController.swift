@@ -28,7 +28,6 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         jobViewModel.filterJobsBy(tags: ["marketing"])
-        jobViewModel.getTags()
       //  jobViewModel.filterJobsBy(category: "dev")
     }
 

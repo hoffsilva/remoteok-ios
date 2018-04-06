@@ -28,29 +28,77 @@
 		<data>
 		szttDxDzZJzLNYVPA5tdP+2q3Yc=
 		</data>
-		<key>Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib</key>
-		<data>
-		3i0BCH9eWCDSb3U/aMKjxcnp0lc=
-		</data>
 		<key>Base.lproj/Main.storyboardc/Info.plist</key>
 		<data>
 		r8R2fdNXxBH8PNgLLnwoLcEuBGo=
 		</data>
-		<key>Base.lproj/Main.storyboardc/R2b-dy-tNI-view-vb7-4q-WNm.nib</key>
+		<key>Base.lproj/Main.storyboardc/azo-Yx-Aqz-view-cJR-Eg-Wsl.nib</key>
 		<data>
-		JJaTi9juh6Mp2Ype2wZeCk1gzc0=
+		JwOa5wAAaJUmngbn4zlw0aIofDc=
 		</data>
-		<key>Base.lproj/Main.storyboardc/gbG-kH-2Ya-view-Tmm-TS-MB9.nib</key>
+		<key>Base.lproj/Main.storyboardc/ixY-Yl-csI-view-NVE-j6-W8Q.nib</key>
 		<data>
-		3fTsGJdWB4Wwjd4cxo/xj1b8Sd0=
+		TrImBc2LmxJ1g671Jq/KxmWUv5A=
 		</data>
 		<key>Base.lproj/Main.storyboardc/main.nib</key>
 		<data>
-		9JA4ZKKJQcGsttjuM31YTPWDTSA=
+		hpEfCMtArXv9AqOzIGpgcli+z90=
+		</data>
+		<key>Constants.plist</key>
+		<data>
+		NE5PGPnefjwAXehjYWY0EUUoYsU=
+		</data>
+		<key>Frameworks/Alamofire.framework/Alamofire</key>
+		<data>
+		LXeosRkKiCZ8gweCsMXPdj4e02Q=
+		</data>
+		<key>Frameworks/Alamofire.framework/Info.plist</key>
+		<data>
+		Z6vdSKdhJvNaSnxmgybGIJPTUXU=
+		</data>
+		<key>Frameworks/Alamofire.framework/_CodeSignature/CodeResources</key>
+		<data>
+		RFh9CxDxVl8m+kjZSD0gIAS/tHA=
+		</data>
+		<key>Frameworks/FCAlertView.framework/FCAlertView</key>
+		<data>
+		lDkUxSq9ubir3BXW5CEj7BJ1vRE=
+		</data>
+		<key>Frameworks/FCAlertView.framework/FCAlertView.bundle/Info.plist</key>
+		<data>
+		xe2l1hI8pCGz/USM6rr+jelZodM=
+		</data>
+		<key>Frameworks/FCAlertView.framework/FCAlertView.bundle/alert-round.png</key>
+		<data>
+		blVZm8X8Gdk7wkWmjCM8YH6uBek=
+		</data>
+		<key>Frameworks/FCAlertView.framework/FCAlertView.bundle/checkmark-round.png</key>
+		<data>
+		A1fZ+aEZHraPIbCFnSgjHGmTfzw=
+		</data>
+		<key>Frameworks/FCAlertView.framework/FCAlertView.bundle/close-round.png</key>
+		<data>
+		7Kis5gUtLOKbaLdFjS8k7bEDSo0=
+		</data>
+		<key>Frameworks/FCAlertView.framework/FCAlertView.bundle/heart.png</key>
+		<data>
+		x6R7i6Why+xFAoPeYKPKFvAre9Y=
+		</data>
+		<key>Frameworks/FCAlertView.framework/FCAlertView.bundle/star.png</key>
+		<data>
+		4//rPeBGIU/IZ0Hgzl7FqyQh6GA=
+		</data>
+		<key>Frameworks/FCAlertView.framework/Info.plist</key>
+		<data>
+		Mhap9ZWiCuUdrkavi9mnJHdy3Ac=
+		</data>
+		<key>Frameworks/FCAlertView.framework/_CodeSignature/CodeResources</key>
+		<data>
+		jrJjTtx9qZZ8L8oD879sgo2ksYI=
 		</data>
 		<key>Frameworks/Hero.framework/Hero</key>
 		<data>
-		rDdh8TygNymc4aOWOQ+oBuXFp20=
+		JIVq+WttgMdR3rfoZceKjd7wkE8=
 		</data>
 		<key>Frameworks/Hero.framework/Info.plist</key>
 		<data>
@@ -59,6 +107,42 @@
 		<key>Frameworks/Hero.framework/_CodeSignature/CodeResources</key>
 		<data>
 		OaByRVigZHusQibs+BRemzfpL2k=
+		</data>
+		<key>Frameworks/SDWebImage.framework/Info.plist</key>
+		<data>
+		dfnEoV+mK5l0CTdKCbqCcREdHLQ=
+		</data>
+		<key>Frameworks/SDWebImage.framework/SDWebImage</key>
+		<data>
+		ffNhMOd+9D1s52JpbrMzwQJ+HAY=
+		</data>
+		<key>Frameworks/SDWebImage.framework/_CodeSignature/CodeResources</key>
+		<data>
+		W4yUvgF7KR7gHe4X1oCwG5RFAa4=
+		</data>
+		<key>Frameworks/SwiftyJSON.framework/Info.plist</key>
+		<data>
+		lKGaqAqngnRyROQX++LFsockAFg=
+		</data>
+		<key>Frameworks/SwiftyJSON.framework/SwiftyJSON</key>
+		<data>
+		OH7Ddeo65k7AtDJooMBTrya8eHY=
+		</data>
+		<key>Frameworks/SwiftyJSON.framework/_CodeSignature/CodeResources</key>
+		<data>
+		d2gHfClJ+DvzRigMseFXQTKJf/s=
+		</data>
+		<key>Frameworks/SwiftyPlistManager.framework/Info.plist</key>
+		<data>
+		jKwwOOI0Z7Z7IoGq1Za3LiFnCHk=
+		</data>
+		<key>Frameworks/SwiftyPlistManager.framework/SwiftyPlistManager</key>
+		<data>
+		92OtFttbntrLmG0J6/srnSCYXGY=
+		</data>
+		<key>Frameworks/SwiftyPlistManager.framework/_CodeSignature/CodeResources</key>
+		<data>
+		WMhlKj/Cs2C995zMLStTKj/RfeQ=
 		</data>
 		<key>Frameworks/libswiftAVFoundation.dylib</key>
 		<data>
@@ -321,17 +405,6 @@
 			KVqrGc/YXb1vYr1NAAMjvyLcI4PyuxYtISSTigEzi80=
 			</data>
 		</dict>
-		<key>Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			3i0BCH9eWCDSb3U/aMKjxcnp0lc=
-			</data>
-			<key>hash2</key>
-			<data>
-			1qGnwJpWEMie3k5opkeUFhdOjXJfyMNie4vy5x5THdo=
-			</data>
-		</dict>
 		<key>Base.lproj/Main.storyboardc/Info.plist</key>
 		<dict>
 			<key>hash</key>
@@ -343,48 +416,191 @@
 			DPT0CrgHzj08Yi85ooNgZfK7o1mzAoCweGEu/Wrychw=
 			</data>
 		</dict>
-		<key>Base.lproj/Main.storyboardc/R2b-dy-tNI-view-vb7-4q-WNm.nib</key>
+		<key>Base.lproj/Main.storyboardc/azo-Yx-Aqz-view-cJR-Eg-Wsl.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			JJaTi9juh6Mp2Ype2wZeCk1gzc0=
+			JwOa5wAAaJUmngbn4zlw0aIofDc=
 			</data>
 			<key>hash2</key>
 			<data>
-			gxTXeDVvxxdqrGtSq1/QWfIigXMRoIOWWQTUAH1e2tc=
+			Q+XzgjGLCLugLeUtIReOGpIl0li8GD34ZDoC21F4B8g=
 			</data>
 		</dict>
-		<key>Base.lproj/Main.storyboardc/gbG-kH-2Ya-view-Tmm-TS-MB9.nib</key>
+		<key>Base.lproj/Main.storyboardc/ixY-Yl-csI-view-NVE-j6-W8Q.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			3fTsGJdWB4Wwjd4cxo/xj1b8Sd0=
+			TrImBc2LmxJ1g671Jq/KxmWUv5A=
 			</data>
 			<key>hash2</key>
 			<data>
-			DOsCwbnUC1FmiEM83PaFjlPIA5BOXprxjpE92y4l6FI=
+			F+axBNUmg7K0ZoefSqvUSEzuL4xV4yeFImcCM8WtsVI=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/main.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			9JA4ZKKJQcGsttjuM31YTPWDTSA=
+			hpEfCMtArXv9AqOzIGpgcli+z90=
 			</data>
 			<key>hash2</key>
 			<data>
-			oRCjGLebEfGvJOFjujITio3Bz36mAW1bssGEdSZ9ToY=
+			tjPbmngyjBeJEOJBkotuxrZ3qoh4qsIKal+bhDcGC7Y=
+			</data>
+		</dict>
+		<key>Constants.plist</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			NE5PGPnefjwAXehjYWY0EUUoYsU=
+			</data>
+			<key>hash2</key>
+			<data>
+			m3gWWB5Bsx2ze/7tLgpC2ZVaEe14EGPlZaXSTNPnb4s=
+			</data>
+		</dict>
+		<key>Frameworks/Alamofire.framework/Alamofire</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			LXeosRkKiCZ8gweCsMXPdj4e02Q=
+			</data>
+			<key>hash2</key>
+			<data>
+			gLxrUzf1rJQrqk662OyWfM8vIKpw13Y8Cyc27EhN4qI=
+			</data>
+		</dict>
+		<key>Frameworks/Alamofire.framework/Info.plist</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Z6vdSKdhJvNaSnxmgybGIJPTUXU=
+			</data>
+			<key>hash2</key>
+			<data>
+			PKiKryIIv+j7urA0wf6dr4/DAb8DKQuVNx/m3glpzbo=
+			</data>
+		</dict>
+		<key>Frameworks/Alamofire.framework/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			RFh9CxDxVl8m+kjZSD0gIAS/tHA=
+			</data>
+			<key>hash2</key>
+			<data>
+			QmOE8eBUOsCSUz8MBYVryDbwcbp4tNVxKAOR3YC1ULg=
+			</data>
+		</dict>
+		<key>Frameworks/FCAlertView.framework/FCAlertView</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			lDkUxSq9ubir3BXW5CEj7BJ1vRE=
+			</data>
+			<key>hash2</key>
+			<data>
+			MStzmz+B9pPs0zjyxAAbv5B5Ri7zo4vK+Uva1Pao+yI=
+			</data>
+		</dict>
+		<key>Frameworks/FCAlertView.framework/FCAlertView.bundle/Info.plist</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			xe2l1hI8pCGz/USM6rr+jelZodM=
+			</data>
+			<key>hash2</key>
+			<data>
+			125ZH1kSOEK3JqtuJDy9fhJINB3yxyHuSnoW3aeKON8=
+			</data>
+		</dict>
+		<key>Frameworks/FCAlertView.framework/FCAlertView.bundle/alert-round.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			blVZm8X8Gdk7wkWmjCM8YH6uBek=
+			</data>
+			<key>hash2</key>
+			<data>
+			ID5IKIaLrdAWWoQeU+zRiOg+MmJfw/oRRyAk/Jv4T9k=
+			</data>
+		</dict>
+		<key>Frameworks/FCAlertView.framework/FCAlertView.bundle/checkmark-round.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			A1fZ+aEZHraPIbCFnSgjHGmTfzw=
+			</data>
+			<key>hash2</key>
+			<data>
+			6DVCxYYF9Ovgn7wuIpcE31NAnYP6UVTJvjRvRU/A/Os=
+			</data>
+		</dict>
+		<key>Frameworks/FCAlertView.framework/FCAlertView.bundle/close-round.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			7Kis5gUtLOKbaLdFjS8k7bEDSo0=
+			</data>
+			<key>hash2</key>
+			<data>
+			qNSitVlLTfOxnYsPGvj5a/jYcz/EDcIj5fe5IjISA/k=
+			</data>
+		</dict>
+		<key>Frameworks/FCAlertView.framework/FCAlertView.bundle/heart.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			x6R7i6Why+xFAoPeYKPKFvAre9Y=
+			</data>
+			<key>hash2</key>
+			<data>
+			H9+FsU4hXvZVAlLm68HRWt2SeI17Fug8BBjTbUCUlow=
+			</data>
+		</dict>
+		<key>Frameworks/FCAlertView.framework/FCAlertView.bundle/star.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			4//rPeBGIU/IZ0Hgzl7FqyQh6GA=
+			</data>
+			<key>hash2</key>
+			<data>
+			Ys5R5Wc5YbymFxVa79ot+Cw/5oXt5MZTtm+olcwnqQA=
+			</data>
+		</dict>
+		<key>Frameworks/FCAlertView.framework/Info.plist</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Mhap9ZWiCuUdrkavi9mnJHdy3Ac=
+			</data>
+			<key>hash2</key>
+			<data>
+			rUKYY9QiFAWcPHRqtrVpHEMFQGjvEuUur//Ag/dh6TU=
+			</data>
+		</dict>
+		<key>Frameworks/FCAlertView.framework/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			jrJjTtx9qZZ8L8oD879sgo2ksYI=
+			</data>
+			<key>hash2</key>
+			<data>
+			RaOsuhTlWE3FT/u5IpL5Apzym4bKkXKr4iy/72ndIPs=
 			</data>
 		</dict>
 		<key>Frameworks/Hero.framework/Hero</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			rDdh8TygNymc4aOWOQ+oBuXFp20=
+			JIVq+WttgMdR3rfoZceKjd7wkE8=
 			</data>
 			<key>hash2</key>
 			<data>
-			cZh9J7DsZ4sshPk7mx9U9Hp1mbgdO4+n9DMjF/+Vi90=
+			8P+qbEz/bK/aFWpJbh4cg096vx7PdHGZM9G5zbnGKg0=
 			</data>
 		</dict>
 		<key>Frameworks/Hero.framework/Info.plist</key>
@@ -407,6 +623,105 @@
 			<key>hash2</key>
 			<data>
 			Pa+DjbF0dXhQlav5aJw0Bvo2+QxYoxaJW1w0aMBwo24=
+			</data>
+		</dict>
+		<key>Frameworks/SDWebImage.framework/Info.plist</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			dfnEoV+mK5l0CTdKCbqCcREdHLQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			a07HwVNyHZzuKz47iQOhoLSEtBxop4VV063R/B5nVGI=
+			</data>
+		</dict>
+		<key>Frameworks/SDWebImage.framework/SDWebImage</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			ffNhMOd+9D1s52JpbrMzwQJ+HAY=
+			</data>
+			<key>hash2</key>
+			<data>
+			rtRzp5aP13fJmc/PGBtKmgxfvsVGyzBusChUZ5kQ/RI=
+			</data>
+		</dict>
+		<key>Frameworks/SDWebImage.framework/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			W4yUvgF7KR7gHe4X1oCwG5RFAa4=
+			</data>
+			<key>hash2</key>
+			<data>
+			iC9xvBUzlTndoUYjoE0+VNmb8jm4jq0LxpiaveHJECc=
+			</data>
+		</dict>
+		<key>Frameworks/SwiftyJSON.framework/Info.plist</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			lKGaqAqngnRyROQX++LFsockAFg=
+			</data>
+			<key>hash2</key>
+			<data>
+			XXRj3lmt8OCy5ZS6OyaZcwPsXqDXfiC0AAQQzDiTgAQ=
+			</data>
+		</dict>
+		<key>Frameworks/SwiftyJSON.framework/SwiftyJSON</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			OH7Ddeo65k7AtDJooMBTrya8eHY=
+			</data>
+			<key>hash2</key>
+			<data>
+			P2Li5g4RkSu8kDOJhuHVEkrzD1+ZnF/5d/gol9A+kxs=
+			</data>
+		</dict>
+		<key>Frameworks/SwiftyJSON.framework/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			d2gHfClJ+DvzRigMseFXQTKJf/s=
+			</data>
+			<key>hash2</key>
+			<data>
+			pZXqSV8mbUUn/OKHrP3BuZnX1pOk2kQkrUF8vL4a2Xo=
+			</data>
+		</dict>
+		<key>Frameworks/SwiftyPlistManager.framework/Info.plist</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			jKwwOOI0Z7Z7IoGq1Za3LiFnCHk=
+			</data>
+			<key>hash2</key>
+			<data>
+			k2WsKAGLl3qaJlTbM7g1THV/lov5VJD95frfRXOTBa0=
+			</data>
+		</dict>
+		<key>Frameworks/SwiftyPlistManager.framework/SwiftyPlistManager</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			92OtFttbntrLmG0J6/srnSCYXGY=
+			</data>
+			<key>hash2</key>
+			<data>
+			fLEaTDtDKNjZtrLWLoPe7pAB+d5VK69Qtr6f2HOXH1Q=
+			</data>
+		</dict>
+		<key>Frameworks/SwiftyPlistManager.framework/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			WMhlKj/Cs2C995zMLStTKj/RfeQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			aojE5XlE5msLX07Ch6eEmvSnOLDKEgmQwx+J/Q8a8O4=
 			</data>
 		</dict>
 		<key>Frameworks/libswiftAVFoundation.dylib</key>
