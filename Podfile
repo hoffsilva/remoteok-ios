@@ -6,5 +6,10 @@ target 'RemoteOk' do
   use_frameworks!
 
   # Pods for RemoteOk
+    pod 'Alamofire', '~> 4.5'
+    pod 'SwiftyJSON'
+    pod 'SDWebImage', '~> 4.0'
     pod "Hero"
+    pod 'SwiftyPlistManager'
+    pod 'FCAlertView'
 end

@@ -7,58 +7,45 @@
 //
 
 import Foundation
+import FCAlertView
+import Alamofire
 
 class Connection {
     
-    static func fetchData(responseData: @escaping (Any) -> Swift.Void) {
+    static func fetchData(responseData: @escaping (DataResponse<Any>) -> Swift.Void) {
         if !verifyConnection() {
-//            let alert = FCAlertView()
-//            alert.showAlert(withTitle: "Error", withSubtitle: "The internet connection has some problem", withCustomImage: nil, withDoneButtonTitle: nil, andButtons: nil)
-//            alert.dismissOnOutsideTouch = true
-//            alert.hideDoneButton = true
-//            alert.makeAlertTypeCaution()
+            let alert = FCAlertView()
+            alert.dismissOnOutsideTouch = true
+            alert.hideDoneButton = true
+            alert.makeAlertTypeWarning()
+            DispatchQueue.main.async {
+                alert.showAlert(withTitle: "Error", withSubtitle: "The internet connection has some problem", withCustomImage: nil, withDoneButtonTitle: nil, andButtons: nil)
+            }
+            return
         }
-        let stringURL = "https://remoteok.io/remote-jobs.json"
+        let stringURL = ConstantsUtil.remoteJobsURL()
         
-        let url = URL(string: stringURL)
-        
-        let session = URLSession.shared
+        let url = URL(string: stringURL.trimmingCharacters(in: .whitespaces))
         
         guard let URL = url else {
             return
         }
         
-        let dataTask = session.dataTask(with: URL) { (data, response, error) in
-            guard let dataOportunities = data else {
-                return
-            }
-            
-            let array = try? JSONSerialization.jsonObject(with:  dataOportunities, options: JSONSerialization.ReadingOptions.allowFragments) as! [AnyObject]
-            
-            guard let oportunities = array else {
-                return
-            }
-            
-            responseData(oportunities)
-            
-            print()
+        Alamofire.request(URL).responseJSON { (response) in
+            responseData(response)
         }
-        
-        dataTask.resume()
         
     }
     
     static func verifyConnection() -> Bool{
         
-//        if let reachabilityNetwork = Alamofire.NetworkReachabilityManager(host: "www.google.com") {
-//
-//            if reachabilityNetwork.isReachable {
-//                return true
-//            }
-//        }
-//
+        if let reachabilityNetwork = Alamofire.NetworkReachabilityManager(host: "www.google.com") {
+
+            if reachabilityNetwork.isReachable {
+                return true
+            }
+        }
         return false
-        
     }
     
     

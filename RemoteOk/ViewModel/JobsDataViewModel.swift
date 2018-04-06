@@ -21,20 +21,10 @@ struct JobsDataViewModel {
     func loadJobsFromRemoteOK() {
         self.jobsOpportunityViewModel.deleteAllOpportunities()
         Connection.fetchData { (arrayOfJobOportunities) in
-            print((arrayOfJobOportunities as! Array<Any>).count)
-            for job in arrayOfJobOportunities as! Array<Any>{
-                let currentJob = JobOportunity()
-                let jobDictionary = job as! [String:Any]
-                currentJob.position = jobDictionary["position"] as? String
-                currentJob.slug = jobDictionary["slug"] as? String
-                currentJob.id = jobDictionary["id"] as? String
-                currentJob.epoch = jobDictionary["epoch"] as? String
-                currentJob.descriptionValue = jobDictionary["description"] as? String
-                currentJob.date = jobDictionary["date"] as? String
-                currentJob.logo = jobDictionary["logo"] as? String
-                currentJob.tags = jobDictionary["tags"] as? [String]
-                currentJob.company = jobDictionary["company"] as? String
-                currentJob.url = jobDictionary["url"] as? String
+            let dic = arrayOfJobOportunities.result.value as! [[String:Any]]
+            print(dic.count)
+            for job in dic {
+                let currentJob = JobOportunity(object: job)
                 self.jobsOpportunityViewModel.saveJobFromJSON(currentJob)
             }
             self.delegate.loadJobDataSuccessful()

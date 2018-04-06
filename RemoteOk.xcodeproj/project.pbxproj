@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		43096EA02076EB31003702F0 /* Constants.plist in Resources */ = {isa = PBXBuildFile; fileRef = 43096E9F2076EB31003702F0 /* Constants.plist */; };
+		43096EA22076F15B003702F0 /* ConstatsUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43096EA12076F15B003702F0 /* ConstatsUtil.swift */; };
 		430E6D32206C4FFA0093EA8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430E6D31206C4FFA0093EA8B /* AppDelegate.swift */; };
 		430E6D34206C4FFA0093EA8B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430E6D33206C4FFA0093EA8B /* ViewController.swift */; };
 		430E6D37206C4FFA0093EA8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 430E6D35206C4FFA0093EA8B /* Main.storyboard */; };
@@ -43,6 +45,8 @@
 
 /* Begin PBXFileReference section */
 		11DF5B9A2E80982E1ED0E538 /* Pods_RemoteOk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RemoteOk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		43096E9F2076EB31003702F0 /* Constants.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Constants.plist; sourceTree = "<group>"; };
+		43096EA12076F15B003702F0 /* ConstatsUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstatsUtil.swift; sourceTree = "<group>"; };
 		430E6D2E206C4FFA0093EA8B /* RemoteOk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemoteOk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		430E6D31206C4FFA0093EA8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		430E6D33206C4FFA0093EA8B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +104,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		43096E9E2076EB01003702F0 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				43096E9F2076EB31003702F0 /* Constants.plist */,
+				43096EA12076F15B003702F0 /* ConstatsUtil.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		430E6D25206C4FFA0093EA8B = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +134,7 @@
 		430E6D30206C4FFA0093EA8B /* RemoteOk */ = {
 			isa = PBXGroup;
 			children = (
+				43096E9E2076EB01003702F0 /* Settings */,
 				43EE8CD920759A6F005BBE76 /* RemoteOk.xcdatamodeld */,
 				4399FE392072FF620099E529 /* media */,
 				430E6D4D206C63BB0093EA8B /* Network */,
@@ -284,6 +298,7 @@
 				4399FE41207300D20099E529 /* Launch.storyboard in Resources */,
 				43A9B25D206EED76003EB208 /* Assets.xcassets in Resources */,
 				4399FE43207306730099E529 /* Pacifico.ttf in Resources */,
+				43096EA02076EB31003702F0 /* Constants.plist in Resources */,
 				4399FE5F20730B1D0099E529 /* Nunito-SemiBold.ttf in Resources */,
 				4399FE5A20730B1D0099E529 /* Nunito-ExtraBold.ttf in Resources */,
 				430E6D37206C4FFA0093EA8B /* Main.storyboard in Resources */,
@@ -303,11 +318,21 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-RemoteOk/Pods-RemoteOk-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/FCAlertView/FCAlertView.framework",
 				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyPlistManager/SwiftyPlistManager.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FCAlertView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyPlistManager.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -358,6 +383,7 @@
 				430E6D51206C736F0093EA8B /* JobOportunity.swift in Sources */,
 				43EE8CD82074441B005BBE76 /* JobsDataViewModel.swift in Sources */,
 				4399FE372072F0ED0099E529 /* LaunchScreenViewController.swift in Sources */,
+				43096EA22076F15B003702F0 /* ConstatsUtil.swift in Sources */,
 				430E6D4F206C65A90093EA8B /* Connection.swift in Sources */,
 				CA869449206D68B30099F39D /* JobOportunityViewModel.swift in Sources */,
 				430E6D34206C4FFA0093EA8B /* ViewController.swift in Sources */,
