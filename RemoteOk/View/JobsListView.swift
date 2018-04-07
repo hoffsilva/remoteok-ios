@@ -7,17 +7,21 @@
 //
 
 import UIKit
+import SDWebImage
 
 class JobsListView: UITableViewController {
     
     var jobViewModel = JobOportunityViewModel()
     let searchController = UISearchController(searchResultsController: nil)
+    var currentJobIndex = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
         jobViewModel.delegate = self
         jobViewModel.getAllOpportunities()
         configureSearchBar()
+        setTableViewBackground()
+        addRefreshControl()
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,22 +32,35 @@ class JobsListView: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 5
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return jobViewModel.arrayOfOpportunity.count
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 170.0
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-
-        // Configure the cell...
-    
-        cell.textLabel?.text = jobViewModel.arrayOfOpportunity[indexPath.row].position
+        currentJobIndex = indexPath.row
+        let cell = tableView.dequeueReusableCell(withIdentifier: "jobCell", for: indexPath) as! JobViewCell
+        cell.tagsCollectioView.delegate = self
+        cell.tagsCollectioView.dataSource = self
+        cell.tagsCollectioView.reloadData()
+        cell.companyNameLabel.text = jobViewModel.arrayOfOpportunity[currentJobIndex].company ?? "None"
+        cell.positionLabel.text = jobViewModel.arrayOfOpportunity[currentJobIndex].position ?? "None"
+        
+        cell.logoImageView.sd_addActivityIndicator()
+        cell.logoImageView.sd_setShowActivityIndicatorView(true)
+        
+        if let imageUrl = jobViewModel.arrayOfOpportunity[currentJobIndex].logo {
+            cell.logoImageView.sd_setImage(with: URL(string: imageUrl), completed: nil)
+        } else {
+            cell.logoImageView.image = #imageLiteral(resourceName: "logo.png")
+        }
         return cell
     }
 
@@ -108,10 +125,60 @@ class JobsListView: UITableViewController {
     
 }
 
+extension JobsListView: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
+    {
+       return UICollectionViewFlowLayoutAutomaticSize
+    }
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return jobViewModel.arrayOfOpportunity[currentJobIndex].tags?.count ?? 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "tagCell", for: indexPath) as! TagViewCell
+        if let tag = jobViewModel.arrayOfOpportunity[currentJobIndex].tags?[indexPath.row] {
+            cell.tagLabel.text =  tag.uppercased()
+        } else {
+            cell.tagLabel.text = "none"
+        }
+        return cell
+    }
+    
+    
+}
+
 extension JobsListView: JobOpportunityDelegate {
     func jobOpportunitiesLoaded() {
         tableView.reloadData()
     }
+}
+
+extension JobsListView {
+    
+    func setTableViewBackground() {
+        let view = UIImageView(frame: tableView.frame)
+        view.image = #imageLiteral(resourceName: "lauchscreen")
+        view.contentMode = .scaleAspectFill
+        view.alpha = 0.2
+        tableView.backgroundView = view
+    }
+    
+    func addRefreshControl() {
+        tableView.refreshControl = UIRefreshControl()
+        tableView.refreshControl?.attributedTitle = NSAttributedString(string: "Update jobs list")
+        tableView.refreshControl?.addTarget(self, action: #selector(loadJobs), for: .valueChanged)
+    }
+    
+    @objc func loadJobs() {
+        jobViewModel.getAllOpportunities()
+    }
+    
 }
 
 extension JobsListView: UISearchResultsUpdating, UISearchControllerDelegate {
