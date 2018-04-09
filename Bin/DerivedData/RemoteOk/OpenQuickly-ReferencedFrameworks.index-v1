@@ -3,9 +3,9 @@
 <plist version="1.0">
 <array>
 	<string>Foundation</string>
-	<string>SwiftyJSON</string>
 	<string>CoreData</string>
 	<string>AppKit</string>
+	<string>SwiftyJSON</string>
 	<string>FCAlertView</string>
 	<string>Dispatch</string>
 	<string>CommonCrypto</string>

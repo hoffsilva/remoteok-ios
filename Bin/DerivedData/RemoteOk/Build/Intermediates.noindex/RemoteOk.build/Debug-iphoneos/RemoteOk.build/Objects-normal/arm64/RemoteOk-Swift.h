@@ -165,6 +165,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_feature(modules)
 @import UIKit;
 @import Foundation;
+@import CoreGraphics;
 @import CoreData;
 #endif
 
@@ -198,10 +199,35 @@ SWIFT_CLASS("_TtC8RemoteOk11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class UITableView;
-@class UITableViewCell;
-@class NSBundle;
+@class UIButton;
+@class UIImageView;
+@class UILabel;
+@class UICollectionView;
 @class NSCoder;
+
+SWIFT_CLASS("_TtC8RemoteOk11JobViewCell")
+@interface JobViewCell : UITableViewCell
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified setAsFavoriteButton;
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified logoImageView;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified positionLabel;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified companyNameLabel;
+@property (nonatomic, weak) IBOutlet UICollectionView * _Null_unspecified tagsCollectioView;
+- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class UICollectionViewLayout;
+@class UICollectionViewCell;
+
+@interface JobViewCell (SWIFT_EXTENSION(RemoteOk)) <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
+- (CGSize)collectionView:(UICollectionView * _Nonnull)collectionView layout:(UICollectionViewLayout * _Nonnull)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView * _Nonnull)collectionView SWIFT_WARN_UNUSED_RESULT;
+- (NSInteger)collectionView:(UICollectionView * _Nonnull)collectionView numberOfItemsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (UICollectionViewCell * _Nonnull)collectionView:(UICollectionView * _Nonnull)collectionView cellForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+@end
+
+@class UITableView;
+@class NSBundle;
 
 SWIFT_CLASS("_TtC8RemoteOk12JobsListView")
 @interface JobsListView : UITableViewController
@@ -209,6 +235,7 @@ SWIFT_CLASS("_TtC8RemoteOk12JobsListView")
 - (void)didReceiveMemoryWarning;
 - (NSInteger)numberOfSectionsInTableView:(UITableView * _Nonnull)tableView SWIFT_WARN_UNUSED_RESULT;
 - (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)initWithStyle:(UITableViewStyle)style OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
@@ -221,6 +248,11 @@ SWIFT_CLASS("_TtC8RemoteOk12JobsListView")
 
 @interface JobsListView (SWIFT_EXTENSION(RemoteOk)) <UISearchControllerDelegate, UISearchResultsUpdating>
 - (void)updateSearchResultsForSearchController:(UISearchController * _Nonnull)searchController;
+@end
+
+
+@interface JobsListView (SWIFT_EXTENSION(RemoteOk))
+- (void)loadJobs;
 @end
 
 
@@ -274,6 +306,14 @@ SWIFT_CLASS_NAMED("Opportunity")
 @property (nonatomic, copy) NSString * _Nullable slug;
 @property (nonatomic, copy) NSArray<NSString *> * _Nullable tags;
 @property (nonatomic, copy) NSString * _Nullable url;
+@end
+
+
+SWIFT_CLASS("_TtC8RemoteOk11TagViewCell")
+@interface TagViewCell : UICollectionViewCell
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified tagLabel;
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
