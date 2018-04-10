@@ -38,6 +38,9 @@
 		4399FE5D20730B1D0099E529 /* Nunito-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4399FE4F20730B1C0099E529 /* Nunito-BlackItalic.ttf */; };
 		4399FE5E20730B1D0099E529 /* Nunito-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4399FE5020730B1C0099E529 /* Nunito-BoldItalic.ttf */; };
 		4399FE5F20730B1D0099E529 /* Nunito-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4399FE5120730B1D0099E529 /* Nunito-SemiBold.ttf */; };
+		439CB824207C2D2D00C1EF64 /* TagsViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439CB823207C2D2D00C1EF64 /* TagsViewLayout.swift */; };
+		439CB826207C341F00C1EF64 /* RemoteFilters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439CB825207C341F00C1EF64 /* RemoteFilters.swift */; };
+		439CB828207C363900C1EF64 /* RemoteFilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439CB827207C363900C1EF64 /* RemoteFilterCell.swift */; };
 		43A9B25D206EED76003EB208 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43A9B25C206EED76003EB208 /* Assets.xcassets */; };
 		43B7BA43206E6AEA00DA3A39 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B7BA42206E6AEA00DA3A39 /* CoreDataStack.swift */; };
 		43EE8CD82074441B005BBE76 /* JobsDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EE8CD72074441B005BBE76 /* JobsDataViewModel.swift */; };
@@ -82,6 +85,9 @@
 		4399FE4F20730B1C0099E529 /* Nunito-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-BlackItalic.ttf"; sourceTree = "<group>"; };
 		4399FE5020730B1C0099E529 /* Nunito-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-BoldItalic.ttf"; sourceTree = "<group>"; };
 		4399FE5120730B1D0099E529 /* Nunito-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-SemiBold.ttf"; sourceTree = "<group>"; };
+		439CB823207C2D2D00C1EF64 /* TagsViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsViewLayout.swift; sourceTree = "<group>"; };
+		439CB825207C341F00C1EF64 /* RemoteFilters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFilters.swift; sourceTree = "<group>"; };
+		439CB827207C363900C1EF64 /* RemoteFilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFilterCell.swift; sourceTree = "<group>"; };
 		43A9B25C206EED76003EB208 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		43B7BA42206E6AEA00DA3A39 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		43EE8CD72074441B005BBE76 /* JobsDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsDataViewModel.swift; sourceTree = "<group>"; };
@@ -176,6 +182,8 @@
 				CA13F4502077F2AC007676AB /* JobsListView.swift */,
 				43487CCE2078EB4000430934 /* JobViewCell.swift */,
 				43487CD02078EE1700430934 /* TagViewCell.swift */,
+				439CB825207C341F00C1EF64 /* RemoteFilters.swift */,
+				439CB827207C363900C1EF64 /* RemoteFilterCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -186,6 +194,7 @@
 				43487CCC2078EA8B00430934 /* TagsViewModel.swift */,
 				CA869448206D68B30099F39D /* JobOportunityViewModel.swift */,
 				43EE8CD72074441B005BBE76 /* JobsDataViewModel.swift */,
+				439CB823207C2D2D00C1EF64 /* TagsViewLayout.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -395,15 +404,18 @@
 				43B7BA43206E6AEA00DA3A39 /* CoreDataStack.swift in Sources */,
 				430E6D51206C736F0093EA8B /* JobOportunity.swift in Sources */,
 				43EE8CD82074441B005BBE76 /* JobsDataViewModel.swift in Sources */,
+				439CB826207C341F00C1EF64 /* RemoteFilters.swift in Sources */,
 				4399FE372072F0ED0099E529 /* LaunchScreenViewController.swift in Sources */,
 				43096EA22076F15B003702F0 /* ConstatsUtil.swift in Sources */,
 				CA13F4512077F2AC007676AB /* JobsListView.swift in Sources */,
 				43487CD12078EE1700430934 /* TagViewCell.swift in Sources */,
 				43487CCD2078EA8B00430934 /* TagsViewModel.swift in Sources */,
 				430E6D4F206C65A90093EA8B /* Connection.swift in Sources */,
+				439CB828207C363900C1EF64 /* RemoteFilterCell.swift in Sources */,
 				CA869449206D68B30099F39D /* JobOportunityViewModel.swift in Sources */,
 				430E6D34206C4FFA0093EA8B /* ViewController.swift in Sources */,
 				430E6D32206C4FFA0093EA8B /* AppDelegate.swift in Sources */,
+				439CB824207C2D2D00C1EF64 /* TagsViewLayout.swift in Sources */,
 				43EE8CDB20759A6F005BBE76 /* RemoteOk.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RemoteOk/ViewModel/JobOportunityViewModel.swift"
-            timestampString = "544805144.7568409"
+            timestampString = "544805825.085734"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "74"
@@ -42,13 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RemoteOk/View/JobsListView.swift"
-            timestampString = "544805144.756906"
+            timestampString = "544805825.085804"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "145"
-            endingLineNumber = "145"
-            landmarkName = "collectionView(_:cellForItemAt:)"
-            landmarkType = "7">
+            endingLineNumber = "145">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -58,13 +56,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RemoteOk/View/JobsListView.swift"
-            timestampString = "544805144.757261"
+            timestampString = "544805825.086161"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "132"
-            endingLineNumber = "132"
-            landmarkName = "collectionView(_:layout:sizeForItemAt:)"
-            landmarkType = "7">
+            endingLineNumber = "132">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

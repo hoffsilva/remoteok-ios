@@ -22,10 +22,10 @@ class JobViewCell: UITableViewCell {
 
 extension JobViewCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
-        {
-           return CGSize(width: UICollectionViewFlowLayoutAutomaticSize.width/2, height: 50.0 )
-        }
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
+//        {
+//           return CGSize(width: UICollectionViewFlowLayoutAutomaticSize.width/2, height: 50.0 )
+//        }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
