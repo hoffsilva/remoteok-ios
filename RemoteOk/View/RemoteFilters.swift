@@ -62,10 +62,10 @@ class RemoteFilters: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         //jobDataViewModel.loadJobsFromRemoteOK(ConstantsUtil.devJobsURL())
-        let teste = JobsListView()
-        teste.testing = "\(indexPath.row)"
-    
-        teste.passFilter()
+//        let teste = JobsListView()
+//        teste.testing = "\(indexPath.row)"
+//    
+//        teste.passFilter()
         
         
     }

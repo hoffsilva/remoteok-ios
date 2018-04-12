@@ -25,7 +25,7 @@ class JobOportunityViewModel {
     var arrayOfTags: Set = Set<String>()
     var arrayOfFilters: [String]!
     var currentJob: Int!
-    //var jdvm = JobsDataViewModel()
+    
     
     func saveJobFromJSON(_ currentJob: JobOportunity) {
         let jobToSave = NSEntityDescription.entity(forEntityName: "Opportunity", in: managedContext)
@@ -154,32 +154,6 @@ class JobOportunityViewModel {
     
     func getJob() -> Opportunity {
         return arrayOfOpportunity[currentJob]
-    }
-    
-    func filterJobs()  {
-        if arrayOfFilters.count == 1 {
-            
-        }
-    }
-    
-    
-    func loadJobsFromRemoteOK(_ URL: String) {
-        deleteAllOpportunities()
-        Connection.fetchData(url: URL) { (arrayOfJobOportunities) in
-            self.parse(dic: arrayOfJobOportunities)
-        }
-    }
-    
-    func parse(dic: DataResponse<Any>) {
-        if let dictionary = dic.result.value as? [[String:Any]] {
-            print(dictionary.count)
-            for job in dictionary {
-                let currentJob = JobOportunity(object: job)
-                saveJobFromJSON(currentJob)
-            }
-            self.delegate.jobOpportunitiesLoaded()
-        }
-        
     }
     
 }
