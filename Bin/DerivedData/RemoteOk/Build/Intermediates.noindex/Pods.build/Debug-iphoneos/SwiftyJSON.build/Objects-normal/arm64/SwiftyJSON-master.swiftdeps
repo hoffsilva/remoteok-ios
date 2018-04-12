@@ -1,5 +1,0 @@
-version: "Apple Swift version 4.1 (swiftlang-902.0.48 clang-902.0.37.1)"
-options: "deb40959815c51872e5084c51523197e"
-build_time: [1523038813, 783079000]
-inputs:
-  "/Users/hoff.silva/Documents/Personal/Git/remoteok-ios/Pods/SwiftyJSON/Source/SwiftyJSON.swift": [1523017951, 0]

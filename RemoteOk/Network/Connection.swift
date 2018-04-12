@@ -12,7 +12,7 @@ import Alamofire
 
 class Connection {
     
-    static func fetchData(responseData: @escaping (DataResponse<Any>) -> Swift.Void) {
+    static func fetchData(url: String, responseData: @escaping (DataResponse<Any>) -> Swift.Void) {
         if !verifyConnection() {
             let alert = FCAlertView()
             alert.dismissOnOutsideTouch = true
@@ -23,7 +23,7 @@ class Connection {
             }
             return
         }
-        let stringURL = ConstantsUtil.remoteJobsURL()
+        let stringURL = url
         
         let url = URL(string: stringURL.trimmingCharacters(in: .whitespaces))
         
@@ -40,7 +40,7 @@ class Connection {
     static func verifyConnection() -> Bool{
         
         if let reachabilityNetwork = Alamofire.NetworkReachabilityManager(host: "www.google.com") {
-
+            
             if reachabilityNetwork.isReachable {
                 return true
             }

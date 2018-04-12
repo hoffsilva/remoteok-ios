@@ -8,6 +8,7 @@
 
 import Foundation
 import CoreData
+import Alamofire
 
 
 protocol JobOpportunityDelegate: class {
@@ -21,7 +22,10 @@ class JobOportunityViewModel {
     var managedContext = CoreDataStack().persistentContainer.viewContext
     var arrayOfOpportunity = [Opportunity]()
     var arrayOfFavoriteOpportunity = [OportunityFavorite]()
-    var arrayOfTags : Set = Set<String>()
+    var arrayOfTags: Set = Set<String>()
+    var arrayOfFilters: [String]!
+    var currentJob: Int!
+    //var jdvm = JobsDataViewModel()
     
     func saveJobFromJSON(_ currentJob: JobOportunity) {
         let jobToSave = NSEntityDescription.entity(forEntityName: "Opportunity", in: managedContext)
@@ -53,7 +57,7 @@ class JobOportunityViewModel {
         }
         
         do {
-           arrayOfOpportunity = try managedContext.fetch(fetch)
+            arrayOfOpportunity = try managedContext.fetch(fetch)
         } catch let error as NSError {
             print("Error when try fetch all opportunities " + error.description)
         }
@@ -122,7 +126,7 @@ class JobOportunityViewModel {
         do {
             try managedContext.save()
         } catch let error as NSError {
-             print("Error when try mark opportunity as favorite opportunity " + error.description)
+            print("Error when try mark opportunity as favorite opportunity " + error.description)
         }
     }
     
@@ -145,6 +149,37 @@ class JobOportunityViewModel {
         } catch let error as NSError {
             print("Error when try delete all favorite opportunities " + error.description)
         }
+    }
+    
+    
+    func getJob() -> Opportunity {
+        return arrayOfOpportunity[currentJob]
+    }
+    
+    func filterJobs()  {
+        if arrayOfFilters.count == 1 {
+            
+        }
+    }
+    
+    
+    func loadJobsFromRemoteOK(_ URL: String) {
+        deleteAllOpportunities()
+        Connection.fetchData(url: URL) { (arrayOfJobOportunities) in
+            self.parse(dic: arrayOfJobOportunities)
+        }
+    }
+    
+    func parse(dic: DataResponse<Any>) {
+        if let dictionary = dic.result.value as? [[String:Any]] {
+            print(dictionary.count)
+            for job in dictionary {
+                let currentJob = JobOportunity(object: job)
+                saveJobFromJSON(currentJob)
+            }
+            self.delegate.jobOpportunitiesLoaded()
+        }
+        
     }
     
 }

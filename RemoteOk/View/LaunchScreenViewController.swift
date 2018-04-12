@@ -22,7 +22,7 @@ class LaunchScreenViewController: UIViewController {
         super.viewDidLoad()
         loadVideo()
         jobsDataViewModel.delegate = self
-        jobsDataViewModel.loadJobsFromRemoteOK()
+        jobsDataViewModel.loadJobsFromRemoteOK(ConstantsUtil.remoteJobsURL())
         print("")
     }
     

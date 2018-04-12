@@ -1,5 +1,0 @@
-version: "Apple Swift version 4.1 (swiftlang-902.0.48 clang-902.0.37.1)"
-options: "8c62acf009e88e41c1a3d2fd62497795"
-build_time: [1523038814, 133997000]
-inputs:
-  "/Users/hoff.silva/Documents/Personal/Git/remoteok-ios/Pods/SwiftyPlistManager/SwiftyPlistManager/SwiftyPlistManager.swift": [1523017951, 0]
