@@ -9,10 +9,6 @@
 import UIKit
 import SDWebImage
 
-protocol FilterJobsDelegate {
-    func filterJobs(filter: String)
-}
-
 class JobsListView: UITableViewController {
     
     var jobViewModel = JobOportunityViewModel()
@@ -104,9 +100,9 @@ extension JobsListView: JobsDataDelegate {
     }
 }
 
-extension JobsListView: FilterJobsDelegate {
-    func filterJobs(filter: String) {
-        switch filter {
+extension JobsListView {
+    func filterJobs() {
+        switch testing {
         case "0":
             jobDataViewModel.loadJobsFromRemoteOK(ConstantsUtil.remoteJobsURL())
             break
@@ -157,7 +153,7 @@ extension JobsListView {
     func passFilter() {
         self.jobDataViewModel.delegate = self
         print(jobDataViewModel.delegate)
-        
+        filterJobs()
     }
     
 }

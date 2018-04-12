@@ -22,7 +22,7 @@ class RemoteFilters: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        jobDataViewModel.delegate = self
         arrayOfFilters = [
             RemoteFilter(image: UIImage(named: "remote-jobs"), title: "REMOTE JOBS"),
             RemoteFilter(image: UIImage(named: "dev"), title: "DEV"),
@@ -61,7 +61,26 @@ class RemoteFilters: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        filterJobsDelegate?.filterJobs(filter: "\(indexPath.row)")
+        
+        //jobDataViewModel.loadJobsFromRemoteOK(ConstantsUtil.devJobsURL())
+        let teste = JobsListView()
+        teste.testing = "\(indexPath.row)"
+    
+        teste.passFilter()
+        
+        
     }
+    
 }
 
+extension RemoteFilters: JobsDataDelegate {
+    func loadJobDataSuccessful() {
+        UIApplication.shared.windows
+    }
+    
+    func loadJobDataFailed(message: String) {
+        
+    }
+    
+    
+}
