@@ -18,7 +18,6 @@ class RemoteFilters: UICollectionViewController {
     var arrayOfFilters = [RemoteFilter]()
     var jobsViewModel = JobOportunityViewModel()
     var jobDataViewModel = JobsDataViewModel()
-    var filterJobsDelegate: FilterJobsDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
