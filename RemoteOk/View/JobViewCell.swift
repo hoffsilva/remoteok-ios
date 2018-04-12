@@ -14,6 +14,7 @@ class JobViewCell: UITableViewCell {
     @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var positionLabel: UILabel!
     @IBOutlet weak var companyNameLabel: UILabel!
+     @IBOutlet weak var fakeCompanyLogoLabel: UILabel!
     @IBOutlet weak var tagsCollectioView: UICollectionView!
     var job: Opportunity!
 

@@ -14,11 +14,14 @@ class JobsListView: UIViewController {
     @IBOutlet weak var remoteFiltersCollectionView: UICollectionView!
     @IBOutlet weak var jobsListTableView: UITableView!
     
+    
     var arrayOfFilters = [RemoteFilter]()
     
     var jobViewModel = JobOportunityViewModel()
     var jobDataViewModel = JobsDataViewModel()
     var currentJobIndex = 0
+    var overlayView = UIView()
+    var activityIndicator: UIActivityIndicatorView!
     
     
     
@@ -76,9 +79,18 @@ extension JobsListView: UITableViewDelegate, UITableViewDataSource {
         cell.logoImageView.sd_setShowActivityIndicatorView(true)
         
         if let imageUrl = jobViewModel.getJob().logo {
-            cell.logoImageView.sd_setImage(with: URL(string: imageUrl), completed: nil)
-        } else {
-            cell.logoImageView.image = #imageLiteral(resourceName: "logo.png")
+            cell.logoImageView.sd_setImage(with: URL(string: imageUrl)) { (image, error, cache, url) in
+                if image == nil {
+                    cell.fakeCompanyLogoLabel.isHidden = false
+                    if let fakeLogo = self.jobViewModel.getJob().company?.first {
+                         cell.fakeCompanyLogoLabel.text = String(fakeLogo).uppercased()
+                    } else {
+                        cell.fakeCompanyLogoLabel.text = "🏢".uppercased()
+                    }
+                } else {
+                    cell.fakeCompanyLogoLabel.isHidden = true
+                }
+            }
         }
         return cell
     }
@@ -130,26 +142,34 @@ extension JobsListView: UICollectionViewDelegate, UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        loadActivityIndicator()
         switch "\(indexPath.row)" {
         case "0":
+            self.title = "OK"
             jobDataViewModel.loadJobsFromRemoteOK(ConstantsUtil.remoteJobsURL())
             break
         case "1":
+            self.title = "Dev Jobs"
             jobDataViewModel.loadJobsFromRemoteOK(ConstantsUtil.devJobsURL())
             break
         case "2":
+            self.title = "Support Jobs"
             jobDataViewModel.loadJobsFromRemoteOK(ConstantsUtil.supportJobsURL())
             break
         case "3":
+            self.title = "Marketing Jobs"
             jobDataViewModel.loadJobsFromRemoteOK(ConstantsUtil.marketingJobsURL())
             break
         case "4":
+            self.title = "Design Jobs"
             jobDataViewModel.loadJobsFromRemoteOK(ConstantsUtil.designJobsURL())
             break
         case "5":
+            self.title = "Non Tech Jobs"
             jobDataViewModel.loadJobsFromRemoteOK(ConstantsUtil.nonTechJobsURL())
             break
         case "6":
+            self.title = "English Teacher Jobs"
             jobDataViewModel.loadJobsFromRemoteOK(ConstantsUtil.englishTeacherJobsURL())
             break
         default:
@@ -170,6 +190,8 @@ extension JobsListView: JobOpportunityDelegate {
 
 extension JobsListView: JobsDataDelegate {
     func loadJobDataSuccessful() {
+        removeActivityIndicator()
+        jobsListTableView.refreshControl?.endRefreshing()
         jobViewModel.getAllOpportunities()
         jobsListTableView.reloadData()
     }
@@ -183,12 +205,38 @@ extension JobsListView {
     
     func addRefreshControl() {
         jobsListTableView.refreshControl = UIRefreshControl()
-        jobsListTableView.refreshControl?.attributedTitle = NSAttributedString(string: "Update jobs list")
+        jobsListTableView.refreshControl?.tintColor = #colorLiteral(red: 0.937254902, green: 0.937254902, blue: 0.9568627451, alpha: 1)
+        jobsListTableView.refreshControl?.attributedTitle = NSAttributedString(string: "Updating jobs list", attributes: [NSAttributedStringKey.foregroundColor : #colorLiteral(red: 0.937254902, green: 0.937254902, blue: 0.9568627451, alpha: 1) ])
         jobsListTableView.refreshControl?.addTarget(self, action: #selector(loadJobs), for: .valueChanged)
     }
     
     @objc func loadJobs() {
-        jobViewModel.getAllOpportunities()
+        jobDataViewModel.loadJobsFromRemoteOK(ConstantsUtil.remoteJobsURL())
+    }
+    
+    func loadActivityIndicator(){
+        self.overlayView = UIView(frame: self.view.bounds)
+        self.overlayView.alpha = 0
+        self.overlayView.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        self.activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
+        self.activityIndicator.alpha = 1.0;
+        self.activityIndicator.center = self.view.center;
+        self.activityIndicator.hidesWhenStopped = true;
+        self.overlayView.addSubview(activityIndicator)
+        self.view.addSubview(overlayView)
+        self.view.bringSubview(toFront: overlayView)
+        UIView.animate(withDuration: 0.9, delay: 0.1,  options: .curveEaseIn, animations: {
+            self.overlayView.alpha = 0.6
+        }, completion: nil)
+        self.activityIndicator.startAnimating()
+    }
+    
+    func removeActivityIndicator() {
+        UIView.animate(withDuration: 0.5, delay: 0.1,  options: .curveEaseOut, animations: {
+            self.overlayView.alpha = 0
+        }) { (ok) in
+            self.overlayView.removeFromSuperview()
+        }
     }
     
 }
