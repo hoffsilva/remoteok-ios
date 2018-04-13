@@ -68,10 +68,6 @@ extension JobsListView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         jobViewModel.currentJob = indexPath.row
         let cell = tableView.dequeueReusableCell(withIdentifier: "jobCell", for: indexPath) as! JobViewCell
-        cell.job = jobViewModel.getJob()
-        cell.tagsCollectioView.delegate = cell
-        cell.tagsCollectioView.dataSource = cell
-        cell.tagsCollectioView.reloadData()
         cell.companyNameLabel.text = jobViewModel.getJob().company ?? "None"
         cell.positionLabel.text = jobViewModel.getJob().position ?? "None"
         
@@ -93,6 +89,11 @@ extension JobsListView: UITableViewDelegate, UITableViewDataSource {
             }
         }
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        jobViewModel.currentJob = indexPath.row
+        print(jobViewModel.getJob())
     }
     
 }
@@ -205,8 +206,8 @@ extension JobsListView {
     
     func addRefreshControl() {
         jobsListTableView.refreshControl = UIRefreshControl()
-        jobsListTableView.refreshControl?.tintColor = #colorLiteral(red: 0.937254902, green: 0.937254902, blue: 0.9568627451, alpha: 1)
-        jobsListTableView.refreshControl?.attributedTitle = NSAttributedString(string: "Updating jobs list", attributes: [NSAttributedStringKey.foregroundColor : #colorLiteral(red: 0.937254902, green: 0.937254902, blue: 0.9568627451, alpha: 1) ])
+        jobsListTableView.refreshControl?.tintColor = #colorLiteral(red: 0.1450980392, green: 0.1450980392, blue: 0.1450980392, alpha: 1)
+        jobsListTableView.refreshControl?.attributedTitle = NSAttributedString(string: "Updating jobs list", attributes: [NSAttributedStringKey.foregroundColor : #colorLiteral(red: 0.1294117647, green: 0.1294117647, blue: 0.1294117647, alpha: 1) ])
         jobsListTableView.refreshControl?.addTarget(self, action: #selector(loadJobs), for: .valueChanged)
     }
     
