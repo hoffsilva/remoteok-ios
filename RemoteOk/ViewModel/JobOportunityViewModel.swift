@@ -22,7 +22,6 @@ class JobOportunityViewModel {
     var managedContext = CoreDataStack().persistentContainer.viewContext
     var arrayOfOpportunity = [Opportunity]()
     var arrayOfFavoriteOpportunity = [OportunityFavorite]()
-    var arrayOfTags: Set = Set<String>()
     var arrayOfFilters: [String]!
     var currentJob: Int!
     
@@ -155,6 +154,7 @@ class JobOportunityViewModel {
     func getJob() -> Opportunity {
         return arrayOfOpportunity[currentJob]
     }
+    
     
 }
 

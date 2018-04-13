@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:RemoteOk/Tag+CoreDataClass.swift">
+   </FileRef>
+   <FileRef
+      location = "group:RemoteOk/Tag+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
       location = "group:RemoteOk/Opportunity+CoreDataClass.swift">
    </FileRef>
    <FileRef

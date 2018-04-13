@@ -83,10 +83,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="qvM-2Z-CLF">
-                                <rect key="frame" x="0.0" y="178" width="375" height="551"/>
+                                <rect key="frame" x="0.0" y="230" width="375" height="499"/>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="nJB-Eu-c5d">
-                                <rect key="frame" x="0.0" y="88" width="375" height="90"/>
+                                <rect key="frame" x="0.0" y="140" width="375" height="90"/>
                                 <color key="backgroundColor" red="0.14509803921568629" green="0.14509803921568629" blue="0.14509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="90" id="5XC-fa-TWl"/>
@@ -138,7 +138,7 @@
                                 </cells>
                             </collectionView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kca-gQ-c1T">
-                                <rect key="frame" x="0.0" y="178" width="375" height="551"/>
+                                <rect key="frame" x="0.0" y="230" width="375" height="499"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="jobCell" rowHeight="200" id="7r3-K3-dta" customClass="JobViewCell" customModule="RemoteOk" customModuleProvider="target">
@@ -288,7 +288,11 @@
                         <viewLayoutGuide key="safeArea" id="hBB-Vi-tE7"/>
                     </view>
                     <navigationItem key="navigationItem" title="Remote Jobs" id="Kza-LV-8ht">
-                        <barButtonItem key="leftBarButtonItem" systemItem="search" id="zUr-YH-4xr"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="search" id="zUr-YH-4xr">
+                            <connections>
+                                <segue destination="E2G-xi-Kjl" kind="show" id="gOl-3a-lT9"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="jobsListTableView" destination="kca-gQ-c1T" id="Ayh-dZ-s0q"/>
@@ -298,6 +302,66 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZSc-7z-nmT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1829.5999999999999" y="-1469.7044334975369"/>
+        </scene>
+        <!--Tags-->
+        <scene sceneID="SLA-Mf-Szs">
+            <objects>
+                <tableViewController id="Vdx-9A-Lyd" customClass="FilterJobsByTagsView" customModule="RemoteOk" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Hvd-Ch-67p">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.14509803921568629" green="0.14509803921568629" blue="0.14509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" reuseIdentifier="tagsCell" id="ImN-Zd-skc" customClass="TagViewCell" customModule="RemoteOk" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ImN-Zd-skc" id="CAy-Ag-1Su">
+                                    <rect key="frame" x="0.0" y="0.0" width="335" height="43.666666666666664"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u5S-lq-mZ7">
+                                            <rect key="frame" x="16" y="10.333333333333334" width="303" height="24.666666666666664"/>
+                                            <fontDescription key="fontDescription" name="Nunito-Light" family="Nunito" pointSize="18"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="u5S-lq-mZ7" firstAttribute="leading" secondItem="CAy-Ag-1Su" secondAttribute="leading" constant="16" id="Hz2-zQ-nn9"/>
+                                        <constraint firstAttribute="trailing" secondItem="u5S-lq-mZ7" secondAttribute="trailing" constant="16" id="cio-B5-hvz"/>
+                                        <constraint firstItem="u5S-lq-mZ7" firstAttribute="centerY" secondItem="CAy-Ag-1Su" secondAttribute="centerY" id="zik-WY-H7t"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="tagLabel" destination="u5S-lq-mZ7" id="7Ii-qc-m71"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Vdx-9A-Lyd" id="FrQ-rU-rID"/>
+                            <outlet property="delegate" destination="Vdx-9A-Lyd" id="2D0-5P-dE2"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Tags" id="l69-IA-R14">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Qcz-4r-NNx">
+                            <connections>
+                                <action selector="cancel:" destination="Vdx-9A-Lyd" id="fiZ-Eb-zDc"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="OEJ-Ff-Rsf">
+                            <connections>
+                                <action selector="save:" destination="Vdx-9A-Lyd" id="W0H-v7-noB"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cgY-rH-qda" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3860" y="-1745.3201970443351"/>
         </scene>
         <!--Remote-->
         <scene sceneID="fUt-ez-V7c">
@@ -331,14 +395,18 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JJJ-SS-xmt" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" systemItem="search" id="f26-f3-9Nk"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2Wd-80-nyx">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="2Wd-80-nyx">
+                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="25"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="textShadowColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <color key="textShadowColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </textAttributes>
                     </navigationBar>
@@ -375,6 +443,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8SD-OH-9LR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-163.125" y="269.36619718309862"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rqh-Xc-WmG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="E2G-xi-Kjl" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="aFc-Qo-Shz">
+                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.14509803921568629" green="0.14509803921568629" blue="0.14509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="20"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textShadowColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="40"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textShadowColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Vdx-9A-Lyd" kind="relationship" relationship="rootViewController" id="AY3-XX-wFK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Hf-Z4-Ce8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2917.5999999999999" y="-1745.3201970443351"/>
         </scene>
     </scenes>
     <resources>

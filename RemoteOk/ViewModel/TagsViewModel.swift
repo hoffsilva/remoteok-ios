@@ -16,6 +16,7 @@ class TagsViewModel {
     var managedContext = CoreDataStack().persistentContainer.viewContext
     weak var tagDelegate : TagDelegate!
     var arrayOfTags = Set<String>()
+    var tags = [""]
     
     func getTags() {
         guard let model = managedContext.persistentStoreCoordinator?.managedObjectModel, let fetch = model.fetchRequestTemplate(forName: "allOportunities") as? NSFetchRequest<Opportunity> else {
@@ -29,9 +30,17 @@ class TagsViewModel {
                     arrayOfTags.insert(tag)
                 }
             }
+            populateTags()
             self.tagDelegate.tagsLoaded()
         } catch let error as NSError {
             print("Error when try fetch all opportunities " + error.description)
+        }
+    }
+    
+    func populateTags() {
+        tags = []
+        for tag in arrayOfTags {
+            tags.append(tag)
         }
     }
 }

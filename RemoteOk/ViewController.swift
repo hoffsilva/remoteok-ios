@@ -43,9 +43,5 @@ extension ViewController: JobOpportunityDelegate {
         print(jobViewModel.arrayOfOpportunity)
     }
     
-    func tagsLoaded() {
-        print(jobViewModel.arrayOfTags)
-    }
-    
 }
 

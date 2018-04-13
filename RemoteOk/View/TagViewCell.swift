@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TagViewCell: UICollectionViewCell {
+class TagViewCell: UITableViewCell {
     
     @IBOutlet weak var tagLabel: UILabel!
     
