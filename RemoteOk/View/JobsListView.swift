@@ -80,7 +80,7 @@ extension JobsListView: UITableViewDelegate, UITableViewDataSource {
             } else if formatDate(dateString: dateOfJob) == getYesterday() {
                 cell.postDate.text = "Yesterday"
             } else if getWeekNumber(date: "\(formatDate(dateString: dateOfJob))") == getWeekNumber(date: "\(formatDate(dateString: "\(Date())"))") {
-                cell.postDate.text = "This Week"
+                cell.postDate.text = "This week"
             } else {
                 cell.postDate.text = "This month"
             }
@@ -225,6 +225,7 @@ extension JobsListView {
     }
     
     @objc func loadJobs() {
+        title = "OK"
         jobDataViewModel.loadJobsFromRemoteOK(ConstantsUtil.remoteJobsURL())
     }
     
@@ -264,19 +265,26 @@ extension JobsListView {
     }
     
     func getYesterday() -> Date {
-        return Calendar.current.date(byAdding: .day, value: -1, to: Date())!
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let dString = "\(Calendar.current.date(byAdding: .day, value: -1, to: Date())!)".prefix(10)
+        guard let date = dateFormatter.date(from: String(dString)) else {
+            fatalError("ERROR: Date conversion failed due to mismatched format.")
+        }
+        return date
     }
     
     func getWeekNumber(date: String) -> Int {
         let formatter  = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
-        guard let todaydate = formatter.date(from: String(date)) else {
+        let dString = date.prefix(10)
+        guard let todaydate = formatter.date(from: String(dString)) else {
             fatalError("ERROR: Date conversion failed due to mismatched format.")
         }
         let myCalendar = NSCalendar(calendarIdentifier: NSCalendar.Identifier.gregorian)!
         let myComponents = myCalendar.components(.weekOfYear, from: todaydate)
-        let weekDay = myComponents.weekday
-        return weekDay!
+        let weekNumber = myComponents.weekOfYear
+        return weekNumber!
     }
     
 }
