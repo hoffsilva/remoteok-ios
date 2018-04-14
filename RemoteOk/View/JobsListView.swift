@@ -19,6 +19,7 @@ class JobsListView: UIViewController {
     
     var jobViewModel = JobOportunityViewModel()
     var jobDataViewModel = JobsDataViewModel()
+    var tagsViewModel = TagsViewModel()
     var currentJobIndex = 0
     var overlayView = UIView()
     var activityIndicator: UIActivityIndicatorView!
@@ -43,8 +44,13 @@ class JobsListView: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        for destination in segue.destination.childViewControllers {
+            if destination.isKind(of: FilterJobsByTagsView.self) {
+                (destination as? FilterJobsByTagsView)?.filterJobsDelegate = self
+            }
+        }
+    }
 }
 
 
@@ -212,6 +218,13 @@ extension JobsListView: JobsDataDelegate {
     
     func loadJobDataFailed(message: String) {
         
+    }
+}
+
+extension JobsListView: FilterJobsByTagsDelegate {
+    func tagsSelected(selectedTags: [String]) {
+        loadActivityIndicator()
+        jobDataViewModel.loadJobsFromRemoteOK(ConstantsUtil.searchJobBy(tags: selectedTags))
     }
 }
 

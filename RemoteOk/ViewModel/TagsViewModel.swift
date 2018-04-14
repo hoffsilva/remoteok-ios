@@ -17,6 +17,7 @@ class TagsViewModel {
     weak var tagDelegate : TagDelegate!
     var arrayOfTags = Set<String>()
     var tags = [""]
+    var selectedTags = [String]()
     
     func getTags() {
         guard let model = managedContext.persistentStoreCoordinator?.managedObjectModel, let fetch = model.fetchRequestTemplate(forName: "allOportunities") as? NSFetchRequest<Opportunity> else {
@@ -41,6 +42,15 @@ class TagsViewModel {
         tags = []
         for tag in arrayOfTags {
             tags.append(tag)
+        }
+    }
+    
+    func serchTag(string: String) {
+        tags = []
+        for tag in arrayOfTags {
+            if tag.uppercased().contains(string) {
+                tags.append(tag)
+            }
         }
     }
 }

@@ -9,10 +9,12 @@
 import UIKit
 
 protocol FilterJobsByTagsDelegate: class {
-    func tagsSelected()
+    func tagsSelected(selectedTags: [String])
 }
 
 class FilterJobsByTagsView: UITableViewController {
+    
+    weak var filterJobsDelegate: FilterJobsByTagsDelegate?
     
     var tagViewModel = TagsViewModel()
     let searchController = UISearchController(searchResultsController: nil)
@@ -43,14 +45,36 @@ class FilterJobsByTagsView: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tagsCell") as! TagViewCell
+        cell.accessoryType = .none
         cell.tagLabel.text = tagViewModel.tags[indexPath.row]
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath) as! TagViewCell
+        let accessoryType = cell.accessoryType
+        var index = 0
+        if accessoryType == UITableViewCellAccessoryType.none {
+            cell.accessoryType = .checkmark
+            tagViewModel.selectedTags.append(cell.tagLabel.text!)
+        } else {
+            cell.accessoryType = .none
+            for tag in tagViewModel.selectedTags {
+                if tag == cell.tagLabel.text {
+                    tagViewModel.selectedTags.remove(at: index)
+                }
+                index += 1
+            }
+        }
     }
     
     func configureSearchBar() {
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = "Search tags."
+        searchController.searchBar.placeholder = "Search tags..."
+        searchController.searchBar.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        searchController.searchBar.barTintColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+        searchController.searchBar.barStyle = .blackOpaque
         if #available(iOS 11.0, *) {
             navigationItem.searchController = searchController
         } else {
@@ -65,6 +89,7 @@ class FilterJobsByTagsView: UITableViewController {
     
     @IBAction func save(_ sender: Any) {
         dismiss(animated: true, completion: nil)
+        filterJobsDelegate?.tagsSelected(selectedTags: tagViewModel.selectedTags)
     }
     
     
@@ -73,10 +98,20 @@ class FilterJobsByTagsView: UITableViewController {
 
 extension FilterJobsByTagsView: UISearchResultsUpdating, UISearchControllerDelegate {
     func updateSearchResults(for searchController: UISearchController) {
-        //jobsController.arrayOfJobs.removeAll()
+        if !searchController.isActive {
+            tagViewModel.getTags()
+        } else {
+            guard let term = searchController.searchBar.text else {
+                return
+            }
+            if !term.isEmpty {
+                tagViewModel.serchTag(string: term.uppercased())
+            }
+        }
         tableView.reloadData()
-       // jobsController.getJobsBySearch(parameter: searchController.searchBar.text!)
     }
+    
+    
 }
 
 extension FilterJobsByTagsView: TagDelegate {
