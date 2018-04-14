@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>english-teacher</key>
+	<string>-english-teacher</string>
+	<key>non-tech</key>
+	<string>-non-tech</string>
+	<key>design</key>
+	<string>-design</string>
+	<key>marketing</key>
+	<string>-marketing</string>
+	<key>support</key>
+	<string>-support</string>
+	<key>dev</key>
+	<string>-dev</string>
+	<key>mainURL</key>
+	<string>https://remoteok.io/remote</string>
+</dict>
+</plist>

@@ -7,23 +7,97 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		43096EA02076EB31003702F0 /* Constants.plist in Resources */ = {isa = PBXBuildFile; fileRef = 43096E9F2076EB31003702F0 /* Constants.plist */; };
+		43096EA22076F15B003702F0 /* ConstatsUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43096EA12076F15B003702F0 /* ConstatsUtil.swift */; };
 		430E6D32206C4FFA0093EA8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430E6D31206C4FFA0093EA8B /* AppDelegate.swift */; };
 		430E6D34206C4FFA0093EA8B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430E6D33206C4FFA0093EA8B /* ViewController.swift */; };
 		430E6D37206C4FFA0093EA8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 430E6D35206C4FFA0093EA8B /* Main.storyboard */; };
-		430E6D3A206C4FFA0093EA8B /* RemoteOk.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 430E6D38206C4FFA0093EA8B /* RemoteOk.xcdatamodeld */; };
-		430E6D3C206C4FFA0093EA8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 430E6D3B206C4FFA0093EA8B /* Assets.xcassets */; };
 		430E6D3F206C4FFA0093EA8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 430E6D3D206C4FFA0093EA8B /* LaunchScreen.storyboard */; };
+		430E6D4F206C65A90093EA8B /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430E6D4E206C65A90093EA8B /* Connection.swift */; };
+		430E6D51206C736F0093EA8B /* JobOportunity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430E6D50206C736F0093EA8B /* JobOportunity.swift */; };
+		43487CCD2078EA8B00430934 /* TagsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43487CCC2078EA8B00430934 /* TagsViewModel.swift */; };
+		43487CCF2078EB4000430934 /* JobViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43487CCE2078EB4000430934 /* JobViewCell.swift */; };
+		43487CD12078EE1700430934 /* TagViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43487CD02078EE1700430934 /* TagViewCell.swift */; };
+		4399FE372072F0ED0099E529 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4399FE362072F0ED0099E529 /* LaunchScreenViewController.swift */; };
+		4399FE3D2072FF620099E529 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 4399FE3A2072FF620099E529 /* logo.png */; };
+		4399FE3E2072FF620099E529 /* launchscreen.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4399FE3B2072FF620099E529 /* launchscreen.mp4 */; };
+		4399FE3F2072FF620099E529 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 4399FE3C2072FF620099E529 /* bg.png */; };
+		4399FE41207300D20099E529 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4399FE40207300D20099E529 /* Launch.storyboard */; };
+		4399FE43207306730099E529 /* Pacifico.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4399FE42207306730099E529 /* Pacifico.ttf */; };
+		4399FE5220730B1D0099E529 /* Nunito-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4399FE4420730B190099E529 /* Nunito-SemiBoldItalic.ttf */; };
+		4399FE5320730B1D0099E529 /* Nunito-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4399FE4520730B190099E529 /* Nunito-Black.ttf */; };
+		4399FE5420730B1D0099E529 /* Nunito-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4399FE4620730B1A0099E529 /* Nunito-ExtraBoldItalic.ttf */; };
+		4399FE5520730B1D0099E529 /* Nunito-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4399FE4720730B1A0099E529 /* Nunito-ExtraLight.ttf */; };
+		4399FE5620730B1D0099E529 /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4399FE4820730B1A0099E529 /* Nunito-Bold.ttf */; };
+		4399FE5720730B1D0099E529 /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4399FE4920730B1B0099E529 /* Nunito-Regular.ttf */; };
+		4399FE5820730B1D0099E529 /* Nunito-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4399FE4A20730B1B0099E529 /* Nunito-LightItalic.ttf */; };
+		4399FE5920730B1D0099E529 /* Nunito-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4399FE4B20730B1B0099E529 /* Nunito-ExtraLightItalic.ttf */; };
+		4399FE5A20730B1D0099E529 /* Nunito-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4399FE4C20730B1B0099E529 /* Nunito-ExtraBold.ttf */; };
+		4399FE5B20730B1D0099E529 /* Nunito-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4399FE4D20730B1C0099E529 /* Nunito-Italic.ttf */; };
+		4399FE5C20730B1D0099E529 /* Nunito-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4399FE4E20730B1C0099E529 /* Nunito-Light.ttf */; };
+		4399FE5D20730B1D0099E529 /* Nunito-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4399FE4F20730B1C0099E529 /* Nunito-BlackItalic.ttf */; };
+		4399FE5E20730B1D0099E529 /* Nunito-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4399FE5020730B1C0099E529 /* Nunito-BoldItalic.ttf */; };
+		4399FE5F20730B1D0099E529 /* Nunito-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4399FE5120730B1D0099E529 /* Nunito-SemiBold.ttf */; };
+		439CB824207C2D2D00C1EF64 /* TagsViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439CB823207C2D2D00C1EF64 /* TagsViewLayout.swift */; };
+		439CB826207C341F00C1EF64 /* RemoteFilters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439CB825207C341F00C1EF64 /* RemoteFilters.swift */; };
+		439CB828207C363900C1EF64 /* RemoteFilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439CB827207C363900C1EF64 /* RemoteFilterCell.swift */; };
+		43A9B25D206EED76003EB208 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43A9B25C206EED76003EB208 /* Assets.xcassets */; };
+		43B7BA43206E6AEA00DA3A39 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B7BA42206E6AEA00DA3A39 /* CoreDataStack.swift */; };
+		43EE8CD82074441B005BBE76 /* JobsDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EE8CD72074441B005BBE76 /* JobsDataViewModel.swift */; };
+		43EE8CDB20759A6F005BBE76 /* RemoteOk.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 43EE8CD920759A6F005BBE76 /* RemoteOk.xcdatamodeld */; };
+		96B14212FB7FCFD275086D1B /* Pods_RemoteOk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11DF5B9A2E80982E1ED0E538 /* Pods_RemoteOk.framework */; };
+		CA13F4512077F2AC007676AB /* JobsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA13F4502077F2AC007676AB /* JobsListView.swift */; };
+		CA869449206D68B30099F39D /* JobOportunityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA869448206D68B30099F39D /* JobOportunityViewModel.swift */; };
+		CAD06CF32080E02D00BA3625 /* FilterJobsByTagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD06CF22080E02D00BA3625 /* FilterJobsByTagsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		11DF5B9A2E80982E1ED0E538 /* Pods_RemoteOk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RemoteOk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		43096E9F2076EB31003702F0 /* Constants.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Constants.plist; sourceTree = "<group>"; };
+		43096EA12076F15B003702F0 /* ConstatsUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstatsUtil.swift; sourceTree = "<group>"; };
 		430E6D2E206C4FFA0093EA8B /* RemoteOk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemoteOk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		430E6D31206C4FFA0093EA8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		430E6D33206C4FFA0093EA8B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		430E6D36206C4FFA0093EA8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		430E6D39206C4FFA0093EA8B /* RemoteOk.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RemoteOk.xcdatamodel; sourceTree = "<group>"; };
-		430E6D3B206C4FFA0093EA8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		430E6D3E206C4FFA0093EA8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		430E6D40206C4FFA0093EA8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		430E6D4E206C65A90093EA8B /* Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
+		430E6D50206C736F0093EA8B /* JobOportunity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobOportunity.swift; sourceTree = "<group>"; };
+		43487CCC2078EA8B00430934 /* TagsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagsViewModel.swift; sourceTree = "<group>"; };
+		43487CCE2078EB4000430934 /* JobViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobViewCell.swift; sourceTree = "<group>"; };
+		43487CD02078EE1700430934 /* TagViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagViewCell.swift; sourceTree = "<group>"; };
+		4399FE362072F0ED0099E529 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
+		4399FE3A2072FF620099E529 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		4399FE3B2072FF620099E529 /* launchscreen.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = launchscreen.mp4; sourceTree = "<group>"; };
+		4399FE3C2072FF620099E529 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
+		4399FE40207300D20099E529 /* Launch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
+		4399FE42207306730099E529 /* Pacifico.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Pacifico.ttf; sourceTree = "<group>"; };
+		4399FE4420730B190099E529 /* Nunito-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		4399FE4520730B190099E529 /* Nunito-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Black.ttf"; sourceTree = "<group>"; };
+		4399FE4620730B1A0099E529 /* Nunito-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		4399FE4720730B1A0099E529 /* Nunito-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraLight.ttf"; sourceTree = "<group>"; };
+		4399FE4820730B1A0099E529 /* Nunito-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Bold.ttf"; sourceTree = "<group>"; };
+		4399FE4920730B1B0099E529 /* Nunito-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Regular.ttf"; sourceTree = "<group>"; };
+		4399FE4A20730B1B0099E529 /* Nunito-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-LightItalic.ttf"; sourceTree = "<group>"; };
+		4399FE4B20730B1B0099E529 /* Nunito-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		4399FE4C20730B1B0099E529 /* Nunito-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraBold.ttf"; sourceTree = "<group>"; };
+		4399FE4D20730B1C0099E529 /* Nunito-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Italic.ttf"; sourceTree = "<group>"; };
+		4399FE4E20730B1C0099E529 /* Nunito-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Light.ttf"; sourceTree = "<group>"; };
+		4399FE4F20730B1C0099E529 /* Nunito-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-BlackItalic.ttf"; sourceTree = "<group>"; };
+		4399FE5020730B1C0099E529 /* Nunito-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-BoldItalic.ttf"; sourceTree = "<group>"; };
+		4399FE5120730B1D0099E529 /* Nunito-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-SemiBold.ttf"; sourceTree = "<group>"; };
+		439CB823207C2D2D00C1EF64 /* TagsViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsViewLayout.swift; sourceTree = "<group>"; };
+		439CB825207C341F00C1EF64 /* RemoteFilters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFilters.swift; sourceTree = "<group>"; };
+		439CB827207C363900C1EF64 /* RemoteFilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFilterCell.swift; sourceTree = "<group>"; };
+		43A9B25C206EED76003EB208 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		43B7BA42206E6AEA00DA3A39 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		43EE8CD72074441B005BBE76 /* JobsDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsDataViewModel.swift; sourceTree = "<group>"; };
+		43EE8CDA20759A6F005BBE76 /* RemoteOk.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RemoteOk.xcdatamodel; sourceTree = "<group>"; };
+		549011949B0F36695879AAC6 /* Pods-RemoteOk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RemoteOk.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RemoteOk/Pods-RemoteOk.debug.xcconfig"; sourceTree = "<group>"; };
+		6C803A45ABA505F2553F6B5D /* Pods-RemoteOk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RemoteOk.release.xcconfig"; path = "Pods/Target Support Files/Pods-RemoteOk/Pods-RemoteOk.release.xcconfig"; sourceTree = "<group>"; };
+		CA13F4502077F2AC007676AB /* JobsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsListView.swift; sourceTree = "<group>"; };
+		CA869448206D68B30099F39D /* JobOportunityViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobOportunityViewModel.swift; sourceTree = "<group>"; };
+		CAD06CF22080E02D00BA3625 /* FilterJobsByTagsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterJobsByTagsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +105,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96B14212FB7FCFD275086D1B /* Pods_RemoteOk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		20666A25EA97CCEBF8D45BB1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				11DF5B9A2E80982E1ED0E538 /* Pods_RemoteOk.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		43096E9E2076EB01003702F0 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				43096E9F2076EB31003702F0 /* Constants.plist */,
+				43096EA12076F15B003702F0 /* ConstatsUtil.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		430E6D25206C4FFA0093EA8B = {
 			isa = PBXGroup;
 			children = (
 				430E6D30206C4FFA0093EA8B /* RemoteOk */,
 				430E6D2F206C4FFA0093EA8B /* Products */,
+				9E89E584AA4ED6AE9D4CEA2E /* Pods */,
+				20666A25EA97CCEBF8D45BB1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +150,98 @@
 		430E6D30206C4FFA0093EA8B /* RemoteOk */ = {
 			isa = PBXGroup;
 			children = (
+				43096E9E2076EB01003702F0 /* Settings */,
+				43EE8CD920759A6F005BBE76 /* RemoteOk.xcdatamodeld */,
+				4399FE392072FF620099E529 /* media */,
+				430E6D4D206C63BB0093EA8B /* Network */,
+				430E6D48206C5E3F0093EA8B /* ViewModel */,
+				430E6D47206C5E340093EA8B /* View */,
+				430E6D46206C5E250093EA8B /* Model */,
 				430E6D31206C4FFA0093EA8B /* AppDelegate.swift */,
 				430E6D33206C4FFA0093EA8B /* ViewController.swift */,
 				430E6D35206C4FFA0093EA8B /* Main.storyboard */,
-				430E6D3B206C4FFA0093EA8B /* Assets.xcassets */,
 				430E6D3D206C4FFA0093EA8B /* LaunchScreen.storyboard */,
 				430E6D40206C4FFA0093EA8B /* Info.plist */,
-				430E6D38206C4FFA0093EA8B /* RemoteOk.xcdatamodeld */,
+				43A9B25C206EED76003EB208 /* Assets.xcassets */,
+				43B7BA42206E6AEA00DA3A39 /* CoreDataStack.swift */,
+				4399FE40207300D20099E529 /* Launch.storyboard */,
 			);
 			path = RemoteOk;
+			sourceTree = "<group>";
+		};
+		430E6D46206C5E250093EA8B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				430E6D50206C736F0093EA8B /* JobOportunity.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		430E6D47206C5E340093EA8B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4399FE362072F0ED0099E529 /* LaunchScreenViewController.swift */,
+				CA13F4502077F2AC007676AB /* JobsListView.swift */,
+				43487CCE2078EB4000430934 /* JobViewCell.swift */,
+				43487CD02078EE1700430934 /* TagViewCell.swift */,
+				439CB825207C341F00C1EF64 /* RemoteFilters.swift */,
+				439CB827207C363900C1EF64 /* RemoteFilterCell.swift */,
+				CAD06CF22080E02D00BA3625 /* FilterJobsByTagsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		430E6D48206C5E3F0093EA8B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				43487CCC2078EA8B00430934 /* TagsViewModel.swift */,
+				CA869448206D68B30099F39D /* JobOportunityViewModel.swift */,
+				43EE8CD72074441B005BBE76 /* JobsDataViewModel.swift */,
+				439CB823207C2D2D00C1EF64 /* TagsViewLayout.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		430E6D4D206C63BB0093EA8B /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				430E6D4E206C65A90093EA8B /* Connection.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		4399FE392072FF620099E529 /* media */ = {
+			isa = PBXGroup;
+			children = (
+				4399FE4520730B190099E529 /* Nunito-Black.ttf */,
+				4399FE4F20730B1C0099E529 /* Nunito-BlackItalic.ttf */,
+				4399FE4820730B1A0099E529 /* Nunito-Bold.ttf */,
+				4399FE5020730B1C0099E529 /* Nunito-BoldItalic.ttf */,
+				4399FE4C20730B1B0099E529 /* Nunito-ExtraBold.ttf */,
+				4399FE4620730B1A0099E529 /* Nunito-ExtraBoldItalic.ttf */,
+				4399FE4720730B1A0099E529 /* Nunito-ExtraLight.ttf */,
+				4399FE4B20730B1B0099E529 /* Nunito-ExtraLightItalic.ttf */,
+				4399FE4D20730B1C0099E529 /* Nunito-Italic.ttf */,
+				4399FE4E20730B1C0099E529 /* Nunito-Light.ttf */,
+				4399FE4A20730B1B0099E529 /* Nunito-LightItalic.ttf */,
+				4399FE4920730B1B0099E529 /* Nunito-Regular.ttf */,
+				4399FE5120730B1D0099E529 /* Nunito-SemiBold.ttf */,
+				4399FE4420730B190099E529 /* Nunito-SemiBoldItalic.ttf */,
+				4399FE42207306730099E529 /* Pacifico.ttf */,
+				4399FE3A2072FF620099E529 /* logo.png */,
+				4399FE3B2072FF620099E529 /* launchscreen.mp4 */,
+				4399FE3C2072FF620099E529 /* bg.png */,
+			);
+			path = media;
+			sourceTree = "<group>";
+		};
+		9E89E584AA4ED6AE9D4CEA2E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				549011949B0F36695879AAC6 /* Pods-RemoteOk.debug.xcconfig */,
+				6C803A45ABA505F2553F6B5D /* Pods-RemoteOk.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +251,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 430E6D43206C4FFA0093EA8B /* Build configuration list for PBXNativeTarget "RemoteOk" */;
 			buildPhases = (
+				EB8DE8297964B1BD81067FE2 /* [CP] Check Pods Manifest.lock */,
 				430E6D2A206C4FFA0093EA8B /* Sources */,
 				430E6D2B206C4FFA0093EA8B /* Frameworks */,
 				430E6D2C206C4FFA0093EA8B /* Resources */,
+				6AB055C63B35819AAF836688 /* [CP] Embed Pods Frameworks */,
+				9617275A3E0232EDB6A4ECA4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -126,22 +306,121 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4399FE3D2072FF620099E529 /* logo.png in Resources */,
+				4399FE5B20730B1D0099E529 /* Nunito-Italic.ttf in Resources */,
+				4399FE5C20730B1D0099E529 /* Nunito-Light.ttf in Resources */,
+				4399FE5320730B1D0099E529 /* Nunito-Black.ttf in Resources */,
+				4399FE5620730B1D0099E529 /* Nunito-Bold.ttf in Resources */,
+				4399FE5920730B1D0099E529 /* Nunito-ExtraLightItalic.ttf in Resources */,
 				430E6D3F206C4FFA0093EA8B /* LaunchScreen.storyboard in Resources */,
-				430E6D3C206C4FFA0093EA8B /* Assets.xcassets in Resources */,
+				4399FE5720730B1D0099E529 /* Nunito-Regular.ttf in Resources */,
+				4399FE5520730B1D0099E529 /* Nunito-ExtraLight.ttf in Resources */,
+				4399FE5E20730B1D0099E529 /* Nunito-BoldItalic.ttf in Resources */,
+				4399FE3F2072FF620099E529 /* bg.png in Resources */,
+				4399FE5220730B1D0099E529 /* Nunito-SemiBoldItalic.ttf in Resources */,
+				4399FE3E2072FF620099E529 /* launchscreen.mp4 in Resources */,
+				4399FE41207300D20099E529 /* Launch.storyboard in Resources */,
+				43A9B25D206EED76003EB208 /* Assets.xcassets in Resources */,
+				4399FE43207306730099E529 /* Pacifico.ttf in Resources */,
+				43096EA02076EB31003702F0 /* Constants.plist in Resources */,
+				4399FE5F20730B1D0099E529 /* Nunito-SemiBold.ttf in Resources */,
+				4399FE5A20730B1D0099E529 /* Nunito-ExtraBold.ttf in Resources */,
 				430E6D37206C4FFA0093EA8B /* Main.storyboard in Resources */,
+				4399FE5820730B1D0099E529 /* Nunito-LightItalic.ttf in Resources */,
+				4399FE5420730B1D0099E529 /* Nunito-ExtraBoldItalic.ttf in Resources */,
+				4399FE5D20730B1D0099E529 /* Nunito-BlackItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6AB055C63B35819AAF836688 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-RemoteOk/Pods-RemoteOk-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/FCAlertView/FCAlertView.framework",
+				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyPlistManager/SwiftyPlistManager.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FCAlertView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyPlistManager.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RemoteOk/Pods-RemoteOk-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9617275A3E0232EDB6A4ECA4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RemoteOk/Pods-RemoteOk-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EB8DE8297964B1BD81067FE2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RemoteOk-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		430E6D2A206C4FFA0093EA8B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43487CCF2078EB4000430934 /* JobViewCell.swift in Sources */,
+				43B7BA43206E6AEA00DA3A39 /* CoreDataStack.swift in Sources */,
+				430E6D51206C736F0093EA8B /* JobOportunity.swift in Sources */,
+				43EE8CD82074441B005BBE76 /* JobsDataViewModel.swift in Sources */,
+				CAD06CF32080E02D00BA3625 /* FilterJobsByTagsView.swift in Sources */,
+				439CB826207C341F00C1EF64 /* RemoteFilters.swift in Sources */,
+				4399FE372072F0ED0099E529 /* LaunchScreenViewController.swift in Sources */,
+				43096EA22076F15B003702F0 /* ConstatsUtil.swift in Sources */,
+				CA13F4512077F2AC007676AB /* JobsListView.swift in Sources */,
+				43487CD12078EE1700430934 /* TagViewCell.swift in Sources */,
+				43487CCD2078EA8B00430934 /* TagsViewModel.swift in Sources */,
+				430E6D4F206C65A90093EA8B /* Connection.swift in Sources */,
+				439CB828207C363900C1EF64 /* RemoteFilterCell.swift in Sources */,
+				CA869449206D68B30099F39D /* JobOportunityViewModel.swift in Sources */,
 				430E6D34206C4FFA0093EA8B /* ViewController.swift in Sources */,
 				430E6D32206C4FFA0093EA8B /* AppDelegate.swift in Sources */,
-				430E6D3A206C4FFA0093EA8B /* RemoteOk.xcdatamodeld in Sources */,
+				439CB824207C2D2D00C1EF64 /* TagsViewLayout.swift in Sources */,
+				43EE8CDB20759A6F005BBE76 /* RemoteOk.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +555,7 @@
 		};
 		430E6D44206C4FFA0093EA8B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 549011949B0F36695879AAC6 /* Pods-RemoteOk.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -291,6 +571,7 @@
 		};
 		430E6D45206C4FFA0093EA8B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C803A45ABA505F2553F6B5D /* Pods-RemoteOk.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -328,12 +609,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		430E6D38206C4FFA0093EA8B /* RemoteOk.xcdatamodeld */ = {
+		43EE8CD920759A6F005BBE76 /* RemoteOk.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				430E6D39206C4FFA0093EA8B /* RemoteOk.xcdatamodel */,
+				43EE8CDA20759A6F005BBE76 /* RemoteOk.xcdatamodel */,
 			);
-			currentVersion = 430E6D39206C4FFA0093EA8B /* RemoteOk.xcdatamodel */;
+			currentVersion = 43EE8CDA20759A6F005BBE76 /* RemoteOk.xcdatamodel */;
 			path = RemoteOk.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
