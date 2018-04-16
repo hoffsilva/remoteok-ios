@@ -27,7 +27,7 @@ class FilterJobsByTagsView: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        tagViewModel.getTags()
+        tagViewModel.getTagsFromJobs()
     }
 
     override func didReceiveMemoryWarning() {
@@ -45,8 +45,13 @@ class FilterJobsByTagsView: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tagsCell") as! TagViewCell
-        cell.accessoryType = .none
-        cell.tagLabel.text = tagViewModel.tags[indexPath.row]
+        if tagViewModel.tags[indexPath.row].isSelected {
+            cell.accessoryType = .checkmark
+        } else {
+            cell.accessoryType = .none
+        }
+        
+        cell.tagLabel.text = tagViewModel.tags[indexPath.row].name ?? ""
         return cell
     }
     
@@ -56,9 +61,11 @@ class FilterJobsByTagsView: UITableViewController {
         var index = 0
         if accessoryType == UITableViewCellAccessoryType.none {
             cell.accessoryType = .checkmark
+            tagViewModel.updateTag(tag: tagViewModel.tags[indexPath.row])
             tagViewModel.selectedTags.append(cell.tagLabel.text!)
         } else {
             cell.accessoryType = .none
+            tagViewModel.updateTag(tag: tagViewModel.tags[indexPath.row])
             for tag in tagViewModel.selectedTags {
                 if tag == cell.tagLabel.text {
                     tagViewModel.selectedTags.remove(at: index)
