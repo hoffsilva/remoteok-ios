@@ -323,11 +323,11 @@
                                     <segue destination="FJm-Jq-awU" kind="embed" identifier="dataJob" id="2sH-sp-agm"/>
                                 </connections>
                             </containerView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="PXt-xW-xN6">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="PXt-xW-xN6">
                                 <rect key="frame" x="8" y="460" width="304" height="51"/>
                                 <subviews>
                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NAh-e0-5Va">
-                                        <rect key="frame" x="0.0" y="0.0" width="137" height="51"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="146" height="51"/>
                                         <color key="backgroundColor" red="1" green="0.2784313725" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Nunito-ExtraBold" family="Nunito" pointSize="18"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -340,9 +340,18 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3v5-Ii-gyF">
-                                        <rect key="frame" x="167" y="0.0" width="137" height="51"/>
-                                        <state key="normal" title="Button"/>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3v5-Ii-gyF">
+                                        <rect key="frame" x="158" y="0.0" width="146" height="51"/>
+                                        <color key="backgroundColor" red="1" green="0.2784313725" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Nunito-ExtraBold" family="Nunito" pointSize="18"/>
+                                        <state key="normal" title="Favorite">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -375,7 +384,7 @@
         <scene sceneID="QPP-kQ-7lZ">
             <objects>
                 <tableViewController id="FJm-Jq-awU" customClass="DetailJobTableViewController" customModule="RemoteOk" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="xcC-dX-dAM">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="xcC-dX-dAM">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -443,6 +452,12 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="384"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2000" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="suJ-Ny-ohc">
+                                                    <rect key="frame" x="16" y="11" width="288" height="362"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                                 <wkWebView contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="ncs-mr-690">
                                                     <rect key="frame" x="24" y="19" width="272" height="346"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -455,8 +470,12 @@
                                             <constraints>
                                                 <constraint firstItem="ncs-mr-690" firstAttribute="leading" secondItem="Pf9-hY-R4W" secondAttribute="leadingMargin" constant="8" id="3lT-ay-Z1o"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="ncs-mr-690" secondAttribute="bottom" constant="8" id="QT6-WB-0we"/>
+                                                <constraint firstItem="suJ-Ny-ohc" firstAttribute="leading" secondItem="Pf9-hY-R4W" secondAttribute="leadingMargin" id="R2d-mG-4QL"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="suJ-Ny-ohc" secondAttribute="bottom" id="S5F-2g-zt8"/>
+                                                <constraint firstItem="suJ-Ny-ohc" firstAttribute="top" secondItem="Pf9-hY-R4W" secondAttribute="topMargin" id="T1P-ur-2ZP"/>
                                                 <constraint firstItem="ncs-mr-690" firstAttribute="top" secondItem="Pf9-hY-R4W" secondAttribute="topMargin" constant="8" id="UaF-0c-8cm"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="ncs-mr-690" secondAttribute="trailing" constant="8" id="Z7E-N0-hL2"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="suJ-Ny-ohc" secondAttribute="trailing" id="ikw-ip-oMK"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -472,13 +491,14 @@
                     <connections>
                         <outlet property="companyLogoImageView" destination="ZVs-1R-7gK" id="whF-ec-3TX"/>
                         <outlet property="companyNameLabel" destination="kLk-At-OPV" id="zW6-wN-5ri"/>
+                        <outlet property="jobDescriptionLabel" destination="suJ-Ny-ohc" id="oGu-Ak-myZ"/>
                         <outlet property="jobDescriptionWebView" destination="ncs-mr-690" id="HFG-pL-ovh"/>
                         <outlet property="jobNameLabel" destination="z8S-vL-zhy" id="Hb2-3a-sn3"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a52-Iy-N56" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3860" y="-1063"/>
+            <point key="canvasLocation" x="3859" y="-862"/>
         </scene>
         <!--Tags-->
         <scene sceneID="SLA-Mf-Szs">

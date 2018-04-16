@@ -20,16 +20,29 @@ class DetailJobTableViewController: UITableViewController {
     @IBOutlet weak var companyLogoImageView: UIImageView!
     @IBOutlet weak var companyNameLabel: UILabel!
     @IBOutlet weak var jobDescriptionWebView: WKWebView!
+    @IBOutlet weak var jobDescriptionLabel: UILabel!
     
     var job: Opportunity!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         jobNameLabel.text = job.position ?? "asasas"
-        jobDescriptionWebView.loadHTMLString(job.desc ?? "", baseURL: nil)
+        jobDescriptionLabel.text = job.desc ?? ""
+        jobDescriptionWebView.loadHTMLString(job.desc ?? "" , baseURL: nil)
         companyNameLabel.text = job.company ?? ""
         companyLogoImageView.sd_setImage(with: URL(string: job.logo ?? ""), completed: nil)
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now(), execute: {
+            print("sasa")
+        })
+       
     }
+    
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewDidAppear(true)
+//        self.jobDescriptionWebView.evaluateJavaScript("document.documentElement.outerHTML.toString()") { (html, error) in
+//            print(html)
+//        }
+//    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
