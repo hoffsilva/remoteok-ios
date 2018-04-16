@@ -21,6 +21,7 @@ class DetailJobTableViewController: UITableViewController {
     @IBOutlet weak var companyNameLabel: UILabel!
     @IBOutlet weak var jobDescriptionWebView: WKWebView!
     @IBOutlet weak var jobDescriptionLabel: UILabel!
+    @IBOutlet weak var fakeCompanyLogoLabel: UILabel!
     
     var job: Opportunity!
     
@@ -28,9 +29,39 @@ class DetailJobTableViewController: UITableViewController {
         super.viewDidLoad()
         jobNameLabel.text = job.position ?? "asasas"
         jobDescriptionLabel.text = job.desc ?? ""
-        jobDescriptionWebView.loadHTMLString(job.desc ?? "" , baseURL: nil)
+        
+        if let imageUrl = job.logo {
+            companyLogoImageView.sd_setImage(with: URL(string: imageUrl)) { (image, error, cache, url) in
+                if image == nil {
+                    self.fakeCompanyLogoLabel.isHidden = false
+                    if let fakeLogo = self.job.company?.first {
+                        self.fakeCompanyLogoLabel.text = String(fakeLogo).uppercased()
+                    } else {
+                        self.fakeCompanyLogoLabel.text = "🏢".uppercased()
+                    }
+                } else {
+                    self.fakeCompanyLogoLabel.isHidden = true
+                }
+            }
+        }
+        jobDescriptionWebView.loadHTMLString("""
+                                             <html>
+                                                <head>
+                                                    <style type='text/css'>
+                                                        body {
+                                                            font-family: "Nunito","Helvetica",Arial,sans-serif;
+                                                            padding: 0;
+                                                            font-size: 30pt;
+                                                            text-align: justify;
+                                                        }
+                                                    </style>
+                                                </head>
+                                                <body>
+                                                \(job.desc!)
+                                                </body>
+                                                </html>
+                                             """ , baseURL: nil)
         companyNameLabel.text = job.company ?? ""
-        companyLogoImageView.sd_setImage(with: URL(string: job.logo ?? ""), completed: nil)
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now(), execute: {
             print("sasa")
         })

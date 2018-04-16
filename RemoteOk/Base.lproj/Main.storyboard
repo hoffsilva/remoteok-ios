@@ -339,6 +339,9 @@
                                                 <integer key="value" value="15"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="apply" destination="2D5-RS-jaW" eventType="touchUpInside" id="4Lm-Tw-6Nj"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3v5-Ii-gyF">
                                         <rect key="frame" x="158" y="0.0" width="146" height="51"/>
@@ -352,6 +355,9 @@
                                                 <integer key="value" value="15"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="addToFavoritesList:" destination="2D5-RS-jaW" eventType="touchUpInside" id="slX-in-N1j"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -373,7 +379,11 @@
                         <viewLayoutGuide key="safeArea" id="eyR-zo-jTd"/>
                     </view>
                     <navigationItem key="navigationItem" id="vmX-ak-QbH">
-                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="hFM-MO-M08"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="hFM-MO-M08">
+                            <connections>
+                                <action selector="shareJob" destination="2D5-RS-jaW" id="MDu-mj-TIy"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bi3-sX-lde" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -420,7 +430,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="108"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kLk-At-OPV">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kLk-At-OPV">
                                                     <rect key="frame" x="74" y="43" width="222" height="23.5"/>
                                                     <fontDescription key="fontDescription" name="Nunito-Light" family="Nunito" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -433,13 +443,23 @@
                                                         <constraint firstAttribute="width" constant="50" id="sYL-fv-kyS"/>
                                                     </constraints>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="S" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDx-Pt-jiS">
+                                                    <rect key="frame" x="16" y="30" width="50" height="50"/>
+                                                    <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="30"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailingMargin" secondItem="kLk-At-OPV" secondAttribute="trailing" constant="8" id="0Mw-ob-3RE"/>
+                                                <constraint firstItem="dDx-Pt-jiS" firstAttribute="height" secondItem="ZVs-1R-7gK" secondAttribute="height" id="4Nu-oa-FKu"/>
+                                                <constraint firstItem="dDx-Pt-jiS" firstAttribute="leading" secondItem="Fb5-Tn-06Z" secondAttribute="leading" constant="16" id="Fl1-WT-wF9"/>
+                                                <constraint firstItem="dDx-Pt-jiS" firstAttribute="width" secondItem="ZVs-1R-7gK" secondAttribute="width" id="JIl-vx-9SW"/>
                                                 <constraint firstItem="ZVs-1R-7gK" firstAttribute="leading" secondItem="Fb5-Tn-06Z" secondAttribute="leading" constant="16" id="dUF-uZ-EzO"/>
                                                 <constraint firstItem="kLk-At-OPV" firstAttribute="top" secondItem="Fb5-Tn-06Z" secondAttribute="topMargin" constant="32" id="maW-OB-S6M"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="kLk-At-OPV" secondAttribute="bottom" constant="30.670000000000002" id="nBU-be-qw0"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="ZVs-1R-7gK" secondAttribute="bottom" constant="18" id="nqO-ss-LZE"/>
+                                                <constraint firstItem="dDx-Pt-jiS" firstAttribute="top" secondItem="Fb5-Tn-06Z" secondAttribute="top" constant="30" id="yfw-aP-0xd"/>
                                                 <constraint firstItem="kLk-At-OPV" firstAttribute="leading" secondItem="ZVs-1R-7gK" secondAttribute="trailing" constant="8" id="yuG-Ge-uTJ"/>
                                                 <constraint firstItem="ZVs-1R-7gK" firstAttribute="top" secondItem="Fb5-Tn-06Z" secondAttribute="topMargin" constant="18" id="zRh-KM-JtL"/>
                                             </constraints>
@@ -454,7 +474,7 @@
                                             <subviews>
                                                 <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2000" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="suJ-Ny-ohc">
                                                     <rect key="frame" x="16" y="11" width="288" height="362"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -479,6 +499,14 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="108" id="eG5-cc-W8D">
+                                        <rect key="frame" x="0.0" y="536" width="320" height="108"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eG5-cc-W8D" id="nTM-iO-DN0">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="108"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -491,6 +519,7 @@
                     <connections>
                         <outlet property="companyLogoImageView" destination="ZVs-1R-7gK" id="whF-ec-3TX"/>
                         <outlet property="companyNameLabel" destination="kLk-At-OPV" id="zW6-wN-5ri"/>
+                        <outlet property="fakeCompanyLogoLabel" destination="dDx-Pt-jiS" id="zGJ-MZ-Hgh"/>
                         <outlet property="jobDescriptionLabel" destination="suJ-Ny-ohc" id="oGu-Ak-myZ"/>
                         <outlet property="jobDescriptionWebView" destination="ncs-mr-690" id="HFG-pL-ovh"/>
                         <outlet property="jobNameLabel" destination="z8S-vL-zhy" id="Hb2-3a-sn3"/>
@@ -498,7 +527,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a52-Iy-N56" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3859" y="-862"/>
+            <point key="canvasLocation" x="3858.75" y="-863.02816901408448"/>
         </scene>
         <!--Tags-->
         <scene sceneID="SLA-Mf-Szs">
