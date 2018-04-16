@@ -77,8 +77,6 @@ class JobOportunityViewModel {
         } catch let error as NSError {
             print("Error when try delete all opportunities " + error.description)
         }
-        
-        
     }
     
     func filterJobsBy(tags: [String]) {

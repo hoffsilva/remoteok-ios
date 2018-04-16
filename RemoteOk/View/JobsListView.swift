@@ -8,6 +8,7 @@
 
 import UIKit
 import SDWebImage
+import Hero
 
 class JobsListView: UIViewController {
     
@@ -37,6 +38,7 @@ class JobsListView: UIViewController {
         jobViewModel.getAllOpportunities()
         addRefreshControl()
         configureCollectionView()
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -49,7 +51,15 @@ class JobsListView: UIViewController {
             if destination.isKind(of: FilterJobsByTagsView.self) {
                 (destination as? FilterJobsByTagsView)?.filterJobsDelegate = self
             }
+            
         }
+        if segue.identifier == "segueDetailJob" {
+            let djvc = segue.destination as! DetailJobViewController
+            djvc.job = jobViewModel.getJob()
+        }
+        
+        
+        
     }
 }
 
@@ -67,7 +77,7 @@ extension JobsListView: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 170.0
+        return UITableViewAutomaticDimension
     }
     
     
@@ -110,9 +120,11 @@ extension JobsListView: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         jobViewModel.currentJob = indexPath.row
-        print(jobViewModel.getJob())
+        performSegue(withIdentifier: "segueDetailJob", sender: self)
     }
     
 }

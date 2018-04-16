@@ -31,6 +31,7 @@ class TagsViewModel {
                     arrayOfTags.insert(tag)
                 }
             }
+            deleteAllTags()
             for tag in arrayOfTags {
                  saveTag(tagFromJobs: tag )
             }
@@ -68,6 +69,21 @@ class TagsViewModel {
         }
     }
     
+    func deleteAllTags() {
+        var dataToDelete = [Tag]()
+        guard let model = managedContext.persistentStoreCoordinator?.managedObjectModel, let fetch = model.fetchRequestTemplate(forName: "allTags") as? NSFetchRequest<Tag> else {
+            return
+        }
+        do {
+            dataToDelete = try managedContext.fetch(fetch)
+            for jobToDelete in dataToDelete {
+                managedContext.delete(jobToDelete)
+            }
+            try managedContext.save()
+        } catch let error as NSError {
+            print("Error when try delete all opportunities " + error.description)
+        }
+    }
 //    func populateTags() {
 //        tags = []
 //        for tag in arrayOfTags {

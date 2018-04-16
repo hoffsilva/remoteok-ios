@@ -47,6 +47,8 @@
 		43EE8CDB20759A6F005BBE76 /* RemoteOk.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 43EE8CD920759A6F005BBE76 /* RemoteOk.xcdatamodeld */; };
 		96B14212FB7FCFD275086D1B /* Pods_RemoteOk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11DF5B9A2E80982E1ED0E538 /* Pods_RemoteOk.framework */; };
 		CA13F4512077F2AC007676AB /* JobsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA13F4502077F2AC007676AB /* JobsListView.swift */; };
+		CA678C0F2084D132009B7158 /* DetailJobViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA678C0E2084D132009B7158 /* DetailJobViewController.swift */; };
+		CA678C112084DE79009B7158 /* DetailJobTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA678C102084DE79009B7158 /* DetailJobTableViewController.swift */; };
 		CA869449206D68B30099F39D /* JobOportunityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA869448206D68B30099F39D /* JobOportunityViewModel.swift */; };
 		CAD06CF32080E02D00BA3625 /* FilterJobsByTagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD06CF22080E02D00BA3625 /* FilterJobsByTagsView.swift */; };
 /* End PBXBuildFile section */
@@ -96,6 +98,8 @@
 		549011949B0F36695879AAC6 /* Pods-RemoteOk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RemoteOk.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RemoteOk/Pods-RemoteOk.debug.xcconfig"; sourceTree = "<group>"; };
 		6C803A45ABA505F2553F6B5D /* Pods-RemoteOk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RemoteOk.release.xcconfig"; path = "Pods/Target Support Files/Pods-RemoteOk/Pods-RemoteOk.release.xcconfig"; sourceTree = "<group>"; };
 		CA13F4502077F2AC007676AB /* JobsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsListView.swift; sourceTree = "<group>"; };
+		CA678C0E2084D132009B7158 /* DetailJobViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailJobViewController.swift; sourceTree = "<group>"; };
+		CA678C102084DE79009B7158 /* DetailJobTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailJobTableViewController.swift; sourceTree = "<group>"; };
 		CA869448206D68B30099F39D /* JobOportunityViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobOportunityViewModel.swift; sourceTree = "<group>"; };
 		CAD06CF22080E02D00BA3625 /* FilterJobsByTagsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterJobsByTagsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -187,6 +191,8 @@
 				439CB825207C341F00C1EF64 /* RemoteFilters.swift */,
 				439CB827207C363900C1EF64 /* RemoteFilterCell.swift */,
 				CAD06CF22080E02D00BA3625 /* FilterJobsByTagsView.swift */,
+				CA678C0E2084D132009B7158 /* DetailJobViewController.swift */,
+				CA678C102084DE79009B7158 /* DetailJobTableViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -405,6 +411,7 @@
 			files = (
 				43487CCF2078EB4000430934 /* JobViewCell.swift in Sources */,
 				43B7BA43206E6AEA00DA3A39 /* CoreDataStack.swift in Sources */,
+				CA678C112084DE79009B7158 /* DetailJobTableViewController.swift in Sources */,
 				430E6D51206C736F0093EA8B /* JobOportunity.swift in Sources */,
 				43EE8CD82074441B005BBE76 /* JobsDataViewModel.swift in Sources */,
 				CAD06CF32080E02D00BA3625 /* FilterJobsByTagsView.swift in Sources */,
@@ -415,6 +422,7 @@
 				43487CD12078EE1700430934 /* TagViewCell.swift in Sources */,
 				43487CCD2078EA8B00430934 /* TagsViewModel.swift in Sources */,
 				430E6D4F206C65A90093EA8B /* Connection.swift in Sources */,
+				CA678C0F2084D132009B7158 /* DetailJobViewController.swift in Sources */,
 				439CB828207C363900C1EF64 /* RemoteFilterCell.swift in Sources */,
 				CA869449206D68B30099F39D /* JobOportunityViewModel.swift in Sources */,
 				430E6D34206C4FFA0093EA8B /* ViewController.swift in Sources */,
