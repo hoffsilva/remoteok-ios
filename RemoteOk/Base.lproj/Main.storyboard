@@ -109,7 +109,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="100" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3ch-fA-XUQ">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="remote-jobs" translatesAutoresizingMaskIntoConstraints="NO" id="3ch-fA-XUQ">
                                                     <rect key="frame" x="25" y="5" width="50" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="Vpa-eL-Ams"/>
@@ -155,29 +155,29 @@
                                                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2dJ-lf-psP">
                                                     <rect key="frame" x="20" y="20" width="280" height="171.5"/>
                                                     <subviews>
-                                                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PLC-Bb-A58">
-                                                            <rect key="frame" x="1" y="1" width="278" height="169"/>
+                                                        <view clipsSubviews="YES" alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PLC-Bb-A58">
+                                                            <rect key="frame" x="0.0" y="5" width="280" height="166.5"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Senior Security Engineer, DevOps" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uOK-rV-w3k">
-                                                                    <rect key="frame" x="8" y="69.5" width="262" height="54.5"/>
+                                                                    <rect key="frame" x="8" y="69.5" width="264" height="52"/>
                                                                     <fontDescription key="fontDescription" name="Nunito-Black" family="Nunito" pointSize="20"/>
-                                                                    <color key="textColor" red="0.1450980392" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="aOe-W6-3Mj">
-                                                                    <rect key="frame" x="94" y="27" width="172" height="22"/>
+                                                                    <rect key="frame" x="95" y="27" width="173" height="22"/>
                                                                     <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="16"/>
-                                                                    <nil key="textColor"/>
+                                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u6p-11-RQK">
-                                                                    <rect key="frame" x="227.5" y="139" width="38.5" height="22"/>
+                                                                    <rect key="frame" x="229.5" y="136.5" width="38.5" height="22"/>
                                                                     <fontDescription key="fontDescription" name="Nunito-Light" family="Nunito" pointSize="16"/>
-                                                                    <nil key="textColor"/>
+                                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
-                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="backgroundColor" red="0.1450980392" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="trailing" secondItem="aOe-W6-3Mj" secondAttribute="trailing" constant="12" id="0DL-A5-qaz"/>
                                                                 <constraint firstAttribute="bottom" secondItem="u6p-11-RQK" secondAttribute="bottom" constant="8" id="EYA-et-Tqg"/>
@@ -195,12 +195,12 @@
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="0.12941176470588237" green="0.12941176470588237" blue="0.12941176470588237" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" red="0.93333333333333335" green="0.41568627450980394" blue="0.35686274509803922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
-                                                        <constraint firstItem="PLC-Bb-A58" firstAttribute="leading" secondItem="2dJ-lf-psP" secondAttribute="leading" constant="1" id="6Ml-wk-wA3"/>
-                                                        <constraint firstItem="PLC-Bb-A58" firstAttribute="top" secondItem="2dJ-lf-psP" secondAttribute="top" constant="1" id="6ui-Nk-ujJ"/>
-                                                        <constraint firstAttribute="trailing" secondItem="PLC-Bb-A58" secondAttribute="trailing" constant="1" id="Um3-im-x9i"/>
-                                                        <constraint firstAttribute="bottom" secondItem="PLC-Bb-A58" secondAttribute="bottom" constant="1" id="XDv-Yw-I4F"/>
+                                                        <constraint firstItem="PLC-Bb-A58" firstAttribute="leading" secondItem="2dJ-lf-psP" secondAttribute="leading" id="6Ml-wk-wA3"/>
+                                                        <constraint firstItem="PLC-Bb-A58" firstAttribute="top" secondItem="2dJ-lf-psP" secondAttribute="top" constant="5" id="6ui-Nk-ujJ"/>
+                                                        <constraint firstAttribute="trailing" secondItem="PLC-Bb-A58" secondAttribute="trailing" id="Um3-im-x9i"/>
+                                                        <constraint firstAttribute="bottom" secondItem="PLC-Bb-A58" secondAttribute="bottom" id="XDv-Yw-I4F"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -209,25 +209,20 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jPI-8R-pdo">
-                                                    <rect key="frame" x="46" y="10" width="60" height="60"/>
+                                                    <rect key="frame" x="20" y="25" width="60" height="60"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="p7X-h1-6LO">
                                                             <rect key="frame" x="1" y="1" width="58" height="58"/>
-                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <userDefinedRuntimeAttributes>
-                                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                                    <integer key="value" value="6"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                            </userDefinedRuntimeAttributes>
+                                                            <color key="backgroundColor" red="0.93333333330000001" green="0.41568627450000001" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="Zf8-4z-yCr">
                                                             <rect key="frame" x="1" y="1" width="58" height="58"/>
                                                             <fontDescription key="fontDescription" name="Nunito-Black" family="Nunito" pointSize="40"/>
-                                                            <nil key="textColor"/>
+                                                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" red="0.93333333330000001" green="0.41568627450000001" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstItem="p7X-h1-6LO" firstAttribute="top" secondItem="jPI-8R-pdo" secondAttribute="top" constant="1" id="80B-4A-gTV"/>
                                                         <constraint firstAttribute="trailing" secondItem="p7X-h1-6LO" secondAttribute="trailing" constant="1" id="8wa-b8-iwX"/>
@@ -244,11 +239,6 @@
                                                         <constraint firstAttribute="bottom" secondItem="p7X-h1-6LO" secondAttribute="bottom" constant="1" id="lwV-9i-o0v"/>
                                                         <constraint firstAttribute="bottom" secondItem="Zf8-4z-yCr" secondAttribute="bottom" constant="1" id="qp0-yU-LV1"/>
                                                     </constraints>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                            <integer key="value" value="6"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                    </userDefinedRuntimeAttributes>
                                                 </view>
                                             </subviews>
                                             <constraints>
@@ -256,9 +246,9 @@
                                                 <constraint firstItem="2dJ-lf-psP" firstAttribute="leading" secondItem="LoL-XN-cfV" secondAttribute="leading" constant="20" id="GwX-iN-MSB"/>
                                                 <constraint firstAttribute="trailing" secondItem="2dJ-lf-psP" secondAttribute="trailing" constant="20" id="OVr-lB-uwU"/>
                                                 <constraint firstItem="2dJ-lf-psP" firstAttribute="top" secondItem="LoL-XN-cfV" secondAttribute="top" constant="20" id="S29-Fx-cQ6"/>
-                                                <constraint firstItem="jPI-8R-pdo" firstAttribute="top" secondItem="LoL-XN-cfV" secondAttribute="top" constant="10" id="ScM-sh-wQ8"/>
-                                                <constraint firstItem="aOe-W6-3Mj" firstAttribute="leading" secondItem="jPI-8R-pdo" secondAttribute="trailing" constant="9" id="cEA-tl-I7t"/>
-                                                <constraint firstItem="jPI-8R-pdo" firstAttribute="leading" secondItem="LoL-XN-cfV" secondAttribute="leading" constant="46" id="hrU-fK-D5b"/>
+                                                <constraint firstItem="jPI-8R-pdo" firstAttribute="top" secondItem="LoL-XN-cfV" secondAttribute="top" constant="25" id="ScM-sh-wQ8"/>
+                                                <constraint firstItem="aOe-W6-3Mj" firstAttribute="leading" secondItem="jPI-8R-pdo" secondAttribute="trailing" constant="35" id="cEA-tl-I7t"/>
+                                                <constraint firstItem="jPI-8R-pdo" firstAttribute="leading" secondItem="LoL-XN-cfV" secondAttribute="leading" constant="20" id="hrU-fK-D5b"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -307,7 +297,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZSc-7z-nmT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1829.5999999999999" y="-1469.7044334975369"/>
+            <point key="canvasLocation" x="1828.125" y="-1470.4225352112676"/>
         </scene>
         <!--Detail Job View Controller-->
         <scene sceneID="ef5-tM-fGG">
@@ -445,7 +435,7 @@
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="S" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDx-Pt-jiS">
                                                     <rect key="frame" x="16" y="30" width="50" height="50"/>
-                                                    <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="30"/>
+                                                    <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="40"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -456,6 +446,7 @@
                                                 <constraint firstItem="dDx-Pt-jiS" firstAttribute="leading" secondItem="Fb5-Tn-06Z" secondAttribute="leading" constant="16" id="Fl1-WT-wF9"/>
                                                 <constraint firstItem="dDx-Pt-jiS" firstAttribute="width" secondItem="ZVs-1R-7gK" secondAttribute="width" id="JIl-vx-9SW"/>
                                                 <constraint firstItem="ZVs-1R-7gK" firstAttribute="leading" secondItem="Fb5-Tn-06Z" secondAttribute="leading" constant="16" id="dUF-uZ-EzO"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="dDx-Pt-jiS" secondAttribute="bottom" constant="17" id="lRt-ub-HPx"/>
                                                 <constraint firstItem="kLk-At-OPV" firstAttribute="top" secondItem="Fb5-Tn-06Z" secondAttribute="topMargin" constant="32" id="maW-OB-S6M"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="kLk-At-OPV" secondAttribute="bottom" constant="30.670000000000002" id="nBU-be-qw0"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="ZVs-1R-7gK" secondAttribute="bottom" constant="18" id="nqO-ss-LZE"/>
@@ -474,7 +465,7 @@
                                             <subviews>
                                                 <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2000" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="suJ-Ny-ohc">
                                                     <rect key="frame" x="16" y="11" width="288" height="362"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -625,7 +616,7 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="25"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -703,5 +694,6 @@
     </scenes>
     <resources>
         <image name="bg" width="1280" height="800"/>
+        <image name="remote-jobs" width="256" height="256"/>
     </resources>
 </document>

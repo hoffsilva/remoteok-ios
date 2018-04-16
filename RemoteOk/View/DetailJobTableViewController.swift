@@ -68,12 +68,6 @@ class DetailJobTableViewController: UITableViewController {
        
     }
     
-//    override func viewDidAppear(_ animated: Bool) {
-//        super.viewDidAppear(true)
-//        self.jobDescriptionWebView.evaluateJavaScript("document.documentElement.outerHTML.toString()") { (html, error) in
-//            print(html)
-//        }
-//    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
