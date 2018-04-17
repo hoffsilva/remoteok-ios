@@ -27,8 +27,10 @@ class TagsViewModel {
             let opportunities = try managedContext.fetch(fetch)
             arrayOfTags = []
             for job in opportunities {
-                for tag in job.tags! {
-                    arrayOfTags.insert(tag)
+                if let tags = job.tags {
+                    for tag in tags {
+                        arrayOfTags.insert(tag)
+                    }
                 }
             }
             deleteAllTags()

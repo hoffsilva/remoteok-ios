@@ -11,22 +11,22 @@ import UIKit
 class DetailJobViewController: UIViewController {
     
     var currentUrl = ""
-    var job: Opportunity!
-    var jobFavorite: OportunityFavorite!
+    var job: Opportunity?
+    var jobFavorite: OportunityFavorite?
     var jobOpportunityViewModel = JobOportunityViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.navigationItem.leftBarButtonItem?.title = ""
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        if let position = job.position {
+        if let position = job?.position {
             title = position
-        } else if let position = jobFavorite.position {
+        } else if let position = jobFavorite?.position {
             title = position
         }
-        
+        navigationController?.navigationItem.leftBarButtonItem?.title = ""
     }
     
     
@@ -38,11 +38,8 @@ class DetailJobViewController: UIViewController {
         if segue.identifier == "dataJob" {
             if segue.destination.isKind(of: DetailJobTableViewController.self) {
                 let djtbvc = segue.destination as! DetailJobTableViewController
-                if job != nil {
-                    djtbvc.job.company = self.jobFavorite.company
-                    djtbvc.job.desc = self.jobFavorite.desc
-                    djtbvc.job.logo = self.jobFavorite.logo
-                    djtbvc.job.position = self.jobFavorite.position
+                if job == nil {
+                    djtbvc.favoriteJob = self.jobFavorite
                 } else {
                     djtbvc.job = self.job
                 }
@@ -53,11 +50,11 @@ class DetailJobViewController: UIViewController {
     
     @IBAction func apply() {
         var url: String!
-        if let jobURL =  job.url {
+        if let jobURL =  job?.url {
             url = jobURL
         }
         
-        if let favoriteURL = jobFavorite.url {
+        if let favoriteURL = jobFavorite?.url {
             url = favoriteURL
         }
         
@@ -69,12 +66,17 @@ class DetailJobViewController: UIViewController {
     }
     
     @IBAction func addToFavoritesList(_ sender: Any) {
-        jobOpportunityViewModel.markJobAsFavorite(job)
+        jobOpportunityViewModel.markJobAsFavorite(job!)
     }
     
     @IBAction func shareJob() {
         let someText:String = "Hello! I found this job opportunity on remoteok.io and I would like to share it with you."
-        let objectsToShare:URL = URL(string: job.url!)!
+        var objectsToShare: URL!
+        if job == nil {
+            objectsToShare = URL(string: jobFavorite!.url!)!
+        } else {
+            objectsToShare = URL(string: job!.url!)!
+        }
         let sharedObjects:[AnyObject] = [objectsToShare as AnyObject,someText as AnyObject]
         let activityViewController = UIActivityViewController(activityItems : sharedObjects, applicationActivities: nil)
         activityViewController.popoverPresentationController?.sourceView = self.view
