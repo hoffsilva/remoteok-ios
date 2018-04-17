@@ -10,6 +10,8 @@ import UIKit
 
 class DetailJobViewController: UIViewController {
     
+    @IBOutlet weak var favoriteButton: UIButton!
+    
     var currentUrl = ""
     var job: Opportunity?
     var jobFavorite: OportunityFavorite?
@@ -17,7 +19,7 @@ class DetailJobViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        navigationItem.backBarButtonItem?.title = ""
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -26,7 +28,14 @@ class DetailJobViewController: UIViewController {
         } else if let position = jobFavorite?.position {
             title = position
         }
-        navigationController?.navigationItem.leftBarButtonItem?.title = ""
+        
+        
+        
+        if jobFavorite != nil {
+            favoriteButton.isEnabled = false
+        } else {
+            favoriteButton.isEnabled = true
+        }
     }
     
     
@@ -38,12 +47,11 @@ class DetailJobViewController: UIViewController {
         if segue.identifier == "dataJob" {
             if segue.destination.isKind(of: DetailJobTableViewController.self) {
                 let djtbvc = segue.destination as! DetailJobTableViewController
-                if job == nil {
-                    djtbvc.favoriteJob = self.jobFavorite
-                } else {
-                    djtbvc.job = self.job
+                if let job = self.job {
+                    djtbvc.job = job
+                } else if let favoriteJob = self.jobFavorite {
+                    djtbvc.favoriteJob = favoriteJob
                 }
-                
             }
         }
     }

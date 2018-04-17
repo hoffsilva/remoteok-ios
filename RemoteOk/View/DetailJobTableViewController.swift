@@ -29,14 +29,16 @@ class DetailJobTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if job != nil {
+        
+        
+        if let job = self.job {
             
             let position = job.position ?? ""
             let desc = job.desc ?? ""
             let company = job.company ?? ""
             configureJobDetail(position: position , desc: desc, logo: job.logo, company: company)
             
-        } else {
+        } else if let favoriteJob = self.favoriteJob {
             
             let position = favoriteJob.position ?? ""
             let desc = favoriteJob.desc ?? ""
@@ -73,7 +75,7 @@ class DetailJobTableViewController: UITableViewController {
             body {
             font-family: "Nunito","Helvetica",Arial,sans-serif;
             padding: 0;
-            font-size: 30pt;
+            font-size: 40pt;
             text-align: justify;
             }
             </style>

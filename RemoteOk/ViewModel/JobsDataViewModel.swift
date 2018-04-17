@@ -31,8 +31,10 @@ struct JobsDataViewModel {
         if let dictionary = dic.result.value as? [[String:Any]] {
             print(dictionary.count)
             for job in dictionary {
-                let currentJob = JobOportunity(object: job)
-                self.jobsOpportunityViewModel.saveJobFromJSON(currentJob)
+                if (job["legal"] == nil) {
+                    let currentJob = JobOportunity(object: job)
+                    self.jobsOpportunityViewModel.saveJobFromJSON(currentJob)
+                }
             }
             self.delegate.loadJobDataSuccessful()
         }

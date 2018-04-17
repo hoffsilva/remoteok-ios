@@ -179,7 +179,9 @@
                             <outlet property="delegate" destination="azo-Yx-Aqz" id="1uU-MV-Lpm"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Favorites Jobs" id="Sys-Sz-QaO"/>
+                    <navigationItem key="navigationItem" title="Favorites Jobs" id="Sys-Sz-QaO">
+                        <barButtonItem key="backBarButtonItem" title="   " id="6oW-G7-d5M"/>
+                    </navigationItem>
                     <connections>
                         <segue destination="2D5-RS-jaW" kind="show" identifier="segueDetailFavoriteJob" id="WUS-bU-bYh"/>
                     </connections>
@@ -486,6 +488,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="favoriteButton" destination="3v5-Ii-gyF" id="ZOC-E7-QsY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bi3-sX-lde" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -815,6 +820,6 @@
         <image name="remote-jobs" width="256" height="256"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="WUS-bU-bYh"/>
+        <segue reference="X28-Iw-JuJ"/>
     </inferredMetricsTieBreakers>
 </document>
