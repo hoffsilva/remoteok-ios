@@ -16,6 +16,13 @@ class DetailJobViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationController?.navigationItem.leftBarButtonItem?.title = "dassasas"
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        title = job.position!
     }
     
     
