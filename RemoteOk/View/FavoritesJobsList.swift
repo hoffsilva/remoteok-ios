@@ -1,0 +1,116 @@
+//
+//  FavoriteJobsList.swift
+//  RemoteOk
+//
+//  Created by Hoff Silva on 17/04/2018.
+//  Copyright © 2018 Hoff Henry Pereira da Silva. All rights reserved.
+//
+
+import UIKit
+
+class FavoritesJobsList: UITableViewController {
+    
+    var jobViewModel = JobOportunityViewModel()
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        jobViewModel.favoriteDelegate = self
+        jobViewModel.getAllFavoriteOpportunities()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueDetailFavoriteJob" {
+            let djvc = segue.destination as! DetailJobViewController
+            djvc.jobFavorite = jobViewModel.getFavoriteJob()
+        }
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+
+    // MARK: - Table view data source
+
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 1
+    }
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        return jobViewModel.arrayOfFavoriteOpportunity.count
+    }
+
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        jobViewModel.currentJobFavorite = indexPath.row
+        let cell = tableView.dequeueReusableCell(withIdentifier: "jobCell", for: indexPath) as! JobViewCell
+        cell.companyNameLabel.text = jobViewModel.getFavoriteJob().company ?? "None"
+        cell.positionLabel.text = jobViewModel.getFavoriteJob().position ?? "None"
+        
+        cell.logoImageView.sd_addActivityIndicator()
+        cell.logoImageView.sd_setShowActivityIndicatorView(true)
+        
+        if let dateOfJob = jobViewModel.getFavoriteJob().date {
+            if Extensions.formatDate(dateString: "\(Date())") == Extensions.formatDate(dateString: dateOfJob) {
+                cell.postDate.text = "Today"
+            } else if Extensions.formatDate(dateString: dateOfJob) == Extensions.getYesterday() {
+                cell.postDate.text = "Yesterday"
+            } else if Extensions.getWeekNumber(date: "\(Extensions.formatDate(dateString: dateOfJob))") == Extensions.getWeekNumber(date: "\(Extensions.formatDate(dateString: "\(Date())"))") {
+                cell.postDate.text = "This week"
+            } else {
+                cell.postDate.text = "This month"
+            }
+            
+        }
+        
+        if let imageUrl = jobViewModel.getFavoriteJob().logo {
+            cell.logoImageView.sd_setImage(with: URL(string: imageUrl)) { (image, error, cache, url) in
+                if image == nil {
+                    cell.fakeCompanyLogoLabel.isHidden = false
+                    if let fakeLogo = self.jobViewModel.getFavoriteJob().company?.first {
+                        cell.fakeCompanyLogoLabel.text = String(fakeLogo).uppercased()
+                    } else {
+                        cell.fakeCompanyLogoLabel.text = "🏢".uppercased()
+                    }
+                } else {
+                    cell.fakeCompanyLogoLabel.isHidden = true
+                }
+            }
+        }
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        jobViewModel.currentJobFavorite = indexPath.row
+        performSegue(withIdentifier: "segueDetailFavoriteJob", sender: self)
+    }
+
+    /*
+    // Override to support conditional editing of the table view.
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        // Return false if you do not want the specified item to be editable.
+        return true
+    }
+    */
+
+    /*
+    // Override to support editing the table view.
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            // Delete the row from the data source
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        } else if editingStyle == .insert {
+            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+        }    
+    }
+    */
+
+}
+
+extension FavoritesJobsList: JobOppotunityFavoriteDelegate {
+    func favoritesJobsLoaded() {
+        tableView.reloadData()
+    }
+}

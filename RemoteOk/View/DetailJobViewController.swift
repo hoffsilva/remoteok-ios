@@ -12,17 +12,21 @@ class DetailJobViewController: UIViewController {
     
     var currentUrl = ""
     var job: Opportunity!
+    var jobFavorite: OportunityFavorite!
     var jobOpportunityViewModel = JobOportunityViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        navigationController?.navigationItem.leftBarButtonItem?.title = "dassasas"
+        navigationController?.navigationItem.leftBarButtonItem?.title = ""
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        if let position = job.position {
+            title = position
+        } else if let position = jobFavorite.position {
+            title = position
+        }
         
-        title = job.position!
     }
     
     
@@ -34,14 +38,27 @@ class DetailJobViewController: UIViewController {
         if segue.identifier == "dataJob" {
             if segue.destination.isKind(of: DetailJobTableViewController.self) {
                 let djtbvc = segue.destination as! DetailJobTableViewController
-                djtbvc.job = self.job
+                if job != nil {
+                    djtbvc.job.company = self.jobFavorite.company
+                    djtbvc.job.desc = self.jobFavorite.desc
+                    djtbvc.job.logo = self.jobFavorite.logo
+                    djtbvc.job.position = self.jobFavorite.position
+                } else {
+                    djtbvc.job = self.job
+                }
+                
             }
         }
     }
     
     @IBAction func apply() {
-        guard let url =  job.url else {
-            return
+        var url: String!
+        if let jobURL =  job.url {
+            url = jobURL
+        }
+        
+        if let favoriteURL = jobFavorite.url {
+            url = favoriteURL
         }
         
         if #available(iOS 10.0, *) {

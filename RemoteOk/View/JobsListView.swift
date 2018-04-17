@@ -57,9 +57,6 @@ class JobsListView: UIViewController {
             let djvc = segue.destination as! DetailJobViewController
             djvc.job = jobViewModel.getJob()
         }
-        
-        
-        
     }
 }
 
@@ -91,11 +88,11 @@ extension JobsListView: UITableViewDelegate, UITableViewDataSource {
         cell.logoImageView.sd_setShowActivityIndicatorView(true)
         
         if let dateOfJob = jobViewModel.getJob().date {
-            if formatDate(dateString: "\(Date())") == formatDate(dateString: dateOfJob) {
+            if Extensions.formatDate(dateString: "\(Date())") == Extensions.formatDate(dateString: dateOfJob) {
                 cell.postDate.text = "Today"
-            } else if formatDate(dateString: dateOfJob) == getYesterday() {
+            } else if Extensions.formatDate(dateString: dateOfJob) == Extensions.getYesterday() {
                 cell.postDate.text = "Yesterday"
-            } else if getWeekNumber(date: "\(formatDate(dateString: dateOfJob))") == getWeekNumber(date: "\(formatDate(dateString: "\(Date())"))") {
+            } else if Extensions.getWeekNumber(date: "\(Extensions.formatDate(dateString: dateOfJob))") == Extensions.getWeekNumber(date: "\(Extensions.formatDate(dateString: "\(Date())"))") {
                 cell.postDate.text = "This week"
             } else {
                 cell.postDate.text = "This month"
@@ -279,37 +276,37 @@ extension JobsListView {
         }
     }
     
-    func formatDate(dateString: String) -> Date {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        let dString = dateString.prefix(10)
-        guard let date = dateFormatter.date(from: String(dString)) else {
-            fatalError("ERROR: Date conversion failed due to mismatched format.")
-        }
-        return date
-    }
-    
-    func getYesterday() -> Date {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        let dString = "\(Calendar.current.date(byAdding: .day, value: -1, to: Date())!)".prefix(10)
-        guard let date = dateFormatter.date(from: String(dString)) else {
-            fatalError("ERROR: Date conversion failed due to mismatched format.")
-        }
-        return date
-    }
-    
-    func getWeekNumber(date: String) -> Int {
-        let formatter  = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd"
-        let dString = date.prefix(10)
-        guard let todaydate = formatter.date(from: String(dString)) else {
-            fatalError("ERROR: Date conversion failed due to mismatched format.")
-        }
-        let myCalendar = NSCalendar(calendarIdentifier: NSCalendar.Identifier.gregorian)!
-        let myComponents = myCalendar.components(.weekOfYear, from: todaydate)
-        let weekNumber = myComponents.weekOfYear
-        return weekNumber!
-    }
+//    func formatDate(dateString: String) -> Date {
+//        let dateFormatter = DateFormatter()
+//        dateFormatter.dateFormat = "yyyy-MM-dd"
+//        let dString = dateString.prefix(10)
+//        guard let date = dateFormatter.date(from: String(dString)) else {
+//            fatalError("ERROR: Date conversion failed due to mismatched format.")
+//        }
+//        return date
+//    }
+//    
+//    func getYesterday() -> Date {
+//        let dateFormatter = DateFormatter()
+//        dateFormatter.dateFormat = "yyyy-MM-dd"
+//        let dString = "\(Calendar.current.date(byAdding: .day, value: -1, to: Date())!)".prefix(10)
+//        guard let date = dateFormatter.date(from: String(dString)) else {
+//            fatalError("ERROR: Date conversion failed due to mismatched format.")
+//        }
+//        return date
+//    }
+//    
+//    func getWeekNumber(date: String) -> Int {
+//        let formatter  = DateFormatter()
+//        formatter.dateFormat = "yyyy-MM-dd"
+//        let dString = date.prefix(10)
+//        guard let todaydate = formatter.date(from: String(dString)) else {
+//            fatalError("ERROR: Date conversion failed due to mismatched format.")
+//        }
+//        let myCalendar = NSCalendar(calendarIdentifier: NSCalendar.Identifier.gregorian)!
+//        let myComponents = myCalendar.components(.weekOfYear, from: todaydate)
+//        let weekNumber = myComponents.weekOfYear
+//        return weekNumber!
+//    }
     
 }

@@ -10,6 +10,9 @@ import Foundation
 import CoreData
 import Alamofire
 
+protocol JobOppotunityFavoriteDelegate: class  {
+    func favoritesJobsLoaded()
+}
 
 protocol JobOpportunityDelegate: class {
     func jobOpportunitiesLoaded()
@@ -18,12 +21,14 @@ protocol JobOpportunityDelegate: class {
 class JobOportunityViewModel {
     
     weak var delegate: JobOpportunityDelegate!
+    weak var favoriteDelegate: JobOppotunityFavoriteDelegate!
     
     var managedContext = CoreDataStack().persistentContainer.viewContext
     var arrayOfOpportunity = [Opportunity]()
     var arrayOfFavoriteOpportunity = [OportunityFavorite]()
     var arrayOfFilters: [String]!
     var currentJob: Int!
+    var currentJobFavorite: Int!
     
     
     func saveJobFromJSON(_ currentJob: JobOportunity) {
@@ -109,7 +114,7 @@ class JobOportunityViewModel {
         guard let jtf = jobToFavorite else {
             return
         }
-        let jobFavorite = Opportunity(entity: jtf, insertInto: managedContext)
+        let jobFavorite = OportunityFavorite(entity: jtf, insertInto: managedContext)
         jobFavorite.position = job.position
         jobFavorite.slug = job.slug
         jobFavorite.id = job.id
@@ -120,8 +125,10 @@ class JobOportunityViewModel {
         jobFavorite.tags = job.tags
         jobFavorite.company = job.company
         jobFavorite.url = job.url
+        jobFavorite.favorite = true
         do {
             try managedContext.save()
+            getAllFavoriteOpportunities()
         } catch let error as NSError {
             print("Error when try mark opportunity as favorite opportunity " + error.description)
         }
@@ -137,12 +144,13 @@ class JobOportunityViewModel {
     }
     
     func getAllFavoriteOpportunities() {
-        guard let model = managedContext.persistentStoreCoordinator?.managedObjectModel, let fetch = model.fetchRequestTemplate(forName: "allFavoriteOportunities") as? NSFetchRequest<OportunityFavorite> else {
+        guard let model = managedContext.persistentStoreCoordinator?.managedObjectModel, let fetch = model.fetchRequestTemplate(forName: "allFavoriteOpportunities") as? NSFetchRequest<OportunityFavorite> else {
             return
         }
         
         do {
             arrayOfFavoriteOpportunity = try managedContext.fetch(fetch)
+           // favoriteDelegate.favoritesJobsLoaded()
         } catch let error as NSError {
             print("Error when try delete all favorite opportunities " + error.description)
         }
@@ -151,6 +159,10 @@ class JobOportunityViewModel {
     
     func getJob() -> Opportunity {
         return arrayOfOpportunity[currentJob]
+    }
+    
+    func getFavoriteJob() -> OportunityFavorite {
+        return arrayOfFavoriteOpportunity[currentJobFavorite]
     }
     
     
