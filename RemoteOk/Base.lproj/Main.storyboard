@@ -198,7 +198,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="qvM-2Z-CLF">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="qvM-2Z-CLF">
                                 <rect key="frame" x="0.0" y="206" width="320" height="313"/>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="nJB-Eu-c5d">
@@ -820,6 +820,6 @@
         <image name="remote-jobs" width="256" height="256"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="X28-Iw-JuJ"/>
+        <segue reference="WUS-bU-bYh"/>
     </inferredMetricsTieBreakers>
 </document>
