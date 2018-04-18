@@ -140,7 +140,8 @@ extension JobsListView: UICollectionViewDelegate, UICollectionViewDataSource {
             RemoteFilter(image: UIImage(named: "marketing"), title: "MARKETING"),
             RemoteFilter(image: UIImage(named: "design"), title: "UI & UX"),
             RemoteFilter(image: UIImage(named: "non-tech"), title: "NON-TECH"),
-            RemoteFilter(image: UIImage(named: "english"), title: "EN TEACHER")]
+            RemoteFilter(image: UIImage(named: "english"), title: "EN TEACHER"),
+            RemoteFilter(image: #imageLiteral(resourceName: "remote-jobs"), title: "CURRENCY")]
     }
     
     // MARK: UICollectionViewDataSource
@@ -200,6 +201,10 @@ extension JobsListView: UICollectionViewDelegate, UICollectionViewDataSource {
         case "6":
             self.title = "English Teacher Jobs"
             jobDataViewModel.loadJobsFromRemoteOK(ConstantsUtil.englishTeacherJobsURL())
+            break
+        case "7":
+            self.title = "Cryptocyrrency"
+            jobDataViewModel.loadJobsFromRemoteOK(ConstantsUtil.cryptoCurrency())
             break
         default:
             break

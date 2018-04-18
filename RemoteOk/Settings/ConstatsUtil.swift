@@ -49,7 +49,6 @@ class ConstantsUtil {
         return "\(mainURL)\(englishTeacher)\(endOfURL)"
     }
     
-    
     public static func searchJobBy(tags: [String]) -> String {
         var URL =  mainURL
         for tag in tags {
@@ -61,6 +60,12 @@ class ConstantsUtil {
         }
         URL.append(endOfURL)
         return URL
+    }
+    
+    public static func cryptoCurrency() -> String {
+        //cryptoCurrency
+        let cryptoCurrency = plist.fetchValue(for: "cryptoCurrency", fromPlistWithName: "Constants") as! String
+        return cryptoCurrency
     }
     
 }

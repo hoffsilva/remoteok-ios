@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4302D44C20875A05006BE3E9 /* CryptoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4302D44B20875A05006BE3E9 /* CryptoModel.swift */; };
 		43096EA02076EB31003702F0 /* Constants.plist in Resources */ = {isa = PBXBuildFile; fileRef = 43096E9F2076EB31003702F0 /* Constants.plist */; };
 		43096EA22076F15B003702F0 /* ConstatsUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43096EA12076F15B003702F0 /* ConstatsUtil.swift */; };
 		430E6D32206C4FFA0093EA8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430E6D31206C4FFA0093EA8B /* AppDelegate.swift */; };
@@ -58,6 +59,7 @@
 
 /* Begin PBXFileReference section */
 		11DF5B9A2E80982E1ED0E538 /* Pods_RemoteOk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RemoteOk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4302D44B20875A05006BE3E9 /* CryptoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoModel.swift; sourceTree = "<group>"; };
 		43096E9F2076EB31003702F0 /* Constants.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Constants.plist; sourceTree = "<group>"; };
 		43096EA12076F15B003702F0 /* ConstatsUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstatsUtil.swift; sourceTree = "<group>"; };
 		430E6D2E206C4FFA0093EA8B /* RemoteOk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemoteOk.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -184,6 +186,7 @@
 		430E6D46206C5E250093EA8B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4302D44B20875A05006BE3E9 /* CryptoModel.swift */,
 				430E6D50206C736F0093EA8B /* JobOportunity.swift */,
 			);
 			path = Model;
@@ -424,6 +427,7 @@
 				CA678C112084DE79009B7158 /* DetailJobTableViewController.swift in Sources */,
 				430E6D51206C736F0093EA8B /* JobOportunity.swift in Sources */,
 				43EE8CD82074441B005BBE76 /* JobsDataViewModel.swift in Sources */,
+				4302D44C20875A05006BE3E9 /* CryptoModel.swift in Sources */,
 				CAD06CF32080E02D00BA3625 /* FilterJobsByTagsView.swift in Sources */,
 				438C3D932086C4F300D80BB8 /* SwiftNotice.swift in Sources */,
 				439CB826207C341F00C1EF64 /* RemoteFilters.swift in Sources */,

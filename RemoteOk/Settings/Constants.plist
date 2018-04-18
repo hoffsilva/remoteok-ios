@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>cryptoCurrency</key>
+	<string>https://cryptojobslist.com/job/filter?remote=true</string>
 	<key>english-teacher</key>
 	<string>-english-teacher</string>
 	<key>non-tech</key>
