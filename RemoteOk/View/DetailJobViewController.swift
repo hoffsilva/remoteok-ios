@@ -74,7 +74,9 @@ class DetailJobViewController: UIViewController {
     }
     
     @IBAction func addToFavoritesList(_ sender: Any) {
-        jobOpportunityViewModel.markJobAsFavorite(job!)
+        jobOpportunityViewModel.markJobAsFavorite(job!) { (result) in
+            self.noticeOnlyText(result!)
+        }
     }
     
     @IBAction func shareJob() {

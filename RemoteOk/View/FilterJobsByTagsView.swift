@@ -63,12 +63,14 @@ class FilterJobsByTagsView: UITableViewController {
             cell.accessoryType = .checkmark
             tagViewModel.updateTag(tag: tagViewModel.tags[indexPath.row])
             tagViewModel.selectedTags.append(cell.tagLabel.text!)
+            self.noticeOnlyText("\(cell.tagLabel.text!) added to job search")
         } else {
             cell.accessoryType = .none
             tagViewModel.updateTag(tag: tagViewModel.tags[indexPath.row])
             for tag in tagViewModel.selectedTags {
                 if tag == cell.tagLabel.text {
                     tagViewModel.selectedTags.remove(at: index)
+                    self.noticeOnlyText("\(cell.tagLabel.text!) removed from job search")
                 }
                 index += 1
             }

@@ -15,7 +15,12 @@ class FavoritesJobsList: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         jobViewModel.favoriteDelegate = self
-        jobViewModel.getAllFavoriteOpportunities()
+       
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+         jobViewModel.getAllFavoriteOpportunities()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
