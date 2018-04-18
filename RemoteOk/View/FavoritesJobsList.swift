@@ -11,7 +11,7 @@ import UIKit
 class FavoritesJobsList: UITableViewController {
     
     var jobViewModel = JobOportunityViewModel()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         jobViewModel.favoriteDelegate = self
@@ -21,6 +21,11 @@ class FavoritesJobsList: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
          jobViewModel.getAllFavoriteOpportunities()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        tableView.reloadData()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -44,6 +49,11 @@ class FavoritesJobsList: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
+        if jobViewModel.arrayOfFavoriteOpportunity.count == 0 {
+            jobsEmptyNotice(show: true)
+        } else {
+            jobsEmptyNotice(show: false)
+        }
         return jobViewModel.arrayOfFavoriteOpportunity.count
     }
 
@@ -114,6 +124,21 @@ class FavoritesJobsList: UITableViewController {
         }    
     }
     
+    func jobsEmptyNotice(show: Bool) {
+        let view = UIView(frame: tableView.frame)
+        if show {
+            view.isHidden = false
+        } else {
+            view.isHidden = true
+        }
+        let label = UILabel(frame: view.frame)
+        label.text = "You haven't shortlisted any jobs yet."
+        label.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        label.textAlignment = .center
+        view.addSubview(label)
+        view.bringSubview(toFront: label)
+        tableView.backgroundView = view
+    }
 
 }
 

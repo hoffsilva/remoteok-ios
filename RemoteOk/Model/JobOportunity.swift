@@ -39,6 +39,10 @@ public class JobOportunity: Codable {
     public convenience init(object: Any) {
         self.init(json: JSON(object))
     }
+    
+    public init() {
+        
+    }
     // MARK: SwiftyJSON Initializers
     /// Initiates the instance based on the object.
     ///

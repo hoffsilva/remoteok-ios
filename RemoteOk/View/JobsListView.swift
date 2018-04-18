@@ -70,6 +70,11 @@ extension JobsListView: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if jobViewModel.arrayOfFavoriteOpportunity.count == 0 {
+            jobsEmptyNotice(show: true)
+        } else {
+            jobsEmptyNotice(show: false)
+        }
         return jobViewModel.arrayOfOpportunity.count
     }
     
@@ -141,7 +146,7 @@ extension JobsListView: UICollectionViewDelegate, UICollectionViewDataSource {
             RemoteFilter(image: UIImage(named: "design"), title: "UI & UX"),
             RemoteFilter(image: UIImage(named: "non-tech"), title: "NON-TECH"),
             RemoteFilter(image: UIImage(named: "english"), title: "EN TEACHER"),
-            RemoteFilter(image: #imageLiteral(resourceName: "remote-jobs"), title: "CURRENCY")]
+            RemoteFilter(image: #imageLiteral(resourceName: "crypto"), title: "CURRENCY")]
     }
     
     // MARK: UICollectionViewDataSource
@@ -203,7 +208,7 @@ extension JobsListView: UICollectionViewDelegate, UICollectionViewDataSource {
             jobDataViewModel.loadJobsFromRemoteOK(ConstantsUtil.englishTeacherJobsURL())
             break
         case "7":
-            self.title = "Cryptocyrrency"
+            self.title = "Cryptojob"
             jobDataViewModel.loadJobsFromRemoteOK(ConstantsUtil.cryptoCurrency())
             break
         default:
@@ -281,37 +286,20 @@ extension JobsListView {
         }
     }
     
-//    func formatDate(dateString: String) -> Date {
-//        let dateFormatter = DateFormatter()
-//        dateFormatter.dateFormat = "yyyy-MM-dd"
-//        let dString = dateString.prefix(10)
-//        guard let date = dateFormatter.date(from: String(dString)) else {
-//            fatalError("ERROR: Date conversion failed due to mismatched format.")
-//        }
-//        return date
-//    }
-//    
-//    func getYesterday() -> Date {
-//        let dateFormatter = DateFormatter()
-//        dateFormatter.dateFormat = "yyyy-MM-dd"
-//        let dString = "\(Calendar.current.date(byAdding: .day, value: -1, to: Date())!)".prefix(10)
-//        guard let date = dateFormatter.date(from: String(dString)) else {
-//            fatalError("ERROR: Date conversion failed due to mismatched format.")
-//        }
-//        return date
-//    }
-//    
-//    func getWeekNumber(date: String) -> Int {
-//        let formatter  = DateFormatter()
-//        formatter.dateFormat = "yyyy-MM-dd"
-//        let dString = date.prefix(10)
-//        guard let todaydate = formatter.date(from: String(dString)) else {
-//            fatalError("ERROR: Date conversion failed due to mismatched format.")
-//        }
-//        let myCalendar = NSCalendar(calendarIdentifier: NSCalendar.Identifier.gregorian)!
-//        let myComponents = myCalendar.components(.weekOfYear, from: todaydate)
-//        let weekNumber = myComponents.weekOfYear
-//        return weekNumber!
-//    }
+    func jobsEmptyNotice(show: Bool) {
+        let view = UIView(frame: jobsListTableView.frame)
+        if show {
+            view.isHidden = false
+        } else {
+            view.isHidden = true
+        }
+        let label = UILabel(frame: view.frame)
+        label.text = "No jobs found."
+        label.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        label.textAlignment = .center
+        view.addSubview(label)
+        view.bringSubview(toFront: label)
+        jobsListTableView.backgroundView = view
+    }
     
 }

@@ -172,7 +172,7 @@ class JobOportunityViewModel {
         
         do {
             arrayOfFavoriteOpportunity = try managedContext.fetch(fetch)
-           // favoriteDelegate.favoritesJobsLoaded()
+            //favoriteDelegate.favoritesJobsLoaded()
         } catch let error as NSError {
             print("Error when try delete all favorite opportunities " + error.description)
         }
