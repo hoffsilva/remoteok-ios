@@ -22,7 +22,7 @@ class LaunchScreenViewController: UIViewController {
         super.viewDidLoad()
         loadVideo()
         jobsDataViewModel.delegate = self
-        jobsDataViewModel.loadJobsFromRemoteOK(ConstantsUtil.remoteJobsURL())
+        jobsDataViewModel.loadJobsFromRemoteOK(ConstantsUtil.getAllJobs())
         print("")
     }
     
@@ -42,11 +42,20 @@ class LaunchScreenViewController: UIViewController {
         playerLayer.frame = self.view.frame
         playerLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
         playerLayer.zPosition = -1
+        playerLayer.repeatCount = 3
         
         self.view.layer.addSublayer(playerLayer)
         
-        player?.seek(to: kCMTimeZero)
-        player?.play()
+        self.player?.play()
+        
+        NotificationCenter.default.addObserver(forName: .AVPlayerItemDidPlayToEndTime, object: self.player?.currentItem, queue: .main) { _ in
+            self.player?.seek(to: kCMTimeZero)
+            self.player?.play()
+        }
+        
+        
+
+        
     }
     
     func callMainStoryboard() {
@@ -64,6 +73,7 @@ class LaunchScreenViewController: UIViewController {
 extension LaunchScreenViewController: JobsDataDelegate {
     func loadJobDataSuccessful() {
         callMainStoryboard()
+        //NotificationCenter.default.removeObserver(.AVPlayerItemDidPlayToEndTime)
     }
     
     func loadJobDataFailed(message: String) {

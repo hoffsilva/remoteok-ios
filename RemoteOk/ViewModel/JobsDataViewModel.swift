@@ -28,13 +28,27 @@ struct JobsDataViewModel {
     }
     
     func parse(dic: DataResponse<Any>) {
-        if let dictionary = dic.result.value as? [[String:Any]] {
+        if let dictionary = dic.result.value as? [[[String:Any]]] {
             print(dictionary.count)
-            for job in dictionary {
-                if (job["legal"] == nil) && (job["salaryRange"] == nil) {
-                    let currentJob = JobOportunity(object: job)
-                    self.jobsOpportunityViewModel.saveJobFromJSON(currentJob)
-                } else if (job["salaryRange"] != nil){
+            guard let remoteJobsArray = dictionary.first else {
+                return
+            }
+            guard let landingJobsArray = dictionary.last else {
+                return
+            }
+            for job in remoteJobsArray {
+                let currentJob = JobOportunity(object: job)
+                self.jobsOpportunityViewModel.saveJobFromJSON(currentJob)
+            }
+            
+            for job in landingJobsArray {
+                let currentJob = JobOportunity(object: job)
+                self.jobsOpportunityViewModel.saveJobFromJSON(currentJob)
+            }
+            self.delegate.loadJobDataSuccessful()
+        } else if let cryptoJobsDictionary = dic.result.value as? [[String:Any]] {
+            for job in cryptoJobsDictionary {
+                if (job["salaryRange"] != nil){
                     let currentCryptoJob = CryptoModel(dictionary: job as NSDictionary)
                     let currentJob = JobOportunity()
                     /*
@@ -49,19 +63,15 @@ struct JobsDataViewModel {
                      static let company = "company"
                      static let url = "url"
                      */
-                    currentJob.position = currentCryptoJob?.jobTitle
-                    currentJob.slug = ""
-                    currentJob.id = currentCryptoJob?.id
-                    currentJob.epoch = ""
-                    currentJob.descriptionValue = currentCryptoJob?.jobDescription
-                    currentJob.date = currentCryptoJob?.publishedAt
-                    currentJob.logo = currentCryptoJob?.companyLogo
-                    currentJob.tags = []
-                    currentJob.company = currentCryptoJob?.companyName
-                    currentJob.url = currentCryptoJob?.canonicalURL
+                    currentJob.jobTitle = currentCryptoJob?.jobTitle
+                    currentJob.jobDescription = currentCryptoJob?.jobDescription
+                    currentJob.companyLogoURL = currentCryptoJob?.companyLogo
+                    currentJob.companyName = currentCryptoJob?.companyName
+                    currentJob.applyURL = currentCryptoJob?.canonicalURL
                     self.jobsOpportunityViewModel.saveJobFromJSON(currentJob)
                 }
             }
+            
             self.delegate.loadJobDataSuccessful()
         }
         

@@ -552,8 +552,8 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kLk-At-OPV">
-                                                    <rect key="frame" x="74" y="43" width="222" height="23.5"/>
-                                                    <fontDescription key="fontDescription" name="Nunito-Light" family="Nunito" pointSize="17"/>
+                                                    <rect key="frame" x="74" y="27" width="222" height="54"/>
+                                                    <fontDescription key="fontDescription" name="Nunito-Light" family="Nunito" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -578,8 +578,8 @@
                                                 <constraint firstItem="dDx-Pt-jiS" firstAttribute="width" secondItem="ZVs-1R-7gK" secondAttribute="width" id="JIl-vx-9SW"/>
                                                 <constraint firstItem="ZVs-1R-7gK" firstAttribute="leading" secondItem="Fb5-Tn-06Z" secondAttribute="leading" constant="16" id="dUF-uZ-EzO"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="dDx-Pt-jiS" secondAttribute="bottom" constant="17" id="lRt-ub-HPx"/>
-                                                <constraint firstItem="kLk-At-OPV" firstAttribute="top" secondItem="Fb5-Tn-06Z" secondAttribute="topMargin" constant="32" id="maW-OB-S6M"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="kLk-At-OPV" secondAttribute="bottom" constant="30.670000000000002" id="nBU-be-qw0"/>
+                                                <constraint firstItem="kLk-At-OPV" firstAttribute="top" secondItem="Fb5-Tn-06Z" secondAttribute="topMargin" constant="16" id="maW-OB-S6M"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="kLk-At-OPV" secondAttribute="bottom" constant="16" id="nBU-be-qw0"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="ZVs-1R-7gK" secondAttribute="bottom" constant="18" id="nqO-ss-LZE"/>
                                                 <constraint firstItem="dDx-Pt-jiS" firstAttribute="top" secondItem="Fb5-Tn-06Z" secondAttribute="top" constant="30" id="yfw-aP-0xd"/>
                                                 <constraint firstItem="kLk-At-OPV" firstAttribute="leading" secondItem="ZVs-1R-7gK" secondAttribute="trailing" constant="8" id="yuG-Ge-uTJ"/>
@@ -600,24 +600,23 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <wkWebView contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="ncs-mr-690">
-                                                    <rect key="frame" x="16" y="11" width="288" height="362"/>
+                                                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q2i-1M-fsr">
+                                                    <rect key="frame" x="8" y="11" width="304" height="362"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <wkWebViewConfiguration key="configuration">
-                                                        <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                                        <wkPreferences key="preferences"/>
-                                                    </wkWebViewConfiguration>
-                                                </wkWebView>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="362" id="Dab-36-4Oi"/>
+                                                    </constraints>
+                                                </webView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="ncs-mr-690" firstAttribute="centerX" secondItem="Pf9-hY-R4W" secondAttribute="centerX" id="9n5-bg-yCz"/>
-                                                <constraint firstItem="ncs-mr-690" firstAttribute="height" secondItem="suJ-Ny-ohc" secondAttribute="height" id="CLg-YD-EUI"/>
-                                                <constraint firstItem="ncs-mr-690" firstAttribute="width" secondItem="suJ-Ny-ohc" secondAttribute="width" id="NGh-DV-L8f"/>
+                                                <constraint firstItem="q2i-1M-fsr" firstAttribute="centerY" secondItem="Pf9-hY-R4W" secondAttribute="centerY" id="5xF-8u-ix3"/>
+                                                <constraint firstItem="q2i-1M-fsr" firstAttribute="leading" secondItem="Pf9-hY-R4W" secondAttribute="leading" constant="8" id="Mpy-Uk-NIt"/>
+                                                <constraint firstItem="q2i-1M-fsr" firstAttribute="centerX" secondItem="Pf9-hY-R4W" secondAttribute="centerX" id="QlF-Jc-G0G"/>
                                                 <constraint firstItem="suJ-Ny-ohc" firstAttribute="leading" secondItem="Pf9-hY-R4W" secondAttribute="leadingMargin" id="R2d-mG-4QL"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="suJ-Ny-ohc" secondAttribute="bottom" id="S5F-2g-zt8"/>
                                                 <constraint firstItem="suJ-Ny-ohc" firstAttribute="top" secondItem="Pf9-hY-R4W" secondAttribute="topMargin" id="T1P-ur-2ZP"/>
-                                                <constraint firstItem="ncs-mr-690" firstAttribute="centerY" secondItem="Pf9-hY-R4W" secondAttribute="centerY" id="Tfp-py-cOK"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="suJ-Ny-ohc" secondAttribute="trailing" id="ikw-ip-oMK"/>
+                                                <constraint firstAttribute="trailing" secondItem="q2i-1M-fsr" secondAttribute="trailing" constant="8" id="y5U-li-7yp"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -642,8 +641,8 @@
                         <outlet property="companyLogoImageView" destination="ZVs-1R-7gK" id="whF-ec-3TX"/>
                         <outlet property="companyNameLabel" destination="kLk-At-OPV" id="zW6-wN-5ri"/>
                         <outlet property="fakeCompanyLogoLabel" destination="dDx-Pt-jiS" id="zGJ-MZ-Hgh"/>
+                        <outlet property="jobDescWebView" destination="q2i-1M-fsr" id="nV9-QI-CLw"/>
                         <outlet property="jobDescriptionLabel" destination="suJ-Ny-ohc" id="oGu-Ak-myZ"/>
-                        <outlet property="jobDescriptionWebView" destination="ncs-mr-690" id="HFG-pL-ovh"/>
                         <outlet property="jobNameLabel" destination="z8S-vL-zhy" id="Hb2-3a-sn3"/>
                     </connections>
                 </tableViewController>

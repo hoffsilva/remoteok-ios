@@ -19,7 +19,7 @@ class DetailJobTableViewController: UITableViewController {
     @IBOutlet weak var jobNameLabel: UILabel!
     @IBOutlet weak var companyLogoImageView: UIImageView!
     @IBOutlet weak var companyNameLabel: UILabel!
-    @IBOutlet weak var jobDescriptionWebView: WKWebView!
+    @IBOutlet weak var jobDescWebView: UIWebView!
     @IBOutlet weak var jobDescriptionLabel: UILabel!
     @IBOutlet weak var fakeCompanyLogoLabel: UILabel!
     
@@ -34,7 +34,7 @@ class DetailJobTableViewController: UITableViewController {
         if let job = self.job {
             
             let position = job.position ?? ""
-            let desc = job.desc ?? ""
+            let desc = job.url ?? ""
             let company = job.company ?? ""
             configureJobDetail(position: position , desc: desc, logo: job.logo, company: company)
             
@@ -52,7 +52,36 @@ class DetailJobTableViewController: UITableViewController {
         
         
         jobNameLabel.text = position
-        jobDescriptionLabel.text = desc
+//        do {
+//            jobDescWebView.isHidden = true
+//            jobDescriptionLabel.isHidden = false
+//            let teste: Data = desc.data(using: .utf8)!
+//            let data: Data = """
+//            <html>
+//                <head>
+//                    <style type='text/css'>
+//                        body {
+//                        font-family: "Nunito","Helvetica",Arial,sans-serif;
+//                        padding: 0;
+//                        font-size: 15px;
+//                        text-align: justify;
+//                        }
+//                    </style>
+//                </head>
+//                <body>
+//                    \(desc)
+//                </body>
+//            </html>
+//            """.data(using: .utf8)!
+//            let text = try NSAttributedString(data: teste, options: [NSAttributedString.DocumentReadingOptionKey.documentType : NSAttributedString.DocumentType.html], documentAttributes: nil)
+//            print(text)
+//            jobDescriptionLabel.text = text.string
+//
+//        } catch {
+//            jobDescWebView.isHidden = false
+//            jobDescriptionLabel.isHidden = true
+//        }
+        
         
         if let imageUrl = logo {
             companyLogoImageView.sd_setImage(with: URL(string: imageUrl)) { (image, error, cache, url) in
@@ -68,23 +97,26 @@ class DetailJobTableViewController: UITableViewController {
                 }
             }
         }
-        jobDescriptionWebView.loadHTMLString("""
-            <html>
-            <head>
-            <style type='text/css'>
-            body {
-            font-family: "Nunito","Helvetica",Arial,sans-serif;
-            padding: 0;
-            font-size: 40pt;
-            text-align: justify;
-            }
-            </style>
-            </head>
-            <body>
-            \(desc)
-            </body>
-            </html>
-            """ , baseURL: nil)
+        
+        jobDescWebView.loadRequest(URLRequest(url: URL(string: desc)!))
+        
+//        jobDescWebView.loadHTMLString("""
+//            <html>
+//            <head>
+//            <style type='text/css'>
+//            body {
+//            font-family: "Nunito","Helvetica",Arial,sans-serif;
+//            padding: 0;
+//            font-size: 15px;
+//            text-align: justify;
+//            }
+//            </style>
+//            </head>
+//            <body>
+//            \(desc)
+//            </body>
+//            </html>
+//            """, baseURL: nil)
         companyNameLabel.text = company
     }
     

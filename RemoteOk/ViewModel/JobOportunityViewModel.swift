@@ -37,16 +37,16 @@ class JobOportunityViewModel {
             return
         }
         let job = Opportunity(entity: jts, insertInto: managedContext)
-        job.position = currentJob.position
-        job.slug = currentJob.slug
-        job.id = currentJob.id
-        job.epoch = currentJob.epoch
-        job.desc = currentJob.descriptionValue
-        job.date = currentJob.date
-        job.logo = currentJob.logo
+        job.position = currentJob.jobTitle
+        job.slug = ""
+        job.id = ""
+        job.epoch = ""
+        job.desc = currentJob.jobDescription
+        job.date = "2018-07-30T20:53:26-07:00"
+        job.logo = currentJob.companyLogoURL
         job.tags = currentJob.tags
-        job.company = currentJob.company
-        job.url = currentJob.url
+        job.company = currentJob.companyName
+        job.url = currentJob.applyURL
         do {
             try managedContext.save()
         } catch let error as NSError {

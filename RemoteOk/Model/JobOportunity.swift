@@ -12,29 +12,23 @@ public class JobOportunity: Codable {
     
     // MARK: Declaration for string constants to be used to decode and also serialize.
     private struct SerializationKeys {
-        static let position = "position"
-        static let slug = "slug"
-        static let id = "id"
-        static let epoch = "epoch"
-        static let descriptionValue = "description"
-        static let date = "date"
-        static let logo = "logo"
+        static let jobTitle = "jobTitle"
+        static let companyLogoURL = "companyLogoURL"
+        static let companyName = "companyName"
+        static let jobDescription = "jobDescription"
+        static let applyURL = "applyURL"
         static let tags = "tags"
-        static let company = "company"
-        static let url = "url"
+        static let source = "source"
     }
     
     // MARK: Properties
-    public var position: String?
-    public var slug: String?
-    public var id: String?
-    public var epoch: String?
-    public var descriptionValue: String?
-    public var date: String?
-    public var logo: String?
+    public var jobTitle: String?
+    public var companyLogoURL: String?
+    public var companyName: String?
+    public var jobDescription: String?
+    public var applyURL: String?
     public var tags: [String]?
-    public var company: String?
-    public var url: String?
+    public var source: String?
     
     public convenience init(object: Any) {
         self.init(json: JSON(object))
@@ -53,16 +47,13 @@ public class JobOportunity: Codable {
     ///
     /// - parameter json: JSON object from SwiftyJSON.
     public required init(json: JSON) {
-        position = json[SerializationKeys.position].string
-        slug = json[SerializationKeys.slug].string
-        id = json[SerializationKeys.id].string
-        epoch = json[SerializationKeys.epoch].string
-        descriptionValue = json[SerializationKeys.descriptionValue].string
-        date = json[SerializationKeys.date].string
-        logo = json[SerializationKeys.logo].string
+        jobTitle = json[SerializationKeys.jobTitle].string
+        companyLogoURL = json[SerializationKeys.companyLogoURL].string
+        companyName = json[SerializationKeys.companyName].string
+        jobDescription = json[SerializationKeys.jobDescription].string
+        applyURL = json[SerializationKeys.applyURL].string
         if let items = json[SerializationKeys.tags].array { tags = items.map { $0.stringValue } }
-        company = json[SerializationKeys.company].string
-        url = json[SerializationKeys.url].string
+        source = json[SerializationKeys.source].string
     }
     
     /// Generates description of the object in the form of a NSDictionary.
@@ -70,16 +61,13 @@ public class JobOportunity: Codable {
     /// - returns: A Key value pair containing all valid values in the object.
     public func dictionaryRepresentation() -> [String: Any] {
         var dictionary: [String: Any] = [:]
-        if let value = position { dictionary[SerializationKeys.position] = value }
-        if let value = slug { dictionary[SerializationKeys.slug] = value }
-        if let value = id { dictionary[SerializationKeys.id] = value }
-        if let value = epoch { dictionary[SerializationKeys.epoch] = value }
-        if let value = descriptionValue { dictionary[SerializationKeys.descriptionValue] = value }
-        if let value = date { dictionary[SerializationKeys.date] = value }
-        if let value = logo { dictionary[SerializationKeys.logo] = value }
+        if let value = jobTitle { dictionary[SerializationKeys.jobTitle] = value }
+        if let value = companyLogoURL { dictionary[SerializationKeys.companyLogoURL] = value }
+        if let value = companyName { dictionary[SerializationKeys.companyName] = value }
+        if let value = jobDescription { dictionary[SerializationKeys.jobDescription] = value }
+        if let value = applyURL { dictionary[SerializationKeys.applyURL] = value }
         if let value = tags { dictionary[SerializationKeys.tags] = value }
-        if let value = company { dictionary[SerializationKeys.company] = value }
-        if let value = url { dictionary[SerializationKeys.url] = value }
+        if let value = source { dictionary[SerializationKeys.source] = value }
         return dictionary
     }
     

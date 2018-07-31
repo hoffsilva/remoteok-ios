@@ -29,8 +29,6 @@ class DetailJobViewController: UIViewController {
             title = position
         }
         
-        
-        
         if jobFavorite != nil {
             favoriteButton.isEnabled = false
         } else {
