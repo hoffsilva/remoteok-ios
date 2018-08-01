@@ -57,7 +57,7 @@ class DetailJobViewController: UIViewController {
     @IBAction func apply() {
         var url: String!
         if let jobURL =  job?.url {
-            url = jobURL
+            url = jobURL.replacingOccurrences(of: "remote-jobs/remote-jobs", with: "remote-jobs")
         }
         
         if let favoriteURL = jobFavorite?.url {

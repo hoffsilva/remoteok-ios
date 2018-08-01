@@ -56,6 +56,11 @@ class JobsListView: UIViewController {
         if segue.identifier == "segueDetailJob" {
             let djvc = segue.destination as! DetailJobViewController
             djvc.job = jobViewModel.getJob()
+        } else if segue.identifier == "segueDetailJobWebView" {
+            let djwvvc = segue.destination as! DetailJobWebViewController
+            if let descr = jobViewModel.getJob().url {
+                djwvvc.jobURL = descr
+            }
         }
     }
 }
@@ -92,18 +97,10 @@ extension JobsListView: UITableViewDelegate, UITableViewDataSource {
         cell.logoImageView.sd_addActivityIndicator()
         cell.logoImageView.sd_setShowActivityIndicatorView(true)
         
-        if let dateOfJob = jobViewModel.getJob().date {
-            if Extensions.formatDate(dateString: "\(Date())") == Extensions.formatDate(dateString: dateOfJob) {
-                cell.postDate.text = "Today"
-            } else if Extensions.formatDate(dateString: dateOfJob) == Extensions.getYesterday() {
-                cell.postDate.text = "Yesterday"
-            } else if Extensions.getWeekNumber(date: "\(Extensions.formatDate(dateString: dateOfJob))") == Extensions.getWeekNumber(date: "\(Extensions.formatDate(dateString: "\(Date())"))") {
-                cell.postDate.text = "This week"
-            } else {
-                cell.postDate.text = "This month"
-            }
-            
+        if let epoch = jobViewModel.getJob().epoch {
+            cell.postOriginLabel.text = epoch
         }
+        
         
         if let imageUrl = jobViewModel.getJob().logo {
             cell.logoImageView.sd_setImage(with: URL(string: imageUrl)) { (image, error, cache, url) in
@@ -126,7 +123,12 @@ extension JobsListView: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         jobViewModel.currentJob = indexPath.row
-        performSegue(withIdentifier: "segueDetailJob", sender: self)
+        if (jobViewModel.getJob().desc == "") {
+            performSegue(withIdentifier: "segueDetailJobWebView", sender: self)
+        } else {
+            performSegue(withIdentifier: "segueDetailJob", sender: self)
+        }
+        
     }
     
 }
@@ -139,7 +141,7 @@ extension JobsListView: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func configureCollectionView() {
         arrayOfFilters = [
-            RemoteFilter(image: UIImage(named: "remote-jobs"), title: "REMOTE JOBS"),
+            RemoteFilter(image: UIImage(named: "remote-jobs"), title: "All JOBS"),
             RemoteFilter(image: UIImage(named: "dev"), title: "DEV"),
             RemoteFilter(image: UIImage(named: "support"), title: "SUPPORT"),
             RemoteFilter(image: UIImage(named: "marketing"), title: "MARKETING"),
@@ -180,8 +182,8 @@ extension JobsListView: UICollectionViewDelegate, UICollectionViewDataSource {
         loadActivityIndicator()
         switch "\(indexPath.row)" {
         case "0":
-            self.title = "OK"
-            jobDataViewModel.loadJobsFromRemoteOK(ConstantsUtil.remoteJobsURL())
+            self.title = "All"
+            jobDataViewModel.loadJobsFromRemoteOK(ConstantsUtil.getAllJobs())
             break
         case "1":
             self.title = "Dev Jobs"
@@ -243,7 +245,8 @@ extension JobsListView: JobsDataDelegate {
 extension JobsListView: FilterJobsByTagsDelegate {
     func tagsSelected(selectedTags: [String]) {
         loadActivityIndicator()
-        jobDataViewModel.loadJobsFromRemoteOK(ConstantsUtil.searchJobBy(tags: selectedTags))
+        jobDataViewModel.getJobsBy(parameter: selectedTags)
+        //jobDataViewModel.loadJobsFromRemoteOK(ConstantsUtil.searchJobBy(tags: selectedTags))
     }
 }
 

@@ -27,6 +27,10 @@ struct JobsDataViewModel {
         }
     }
     
+    func getJobsBy(parameter: [String]) {
+        self.jobsOpportunityViewModel.filterJobsBy(tags: parameter)
+    }
+    
     func parse(dic: DataResponse<Any>) {
         if let dictionary = dic.result.value as? [[[String:Any]]] {
             print(dictionary.count)

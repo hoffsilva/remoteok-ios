@@ -20,7 +20,7 @@ protocol JobOpportunityDelegate: class {
 
 class JobOportunityViewModel {
     
-    weak var delegate: JobOpportunityDelegate!
+    var delegate: JobOpportunityDelegate!
     weak var favoriteDelegate: JobOppotunityFavoriteDelegate!
     
     var managedContext = CoreDataStack().persistentContainer.viewContext
@@ -40,7 +40,7 @@ class JobOportunityViewModel {
         job.position = currentJob.jobTitle
         job.slug = ""
         job.id = ""
-        job.epoch = ""
+        job.epoch = currentJob.source
         job.desc = currentJob.jobDescription
         job.date = "2018-07-30T20:53:26-07:00"
         job.logo = currentJob.companyLogoURL
@@ -100,7 +100,9 @@ class JobOportunityViewModel {
                     }
                 }
             }
-            self.delegate.jobOpportunitiesLoaded()
+//            
+//            
+//            self.delegate.jobOpportunitiesLoaded()
         } catch let error as NSError {
             print("Error when try fetch all opportunities " + error.description)
         }

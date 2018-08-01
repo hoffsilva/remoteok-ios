@@ -14,7 +14,7 @@ class JobViewCell: UITableViewCell {
     @IBOutlet weak var positionLabel: UILabel!
     @IBOutlet weak var companyNameLabel: UILabel!
     @IBOutlet weak var fakeCompanyLogoLabel: UILabel!
-    @IBOutlet weak var postDate: UILabel!
+    @IBOutlet weak var postOriginLabel: UILabel!
     
 
 }

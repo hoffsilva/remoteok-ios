@@ -32,6 +32,11 @@ class FavoritesJobsList: UITableViewController {
         if segue.identifier == "segueDetailFavoriteJob" {
             let djvc = segue.destination as! DetailJobViewController
             djvc.jobFavorite = jobViewModel.getFavoriteJob()
+        } else if segue.identifier == "segueDetailFavoriteJobWebView" {
+            let djwvvc = segue.destination as! DetailJobWebViewController
+            if let url = jobViewModel.getFavoriteJob().url {
+                djwvvc.jobURL = url
+            }
         }
     }
 
@@ -67,22 +72,12 @@ class FavoritesJobsList: UITableViewController {
         cell.logoImageView.sd_addActivityIndicator()
         cell.logoImageView.sd_setShowActivityIndicatorView(true)
         
-        if let dateOfJob = jobViewModel.getFavoriteJob().date {
-            if Extensions.formatDate(dateString: "\(Date())") == Extensions.formatDate(dateString: dateOfJob) {
-                cell.postDate.text = "Today"
-            } else if Extensions.formatDate(dateString: dateOfJob) == Extensions.getYesterday() {
-                cell.postDate.text = "Yesterday"
-            } else if Extensions.getWeekNumber(date: "\(Extensions.formatDate(dateString: dateOfJob))") == Extensions.getWeekNumber(date: "\(Extensions.formatDate(dateString: "\(Date())"))") {
-                cell.postDate.text = "This week"
-            } else {
-                cell.postDate.text = "This month"
-            }
-            
-        }
+        cell.postOriginLabel.text = jobViewModel.getFavoriteJob().slug
         
         if let imageUrl = jobViewModel.getFavoriteJob().logo {
             cell.logoImageView.sd_setImage(with: URL(string: imageUrl)) { (image, error, cache, url) in
                 if image == nil {
+                    cell.logoImageView.stopAnimating()
                     cell.fakeCompanyLogoLabel.isHidden = false
                     if let fakeLogo = self.jobViewModel.getFavoriteJob().company?.first {
                         cell.fakeCompanyLogoLabel.text = String(fakeLogo).uppercased()
@@ -99,9 +94,15 @@ class FavoritesJobsList: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         jobViewModel.currentJobFavorite = indexPath.row
-        performSegue(withIdentifier: "segueDetailFavoriteJob", sender: self)
+        if (jobViewModel.getFavoriteJob().desc == "") {
+            performSegue(withIdentifier: "segueDetailFavoriteJobWebView", sender: self)
+        } else {
+          performSegue(withIdentifier: "segueDetailFavoriteJob", sender: self)
+        }
+        
     }
 
+    
     
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
