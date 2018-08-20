@@ -84,6 +84,7 @@ class FilterJobsByTagsView: UITableViewController {
         searchController.searchBar.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         searchController.searchBar.barTintColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         searchController.searchBar.barStyle = .blackOpaque
+        searchController.searchBar.showsCancelButton = false
         if #available(iOS 11.0, *) {
             navigationItem.searchController = searchController
         } else {
