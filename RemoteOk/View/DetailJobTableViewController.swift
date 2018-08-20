@@ -67,10 +67,10 @@ class DetailJobTableViewController: UITableViewController {
             }
         }
         companyNameLabel.text = company
-        let newDesc = desc.replacingOccurrences(of: ". ", with: ".\n")
+        print(desc.contains("\n"))
+        let newDesc = desc.replacingOccurrences(of: "\\n", with: "\n")
         jobDescriptionLabel.text = newDesc
-        jobDescriptionTextView.text = desc
-        jobDescriptionWebView.loadHTMLString(desc, baseURL: nil)
+        jobDescriptionTextView.text = newDesc
     }
     
     override func didReceiveMemoryWarning() {

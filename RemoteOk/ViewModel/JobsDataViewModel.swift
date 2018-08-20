@@ -32,54 +32,23 @@ struct JobsDataViewModel {
     }
     
     func parse(dic: DataResponse<Any>) {
+        
         if let dictionary = dic.result.value as? [[[String:Any]]] {
             print(dictionary.count)
-            guard let remoteJobsArray = dictionary.first else {
-                return
-            }
-            guard let landingJobsArray = dictionary.last else {
-                return
-            }
-            for job in remoteJobsArray {
-                let currentJob = JobOportunity(object: job)
-                self.jobsOpportunityViewModel.saveJobFromJSON(currentJob)
-            }
-            
-            for job in landingJobsArray {
-                let currentJob = JobOportunity(object: job)
-                self.jobsOpportunityViewModel.saveJobFromJSON(currentJob)
-            }
+            saveJobs(jobsList: dictionary[0])
+            saveJobs(jobsList: dictionary[1])
+            saveJobs(jobsList: dictionary[2])
             self.delegate.loadJobDataSuccessful()
-        } else if let cryptoJobsDictionary = dic.result.value as? [[String:Any]] {
-            for job in cryptoJobsDictionary {
-                if (job["salaryRange"] != nil){
-                    let currentCryptoJob = CryptoModel(dictionary: job as NSDictionary)
-                    let currentJob = JobOportunity()
-                    /*
-                     static let position = "position"
-                     static let slug = "slug"
-                     static let id = "id"
-                     static let epoch = "epoch"
-                     static let descriptionValue = "description"
-                     static let date = "date"
-                     static let logo = "logo"
-                     static let tags = "tags"
-                     static let company = "company"
-                     static let url = "url"
-                     */
-                    currentJob.jobTitle = currentCryptoJob?.jobTitle
-                    currentJob.jobDescription = currentCryptoJob?.jobDescription
-                    currentJob.companyLogoURL = currentCryptoJob?.companyLogo
-                    currentJob.companyName = currentCryptoJob?.companyName
-                    currentJob.applyURL = currentCryptoJob?.canonicalURL
-                    currentJob.source = "cryptojobslist"
-                    self.jobsOpportunityViewModel.saveJobFromJSON(currentJob)
-                }
-            }
-            
-            self.delegate.loadJobDataSuccessful()
+        }else {
+            self.delegate.loadJobDataFailed(message: "Loading jobs data error.")
         }
-        
+    }
+    
+    func saveJobs(jobsList: [[String:Any]]) {
+        for job in jobsList {
+            let currentJob = JobOportunity(object: job)
+            self.jobsOpportunityViewModel.saveJobFromJSON(currentJob)
+        }
     }
     
 }

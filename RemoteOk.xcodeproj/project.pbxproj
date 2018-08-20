@@ -49,6 +49,7 @@
 		43EE8CD82074441B005BBE76 /* JobsDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EE8CD72074441B005BBE76 /* JobsDataViewModel.swift */; };
 		43EE8CDB20759A6F005BBE76 /* RemoteOk.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 43EE8CD920759A6F005BBE76 /* RemoteOk.xcdatamodeld */; };
 		96B14212FB7FCFD275086D1B /* Pods_RemoteOk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11DF5B9A2E80982E1ED0E538 /* Pods_RemoteOk.framework */; };
+		C3ACC719212B2BD4008A2802 /* ExtensionUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ACC718212B2BD4008A2802 /* ExtensionUIViewController.swift */; };
 		CA13F4512077F2AC007676AB /* JobsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA13F4502077F2AC007676AB /* JobsListView.swift */; };
 		CA678C0F2084D132009B7158 /* DetailJobViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA678C0E2084D132009B7158 /* DetailJobViewController.swift */; };
 		CA678C112084DE79009B7158 /* DetailJobTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA678C102084DE79009B7158 /* DetailJobTableViewController.swift */; };
@@ -105,6 +106,7 @@
 		43EE8CDA20759A6F005BBE76 /* RemoteOk.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RemoteOk.xcdatamodel; sourceTree = "<group>"; };
 		549011949B0F36695879AAC6 /* Pods-RemoteOk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RemoteOk.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RemoteOk/Pods-RemoteOk.debug.xcconfig"; sourceTree = "<group>"; };
 		6C803A45ABA505F2553F6B5D /* Pods-RemoteOk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RemoteOk.release.xcconfig"; path = "Pods/Target Support Files/Pods-RemoteOk/Pods-RemoteOk.release.xcconfig"; sourceTree = "<group>"; };
+		C3ACC718212B2BD4008A2802 /* ExtensionUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIViewController.swift; sourceTree = "<group>"; };
 		CA13F4502077F2AC007676AB /* JobsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsListView.swift; sourceTree = "<group>"; };
 		CA678C0E2084D132009B7158 /* DetailJobViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailJobViewController.swift; sourceTree = "<group>"; };
 		CA678C102084DE79009B7158 /* DetailJobTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailJobTableViewController.swift; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 				4399FE40207300D20099E529 /* Launch.storyboard */,
 				CADB0E282086427B005B50AD /* Extensions.swift */,
 				438C3D922086C4F300D80BB8 /* SwiftNotice.swift */,
+				C3ACC718212B2BD4008A2802 /* ExtensionUIViewController.swift */,
 			);
 			path = RemoteOk;
 			sourceTree = "<group>";
@@ -424,6 +427,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3ACC719212B2BD4008A2802 /* ExtensionUIViewController.swift in Sources */,
 				CADB0E2720863B3C005B50AD /* FavoritesJobsList.swift in Sources */,
 				43487CCF2078EB4000430934 /* JobViewCell.swift in Sources */,
 				43B7BA43206E6AEA00DA3A39 /* CoreDataStack.swift in Sources */,

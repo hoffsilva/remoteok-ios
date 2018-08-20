@@ -617,35 +617,26 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="NAm-jv-HfI">
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NAm-jv-HfI">
                                                     <rect key="frame" x="16" y="11" width="288" height="362"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <dataDetectorType key="dataDetectorTypes" link="YES"/>
                                                 </textView>
-                                                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1sG-Or-H74">
-                                                    <rect key="frame" x="16" y="11" width="288" height="362"/>
-                                                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </webView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="1sG-Or-H74" firstAttribute="leading" secondItem="Pf9-hY-R4W" secondAttribute="leading" constant="16" id="2b3-5f-5lW"/>
                                                 <constraint firstItem="NAm-jv-HfI" firstAttribute="top" secondItem="Pf9-hY-R4W" secondAttribute="top" constant="11" id="Bhk-qJ-lz7"/>
-                                                <constraint firstItem="1sG-Or-H74" firstAttribute="height" secondItem="suJ-Ny-ohc" secondAttribute="height" id="Dy4-VK-i24"/>
                                                 <constraint firstAttribute="trailing" secondItem="NAm-jv-HfI" secondAttribute="trailing" constant="16" id="FDH-dH-cvA"/>
                                                 <constraint firstItem="NAm-jv-HfI" firstAttribute="width" secondItem="suJ-Ny-ohc" secondAttribute="width" id="GzE-MV-NTZ"/>
-                                                <constraint firstItem="1sG-Or-H74" firstAttribute="top" secondItem="Pf9-hY-R4W" secondAttribute="top" constant="11" id="QaE-Sx-bQ3"/>
-                                                <constraint firstItem="1sG-Or-H74" firstAttribute="width" secondItem="suJ-Ny-ohc" secondAttribute="width" id="QlO-Bt-Ykn"/>
                                                 <constraint firstItem="suJ-Ny-ohc" firstAttribute="leading" secondItem="Pf9-hY-R4W" secondAttribute="leadingMargin" id="R2d-mG-4QL"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="suJ-Ny-ohc" secondAttribute="bottom" id="S5F-2g-zt8"/>
                                                 <constraint firstItem="suJ-Ny-ohc" firstAttribute="top" secondItem="Pf9-hY-R4W" secondAttribute="topMargin" id="T1P-ur-2ZP"/>
-                                                <constraint firstAttribute="trailing" secondItem="1sG-Or-H74" secondAttribute="trailing" constant="16" id="XVi-Yd-hIo"/>
                                                 <constraint firstItem="NAm-jv-HfI" firstAttribute="height" secondItem="suJ-Ny-ohc" secondAttribute="height" id="fWr-q1-5mS"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="suJ-Ny-ohc" secondAttribute="trailing" id="ikw-ip-oMK"/>
                                                 <constraint firstItem="NAm-jv-HfI" firstAttribute="leading" secondItem="Pf9-hY-R4W" secondAttribute="leading" constant="16" id="jUd-bn-0b6"/>
                                                 <constraint firstAttribute="bottom" secondItem="NAm-jv-HfI" secondAttribute="bottom" constant="11" id="nEq-xf-y9I"/>
-                                                <constraint firstAttribute="bottom" secondItem="1sG-Or-H74" secondAttribute="bottom" constant="11" id="sXm-uJ-5ux"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -672,7 +663,6 @@
                         <outlet property="fakeCompanyLogoLabel" destination="dDx-Pt-jiS" id="zGJ-MZ-Hgh"/>
                         <outlet property="jobDescriptionLabel" destination="suJ-Ny-ohc" id="oGu-Ak-myZ"/>
                         <outlet property="jobDescriptionTextView" destination="NAm-jv-HfI" id="4ND-he-5JP"/>
-                        <outlet property="jobDescriptionWebView" destination="1sG-Or-H74" id="DmJ-fo-fS8"/>
                         <outlet property="jobNameLabel" destination="z8S-vL-zhy" id="Hb2-3a-sn3"/>
                     </connections>
                 </tableViewController>

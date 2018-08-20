@@ -180,6 +180,7 @@ extension JobsListView: UICollectionViewDelegate, UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
         loadActivityIndicator()
         switch "\(indexPath.row)" {
         case "0":
@@ -212,7 +213,7 @@ extension JobsListView: UICollectionViewDelegate, UICollectionViewDataSource {
             break
         case "7":
             self.title = "Cryptojob"
-            jobDataViewModel.loadJobsFromRemoteOK(ConstantsUtil.cryptoCurrency())
+            jobViewModel.filterJobsBy(tags: ["cryptojobslist"])
             break
         default:
             break
@@ -280,7 +281,7 @@ extension JobsListView {
         self.overlayView.addSubview(activityIndicator)
         self.view.addSubview(overlayView)
         self.view.bringSubview(toFront: overlayView)
-        UIView.animate(withDuration: 0.9, delay: 0.1,  options: .curveEaseIn, animations: {
+        UIView.animate(withDuration: 0.9, delay: 0.0,  options: .curveEaseIn, animations: {
             self.overlayView.alpha = 0.6
         }, completion: nil)
         self.activityIndicator.startAnimating()

@@ -92,11 +92,21 @@ class JobOportunityViewModel {
         }
         do {
             let opportunities = try managedContext.fetch(fetch)
-//            if opportunities.first?.tags == nil{
-//                jobDataViewModel.loadJobsFromRemoteOK(ConstantsUtil.getAllJobs())
-//            }
             arrayOfOpportunity = []
+            
+            if tags.first == "cryptojobslist" {
+                for job in opportunities {
+                    if job.epoch == tags.first {
+                        arrayOfOpportunity.append(job)
+                    }
+                }
+                self.delegate.jobsFiltered()
+                return
+            }
             for job in opportunities {
+                if job.epoch == tags.first {
+                    arrayOfOpportunity.append(job)
+                }
                 if let orderedTags = job.tags?.sorted() {
                 var newOrderedTags = [String]()
                 for ot in orderedTags {
