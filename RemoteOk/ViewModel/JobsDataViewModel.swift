@@ -72,6 +72,7 @@ struct JobsDataViewModel {
                     currentJob.companyLogoURL = currentCryptoJob?.companyLogo
                     currentJob.companyName = currentCryptoJob?.companyName
                     currentJob.applyURL = currentCryptoJob?.canonicalURL
+                    currentJob.source = "cryptojobslist"
                     self.jobsOpportunityViewModel.saveJobFromJSON(currentJob)
                 }
             }

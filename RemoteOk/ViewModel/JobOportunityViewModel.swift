@@ -16,12 +16,14 @@ protocol JobOppotunityFavoriteDelegate: class  {
 
 protocol JobOpportunityDelegate: class {
     func jobOpportunitiesLoaded()
+    func jobsFiltered()
 }
 
 class JobOportunityViewModel {
     
-    var delegate: JobOpportunityDelegate!
+    weak var delegate: JobOpportunityDelegate!
     weak var favoriteDelegate: JobOppotunityFavoriteDelegate!
+    
     
     var managedContext = CoreDataStack().persistentContainer.viewContext
     var arrayOfOpportunity = [Opportunity]()
@@ -90,19 +92,34 @@ class JobOportunityViewModel {
         }
         do {
             let opportunities = try managedContext.fetch(fetch)
+//            if opportunities.first?.tags == nil{
+//                jobDataViewModel.loadJobsFromRemoteOK(ConstantsUtil.getAllJobs())
+//            }
             arrayOfOpportunity = []
             for job in opportunities {
-                let orderedTags = job.tags?.sorted()
+                if let orderedTags = job.tags?.sorted() {
+                var newOrderedTags = [String]()
+                for ot in orderedTags {
+                    newOrderedTags.append(ot.uppercased())
+                }
+                print(newOrderedTags)
                 let selectedTags = tags.sorted()
+                print(selectedTags)
                 for tag in selectedTags {
-                    if (orderedTags?.contains(tag))! {
+                    if (newOrderedTags.contains(tag)) {
+                        print("tag found!")
                         arrayOfOpportunity.append(job)
+                    } else {
+                        for not in newOrderedTags {
+                            if not.contains(tag) {
+                                arrayOfOpportunity.append(job)
+                            }
+                        }
                     }
                 }
             }
-//            
-//            
-//            self.delegate.jobOpportunitiesLoaded()
+            self.delegate.jobsFiltered()
+            }
         } catch let error as NSError {
             print("Error when try fetch all opportunities " + error.description)
         }

@@ -14,7 +14,7 @@ protocol FilterJobsByTagsDelegate: class {
 
 class FilterJobsByTagsView: UITableViewController {
     
-    weak var filterJobsDelegate: FilterJobsByTagsDelegate?
+    var filterJobsDelegate: FilterJobsByTagsDelegate?
     
     var tagViewModel = TagsViewModel()
     let searchController = UISearchController(searchResultsController: nil)

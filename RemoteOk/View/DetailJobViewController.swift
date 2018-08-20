@@ -83,7 +83,7 @@ class DetailJobViewController: UIViewController {
         if job == nil {
             objectsToShare = URL(string: jobFavorite!.url!)!
         } else {
-            objectsToShare = URL(string: job!.url!)!
+            objectsToShare = URL(string: (job!.url?.replacingOccurrences(of: "remote-jobs/remote-jobs", with: "remote-jobs"))!)!
         }
         let sharedObjects:[AnyObject] = [objectsToShare as AnyObject,someText as AnyObject]
         let activityViewController = UIActivityViewController(activityItems : sharedObjects, applicationActivities: nil)

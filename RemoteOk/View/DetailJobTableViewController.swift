@@ -22,6 +22,8 @@ class DetailJobTableViewController: UITableViewController {
     @IBOutlet weak var jobDescWebView: UIWebView!
     @IBOutlet weak var jobDescriptionLabel: UILabel!
     @IBOutlet weak var fakeCompanyLogoLabel: UILabel!
+    @IBOutlet weak var jobDescriptionTextView: UITextView!
+    @IBOutlet weak var jobDescriptionWebView: UIWebView!
     
     var job: Opportunity!
     var favoriteJob: OportunityFavorite!
@@ -67,6 +69,8 @@ class DetailJobTableViewController: UITableViewController {
         companyNameLabel.text = company
         let newDesc = desc.replacingOccurrences(of: ". ", with: ".\n")
         jobDescriptionLabel.text = newDesc
+        jobDescriptionTextView.text = desc
+        jobDescriptionWebView.loadHTMLString(desc, baseURL: nil)
     }
     
     override func didReceiveMemoryWarning() {

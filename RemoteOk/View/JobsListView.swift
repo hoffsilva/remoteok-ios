@@ -10,6 +10,7 @@ import UIKit
 import SDWebImage
 import Hero
 
+
 class JobsListView: UIViewController {
     
     @IBOutlet weak var remoteFiltersCollectionView: UICollectionView!
@@ -33,8 +34,8 @@ class JobsListView: UIViewController {
         remoteFiltersCollectionView.dataSource = self
         jobsListTableView.delegate = self
         jobsListTableView.dataSource = self
-        jobViewModel.delegate = self
         jobDataViewModel.delegate = self
+        jobViewModel.delegate = self
         jobViewModel.getAllOpportunities()
         addRefreshControl()
         configureCollectionView()
@@ -187,27 +188,27 @@ extension JobsListView: UICollectionViewDelegate, UICollectionViewDataSource {
             break
         case "1":
             self.title = "Dev Jobs"
-            jobDataViewModel.loadJobsFromRemoteOK(ConstantsUtil.devJobsURL())
+            jobViewModel.filterJobsBy(tags: ["DEV"])
             break
         case "2":
             self.title = "Support Jobs"
-            jobDataViewModel.loadJobsFromRemoteOK(ConstantsUtil.supportJobsURL())
+            jobViewModel.filterJobsBy(tags: ["SUPPORT"])
             break
         case "3":
             self.title = "Marketing Jobs"
-            jobDataViewModel.loadJobsFromRemoteOK(ConstantsUtil.marketingJobsURL())
+            jobViewModel.filterJobsBy(tags: ["MARKETING"])
             break
         case "4":
             self.title = "Design Jobs"
-            jobDataViewModel.loadJobsFromRemoteOK(ConstantsUtil.designJobsURL())
+            jobViewModel.filterJobsBy(tags: ["DESIGN"])
             break
         case "5":
             self.title = "Non Tech Jobs"
-            jobDataViewModel.loadJobsFromRemoteOK(ConstantsUtil.nonTechJobsURL())
+            jobViewModel.filterJobsBy(tags: ["NONTECH"])
             break
         case "6":
             self.title = "English Teacher Jobs"
-            jobDataViewModel.loadJobsFromRemoteOK(ConstantsUtil.englishTeacherJobsURL())
+            jobViewModel.filterJobsBy(tags: ["ENGLISH"])
             break
         case "7":
             self.title = "Cryptojob"
@@ -224,6 +225,7 @@ extension JobsListView: UICollectionViewDelegate, UICollectionViewDataSource {
 
 extension JobsListView: JobOpportunityDelegate {
     func jobOpportunitiesLoaded() {
+        removeActivityIndicator()
         jobViewModel.getAllOpportunities()
         jobsListTableView.reloadData()
     }
@@ -237,6 +239,11 @@ extension JobsListView: JobsDataDelegate {
         jobsListTableView.reloadData()
     }
     
+    func jobsFiltered() {
+        removeActivityIndicator()
+        jobsListTableView.reloadData()
+    }
+    
     func loadJobDataFailed(message: String) {
         
     }
@@ -244,9 +251,7 @@ extension JobsListView: JobsDataDelegate {
 
 extension JobsListView: FilterJobsByTagsDelegate {
     func tagsSelected(selectedTags: [String]) {
-        loadActivityIndicator()
-        jobDataViewModel.getJobsBy(parameter: selectedTags)
-        //jobDataViewModel.loadJobsFromRemoteOK(ConstantsUtil.searchJobBy(tags: selectedTags))
+        jobViewModel.filterJobsBy(tags: selectedTags)
     }
 }
 
@@ -260,8 +265,8 @@ extension JobsListView {
     }
     
     @objc func loadJobs() {
-        title = "OK"
-        jobDataViewModel.loadJobsFromRemoteOK(ConstantsUtil.remoteJobsURL())
+        title = "All Jobs"
+        jobDataViewModel.loadJobsFromRemoteOK(ConstantsUtil.getAllJobs())
     }
     
     func loadActivityIndicator(){
