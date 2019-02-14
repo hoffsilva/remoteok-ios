@@ -58,12 +58,7 @@ class JobsListView: UIViewController {
         if segue.identifier == "segueDetailJob" {
             let djvc = segue.destination as! DetailJobViewController
             djvc.job = jobViewModel.getJob()
-        } else if segue.identifier == "segueDetailJobWebView" {
-            let djwvvc = segue.destination as! DetailJobWebViewController
-            if let descr = jobViewModel.getJob().url {
-                djwvvc.jobURL = descr
-            }
-        }
+        } 
     }
 }
 
