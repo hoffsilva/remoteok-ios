@@ -23,16 +23,12 @@ class FilterJobsByTagsView: UITableViewController {
         super.viewDidLoad()
         tagViewModel.tagDelegate = self
         configureSearchBar()
+        tableView.tableFooterView = UIView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tagViewModel.getTagsFromJobs()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -78,6 +74,7 @@ class FilterJobsByTagsView: UITableViewController {
     }
     
     func configureSearchBar() {
+        searchController.searchBar.delegate = self
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Search tags..."
@@ -85,6 +82,7 @@ class FilterJobsByTagsView: UITableViewController {
         searchController.searchBar.barTintColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         searchController.searchBar.barStyle = .blackOpaque
         searchController.searchBar.showsCancelButton = false
+        searchController.searchBar.returnKeyType = .done
         if #available(iOS 11.0, *) {
             navigationItem.searchController = searchController
         } else {
@@ -97,7 +95,7 @@ class FilterJobsByTagsView: UITableViewController {
         dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func save(_ sender: Any) {
+    @IBAction func save() {
         dismiss(animated: true, completion: nil)
         filterJobsDelegate?.tagsSelected(selectedTags: tagViewModel.selectedTags)
     }
@@ -106,7 +104,10 @@ class FilterJobsByTagsView: UITableViewController {
     
 }
 
-extension FilterJobsByTagsView: UISearchResultsUpdating, UISearchControllerDelegate {
+extension FilterJobsByTagsView: UISearchResultsUpdating, UISearchControllerDelegate, UISearchBarDelegate {
+    
+    
+    
     func updateSearchResults(for searchController: UISearchController) {
         if !searchController.isActive {
             tagViewModel.getTags()
@@ -121,6 +122,9 @@ extension FilterJobsByTagsView: UISearchResultsUpdating, UISearchControllerDeleg
         tableView.reloadData()
     }
     
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        dismiss(animated: true, completion: nil)
+    }
     
 }
 

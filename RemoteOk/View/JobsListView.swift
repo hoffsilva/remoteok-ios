@@ -9,6 +9,7 @@
 import UIKit
 import SDWebImage
 import Hero
+import SafariServices
 
 
 class JobsListView: UIViewController {
@@ -76,11 +77,6 @@ extension JobsListView: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if jobViewModel.arrayOfFavoriteOpportunity.count == 0 {
-            jobsEmptyNotice(show: true)
-        } else {
-            jobsEmptyNotice(show: false)
-        }
         return jobViewModel.arrayOfOpportunity.count
     }
     
@@ -125,11 +121,24 @@ extension JobsListView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         jobViewModel.currentJob = indexPath.row
         if (jobViewModel.getJob().desc == "") {
-            performSegue(withIdentifier: "segueDetailJobWebView", sender: self)
+            guard let url = jobViewModel.getJob().url, let uri = URL(string: url)  else {
+                return
+            }
+            let vcs = SFSafariViewController(url: uri)
+            self.present(vcs, animated: true, completion: nil)
+            vcs.delegate = self
         } else {
             performSegue(withIdentifier: "segueDetailJob", sender: self)
         }
         
+    }
+    
+}
+
+extension JobsListView: SFSafariViewControllerDelegate {
+    
+    func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
+        controller.dismiss(animated: true, completion: nil)
     }
     
 }
@@ -293,22 +302,6 @@ extension JobsListView {
         }) { (ok) in
             self.overlayView.removeFromSuperview()
         }
-    }
-    
-    func jobsEmptyNotice(show: Bool) {
-        let view = UIView(frame: jobsListTableView.frame)
-        if show {
-            view.isHidden = false
-        } else {
-            view.isHidden = true
-        }
-        let label = UILabel(frame: view.frame)
-        label.text = "No jobs found."
-        label.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-        label.textAlignment = .center
-        view.addSubview(label)
-        view.bringSubview(toFront: label)
-        jobsListTableView.backgroundView = view
     }
     
 }
