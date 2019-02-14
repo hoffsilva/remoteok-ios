@@ -183,7 +183,6 @@
                     </navigationItem>
                     <connections>
                         <segue destination="2D5-RS-jaW" kind="show" identifier="segueDetailFavoriteJob" id="WUS-bU-bYh"/>
-                        <segue destination="oL3-6p-dZF" kind="show" identifier="segueDetailFavoriteJobWbView" id="6G0-eS-bvd"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kT7-kl-dl4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -405,7 +404,6 @@
                         <outlet property="jobsListTableView" destination="kca-gQ-c1T" id="Ayh-dZ-s0q"/>
                         <outlet property="remoteFiltersCollectionView" destination="nJB-Eu-c5d" id="n9P-Xl-C2T"/>
                         <segue destination="2D5-RS-jaW" kind="show" identifier="segueDetailJob" id="X28-Iw-JuJ"/>
-                        <segue destination="oL3-6p-dZF" kind="show" identifier="segueDetailJobWebView" id="4FN-ac-QsN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZSc-7z-nmT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -496,36 +494,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bi3-sX-lde" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2917.5" y="-984.50704225352115"/>
-        </scene>
-        <!--Detail Job Web View Controller-->
-        <scene sceneID="Tui-6B-SOb">
-            <objects>
-                <viewController id="oL3-6p-dZF" customClass="DetailJobWebViewController" customModule="RemoteOk" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="1lc-Nd-cyZ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7hv-XI-7HZ">
-                                <rect key="frame" x="0.0" y="120.5" width="320" height="398.5"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </webView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="7hv-XI-7HZ" firstAttribute="top" secondItem="C2a-on-7ue" secondAttribute="top" id="MfR-WG-cHp"/>
-                            <constraint firstItem="7hv-XI-7HZ" firstAttribute="leading" secondItem="C2a-on-7ue" secondAttribute="leading" id="UR4-4A-vFc"/>
-                            <constraint firstItem="C2a-on-7ue" firstAttribute="bottom" secondItem="7hv-XI-7HZ" secondAttribute="bottom" id="sPD-sH-gcN"/>
-                            <constraint firstItem="7hv-XI-7HZ" firstAttribute="trailing" secondItem="C2a-on-7ue" secondAttribute="trailing" id="vNh-7C-QX1"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="C2a-on-7ue"/>
-                    </view>
-                    <connections>
-                        <outlet property="jobWebView" destination="7hv-XI-7HZ" id="FQq-ek-QX4"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6Nj-19-qlI" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2567" y="1"/>
         </scene>
         <!--Detail Job Table View Controller-->
         <scene sceneID="QPP-kQ-7lZ">
@@ -762,7 +730,7 @@
                     <tabBarItem key="tabBarItem" systemItem="search" id="f26-f3-9Nk"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="2Wd-80-nyx">
-                        <rect key="frame" x="0.0" y="20" width="320" height="100.5"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="91"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -823,7 +791,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="E2G-xi-Kjl" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="aFc-Qo-Shz">
-                        <rect key="frame" x="0.0" y="20" width="320" height="91"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="100.5"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.14509803921568629" green="0.14509803921568629" blue="0.14509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -853,7 +821,6 @@
         <image name="remote-jobs" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="4FN-ac-QsN"/>
         <segue reference="WUS-bU-bYh"/>
     </inferredMetricsTieBreakers>
 </document>
