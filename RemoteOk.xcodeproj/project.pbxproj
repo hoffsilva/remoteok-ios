@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4302D44C20875A05006BE3E9 /* CryptoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4302D44B20875A05006BE3E9 /* CryptoModel.swift */; };
 		43096EA02076EB31003702F0 /* Constants.plist in Resources */ = {isa = PBXBuildFile; fileRef = 43096E9F2076EB31003702F0 /* Constants.plist */; };
 		43096EA22076F15B003702F0 /* ConstatsUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43096EA12076F15B003702F0 /* ConstatsUtil.swift */; };
 		430E6D32206C4FFA0093EA8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430E6D31206C4FFA0093EA8B /* AppDelegate.swift */; };
@@ -18,6 +19,7 @@
 		43487CCD2078EA8B00430934 /* TagsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43487CCC2078EA8B00430934 /* TagsViewModel.swift */; };
 		43487CCF2078EB4000430934 /* JobViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43487CCE2078EB4000430934 /* JobViewCell.swift */; };
 		43487CD12078EE1700430934 /* TagViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43487CD02078EE1700430934 /* TagViewCell.swift */; };
+		438C3D932086C4F300D80BB8 /* SwiftNotice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438C3D922086C4F300D80BB8 /* SwiftNotice.swift */; };
 		4399FE372072F0ED0099E529 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4399FE362072F0ED0099E529 /* LaunchScreenViewController.swift */; };
 		4399FE3D2072FF620099E529 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 4399FE3A2072FF620099E529 /* logo.png */; };
 		4399FE3E2072FF620099E529 /* launchscreen.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4399FE3B2072FF620099E529 /* launchscreen.mp4 */; };
@@ -46,13 +48,19 @@
 		43EE8CD82074441B005BBE76 /* JobsDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EE8CD72074441B005BBE76 /* JobsDataViewModel.swift */; };
 		43EE8CDB20759A6F005BBE76 /* RemoteOk.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 43EE8CD920759A6F005BBE76 /* RemoteOk.xcdatamodeld */; };
 		96B14212FB7FCFD275086D1B /* Pods_RemoteOk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11DF5B9A2E80982E1ED0E538 /* Pods_RemoteOk.framework */; };
+		C3ACC719212B2BD4008A2802 /* ExtensionUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ACC718212B2BD4008A2802 /* ExtensionUIViewController.swift */; };
 		CA13F4512077F2AC007676AB /* JobsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA13F4502077F2AC007676AB /* JobsListView.swift */; };
+		CA678C0F2084D132009B7158 /* DetailJobViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA678C0E2084D132009B7158 /* DetailJobViewController.swift */; };
+		CA678C112084DE79009B7158 /* DetailJobTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA678C102084DE79009B7158 /* DetailJobTableViewController.swift */; };
 		CA869449206D68B30099F39D /* JobOportunityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA869448206D68B30099F39D /* JobOportunityViewModel.swift */; };
 		CAD06CF32080E02D00BA3625 /* FilterJobsByTagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD06CF22080E02D00BA3625 /* FilterJobsByTagsView.swift */; };
+		CADB0E2720863B3C005B50AD /* FavoritesJobsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADB0E2620863B3C005B50AD /* FavoritesJobsList.swift */; };
+		CADB0E292086427B005B50AD /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADB0E282086427B005B50AD /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		11DF5B9A2E80982E1ED0E538 /* Pods_RemoteOk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RemoteOk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4302D44B20875A05006BE3E9 /* CryptoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoModel.swift; sourceTree = "<group>"; };
 		43096E9F2076EB31003702F0 /* Constants.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Constants.plist; sourceTree = "<group>"; };
 		43096EA12076F15B003702F0 /* ConstatsUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstatsUtil.swift; sourceTree = "<group>"; };
 		430E6D2E206C4FFA0093EA8B /* RemoteOk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemoteOk.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,6 +74,7 @@
 		43487CCC2078EA8B00430934 /* TagsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagsViewModel.swift; sourceTree = "<group>"; };
 		43487CCE2078EB4000430934 /* JobViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobViewCell.swift; sourceTree = "<group>"; };
 		43487CD02078EE1700430934 /* TagViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagViewCell.swift; sourceTree = "<group>"; };
+		438C3D922086C4F300D80BB8 /* SwiftNotice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftNotice.swift; sourceTree = "<group>"; };
 		4399FE362072F0ED0099E529 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		4399FE3A2072FF620099E529 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		4399FE3B2072FF620099E529 /* launchscreen.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = launchscreen.mp4; sourceTree = "<group>"; };
@@ -95,9 +104,14 @@
 		43EE8CDA20759A6F005BBE76 /* RemoteOk.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RemoteOk.xcdatamodel; sourceTree = "<group>"; };
 		549011949B0F36695879AAC6 /* Pods-RemoteOk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RemoteOk.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RemoteOk/Pods-RemoteOk.debug.xcconfig"; sourceTree = "<group>"; };
 		6C803A45ABA505F2553F6B5D /* Pods-RemoteOk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RemoteOk.release.xcconfig"; path = "Pods/Target Support Files/Pods-RemoteOk/Pods-RemoteOk.release.xcconfig"; sourceTree = "<group>"; };
+		C3ACC718212B2BD4008A2802 /* ExtensionUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIViewController.swift; sourceTree = "<group>"; };
 		CA13F4502077F2AC007676AB /* JobsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsListView.swift; sourceTree = "<group>"; };
+		CA678C0E2084D132009B7158 /* DetailJobViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailJobViewController.swift; sourceTree = "<group>"; };
+		CA678C102084DE79009B7158 /* DetailJobTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailJobTableViewController.swift; sourceTree = "<group>"; };
 		CA869448206D68B30099F39D /* JobOportunityViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobOportunityViewModel.swift; sourceTree = "<group>"; };
 		CAD06CF22080E02D00BA3625 /* FilterJobsByTagsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterJobsByTagsView.swift; sourceTree = "<group>"; };
+		CADB0E2620863B3C005B50AD /* FavoritesJobsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesJobsList.swift; sourceTree = "<group>"; };
+		CADB0E282086427B005B50AD /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +179,9 @@
 				43A9B25C206EED76003EB208 /* Assets.xcassets */,
 				43B7BA42206E6AEA00DA3A39 /* CoreDataStack.swift */,
 				4399FE40207300D20099E529 /* Launch.storyboard */,
+				CADB0E282086427B005B50AD /* Extensions.swift */,
+				438C3D922086C4F300D80BB8 /* SwiftNotice.swift */,
+				C3ACC718212B2BD4008A2802 /* ExtensionUIViewController.swift */,
 			);
 			path = RemoteOk;
 			sourceTree = "<group>";
@@ -172,6 +189,7 @@
 		430E6D46206C5E250093EA8B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4302D44B20875A05006BE3E9 /* CryptoModel.swift */,
 				430E6D50206C736F0093EA8B /* JobOportunity.swift */,
 			);
 			path = Model;
@@ -187,6 +205,9 @@
 				439CB825207C341F00C1EF64 /* RemoteFilters.swift */,
 				439CB827207C363900C1EF64 /* RemoteFilterCell.swift */,
 				CAD06CF22080E02D00BA3625 /* FilterJobsByTagsView.swift */,
+				CA678C0E2084D132009B7158 /* DetailJobViewController.swift */,
+				CA678C102084DE79009B7158 /* DetailJobTableViewController.swift */,
+				CADB0E2620863B3C005B50AD /* FavoritesJobsList.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -403,18 +424,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3ACC719212B2BD4008A2802 /* ExtensionUIViewController.swift in Sources */,
+				CADB0E2720863B3C005B50AD /* FavoritesJobsList.swift in Sources */,
 				43487CCF2078EB4000430934 /* JobViewCell.swift in Sources */,
 				43B7BA43206E6AEA00DA3A39 /* CoreDataStack.swift in Sources */,
+				CA678C112084DE79009B7158 /* DetailJobTableViewController.swift in Sources */,
 				430E6D51206C736F0093EA8B /* JobOportunity.swift in Sources */,
 				43EE8CD82074441B005BBE76 /* JobsDataViewModel.swift in Sources */,
+				4302D44C20875A05006BE3E9 /* CryptoModel.swift in Sources */,
 				CAD06CF32080E02D00BA3625 /* FilterJobsByTagsView.swift in Sources */,
+				438C3D932086C4F300D80BB8 /* SwiftNotice.swift in Sources */,
 				439CB826207C341F00C1EF64 /* RemoteFilters.swift in Sources */,
 				4399FE372072F0ED0099E529 /* LaunchScreenViewController.swift in Sources */,
+				CADB0E292086427B005B50AD /* Extensions.swift in Sources */,
 				43096EA22076F15B003702F0 /* ConstatsUtil.swift in Sources */,
 				CA13F4512077F2AC007676AB /* JobsListView.swift in Sources */,
 				43487CD12078EE1700430934 /* TagViewCell.swift in Sources */,
 				43487CCD2078EA8B00430934 /* TagsViewModel.swift in Sources */,
 				430E6D4F206C65A90093EA8B /* Connection.swift in Sources */,
+				CA678C0F2084D132009B7158 /* DetailJobViewController.swift in Sources */,
 				439CB828207C363900C1EF64 /* RemoteFilterCell.swift in Sources */,
 				CA869449206D68B30099F39D /* JobOportunityViewModel.swift in Sources */,
 				430E6D34206C4FFA0093EA8B /* ViewController.swift in Sources */,
@@ -561,11 +589,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C434CHPZ37;
 				INFOPLIST_FILE = RemoteOk/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hoffsilva.RemoteOk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -577,11 +606,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C434CHPZ37;
 				INFOPLIST_FILE = RemoteOk/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hoffsilva.RemoteOk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

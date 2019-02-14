@@ -27,16 +27,28 @@ struct JobsDataViewModel {
         }
     }
     
+    func getJobsBy(parameter: [String]) {
+        self.jobsOpportunityViewModel.filterJobsBy(tags: parameter)
+    }
+    
     func parse(dic: DataResponse<Any>) {
-        if let dictionary = dic.result.value as? [[String:Any]] {
-            print(dictionary.count)
-            for job in dictionary {
-                let currentJob = JobOportunity(object: job)
-                self.jobsOpportunityViewModel.saveJobFromJSON(currentJob)
-            }
-            self.delegate.loadJobDataSuccessful()
-        }
         
+        if let dictionary = dic.result.value as? [[[String:Any]]] {
+            print(dictionary.count)
+            saveJobs(jobsList: dictionary[0])
+            saveJobs(jobsList: dictionary[1])
+            saveJobs(jobsList: dictionary[2])
+            self.delegate.loadJobDataSuccessful()
+        }else {
+            self.delegate.loadJobDataFailed(message: "Loading jobs data error.")
+        }
+    }
+    
+    func saveJobs(jobsList: [[String:Any]]) {
+        for job in jobsList {
+            let currentJob = JobOportunity(object: job)
+            self.jobsOpportunityViewModel.saveJobFromJSON(currentJob)
+        }
     }
     
 }

@@ -8,6 +8,9 @@
 
 import UIKit
 import SDWebImage
+import Hero
+import SafariServices
+
 
 class JobsListView: UIViewController {
     
@@ -32,11 +35,12 @@ class JobsListView: UIViewController {
         remoteFiltersCollectionView.dataSource = self
         jobsListTableView.delegate = self
         jobsListTableView.dataSource = self
-        jobViewModel.delegate = self
         jobDataViewModel.delegate = self
+        jobViewModel.delegate = self
         jobViewModel.getAllOpportunities()
         addRefreshControl()
         configureCollectionView()
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -48,6 +52,16 @@ class JobsListView: UIViewController {
         for destination in segue.destination.childViewControllers {
             if destination.isKind(of: FilterJobsByTagsView.self) {
                 (destination as? FilterJobsByTagsView)?.filterJobsDelegate = self
+            }
+            
+        }
+        if segue.identifier == "segueDetailJob" {
+            let djvc = segue.destination as! DetailJobViewController
+            djvc.job = jobViewModel.getJob()
+        } else if segue.identifier == "segueDetailJobWebView" {
+            let djwvvc = segue.destination as! DetailJobWebViewController
+            if let descr = jobViewModel.getJob().url {
+                djwvvc.jobURL = descr
             }
         }
     }
@@ -67,7 +81,7 @@ extension JobsListView: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 170.0
+        return UITableViewAutomaticDimension
     }
     
     
@@ -80,18 +94,10 @@ extension JobsListView: UITableViewDelegate, UITableViewDataSource {
         cell.logoImageView.sd_addActivityIndicator()
         cell.logoImageView.sd_setShowActivityIndicatorView(true)
         
-        if let dateOfJob = jobViewModel.getJob().date {
-            if formatDate(dateString: "\(Date())") == formatDate(dateString: dateOfJob) {
-                cell.postDate.text = "Today"
-            } else if formatDate(dateString: dateOfJob) == getYesterday() {
-                cell.postDate.text = "Yesterday"
-            } else if getWeekNumber(date: "\(formatDate(dateString: dateOfJob))") == getWeekNumber(date: "\(formatDate(dateString: "\(Date())"))") {
-                cell.postDate.text = "This week"
-            } else {
-                cell.postDate.text = "This month"
-            }
-            
+        if let epoch = jobViewModel.getJob().epoch {
+            cell.postOriginLabel.text = epoch
         }
+        
         
         if let imageUrl = jobViewModel.getJob().logo {
             cell.logoImageView.sd_setImage(with: URL(string: imageUrl)) { (image, error, cache, url) in
@@ -110,9 +116,29 @@ extension JobsListView: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         jobViewModel.currentJob = indexPath.row
-        print(jobViewModel.getJob())
+        if (jobViewModel.getJob().desc == "") {
+            guard let url = jobViewModel.getJob().url, let uri = URL(string: url)  else {
+                return
+            }
+            let vcs = SFSafariViewController(url: uri)
+            self.present(vcs, animated: true, completion: nil)
+            vcs.delegate = self
+        } else {
+            performSegue(withIdentifier: "segueDetailJob", sender: self)
+        }
+        
+    }
+    
+}
+
+extension JobsListView: SFSafariViewControllerDelegate {
+    
+    func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
+        controller.dismiss(animated: true, completion: nil)
     }
     
 }
@@ -125,13 +151,14 @@ extension JobsListView: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func configureCollectionView() {
         arrayOfFilters = [
-            RemoteFilter(image: UIImage(named: "remote-jobs"), title: "REMOTE JOBS"),
+            RemoteFilter(image: UIImage(named: "remote-jobs"), title: "All JOBS"),
             RemoteFilter(image: UIImage(named: "dev"), title: "DEV"),
             RemoteFilter(image: UIImage(named: "support"), title: "SUPPORT"),
             RemoteFilter(image: UIImage(named: "marketing"), title: "MARKETING"),
             RemoteFilter(image: UIImage(named: "design"), title: "UI & UX"),
             RemoteFilter(image: UIImage(named: "non-tech"), title: "NON-TECH"),
-            RemoteFilter(image: UIImage(named: "english"), title: "EN TEACHER")]
+            RemoteFilter(image: UIImage(named: "english"), title: "EN TEACHER"),
+            RemoteFilter(image: #imageLiteral(resourceName: "crypto"), title: "CURRENCY")]
     }
     
     // MARK: UICollectionViewDataSource
@@ -162,35 +189,40 @@ extension JobsListView: UICollectionViewDelegate, UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
         loadActivityIndicator()
         switch "\(indexPath.row)" {
         case "0":
-            self.title = "OK"
-            jobDataViewModel.loadJobsFromRemoteOK(ConstantsUtil.remoteJobsURL())
+            self.title = "All"
+            jobDataViewModel.loadJobsFromRemoteOK(ConstantsUtil.getAllJobs())
             break
         case "1":
             self.title = "Dev Jobs"
-            jobDataViewModel.loadJobsFromRemoteOK(ConstantsUtil.devJobsURL())
+            jobViewModel.filterJobsBy(tags: ["DEV"])
             break
         case "2":
             self.title = "Support Jobs"
-            jobDataViewModel.loadJobsFromRemoteOK(ConstantsUtil.supportJobsURL())
+            jobViewModel.filterJobsBy(tags: ["SUPPORT"])
             break
         case "3":
             self.title = "Marketing Jobs"
-            jobDataViewModel.loadJobsFromRemoteOK(ConstantsUtil.marketingJobsURL())
+            jobViewModel.filterJobsBy(tags: ["MARKETING"])
             break
         case "4":
             self.title = "Design Jobs"
-            jobDataViewModel.loadJobsFromRemoteOK(ConstantsUtil.designJobsURL())
+            jobViewModel.filterJobsBy(tags: ["DESIGN"])
             break
         case "5":
             self.title = "Non Tech Jobs"
-            jobDataViewModel.loadJobsFromRemoteOK(ConstantsUtil.nonTechJobsURL())
+            jobViewModel.filterJobsBy(tags: ["NONTECH"])
             break
         case "6":
             self.title = "English Teacher Jobs"
-            jobDataViewModel.loadJobsFromRemoteOK(ConstantsUtil.englishTeacherJobsURL())
+            jobViewModel.filterJobsBy(tags: ["ENGLISH"])
+            break
+        case "7":
+            self.title = "Cryptojob"
+            jobViewModel.filterJobsBy(tags: ["cryptojobslist"])
             break
         default:
             break
@@ -203,6 +235,7 @@ extension JobsListView: UICollectionViewDelegate, UICollectionViewDataSource {
 
 extension JobsListView: JobOpportunityDelegate {
     func jobOpportunitiesLoaded() {
+        removeActivityIndicator()
         jobViewModel.getAllOpportunities()
         jobsListTableView.reloadData()
     }
@@ -216,6 +249,11 @@ extension JobsListView: JobsDataDelegate {
         jobsListTableView.reloadData()
     }
     
+    func jobsFiltered() {
+        removeActivityIndicator()
+        jobsListTableView.reloadData()
+    }
+    
     func loadJobDataFailed(message: String) {
         
     }
@@ -223,8 +261,7 @@ extension JobsListView: JobsDataDelegate {
 
 extension JobsListView: FilterJobsByTagsDelegate {
     func tagsSelected(selectedTags: [String]) {
-        loadActivityIndicator()
-        jobDataViewModel.loadJobsFromRemoteOK(ConstantsUtil.searchJobBy(tags: selectedTags))
+        jobViewModel.filterJobsBy(tags: selectedTags)
     }
 }
 
@@ -238,8 +275,8 @@ extension JobsListView {
     }
     
     @objc func loadJobs() {
-        title = "OK"
-        jobDataViewModel.loadJobsFromRemoteOK(ConstantsUtil.remoteJobsURL())
+        title = "All Jobs"
+        jobDataViewModel.loadJobsFromRemoteOK(ConstantsUtil.getAllJobs())
     }
     
     func loadActivityIndicator(){
@@ -253,7 +290,7 @@ extension JobsListView {
         self.overlayView.addSubview(activityIndicator)
         self.view.addSubview(overlayView)
         self.view.bringSubview(toFront: overlayView)
-        UIView.animate(withDuration: 0.9, delay: 0.1,  options: .curveEaseIn, animations: {
+        UIView.animate(withDuration: 0.9, delay: 0.0,  options: .curveEaseIn, animations: {
             self.overlayView.alpha = 0.6
         }, completion: nil)
         self.activityIndicator.startAnimating()
@@ -265,39 +302,6 @@ extension JobsListView {
         }) { (ok) in
             self.overlayView.removeFromSuperview()
         }
-    }
-    
-    func formatDate(dateString: String) -> Date {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        let dString = dateString.prefix(10)
-        guard let date = dateFormatter.date(from: String(dString)) else {
-            fatalError("ERROR: Date conversion failed due to mismatched format.")
-        }
-        return date
-    }
-    
-    func getYesterday() -> Date {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        let dString = "\(Calendar.current.date(byAdding: .day, value: -1, to: Date())!)".prefix(10)
-        guard let date = dateFormatter.date(from: String(dString)) else {
-            fatalError("ERROR: Date conversion failed due to mismatched format.")
-        }
-        return date
-    }
-    
-    func getWeekNumber(date: String) -> Int {
-        let formatter  = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd"
-        let dString = date.prefix(10)
-        guard let todaydate = formatter.date(from: String(dString)) else {
-            fatalError("ERROR: Date conversion failed due to mismatched format.")
-        }
-        let myCalendar = NSCalendar(calendarIdentifier: NSCalendar.Identifier.gregorian)!
-        let myComponents = myCalendar.components(.weekOfYear, from: todaydate)
-        let weekNumber = myComponents.weekOfYear
-        return weekNumber!
     }
     
 }

@@ -16,7 +16,7 @@ class ConstantsUtil {
     private static let mainURL =  plist.fetchValue(for: "mainURL", fromPlistWithName: "Constants") as! String
     
     public static func remoteJobsURL() -> String {
-        return "\(mainURL)\(endOfURL)"
+        return "\(mainURL)-api\(endOfURL)"
     }
     
     public static func devJobsURL() -> String {
@@ -49,7 +49,6 @@ class ConstantsUtil {
         return "\(mainURL)\(englishTeacher)\(endOfURL)"
     }
     
-    
     public static func searchJobBy(tags: [String]) -> String {
         var URL =  mainURL
         for tag in tags {
@@ -63,4 +62,14 @@ class ConstantsUtil {
         return URL
     }
     
+    public static func cryptoCurrency() -> String {
+        //cryptoCurrency
+        let cryptoCurrency = plist.fetchValue(for: "cryptoCurrency", fromPlistWithName: "Constants") as! String
+        return cryptoCurrency
+    }
+    
+    public static func getAllJobs() -> String {
+        let allJobs = plist.fetchValue(for: "allJobs", fromPlistWithName: "Constants") as! String
+        return allJobs
+    }
 }

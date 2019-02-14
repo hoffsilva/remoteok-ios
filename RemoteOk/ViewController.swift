@@ -43,5 +43,9 @@ extension ViewController: JobOpportunityDelegate {
         print(jobViewModel.arrayOfOpportunity)
     }
     
+    func jobsFiltered() {
+        
+    }
+    
 }
 

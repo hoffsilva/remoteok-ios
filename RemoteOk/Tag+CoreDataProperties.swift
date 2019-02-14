@@ -17,5 +17,6 @@ extension Tag {
     }
 
     @NSManaged public var name: String?
+    @NSManaged public var isSelected: Bool?
 
 }

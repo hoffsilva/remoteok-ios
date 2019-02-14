@@ -14,7 +14,7 @@ protocol FilterJobsByTagsDelegate: class {
 
 class FilterJobsByTagsView: UITableViewController {
     
-    weak var filterJobsDelegate: FilterJobsByTagsDelegate?
+    var filterJobsDelegate: FilterJobsByTagsDelegate?
     
     var tagViewModel = TagsViewModel()
     let searchController = UISearchController(searchResultsController: nil)
@@ -23,16 +23,12 @@ class FilterJobsByTagsView: UITableViewController {
         super.viewDidLoad()
         tagViewModel.tagDelegate = self
         configureSearchBar()
+        tableView.tableFooterView = UIView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        tagViewModel.getTags()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        tagViewModel.getTagsFromJobs()
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -45,8 +41,13 @@ class FilterJobsByTagsView: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tagsCell") as! TagViewCell
-        cell.accessoryType = .none
-        cell.tagLabel.text = tagViewModel.tags[indexPath.row]
+        if tagViewModel.tags[indexPath.row].isSelected {
+            cell.accessoryType = .checkmark
+        } else {
+            cell.accessoryType = .none
+        }
+        
+        cell.tagLabel.text = tagViewModel.tags[indexPath.row].name ?? ""
         return cell
     }
     
@@ -56,12 +57,16 @@ class FilterJobsByTagsView: UITableViewController {
         var index = 0
         if accessoryType == UITableViewCellAccessoryType.none {
             cell.accessoryType = .checkmark
+            tagViewModel.updateTag(tag: tagViewModel.tags[indexPath.row])
             tagViewModel.selectedTags.append(cell.tagLabel.text!)
+            self.noticeOnlyText("\(cell.tagLabel.text!) added to job search")
         } else {
             cell.accessoryType = .none
+            tagViewModel.updateTag(tag: tagViewModel.tags[indexPath.row])
             for tag in tagViewModel.selectedTags {
                 if tag == cell.tagLabel.text {
                     tagViewModel.selectedTags.remove(at: index)
+                    self.noticeOnlyText("\(cell.tagLabel.text!) removed from job search")
                 }
                 index += 1
             }
@@ -69,12 +74,15 @@ class FilterJobsByTagsView: UITableViewController {
     }
     
     func configureSearchBar() {
+        searchController.searchBar.delegate = self
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Search tags..."
         searchController.searchBar.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         searchController.searchBar.barTintColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         searchController.searchBar.barStyle = .blackOpaque
+        searchController.searchBar.showsCancelButton = false
+        searchController.searchBar.returnKeyType = .done
         if #available(iOS 11.0, *) {
             navigationItem.searchController = searchController
         } else {
@@ -87,7 +95,7 @@ class FilterJobsByTagsView: UITableViewController {
         dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func save(_ sender: Any) {
+    @IBAction func save() {
         dismiss(animated: true, completion: nil)
         filterJobsDelegate?.tagsSelected(selectedTags: tagViewModel.selectedTags)
     }
@@ -96,7 +104,10 @@ class FilterJobsByTagsView: UITableViewController {
     
 }
 
-extension FilterJobsByTagsView: UISearchResultsUpdating, UISearchControllerDelegate {
+extension FilterJobsByTagsView: UISearchResultsUpdating, UISearchControllerDelegate, UISearchBarDelegate {
+    
+    
+    
     func updateSearchResults(for searchController: UISearchController) {
         if !searchController.isActive {
             tagViewModel.getTags()
@@ -111,6 +122,9 @@ extension FilterJobsByTagsView: UISearchResultsUpdating, UISearchControllerDeleg
         tableView.reloadData()
     }
     
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        dismiss(animated: true, completion: nil)
+    }
     
 }
 
