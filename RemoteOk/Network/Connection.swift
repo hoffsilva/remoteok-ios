@@ -14,17 +14,17 @@ class Connection {
     
     static func fetchData(url: String, responseData: @escaping (DataResponse<Any>) -> Swift.Void) {
         if !verifyConnection() {
-            let alert = FCAlertView()
-            alert.dismissOnOutsideTouch = true
-            alert.hideDoneButton = true
-            alert.makeAlertTypeWarning()
             DispatchQueue.main.async {
-                alert.showAlert(withTitle: "Error", withSubtitle: "The internet connection has some problem", withCustomImage: nil, withDoneButtonTitle: nil, andButtons: nil)
+                createAlertView().showAlert(withTitle: Messages.errorInternetConnection.title,
+                                withSubtitle: Messages.errorInternetConnection.description,
+                                withCustomImage: nil,
+                                withDoneButtonTitle: nil,
+                                andButtons: nil)
             }
             return
         }
-        let stringURL = url
         
+        let stringURL = url
         let url = URL(string: stringURL.trimmingCharacters(in: .whitespaces))
         
         guard let URL = url else {
@@ -39,13 +39,21 @@ class Connection {
     
     static func verifyConnection() -> Bool{
         
-        if let reachabilityNetwork = Alamofire.NetworkReachabilityManager(host: "www.google.com") {
+        if let reachabilityNetwork = Alamofire.NetworkReachabilityManager(host: Constants.urlOfReachabilityTest) {
             
             if reachabilityNetwork.isReachable {
                 return true
             }
         }
         return false
+    }
+    
+    private static func createAlertView() -> FCAlertView {
+        let alert = FCAlertView()
+        alert.dismissOnOutsideTouch = true
+        alert.hideDoneButton = true
+        alert.makeAlertTypeWarning()
+        return alert
     }
     
     
