@@ -32,12 +32,7 @@ class FavoritesJobsList: UITableViewController {
         if segue.identifier == "segueDetailFavoriteJob" {
             let djvc = segue.destination as! DetailJobViewController
             djvc.jobFavorite = jobViewModel.getFavoriteJob()
-        } else if segue.identifier == "segueDetailFavoriteJobWebView" {
-            let djwvvc = segue.destination as! DetailJobWebViewController
-            if let url = jobViewModel.getFavoriteJob().url {
-                djwvvc.jobURL = url
-            }
-        }
+        } 
     }
 
     override func didReceiveMemoryWarning() {

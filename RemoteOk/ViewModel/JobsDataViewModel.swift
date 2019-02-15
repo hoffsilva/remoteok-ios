@@ -6,8 +6,8 @@
 //  Copyright © 2018 Hoff Henry Pereira da Silva. All rights reserved.
 //
 
-import Foundation
 import Alamofire
+import Foundation
 
 protocol JobsDataDelegate: class {
     func loadJobDataSuccessful()
@@ -15,14 +15,12 @@ protocol JobsDataDelegate: class {
 }
 
 struct JobsDataViewModel {
-    
-    
     weak var delegate: JobsDataDelegate!
     var jobsOpportunityViewModel = JobOportunityViewModel()
     
     func loadJobsFromRemoteOK(_ URL: String) {
         self.jobsOpportunityViewModel.deleteAllOpportunities()
-        Connection.fetchData(url: URL) { (arrayOfJobOportunities) in
+        Connection.fetchData(url: URL) { arrayOfJobOportunities in
             self.parse(dic: arrayOfJobOportunities)
         }
     }
@@ -32,23 +30,20 @@ struct JobsDataViewModel {
     }
     
     func parse(dic: DataResponse<Any>) {
-        
-        if let dictionary = dic.result.value as? [[[String:Any]]] {
-            print(dictionary.count)
-            saveJobs(jobsList: dictionary[0])
-            saveJobs(jobsList: dictionary[1])
-            saveJobs(jobsList: dictionary[2])
+        if let dictionary = dic.result.value as? [[[String: Any]]] {
+            for count in 0..<dictionary.count {
+                self.saveJobs(jobsList: dictionary[count])
+            }
             self.delegate.loadJobDataSuccessful()
-        }else {
+        } else {
             self.delegate.loadJobDataFailed(message: "Loading jobs data error.")
         }
     }
     
-    func saveJobs(jobsList: [[String:Any]]) {
+    func saveJobs(jobsList: [[String: Any]]) {
         for job in jobsList {
             let currentJob = JobOportunity(object: job)
             self.jobsOpportunityViewModel.saveJobFromJSON(currentJob)
         }
     }
-    
 }
