@@ -164,8 +164,8 @@ extension JobsListView: UICollectionViewDelegate, UICollectionViewDataSource {
     }
 
     func collectionView(_: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //loadActivityIndicator()
-        startActivityIndicator()
+        pleaseWaiting()
+
         switch "\(indexPath.row)" {
         case "0":
             title = "All"
@@ -207,8 +207,7 @@ extension JobsListView: UICollectionViewDelegate, UICollectionViewDataSource {
 
 extension JobsListView: JobOpportunityDelegate {
     func jobOpportunitiesLoaded() {
-        //removeActivityIndicator()
-        stopActivityIndicator()
+        removeActivityIndicator()
         jobViewModel.getAllOpportunities()
         jobsListTableView.reloadData()
     }
@@ -216,16 +215,14 @@ extension JobsListView: JobOpportunityDelegate {
 
 extension JobsListView: JobsDataDelegate {
     func loadJobDataSuccessful() {
-        //removeActivityIndicator()
-        stopActivityIndicator()
+        removeActivityIndicator()
         jobsListTableView.refreshControl?.endRefreshing()
         jobViewModel.getAllOpportunities()
         jobsListTableView.reloadData()
     }
 
     func jobsFiltered() {
-        //removeActivityIndicator()
-        stopActivityIndicator()
+        removeActivityIndicator()
         jobsListTableView.reloadData()
     }
 
@@ -250,29 +247,4 @@ extension JobsListView {
         title = "All Jobs"
         jobDataViewModel.loadJobsFromAbroadJobsAPI()
     }
-
-//    func loadActivityIndicator() {
-//        overlayView = UIView(frame: view.bounds)
-//        overlayView.alpha = 0
-//        overlayView.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-//        activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
-//        activityIndicator.alpha = 1.0
-//        activityIndicator.center = view.center
-//        activityIndicator.hidesWhenStopped = true
-//        overlayView.addSubview(activityIndicator)
-//        view.addSubview(overlayView)
-//        view.bringSubview(toFront: overlayView)
-//        UIView.animate(withDuration: 0.9, delay: 0.0, options: .curveEaseIn, animations: {
-//            self.overlayView.alpha = 0.6
-//        }, completion: nil)
-//        activityIndicator.startAnimating()
-//    }
-//
-//    func removeActivityIndicator() {
-//        UIView.animate(withDuration: 0.5, delay: 0.1, options: .curveEaseOut, animations: {
-//            self.overlayView.alpha = 0
-//        }) { _ in
-//            self.overlayView.removeFromSuperview()
-//        }
-//    }
 }

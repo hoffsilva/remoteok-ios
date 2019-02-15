@@ -54,48 +54,38 @@ class Extensions {
 }
 
 extension UIViewController {
-     var activityIndicatorTag: Int { return 999999 }
-    
-    func startActivityIndicator(
-        style: UIActivityIndicatorViewStyle = .gray,
-        location: CGPoint? = nil) {
-        
-        //Set the position - defaults to `center` if no`location`
-        
-        //argument is provided
-        
-        let loc = location ?? self.view.center
-        
-        //Ensure the UI is updated from the main thread
-        
-        //in case this method is called from a closure
+    var activityIndicatorTag: Int { return 999_999 }
+    func pleaseWaiting() {
         DispatchQueue.main.async {
-            let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: style)
-            //Add the tag so we can find the view in order to remove it later
-            
-            activityIndicator.tag = self.activityIndicatorTag
-            //Set the location
-            
-            activityIndicator.center = loc
+            let overlayView = UIView(frame: self.view.bounds)
+            overlayView.alpha = 0
+            overlayView.tag = self.activityIndicatorTag
+            overlayView.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+            let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
+            activityIndicator.alpha = 1.0
+            activityIndicator.center = self.view.center
             activityIndicator.hidesWhenStopped = true
-            //Start animating and add the view
-            
+            overlayView.addSubview(activityIndicator)
+            self.view.addSubview(overlayView)
+            self.view.bringSubview(toFront: overlayView)
+            UIView.animate(withDuration: 0.9, delay: 0.0, options: .curveEaseIn, animations: {
+                overlayView.alpha = 0.6
+            }, completion: nil)
             activityIndicator.startAnimating()
-            self.view.addSubview(activityIndicator)
-        }
-    }
-    
-    func stopActivityIndicator() {
-        
-        //Again, we need to ensure the UI is updated from the main thread!
-        DispatchQueue.main.async {
-            if let activityIndicator = self.view.subviews.filter(
-                { $0.tag == self.activityIndicatorTag}).first as? UIActivityIndicatorView {
-                activityIndicator.stopAnimating()
-                activityIndicator.removeFromSuperview()
-            }
         }
     }
 
-    
+    func removeActivityIndicator() {
+        DispatchQueue.main.async {
+            if let activityIndicator = self.view.subviews.filter(
+                { $0.tag == self.activityIndicatorTag }
+            ).first {
+                UIView.animate(withDuration: 0.5, delay: 0.1, options: .curveEaseOut, animations: {
+                    activityIndicator.alpha = 0
+                }) { _ in
+                    activityIndicator.removeFromSuperview()
+                }
+            }
+        }
+    }
 }
