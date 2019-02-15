@@ -21,8 +21,6 @@ class JobsListView: UIViewController {
     var jobDataViewModel = JobsDataViewModel()
     var tagsViewModel = TagsViewModel()
     var currentJobIndex = 0
-//    var overlayView = UIView()
-//    var activityIndicator: UIActivityIndicatorView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,11 +33,6 @@ class JobsListView: UIViewController {
         jobViewModel.getAllOpportunities()
         addRefreshControl()
         configureCollectionView()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender _: Any?) {
@@ -73,30 +66,7 @@ extension JobsListView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         jobViewModel.currentJob = indexPath.row
         let cell = tableView.dequeueReusableCell(withIdentifier: "jobCell", for: indexPath) as! JobViewCell
-        cell.companyNameLabel.text = jobViewModel.getJob().company ?? "None"
-        cell.positionLabel.text = jobViewModel.getJob().position ?? "None"
-
-        cell.logoImageView.sd_addActivityIndicator()
-        cell.logoImageView.sd_setShowActivityIndicatorView(true)
-
-        if let epoch = jobViewModel.getJob().epoch {
-            cell.postOriginLabel.text = epoch
-        }
-
-        if let imageUrl = jobViewModel.getJob().logo {
-            cell.logoImageView.sd_setImage(with: URL(string: imageUrl)) { image, _, _, _ in
-                if image == nil {
-                    cell.fakeCompanyLogoLabel.isHidden = false
-                    if let fakeLogo = self.jobViewModel.getJob().company?.first {
-                        cell.fakeCompanyLogoLabel.text = String(fakeLogo).uppercased()
-                    } else {
-                        cell.fakeCompanyLogoLabel.text = "🏢".uppercased()
-                    }
-                } else {
-                    cell.fakeCompanyLogoLabel.isHidden = true
-                }
-            }
-        }
+        cell.configCell(jobViewModel: jobViewModel)
         return cell
     }
 
@@ -151,15 +121,10 @@ extension JobsListView: UICollectionViewDelegate, UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "remoteFilterCell", for: indexPath) as! RemoteFilterCell
-
-        if let image = arrayOfFilters[indexPath.row].image {
+        if let image = arrayOfFilters[indexPath.row].image, let title = arrayOfFilters[indexPath.row].title {
             cell.filterImageView.image = image
-        }
-
-        if let title = arrayOfFilters[indexPath.row].title {
             cell.filterTitle.text = title
         }
-
         return cell
     }
 
@@ -245,6 +210,7 @@ extension JobsListView {
 
     @objc func loadJobs() {
         title = "All Jobs"
+        pleaseWaiting()
         jobDataViewModel.loadJobsFromAbroadJobsAPI()
     }
 }
