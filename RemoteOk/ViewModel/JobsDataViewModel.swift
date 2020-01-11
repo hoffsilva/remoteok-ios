@@ -18,9 +18,9 @@ struct JobsDataViewModel {
     weak var delegate: JobsDataDelegate!
     var jobsOpportunityViewModel = JobOportunityViewModel()
     
-    func loadJobsFromRemoteOK(_ URL: String) {
+    func loadJobsFromAbroadJobsAPI() {
         self.jobsOpportunityViewModel.deleteAllOpportunities()
-        Connection.fetchData(url: URL) { arrayOfJobOportunities in
+        Connection.fetchData(url: Constants.urlOfAllJobs) { arrayOfJobOportunities in
             self.parse(dic: arrayOfJobOportunities)
         }
     }
@@ -30,20 +30,22 @@ struct JobsDataViewModel {
     }
     
     func parse(dic: DataResponse<Any>) {
-        if let dictionary = dic.result.value as? [[[String: Any]]] {
-            for count in 0..<dictionary.count {
-                self.saveJobs(jobsList: dictionary[count])
+        guard let secureData = dic.data else { return }
+
+        do {
+            let arrayOfOppotunities = try JSONDecoder().decode([[JobOportunity]].self, from: secureData)
+            for arrayOfJobs in arrayOfOppotunities {
+                self.saveJobs(jobsList: arrayOfJobs)
             }
             self.delegate.loadJobDataSuccessful()
-        } else {
-            self.delegate.loadJobDataFailed(message: "Loading jobs data error.")
+        } catch {
+            self.delegate.loadJobDataFailed(message: Messages.errorParseDataJobs.description)
         }
     }
     
-    func saveJobs(jobsList: [[String: Any]]) {
+    func saveJobs(jobsList: [JobOportunity]) {
         for job in jobsList {
-            let currentJob = JobOportunity(object: job)
-            self.jobsOpportunityViewModel.saveJobFromJSON(currentJob)
+            self.jobsOpportunityViewModel.saveJobFromJSON(job)
         }
     }
 }

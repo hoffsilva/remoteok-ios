@@ -20,49 +20,46 @@ class LaunchScreenViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadVideo()
         jobsDataViewModel.delegate = self
-        jobsDataViewModel.loadJobsFromRemoteOK(ConstantsUtil.getAllJobs())
-        print("")
+        playVideo()
+        jobsDataViewModel.loadJobsFromAbroadJobsAPI()
     }
     
-    func loadVideo() {
-        
+    private func playVideo() {
         do {
             try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryAmbient)
         } catch { }
-        
-        
-        let path = Bundle.main.path(forResource: "launchscreen", ofType: "mp4")
-        
-        player = AVPlayer(url: URL(fileURLWithPath: path!))
-        
-        let playerLayer = AVPlayerLayer(player: player)
-        
+        configureVideo()
+        self.player?.play()
+        repeatVideo()
+    }
+    
+    private func configureVideo() {
+        let playerLayer = AVPlayerLayer(player: selectVideoFile())
         playerLayer.frame = self.view.frame
         playerLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
         playerLayer.zPosition = -1
         playerLayer.repeatCount = 3
-        
         self.view.layer.addSublayer(playerLayer)
-        
-        self.player?.play()
-        
+    }
+    
+    private func selectVideoFile() -> AVPlayer {
+        let path = Bundle.main.path(forResource: "launchscreen", ofType: "mp4")
+        player = AVPlayer(url: URL(fileURLWithPath: path!))
+        guard let securePlayer = player else { return AVPlayer() }
+        return securePlayer
+    }
+    
+    private func repeatVideo() {
         NotificationCenter.default.addObserver(forName: .AVPlayerItemDidPlayToEndTime, object: self.player?.currentItem, queue: .main) { _ in
             self.player?.seek(to: kCMTimeZero)
             self.player?.play()
         }
-        
-        
-
-        
     }
     
-    func callMainStoryboard() {
+    func showMainStoryboard() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        guard let str = storyboard.instantiateInitialViewController() else {
-            return
-        }
+        guard let str = storyboard.instantiateInitialViewController() else { return }
         Hero.shared.defaultAnimation = HeroDefaultAnimationType.fade
         DispatchQueue.main.async {
             self.hero_replaceViewController(with: str)
@@ -72,12 +69,12 @@ class LaunchScreenViewController: UIViewController {
 
 extension LaunchScreenViewController: JobsDataDelegate {
     func loadJobDataSuccessful() {
-        callMainStoryboard()
-        //NotificationCenter.default.removeObserver(.AVPlayerItemDidPlayToEndTime)
+        NotificationCenter.default.removeObserver(self)
+        showMainStoryboard()
     }
     
     func loadJobDataFailed(message: String) {
-        //print
+        noticeError(message)
     }
     
     

@@ -13,19 +13,21 @@ protocol TagDelegate: class {
 }
 
 class TagsViewModel {
-    var managedContext = CoreDataStack().persistentContainer.viewContext
     weak var tagDelegate: TagDelegate!
+    var managedContext = CoreDataStack().persistentContainer.viewContext
     var arrayOfTags = Set<String>()
     var tags = [Tag]()
     var selectedTags = [String]()
-    
+
     func getTagsFromJobs() {
-        guard let model = managedContext.persistentStoreCoordinator?.managedObjectModel, let fetch = model.fetchRequestTemplate(forName: "allOportunities") as? NSFetchRequest<Opportunity> else {
-            return
-        }
         do {
-            let opportunities = try managedContext.fetch(fetch)
-            arrayOfTags = []
+            let opportunities = try managedContext.fetch(
+                Extensions.getFetchRequestBy(
+                    templateName: Constants.frtallOportunities,
+                    type: Opportunity.self
+                )
+            )
+            arrayOfTags.removeAll()
             for job in opportunities {
                 if let tags = job.tags {
                     for tag in tags {
@@ -44,21 +46,23 @@ class TagsViewModel {
             print("Error when try fetch all opportunities " + error.description)
         }
     }
-    
+
     func getTags() {
-        guard let model = managedContext.persistentStoreCoordinator?.managedObjectModel, let fetch = model.fetchRequestTemplate(forName: "allTags") as? NSFetchRequest<Tag> else {
-            return
-        }
         do {
-            let tagsFromCoreData = try managedContext.fetch(fetch)
+            let tagsFromCoreData = try managedContext.fetch(
+                Extensions.getFetchRequestBy(
+                    templateName: Constants.frtallTags,
+                    type: Tag.self
+                )
+            )
             tags = tagsFromCoreData
         } catch let error as NSError {
             print("Error when try fetch all tags " + error.description)
         }
     }
-    
+
     func saveTag(tagFromJobs: String) {
-        let tagToSave = NSEntityDescription.entity(forEntityName: "Tag", in: managedContext)
+        let tagToSave = NSEntityDescription.entity(forEntityName: Constants.enTag, in: managedContext)
         guard let tts = tagToSave else {
             return
         }
@@ -71,14 +75,16 @@ class TagsViewModel {
             print(error)
         }
     }
-    
+
     func deleteAllTags() {
         var dataToDelete = [Tag]()
-        guard let model = managedContext.persistentStoreCoordinator?.managedObjectModel, let fetch = model.fetchRequestTemplate(forName: "allTags") as? NSFetchRequest<Tag> else {
-            return
-        }
         do {
-            dataToDelete = try managedContext.fetch(fetch)
+            dataToDelete = try managedContext.fetch(
+                Extensions.getFetchRequestBy(
+                    templateName: Constants.frtallTags,
+                    type: Tag.self
+                )
+            )
             for jobToDelete in dataToDelete {
                 managedContext.delete(jobToDelete)
             }
@@ -87,20 +93,13 @@ class TagsViewModel {
             print("Error when try delete all opportunities " + error.description)
         }
     }
-    
-//    func populateTags() {
-//        tags = []
-//        for tag in arrayOfTags {
-//            tags.append(tag)
-//        }
-//    }
-    
+
     func serchTag(string: String) {
         tags = []
         let predicate = NSPredicate(format: "%K CONTAINS[cd] %@", #keyPath(Tag.name), string)
         let fetchRequest: NSFetchRequest<Tag> = Tag.fetchRequest()
         fetchRequest.predicate = predicate
-        
+
         do {
             let filteredTags = try managedContext.fetch(fetchRequest)
             tags = filteredTags
@@ -109,12 +108,12 @@ class TagsViewModel {
             print("Error when try fetch all filtered tags " + error.description)
         }
     }
-    
+
     func updateTag(tag: Tag) {
         let predicate = NSPredicate(format: "%K == %@", #keyPath(Tag.name), tag.name!)
         let fetchRequest: NSFetchRequest<Tag> = Tag.fetchRequest()
         fetchRequest.predicate = predicate
-        
+
         do {
             let currentTag = try managedContext.fetch(fetchRequest)
             let tag = currentTag.first
@@ -129,7 +128,7 @@ class TagsViewModel {
             } catch let error as NSError {
                 print(error)
             }
-            
+
         } catch let error as NSError {
             print("Error when try fetch all filtered tags " + error.description)
         }

@@ -9,9 +9,8 @@
 import UIKit
 
 class DetailJobViewController: UIViewController {
-    
-    @IBOutlet weak var favoriteButton: UIButton!
-    
+    @IBOutlet var favoriteButton: UIButton!
+
     var currentUrl = ""
     var job: Opportunity?
     var jobFavorite: OportunityFavorite?
@@ -21,27 +20,22 @@ class DetailJobViewController: UIViewController {
         super.viewDidLoad()
         navigationItem.backBarButtonItem?.title = ""
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
+
+    override func viewDidAppear(_: Bool) {
         if let position = job?.position {
             title = position
         } else if let position = jobFavorite?.position {
             title = position
         }
-        
+
         if jobFavorite != nil {
             favoriteButton.isEnabled = false
         } else {
             favoriteButton.isEnabled = true
         }
     }
-    
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+    override func prepare(for segue: UIStoryboardSegue, sender _: Any?) {
         if segue.identifier == "dataJob" {
             if segue.destination.isKind(of: DetailJobTableViewController.self) {
                 let djtbvc = segue.destination as! DetailJobTableViewController
@@ -53,45 +47,44 @@ class DetailJobViewController: UIViewController {
             }
         }
     }
-    
+
     @IBAction func apply() {
         var url: String!
-        if let jobURL =  job?.url {
+        if let jobURL = job?.url {
             url = jobURL.replacingOccurrences(of: "remote-jobs/remote-jobs", with: "remote-jobs")
         }
-        
+
         if let favoriteURL = jobFavorite?.url {
             url = favoriteURL
         }
-        
+
         if #available(iOS 10.0, *) {
-            UIApplication.shared.open( URL(string:url)!, options: [:], completionHandler: nil)
+            UIApplication.shared.open(URL(string: url)!, options: [:], completionHandler: nil)
         } else {
-            UIApplication.shared.openURL(URL(string:url)!)
+            UIApplication.shared.openURL(URL(string: url)!)
         }
     }
-    
-    @IBAction func addToFavoritesList(_ sender: Any) {
-        jobOpportunityViewModel.markJobAsFavorite(job!) { (result) in
+
+    @IBAction func addToFavoritesList(_: Any) {
+        jobOpportunityViewModel.markJobAsFavorite(job!) { result in
             self.noticeOnlyText(result!)
         }
     }
-    
+
     @IBAction func shareJob() {
-        let someText:String = "Hello! I found this job opportunity on remoteok.io and I would like to share it with you."
+        let someText: String = "Hello! \nI found this job opportunity on Abroad Jobs App(https://apple.co/2tpsPew).\nI would like to share it with you."
         var objectsToShare: URL!
         if job == nil {
             objectsToShare = URL(string: jobFavorite!.url!)!
         } else {
             objectsToShare = URL(string: (job!.url?.replacingOccurrences(of: "remote-jobs/remote-jobs", with: "remote-jobs"))!)!
         }
-        let sharedObjects:[AnyObject] = [objectsToShare as AnyObject,someText as AnyObject]
-        let activityViewController = UIActivityViewController(activityItems : sharedObjects, applicationActivities: nil)
-        activityViewController.popoverPresentationController?.sourceView = self.view
-        
-        activityViewController.excludedActivityTypes = [ UIActivityType.airDrop, UIActivityType.postToFacebook,UIActivityType.postToTwitter,UIActivityType.mail]
-        
-        self.present(activityViewController, animated: true, completion: nil)
+        let sharedObjects: [AnyObject] = [objectsToShare as AnyObject, someText as AnyObject]
+        let activityViewController = UIActivityViewController(activityItems: sharedObjects, applicationActivities: nil)
+        activityViewController.popoverPresentationController?.sourceView = view
+
+        activityViewController.excludedActivityTypes = [UIActivityType.airDrop, UIActivityType.postToFacebook, UIActivityType.postToTwitter, UIActivityType.mail]
+
+        present(activityViewController, animated: true, completion: nil)
     }
-    
 }

@@ -6,11 +6,11 @@
 //  Copyright © 2018 Hoff Henry Pereira da Silva. All rights reserved.
 //
 
-import Foundation
-import CoreData
 import Alamofire
+import CoreData
+import Foundation
 
-protocol JobOppotunityFavoriteDelegate: class  {
+protocol JobOppotunityFavoriteDelegate: class {
     func favoritesJobsLoaded()
 }
 
@@ -20,19 +20,16 @@ protocol JobOpportunityDelegate: class {
 }
 
 class JobOportunityViewModel {
-    
     weak var delegate: JobOpportunityDelegate!
     weak var favoriteDelegate: JobOppotunityFavoriteDelegate!
-    
-    
+
     var managedContext = CoreDataStack().persistentContainer.viewContext
     var arrayOfOpportunity = [Opportunity]()
     var arrayOfFavoriteOpportunity = [OportunityFavorite]()
     var arrayOfFilters: [String]!
     var currentJob: Int!
     var currentJobFavorite: Int!
-    
-    
+
     func saveJobFromJSON(_ currentJob: JobOportunity) {
         let jobToSave = NSEntityDescription.entity(forEntityName: "Opportunity", in: managedContext)
         guard let jts = jobToSave else {
@@ -54,29 +51,30 @@ class JobOportunityViewModel {
         } catch let error as NSError {
             print(error)
         }
-        
     }
-    
+
     func getAllOpportunities() {
-        guard let model = managedContext.persistentStoreCoordinator?.managedObjectModel, let fetch = model.fetchRequestTemplate(forName: "allOportunities") as? NSFetchRequest<Opportunity> else {
-            return
-        }
-        
         do {
-            arrayOfOpportunity = try managedContext.fetch(fetch)
+            arrayOfOpportunity = try managedContext.fetch(
+                Extensions.getFetchRequestBy(
+                    templateName: Constants.frtallOportunities,
+                    type: Opportunity.self
+                )
+            )
         } catch let error as NSError {
             print("Error when try fetch all opportunities " + error.description)
         }
     }
-    
+
     func deleteAllOpportunities() {
         var dataToDelete = [Opportunity]()
-        guard let model = managedContext.persistentStoreCoordinator?.managedObjectModel, let fetch = model.fetchRequestTemplate(forName: "allOportunities") as? NSFetchRequest<Opportunity> else {
-            return
-        }
-        
         do {
-            dataToDelete = try managedContext.fetch(fetch)
+            dataToDelete = try managedContext.fetch(
+                Extensions.getFetchRequestBy(
+                    templateName: Constants.frtallOportunities,
+                    type: Opportunity.self
+                )
+            )
             for jobToDelete in dataToDelete {
                 managedContext.delete(jobToDelete)
             }
@@ -85,22 +83,24 @@ class JobOportunityViewModel {
             print("Error when try delete all opportunities " + error.description)
         }
     }
-    
+
     func filterJobsBy(tags: [String]) {
-        guard let model = managedContext.persistentStoreCoordinator?.managedObjectModel, let fetch = model.fetchRequestTemplate(forName: "allOportunities") as? NSFetchRequest<Opportunity> else {
-            return
-        }
         do {
-            let opportunities = try managedContext.fetch(fetch)
+            let opportunities = try managedContext.fetch(
+                Extensions.getFetchRequestBy(
+                    templateName: Constants.frtallOportunities,
+                    type: Opportunity.self
+                )
+            )
             arrayOfOpportunity = []
-            
+
             if tags.first == "cryptojobslist" {
                 for job in opportunities {
                     if job.epoch == tags.first {
                         arrayOfOpportunity.append(job)
                     }
                 }
-                self.delegate.jobsFiltered()
+                delegate.jobsFiltered()
                 return
             }
             for job in opportunities {
@@ -108,42 +108,39 @@ class JobOportunityViewModel {
                     arrayOfOpportunity.append(job)
                 }
                 if let orderedTags = job.tags?.sorted() {
-                var newOrderedTags = [String]()
-                for ot in orderedTags {
-                    newOrderedTags.append(ot.uppercased())
-                }
-                print(newOrderedTags)
-                let selectedTags = tags.sorted()
-                print(selectedTags)
-                for tag in selectedTags {
-                    if (newOrderedTags.contains(tag)) {
-                        print("tag found!")
-                        arrayOfOpportunity.append(job)
-                    } else {
-                        for not in newOrderedTags {
-                            if not.contains(tag) {
-                                arrayOfOpportunity.append(job)
+                    var newOrderedTags = [String]()
+                    for ot in orderedTags {
+                        newOrderedTags.append(ot.uppercased())
+                    }
+                    print(newOrderedTags)
+                    let selectedTags = tags.sorted()
+                    print(selectedTags)
+                    for tag in selectedTags {
+                        if newOrderedTags.contains(tag) {
+                            print("tag found!")
+                            arrayOfOpportunity.append(job)
+                        } else {
+                            for not in newOrderedTags {
+                                if not.contains(tag) {
+                                    arrayOfOpportunity.append(job)
+                                }
                             }
                         }
                     }
                 }
-            }
-            self.delegate.jobsFiltered()
+                delegate.jobsFiltered()
             }
         } catch let error as NSError {
             print("Error when try fetch all opportunities " + error.description)
         }
     }
-    
-    
-    
-    
+
     func markJobAsFavorite(_ job: Opportunity, completion: (_ success: String?) -> Void) {
         var exists = false
-        let predicate = NSPredicate(format: "%K == %@",#keyPath(Opportunity.id), job.id!)
+        let predicate = NSPredicate(format: "%K == %@", #keyPath(Opportunity.id), job.id!)
         let fetchRequest: NSFetchRequest<OportunityFavorite> = OportunityFavorite.fetchRequest()
         fetchRequest.predicate = predicate
-        
+
         do {
             let filteredJob = try managedContext.fetch(fetchRequest)
             if filteredJob.first == nil {
@@ -154,7 +151,7 @@ class JobOportunityViewModel {
         } catch let error as NSError {
             print("Error when try fetch all filtered tags " + error.description)
         }
-        
+
         if exists {
             completion("This job already added to favorites jobs list.")
         } else {
@@ -182,9 +179,8 @@ class JobOportunityViewModel {
                 print("Error when try mark opportunity as favorite opportunity " + error.description)
             }
         }
-        
     }
-    
+
     func removeJobFromFavorite(_ job: OportunityFavorite) {
         managedContext.delete(job)
         do {
@@ -193,30 +189,25 @@ class JobOportunityViewModel {
             print("Error when try delete favorite opportunity " + error.description)
         }
     }
-    
+
     func getAllFavoriteOpportunities() {
         guard let model = managedContext.persistentStoreCoordinator?.managedObjectModel, let fetch = model.fetchRequestTemplate(forName: "allFavoriteOpportunities") as? NSFetchRequest<OportunityFavorite> else {
             return
         }
-        
+
         do {
             arrayOfFavoriteOpportunity = try managedContext.fetch(fetch)
-            //favoriteDelegate.favoritesJobsLoaded()
+            // favoriteDelegate.favoritesJobsLoaded()
         } catch let error as NSError {
             print("Error when try delete all favorite opportunities " + error.description)
         }
     }
-    
-    
+
     func getJob() -> Opportunity {
         return arrayOfOpportunity[currentJob]
     }
-    
+
     func getFavoriteJob() -> OportunityFavorite {
         return arrayOfFavoriteOpportunity[currentJobFavorite]
     }
-    
-    
 }
-
-
