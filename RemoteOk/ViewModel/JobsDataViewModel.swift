@@ -19,7 +19,7 @@ struct JobsDataViewModel {
     var jobsOpportunityViewModel = JobOportunityViewModel()
     
     func loadJobsFromAbroadJobsAPI() {
-        self.jobsOpportunityViewModel.deleteAllOpportunities()
+//        self.jobsOpportunityViewModel.deleteAllOpportunities()
         Connection.fetchData(url: Constants.urlOfAllJobs) { arrayOfJobOportunities in
             self.parse(dic: arrayOfJobOportunities)
         }
@@ -33,10 +33,10 @@ struct JobsDataViewModel {
         guard let secureData = dic.data else { return }
 
         do {
-            let arrayOfOppotunities = try JSONDecoder().decode([[JobOportunity]].self, from: secureData)
-            for arrayOfJobs in arrayOfOppotunities {
-                self.saveJobs(jobsList: arrayOfJobs)
-            }
+            let arrayOfOppotunities = try JSONDecoder().decode(DataModel.self, from: secureData)
+//            for arrayOfJobs in arrayOfOppotunities.data {
+                self.saveJobs(jobsList: arrayOfOppotunities.data)
+//            }
             self.delegate.loadJobDataSuccessful()
         } catch {
             self.delegate.loadJobDataFailed(message: Messages.errorParseDataJobs.description)

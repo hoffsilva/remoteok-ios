@@ -9,7 +9,7 @@
 import Foundation
 
 enum Constants {
-    static let urlOfAllJobs = "https://abroadjobs-api.herokuapp.com/jobs"
+    static let urlOfAllJobs = "https://abroad-jobs.us-3.evennode.com/jobs"
     static let urlOfReachabilityTest = "www.google.com"
     
     //Fetch request templates

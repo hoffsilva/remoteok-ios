@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B28FFB42952531800873C48 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B28FFB32952531800873C48 /* DataModel.swift */; };
 		430E6D32206C4FFA0093EA8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430E6D31206C4FFA0093EA8B /* AppDelegate.swift */; };
 		430E6D37206C4FFA0093EA8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 430E6D35206C4FFA0093EA8B /* Main.storyboard */; };
 		430E6D3F206C4FFA0093EA8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 430E6D3D206C4FFA0093EA8B /* LaunchScreen.storyboard */; };
@@ -56,6 +57,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B28FFB32952531800873C48 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		11DF5B9A2E80982E1ED0E538 /* Pods_RemoteOk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RemoteOk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		430E6D2E206C4FFA0093EA8B /* RemoteOk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemoteOk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		430E6D31206C4FFA0093EA8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				430E6D50206C736F0093EA8B /* JobOportunity.swift */,
+				0B28FFB32952531800873C48 /* DataModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -403,6 +406,7 @@
 				43B7BA43206E6AEA00DA3A39 /* CoreDataStack.swift in Sources */,
 				CA678C112084DE79009B7158 /* DetailJobTableViewController.swift in Sources */,
 				430E6D51206C736F0093EA8B /* JobOportunity.swift in Sources */,
+				0B28FFB42952531800873C48 /* DataModel.swift in Sources */,
 				43EE8CD82074441B005BBE76 /* JobsDataViewModel.swift in Sources */,
 				C377F8F32216F49D00539691 /* Constants.swift in Sources */,
 				CAD06CF32080E02D00BA3625 /* FilterJobsByTagsView.swift in Sources */,

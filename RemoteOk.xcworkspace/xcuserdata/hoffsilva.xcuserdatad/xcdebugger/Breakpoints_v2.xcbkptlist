@@ -17,8 +17,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "75"
             endingLineNumber = "75"
-            landmarkName = "loadJobDataSuccessful()"
-            landmarkType = "7">
+            landmarkName = "LaunchScreenViewController"
+            landmarkType = "21">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -34,7 +34,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "50"
             endingLineNumber = "50"
-            landmarkName = "loadJobsFromRemoteOK(_:)"
+            landmarkName = "saveJobs(jobsList:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -51,7 +51,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "50"
             endingLineNumber = "50"
-            landmarkName = "parse(dic:)"
+            landmarkName = "saveJobs(jobsList:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -68,8 +68,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "52"
             endingLineNumber = "52"
-            landmarkName = "loadVideo()"
-            landmarkType = "7">
+            landmarkName = "LaunchScreenViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -85,11 +85,11 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "51"
             endingLineNumber = "51"
-            landmarkName = "loadVideo()"
+            landmarkName = "selectVideoFile()"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "8189DA60-E1F4-4B48-8548-0537037FA08B - 837dfd4fe6eea35e"
+                  uuid = "8189DA60-E1F4-4B48-8548-0537037FA08B - d6764d02f016f703"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -105,7 +105,7 @@
                   offsetFromSymbolStart = "2486">
                </Location>
                <Location
-                  uuid = "8189DA60-E1F4-4B48-8548-0537037FA08B - e693a113fa27823"
+                  uuid = "8189DA60-E1F4-4B48-8548-0537037FA08B - 5b628a5c295a2c1f"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -136,7 +136,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "50"
             endingLineNumber = "50"
-            landmarkName = "loadJobsFromRemoteOK(_:)"
+            landmarkName = "saveJobs(jobsList:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -319,6 +319,38 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "138"
             endingLineNumber = "138">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "31A077ED-29B4-4890-80E9-E0D71EA875E9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RemoteOk/ViewModel/JobsDataViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "parse(dic:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8C3059B9-0351-4B2C-9117-03AAB59416ED"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RemoteOk/ViewModel/JobOportunityViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "saveJobFromJSON(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

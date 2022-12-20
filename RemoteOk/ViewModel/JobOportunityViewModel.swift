@@ -43,7 +43,7 @@ class JobOportunityViewModel {
         job.desc = currentJob.jobDescription
         job.date = "2018-07-30T20:53:26-07:00"
         job.logo = currentJob.companyLogoURL
-        job.tags = currentJob.tags
+        job.tags = currentJob.tagsStrings?.split(separator: ",") as? [String]
         job.company = currentJob.companyName
         job.url = currentJob.applyURL
         do {
@@ -55,12 +55,12 @@ class JobOportunityViewModel {
 
     func getAllOpportunities() {
         do {
-            arrayOfOpportunity = try managedContext.fetch(
-                Extensions.getFetchRequestBy(
-                    templateName: Constants.frtallOportunities,
-                    type: Opportunity.self
-                )
+            var fetch = Extensions.getFetchRequestBy(
+                templateName: Constants.frtallOportunities,
+                type: Opportunity.self
             )
+            fetch = Opportunity.fetchRequest()
+            arrayOfOpportunity = try managedContext.fetch(fetch)
         } catch let error as NSError {
             print("Error when try fetch all opportunities " + error.description)
         }
