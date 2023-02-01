@@ -64,13 +64,13 @@ class FavoritesJobsList: UITableViewController {
         cell.companyNameLabel.text = jobViewModel.getFavoriteJob().company ?? "None"
         cell.positionLabel.text = jobViewModel.getFavoriteJob().position ?? "None"
         
-        cell.logoImageView.sd_addActivityIndicator()
-        cell.logoImageView.sd_setShowActivityIndicatorView(true)
+//        cell.logoImageView.sd_addActivityIndicator()
+//        cell.logoImageView.sd_setShowActivityIndicatorView(true)
         
         cell.postOriginLabel.text = jobViewModel.getFavoriteJob().slug
         
         if let imageUrl = jobViewModel.getFavoriteJob().logo {
-            cell.logoImageView.sd_setImage(with: URL(string: imageUrl)) { (image, error, cache, url) in
+            cell.logoImageView.kf.setImage(with: URL(string: imageUrl)) { (image, error) in
                 if image == nil {
                     cell.logoImageView.stopAnimating()
                     cell.fakeCompanyLogoLabel.isHidden = false

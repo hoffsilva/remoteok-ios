@@ -137,7 +137,7 @@ class JobOportunityViewModel {
 
     func markJobAsFavorite(_ job: Opportunity, completion: (_ success: String?) -> Void) {
         var exists = false
-        let predicate = NSPredicate(format: "%K == %@", #keyPath(Opportunity.id), job.id!)
+        let predicate = NSPredicate(format: "")
         let fetchRequest: NSFetchRequest<OportunityFavorite> = OportunityFavorite.fetchRequest()
         fetchRequest.predicate = predicate
 

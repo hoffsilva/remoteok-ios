@@ -9,7 +9,10 @@
 import Foundation
 
 enum Constants {
-    static let urlOfAllJobs = "https://abroad-jobs.us-3.evennode.com/jobs"
+    
+    static let baseURL = "https://abroad-jobs.us-3.evennode.com/"
+    
+    static let jobsPath = "jobs/page="
     static let urlOfReachabilityTest = "www.google.com"
     
     //Fetch request templates

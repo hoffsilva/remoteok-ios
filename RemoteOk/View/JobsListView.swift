@@ -8,7 +8,7 @@
 
 import Hero
 import SafariServices
-import SDWebImage
+import Kingfisher
 import UIKit
 
 class JobsListView: UIViewController {
@@ -134,7 +134,7 @@ extension JobsListView: UICollectionViewDelegate, UICollectionViewDataSource {
         switch "\(indexPath.row)" {
         case "0":
             title = "All"
-            jobDataViewModel.loadJobsFromAbroadJobsAPI()
+//            jobDataViewModel.loadJobsFromAbroadJobsAPI()
             break
         case "1":
             title = "Dev Jobs"
@@ -211,6 +211,6 @@ extension JobsListView {
     @objc func loadJobs() {
         title = "All Jobs"
         pleaseWaiting()
-        jobDataViewModel.loadJobsFromAbroadJobsAPI()
+//        jobDataViewModel.loadJobsFromAbroadJobsAPI()
     }
 }

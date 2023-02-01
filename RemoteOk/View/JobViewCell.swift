@@ -18,13 +18,12 @@ class JobViewCell: UITableViewCell {
     func configCell(jobViewModel: JobOportunityViewModel) {
         companyNameLabel.text = jobViewModel.getJob().company ?? "None"
         positionLabel.text = jobViewModel.getJob().position ?? "None"
-        logoImageView.sd_addActivityIndicator()
-        logoImageView.sd_setShowActivityIndicatorView(true)
+        
         if let epoch = jobViewModel.getJob().epoch {
             postOriginLabel.text = epoch
         }
         if let imageUrl = jobViewModel.getJob().logo {
-            logoImageView.sd_setImage(with: URL(string: imageUrl)) { image, _, _, _ in
+            logoImageView.kf.setImage(with: URL(string: imageUrl)) { image, _ in
                 if image == nil {
                     self.fakeCompanyLogoLabel.isHidden = false
                     if let fakeLogo = jobViewModel.getJob().company?.first {

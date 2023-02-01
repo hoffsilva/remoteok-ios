@@ -22,7 +22,7 @@ class LaunchScreenViewController: UIViewController {
         super.viewDidLoad()
         jobsDataViewModel.delegate = self
         playVideo()
-        jobsDataViewModel.loadJobsFromAbroadJobsAPI()
+//        jobsDataViewModel.loadJobsFromAbroadJobsAPI()
     }
     
     private func playVideo() {
