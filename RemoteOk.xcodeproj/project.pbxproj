@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		0B28FFB42952531800873C48 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B28FFB32952531800873C48 /* DataModel.swift */; };
-		0B765807298A0B940075F103 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B765806298A0B940075F103 /* Provider.swift */; };
-		0B76580E298A11240075F103 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B76580D298A11240075F103 /* Service.swift */; };
-		0B765810298A115D0075F103 /* ServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B76580F298A115D0075F103 /* ServiceImpl.swift */; };
+		0B765807298A0B940075F103 /* JobsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B765806298A0B940075F103 /* JobsProvider.swift */; };
+		0B765810298A115D0075F103 /* JobsNetworkDatasourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B76580F298A115D0075F103 /* JobsNetworkDatasourceImpl.swift */; };
 		0B765813298A13500075F103 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 0B765812298A13500075F103 /* Moya */; };
 		0B765816298A15970075F103 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 0B765815298A15970075F103 /* Kingfisher */; };
 		0B765819298A16280075F103 /* Hero in Frameworks */ = {isa = PBXBuildFile; productRef = 0B765818298A16280075F103 /* Hero */; };
+		0BF708802990B5A100A9E015 /* JobsNetworkDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF7087F2990B5A100A9E015 /* JobsNetworkDatasource.swift */; };
+		0BF708852990B80E00A9E015 /* GetAllJobsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF708842990B80E00A9E015 /* GetAllJobsUseCase.swift */; };
+		0BF708892990B8CC00A9E015 /* JobsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF708882990B8CC00A9E015 /* JobsRepository.swift */; };
 		430E6D32206C4FFA0093EA8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430E6D31206C4FFA0093EA8B /* AppDelegate.swift */; };
 		430E6D37206C4FFA0093EA8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 430E6D35206C4FFA0093EA8B /* Main.storyboard */; };
 		430E6D3F206C4FFA0093EA8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 430E6D3D206C4FFA0093EA8B /* LaunchScreen.storyboard */; };
@@ -63,13 +65,15 @@
 
 /* Begin PBXFileReference section */
 		0B28FFB32952531800873C48 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
-		0B765806298A0B940075F103 /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
-		0B76580D298A11240075F103 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
-		0B76580F298A115D0075F103 /* ServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceImpl.swift; sourceTree = "<group>"; };
+		0B765806298A0B940075F103 /* JobsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsProvider.swift; sourceTree = "<group>"; };
+		0B76580F298A115D0075F103 /* JobsNetworkDatasourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsNetworkDatasourceImpl.swift; sourceTree = "<group>"; };
 		0B76584A298A19060075F103 /* OportunityFavorite+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OportunityFavorite+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		0B76584B298A19060075F103 /* Opportunity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Opportunity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		0B76584C298A19060075F103 /* OportunityFavorite+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OportunityFavorite+CoreDataClass.swift"; sourceTree = "<group>"; };
 		0B76584D298A19060075F103 /* Opportunity+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Opportunity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		0BF7087F2990B5A100A9E015 /* JobsNetworkDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsNetworkDatasource.swift; sourceTree = "<group>"; };
+		0BF708842990B80E00A9E015 /* GetAllJobsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllJobsUseCase.swift; sourceTree = "<group>"; };
+		0BF708882990B8CC00A9E015 /* JobsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsRepository.swift; sourceTree = "<group>"; };
 		430E6D2E206C4FFA0093EA8B /* RemoteOk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemoteOk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		430E6D31206C4FFA0093EA8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		430E6D36206C4FFA0093EA8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -144,6 +148,65 @@
 			path = CoredataClasses;
 			sourceTree = "<group>";
 		};
+		0BF7087D2990B54B00A9E015 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				0BF708822990B62800A9E015 /* models */,
+				0BF7087E2990B55C00A9E015 /* datasources */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		0BF7087E2990B55C00A9E015 /* datasources */ = {
+			isa = PBXGroup;
+			children = (
+				0BF7087F2990B5A100A9E015 /* JobsNetworkDatasource.swift */,
+				0B765806298A0B940075F103 /* JobsProvider.swift */,
+			);
+			path = datasources;
+			sourceTree = "<group>";
+		};
+		0BF708822990B62800A9E015 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				430E6D50206C736F0093EA8B /* JobOportunity.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		0BF708832990B76800A9E015 /* domain */ = {
+			isa = PBXGroup;
+			children = (
+				0BF708872990B8BC00A9E015 /* repositories */,
+				0BF708862990B81800A9E015 /* usecases */,
+			);
+			path = domain;
+			sourceTree = "<group>";
+		};
+		0BF708862990B81800A9E015 /* usecases */ = {
+			isa = PBXGroup;
+			children = (
+				0BF708842990B80E00A9E015 /* GetAllJobsUseCase.swift */,
+			);
+			path = usecases;
+			sourceTree = "<group>";
+		};
+		0BF708872990B8BC00A9E015 /* repositories */ = {
+			isa = PBXGroup;
+			children = (
+				0BF708882990B8CC00A9E015 /* JobsRepository.swift */,
+			);
+			path = repositories;
+			sourceTree = "<group>";
+		};
+		0BF7088A2990B9E900A9E015 /* datasources */ = {
+			isa = PBXGroup;
+			children = (
+				0B76580F298A115D0075F103 /* JobsNetworkDatasourceImpl.swift */,
+			);
+			path = datasources;
+			sourceTree = "<group>";
+		};
 		43096E9E2076EB01003702F0 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +235,9 @@
 		430E6D30206C4FFA0093EA8B /* RemoteOk */ = {
 			isa = PBXGroup;
 			children = (
+				0BF7088A2990B9E900A9E015 /* datasources */,
+				0BF708832990B76800A9E015 /* domain */,
+				0BF7087D2990B54B00A9E015 /* data */,
 				43096E9E2076EB01003702F0 /* Settings */,
 				43EE8CD920759A6F005BBE76 /* RemoteOk.xcdatamodeld */,
 				0B76583D298A18180075F103 /* CoredataClasses */,
@@ -196,7 +262,6 @@
 		430E6D46206C5E250093EA8B /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				430E6D50206C736F0093EA8B /* JobOportunity.swift */,
 				0B28FFB32952531800873C48 /* DataModel.swift */,
 			);
 			path = Model;
@@ -234,9 +299,6 @@
 			isa = PBXGroup;
 			children = (
 				430E6D4E206C65A90093EA8B /* Connection.swift */,
-				0B765806298A0B940075F103 /* Provider.swift */,
-				0B76580D298A11240075F103 /* Service.swift */,
-				0B76580F298A115D0075F103 /* ServiceImpl.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -368,7 +430,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CADB0E2720863B3C005B50AD /* FavoritesJobsList.swift in Sources */,
-				0B76580E298A11240075F103 /* Service.swift in Sources */,
+				0BF708802990B5A100A9E015 /* JobsNetworkDatasource.swift in Sources */,
 				43487CCF2078EB4000430934 /* JobViewCell.swift in Sources */,
 				43B7BA43206E6AEA00DA3A39 /* CoreDataStack.swift in Sources */,
 				CA678C112084DE79009B7158 /* DetailJobTableViewController.swift in Sources */,
@@ -376,7 +438,7 @@
 				0B28FFB42952531800873C48 /* DataModel.swift in Sources */,
 				43EE8CD82074441B005BBE76 /* JobsDataViewModel.swift in Sources */,
 				C377F8F32216F49D00539691 /* Constants.swift in Sources */,
-				0B765807298A0B940075F103 /* Provider.swift in Sources */,
+				0B765807298A0B940075F103 /* JobsProvider.swift in Sources */,
 				CAD06CF32080E02D00BA3625 /* FilterJobsByTagsView.swift in Sources */,
 				438C3D932086C4F300D80BB8 /* SwiftNotice.swift in Sources */,
 				439CB826207C341F00C1EF64 /* RemoteFilters.swift in Sources */,
@@ -386,13 +448,15 @@
 				43487CD12078EE1700430934 /* TagViewCell.swift in Sources */,
 				43487CCD2078EA8B00430934 /* TagsViewModel.swift in Sources */,
 				430E6D4F206C65A90093EA8B /* Connection.swift in Sources */,
-				0B765810298A115D0075F103 /* ServiceImpl.swift in Sources */,
+				0B765810298A115D0075F103 /* JobsNetworkDatasourceImpl.swift in Sources */,
+				0BF708892990B8CC00A9E015 /* JobsRepository.swift in Sources */,
 				CA678C0F2084D132009B7158 /* DetailJobViewController.swift in Sources */,
 				C377F8F52216F6AE00539691 /* Messages.swift in Sources */,
 				439CB828207C363900C1EF64 /* RemoteFilterCell.swift in Sources */,
 				CA869449206D68B30099F39D /* JobOportunityViewModel.swift in Sources */,
 				430E6D32206C4FFA0093EA8B /* AppDelegate.swift in Sources */,
 				439CB824207C2D2D00C1EF64 /* TagsViewLayout.swift in Sources */,
+				0BF708852990B80E00A9E015 /* GetAllJobsUseCase.swift in Sources */,
 				43EE8CDB20759A6F005BBE76 /* RemoteOk.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

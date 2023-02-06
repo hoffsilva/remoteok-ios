@@ -9,7 +9,7 @@
 import Foundation
 import Moya
 
-final class ServiceImpl: Service {
+final class JobsNetworkDatasourceImpl: JobsNetworkDatasource {
     
     private let provider: MoyaProvider<Provider>
     

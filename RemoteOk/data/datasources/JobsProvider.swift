@@ -1,5 +1,5 @@
 //
-//  Provider.swift
+//  JobsProvider.swift
 //  RemoteOk
 //
 //  Created by Hoff Silva on 2023-01-31.
@@ -9,12 +9,12 @@
 import Foundation
 import Moya
 
-enum Provider {
+enum JobsProvider {
     case getJobsOf(page:Int)
     case searchJobsBy(query:String, page:Int)
 }
 
-extension Provider: TargetType {
+extension JobsProvider: TargetType {
     var baseURL: URL {
         URL(string: Constants.baseURL)!
     }
