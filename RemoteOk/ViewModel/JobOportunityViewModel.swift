@@ -30,40 +30,8 @@ class JobOportunityViewModel {
     var currentJob: Int!
     var currentJobFavorite: Int!
 
-    func saveJobFromJSON(_ currentJob: JobOportunity) {
-        let jobToSave = NSEntityDescription.entity(forEntityName: "Opportunity", in: managedContext)
-        guard let jts = jobToSave else {
-            return
-        }
-        let job = Opportunity(entity: jts, insertInto: managedContext)
-        job.position = currentJob.jobTitle
-        job.slug = ""
-        job.id = ""
-        job.epoch = currentJob.source
-        job.desc = currentJob.jobDescription
-        job.date = "2018-07-30T20:53:26-07:00"
-        job.logo = currentJob.companyLogoURL
-        job.tags = currentJob.tagsStrings?.split(separator: ",") as? [String]
-        job.company = currentJob.companyName
-        job.url = currentJob.applyURL
-        do {
-            try managedContext.save()
-        } catch let error as NSError {
-            print(error)
-        }
-    }
-
-    func getAllOpportunities() {
-        do {
-            var fetch = Extensions.getFetchRequestBy(
-                templateName: Constants.frtallOportunities,
-                type: Opportunity.self
-            )
-            fetch = Opportunity.fetchRequest()
-            arrayOfOpportunity = try managedContext.fetch(fetch)
-        } catch let error as NSError {
-            print("Error when try fetch all opportunities " + error.description)
-        }
+    func getOpportunities() {
+        
     }
 
     func deleteAllOpportunities() {
