@@ -10,4 +10,5 @@ import Foundation
 
 protocol Service {
     func getJobsOf(page: Int, completion: @escaping ((Result<[JobOportunity], Error>)->Void))
+    func searchJobsBy(query: String, in page: Int, completion: @escaping ((Result<[JobOportunity], Error>)->Void))
 }

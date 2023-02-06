@@ -7,16 +7,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "0B22661E-4EF0-4EAC-9732-4678822CDB8F"
+            uuid = "5B75B199-8766-41AA-9241-3C34E9169000"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "RemoteOk/ViewModel/JobOportunityViewModel.swift"
+            filePath = "RemoteOk/Network/ServiceImpl.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "147"
-            endingLineNumber = "147"
-            landmarkName = "markJobAsFavorite(_:completion:)"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "getJobsOf(page:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

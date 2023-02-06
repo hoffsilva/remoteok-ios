@@ -11,6 +11,7 @@ import Moya
 
 enum Provider {
     case getJobsOf(page:Int)
+    case searchJobsBy(query:String, page:Int)
 }
 
 extension Provider: TargetType {
@@ -21,7 +22,9 @@ extension Provider: TargetType {
     var path: String {
         switch self {
         case .getJobsOf(let page):
-            return Constants.jobsPath + "\(page)"
+            return String(format: Constants.jobsPath, page)
+        case .searchJobsBy(let query, let page):
+            return String(format: Constants.filteredJobsPath, query, page)
         }
     }
     

@@ -19,8 +19,17 @@ final class ServiceImpl: Service {
     
     func getJobsOf(page: Int, completion: @escaping ((Result<[JobOportunity], Error>)->Void))  {
         provider.request(.getJobsOf(page: page)) { result in
+            print("asa")
+    
+        }
+    }
+    
+    func searchJobsBy(query: String, in page: Int, completion: @escaping ((Result<[JobOportunity], Error>) -> Void)) {
+        provider .request(.searchJobsBy(query: query, page: page)) { result in
             
         }
     }
+    
+    
     
 }
