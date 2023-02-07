@@ -9,5 +9,6 @@
 import Foundation
 
 protocol JobsRepository {
-    
+    func getJobsOf(page: Int, completion: @escaping ((Result<DataJob, Error>)->Void))
+    func searchJobsBy(query: String, completion: @escaping ((Result<DataJob, Error>)->Void))
 }

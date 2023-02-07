@@ -10,26 +10,50 @@ import Foundation
 import Moya
 
 final class JobsNetworkDatasourceImpl: JobsNetworkDatasource {
+    var provider: Moya.MoyaProvider<JobsProvider>
     
-    private let provider: MoyaProvider<Provider>
-    
-    init(provider: MoyaProvider<Provider>) {
+    init(provider: MoyaProvider<JobsProvider>) {
         self.provider = provider
     }
     
-    func getJobsOf(page: Int, completion: @escaping ((Result<[JobOportunity], Error>)->Void))  {
+    func getJobsOf(page: Int, completion: @escaping ((Result<DataJob, Error>) -> Void)) {
         provider.request(.getJobsOf(page: page)) { result in
-            print("asa")
-    
+            switch result {
+            case .success(let response):
+                if response.statusCode == 200 {
+                    do {
+                        let dataJob = try JSONDecoder().decode(DataJob.self, from: response.data)
+                        completion(.success(dataJob))
+                    } catch let error {
+                        completion(.failure(JobsNetworkDatasourceError.parseError(error.localizedDescription)))
+                    }
+                } else {
+                    completion(
+                        .failure(
+                            JobsNetworkDatasourceError
+                                .serverError("")
+                        )
+                    )
+                }
+            case .failure(let moyaError):
+                completion(
+                    .failure(
+                        JobsNetworkDatasourceError
+                            .requestError(moyaError.localizedDescription)
+                    )
+                )
+            }
         }
     }
     
-    func searchJobsBy(query: String, in page: Int, completion: @escaping ((Result<[JobOportunity], Error>) -> Void)) {
-        provider .request(.searchJobsBy(query: query, page: page)) { result in
-            
-        }
+    func searchJobsBy(query: String, completion: @escaping ((Result<DataJob, Error>) -> Void)) {
+//        provider.
     }
     
-    
-    
+    enum JobsNetworkDatasourceError: Error {
+        var metadata: String { return String(describing: self) }
+        case requestError(String)
+        case parseError(String)
+        case serverError(String)
+    }
 }

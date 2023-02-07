@@ -15,14 +15,10 @@ import Hero
 class LaunchScreenViewController: UIViewController {
     
     var player: AVPlayer?
-    var jobsDataViewModel =  JobsDataViewModel()
-    var jobsOpportunityViewModel = JobOportunityViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        jobsDataViewModel.delegate = self
         playVideo()
-//        jobsDataViewModel.loadJobsFromAbroadJobsAPI()
     }
     
     private func playVideo() {
@@ -65,17 +61,4 @@ class LaunchScreenViewController: UIViewController {
             self.hero_replaceViewController(with: str)
         }
     }
-}
-
-extension LaunchScreenViewController: JobsDataDelegate {
-    func loadJobDataSuccessful() {
-        NotificationCenter.default.removeObserver(self)
-        showMainStoryboard()
-    }
-    
-    func loadJobDataFailed(message: String) {
-        noticeError(message)
-    }
-    
-    
 }

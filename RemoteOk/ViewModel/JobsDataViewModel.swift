@@ -15,8 +15,8 @@ protocol JobsDataDelegate: class {
 }
 
 struct JobsDataViewModel {
-    weak var delegate: JobsDataDelegate!
-    var jobsOpportunityViewModel = JobOportunityViewModel()
+    weak var delegate: JobsDataDelegate?
+    
 //    
 //    func loadJobsFromAbroadJobsAPI() {
 ////        self.jobsOpportunityViewModel.deleteAllOpportunities()

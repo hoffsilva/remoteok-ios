@@ -16,6 +16,10 @@
 		0BF708802990B5A100A9E015 /* JobsNetworkDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF7087F2990B5A100A9E015 /* JobsNetworkDatasource.swift */; };
 		0BF708852990B80E00A9E015 /* GetAllJobsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF708842990B80E00A9E015 /* GetAllJobsUseCase.swift */; };
 		0BF708892990B8CC00A9E015 /* JobsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF708882990B8CC00A9E015 /* JobsRepository.swift */; };
+		0BF708F82991BFB300A9E015 /* GetFilteredJobsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF708F72991BFB300A9E015 /* GetFilteredJobsUseCase.swift */; };
+		0BF708FB2991CDBE00A9E015 /* JobsRespositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF708FA2991CDBE00A9E015 /* JobsRespositoryImpl.swift */; };
+		0BF708FD2991CEC700A9E015 /* GetAllJobsUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF708FC2991CEC700A9E015 /* GetAllJobsUseCaseImpl.swift */; };
+		0BF708FF2991D33200A9E015 /* DataJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF708FE2991D33200A9E015 /* DataJob.swift */; };
 		430E6D32206C4FFA0093EA8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430E6D31206C4FFA0093EA8B /* AppDelegate.swift */; };
 		430E6D37206C4FFA0093EA8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 430E6D35206C4FFA0093EA8B /* Main.storyboard */; };
 		430E6D3F206C4FFA0093EA8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 430E6D3D206C4FFA0093EA8B /* LaunchScreen.storyboard */; };
@@ -74,6 +78,10 @@
 		0BF7087F2990B5A100A9E015 /* JobsNetworkDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsNetworkDatasource.swift; sourceTree = "<group>"; };
 		0BF708842990B80E00A9E015 /* GetAllJobsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllJobsUseCase.swift; sourceTree = "<group>"; };
 		0BF708882990B8CC00A9E015 /* JobsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsRepository.swift; sourceTree = "<group>"; };
+		0BF708F72991BFB300A9E015 /* GetFilteredJobsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFilteredJobsUseCase.swift; sourceTree = "<group>"; };
+		0BF708FA2991CDBE00A9E015 /* JobsRespositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsRespositoryImpl.swift; sourceTree = "<group>"; };
+		0BF708FC2991CEC700A9E015 /* GetAllJobsUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllJobsUseCaseImpl.swift; sourceTree = "<group>"; };
+		0BF708FE2991D33200A9E015 /* DataJob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataJob.swift; sourceTree = "<group>"; };
 		430E6D2E206C4FFA0093EA8B /* RemoteOk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemoteOk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		430E6D31206C4FFA0093EA8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		430E6D36206C4FFA0093EA8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -151,6 +159,7 @@
 		0BF7087D2990B54B00A9E015 /* data */ = {
 			isa = PBXGroup;
 			children = (
+				0BF708F92991CDA600A9E015 /* repositories */,
 				0BF708822990B62800A9E015 /* models */,
 				0BF7087E2990B55C00A9E015 /* datasources */,
 			);
@@ -170,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				430E6D50206C736F0093EA8B /* JobOportunity.swift */,
+				0BF708FE2991D33200A9E015 /* DataJob.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -187,6 +197,8 @@
 			isa = PBXGroup;
 			children = (
 				0BF708842990B80E00A9E015 /* GetAllJobsUseCase.swift */,
+				0BF708F72991BFB300A9E015 /* GetFilteredJobsUseCase.swift */,
+				0BF708FC2991CEC700A9E015 /* GetAllJobsUseCaseImpl.swift */,
 			);
 			path = usecases;
 			sourceTree = "<group>";
@@ -205,6 +217,14 @@
 				0B76580F298A115D0075F103 /* JobsNetworkDatasourceImpl.swift */,
 			);
 			path = datasources;
+			sourceTree = "<group>";
+		};
+		0BF708F92991CDA600A9E015 /* repositories */ = {
+			isa = PBXGroup;
+			children = (
+				0BF708FA2991CDBE00A9E015 /* JobsRespositoryImpl.swift */,
+			);
+			path = repositories;
 			sourceTree = "<group>";
 		};
 		43096E9E2076EB01003702F0 /* Settings */ = {
@@ -433,6 +453,7 @@
 				0BF708802990B5A100A9E015 /* JobsNetworkDatasource.swift in Sources */,
 				43487CCF2078EB4000430934 /* JobViewCell.swift in Sources */,
 				43B7BA43206E6AEA00DA3A39 /* CoreDataStack.swift in Sources */,
+				0BF708FF2991D33200A9E015 /* DataJob.swift in Sources */,
 				CA678C112084DE79009B7158 /* DetailJobTableViewController.swift in Sources */,
 				430E6D51206C736F0093EA8B /* JobOportunity.swift in Sources */,
 				0B28FFB42952531800873C48 /* DataModel.swift in Sources */,
@@ -446,11 +467,14 @@
 				CADB0E292086427B005B50AD /* Extensions.swift in Sources */,
 				CA13F4512077F2AC007676AB /* JobsListView.swift in Sources */,
 				43487CD12078EE1700430934 /* TagViewCell.swift in Sources */,
+				0BF708F82991BFB300A9E015 /* GetFilteredJobsUseCase.swift in Sources */,
 				43487CCD2078EA8B00430934 /* TagsViewModel.swift in Sources */,
 				430E6D4F206C65A90093EA8B /* Connection.swift in Sources */,
 				0B765810298A115D0075F103 /* JobsNetworkDatasourceImpl.swift in Sources */,
 				0BF708892990B8CC00A9E015 /* JobsRepository.swift in Sources */,
 				CA678C0F2084D132009B7158 /* DetailJobViewController.swift in Sources */,
+				0BF708FB2991CDBE00A9E015 /* JobsRespositoryImpl.swift in Sources */,
+				0BF708FD2991CEC700A9E015 /* GetAllJobsUseCaseImpl.swift in Sources */,
 				C377F8F52216F6AE00539691 /* Messages.swift in Sources */,
 				439CB828207C363900C1EF64 /* RemoteFilterCell.swift in Sources */,
 				CA869449206D68B30099F39D /* JobOportunityViewModel.swift in Sources */,

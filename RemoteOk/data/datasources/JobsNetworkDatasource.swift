@@ -10,7 +10,6 @@ import Foundation
 import Moya
 
 protocol JobsNetworkDatasource {
-    var provider: MoyaProvider<JobsProvider> { get set }
-    func getJobsOf(page: Int, completion: @escaping ((Result<[JobOportunity], Error>)->Void))
-    func searchJobsBy(query: String, in page: Int, completion: @escaping ((Result<[JobOportunity], Error>)->Void))
+    func getJobsOf(page: Int, completion: @escaping ((Result<DataJob, Error>)->Void))
+    func searchJobsBy(query: String, completion: @escaping ((Result<DataJob, Error>)->Void))
 }

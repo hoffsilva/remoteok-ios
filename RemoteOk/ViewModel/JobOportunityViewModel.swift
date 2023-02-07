@@ -6,176 +6,52 @@
 //  Copyright © 2018 Hoff Henry Pereira da Silva. All rights reserved.
 //
 
-import Alamofire
-import CoreData
 import Foundation
 
-protocol JobOppotunityFavoriteDelegate: class {
-    func favoritesJobsLoaded()
+protocol JobOportunityViewModel {
+    
+    var didLoadJobs: (() -> Void)? { get set }
+    var didLoadJobsWithError: ((String) -> Void)? { get set }
+    
+    func getOpportunities()
+    func getFilteredOpportunities(by query: String)
 }
 
-protocol JobOpportunityDelegate: class {
-    func jobOpportunitiesLoaded()
-    func jobsFiltered()
-}
-
-class JobOportunityViewModel {
-    weak var delegate: JobOpportunityDelegate!
-    weak var favoriteDelegate: JobOppotunityFavoriteDelegate!
+class JobOportunityViewModelImpl: JobOportunityViewModel {
+    var didLoadJobs: (() -> Void)?
+    var didLoadJobsWithError: ((String) -> Void)?
+    var getAllJobsUseCase: GetAllJobsUseCase
+    var getFilteredJobsUseCase: GetFilteredJobsUseCase
+    var currentPage = 1
 
     var managedContext = CoreDataStack().persistentContainer.viewContext
-    var arrayOfOpportunity = [Opportunity]()
-    var arrayOfFavoriteOpportunity = [OportunityFavorite]()
-    var arrayOfFilters: [String]!
-    var currentJob: Int!
-    var currentJobFavorite: Int!
+    var arrayOfOpportunity = [JobOportunity]()
+    
+    init(getAllJobsUseCase: GetAllJobsUseCase, getFilteredJobsUseCase: GetFilteredJobsUseCase) {
+        self.getAllJobsUseCase = getAllJobsUseCase
+        self.getFilteredJobsUseCase = getFilteredJobsUseCase
+        setupBindings()
+    }
 
     func getOpportunities() {
+        getAllJobsUseCase.getJobsOf(page: currentPage)
+    }
+    
+    func getFilteredOpportunities(by query: String) {
+        
+    }
+    
+    private func setupBindings() {
+        
+        getAllJobsUseCase.didGetJobs = { [weak self] jobs in
+            self?.arrayOfOpportunity = jobs
+            self?.didLoadJobs?()
+        }
+        
+        getAllJobsUseCase.didGetError = { [weak self] error in
+            self?.didLoadJobsWithError?(error.localizedDescription)
+        }
         
     }
 
-    func deleteAllOpportunities() {
-        var dataToDelete = [Opportunity]()
-        do {
-            dataToDelete = try managedContext.fetch(
-                Extensions.getFetchRequestBy(
-                    templateName: Constants.frtallOportunities,
-                    type: Opportunity.self
-                )
-            )
-            for jobToDelete in dataToDelete {
-                managedContext.delete(jobToDelete)
-            }
-            try managedContext.save()
-        } catch let error as NSError {
-            print("Error when try delete all opportunities " + error.description)
-        }
-    }
-
-    func filterJobsBy(tags: [String]) {
-        do {
-            let opportunities = try managedContext.fetch(
-                Extensions.getFetchRequestBy(
-                    templateName: Constants.frtallOportunities,
-                    type: Opportunity.self
-                )
-            )
-            arrayOfOpportunity = []
-
-            if tags.first == "cryptojobslist" {
-                for job in opportunities {
-                    if job.epoch == tags.first {
-                        arrayOfOpportunity.append(job)
-                    }
-                }
-                delegate.jobsFiltered()
-                return
-            }
-            for job in opportunities {
-                if job.epoch == tags.first {
-                    arrayOfOpportunity.append(job)
-                }
-                if let orderedTags = job.tags?.sorted() {
-                    var newOrderedTags = [String]()
-                    for ot in orderedTags {
-                        newOrderedTags.append(ot.uppercased())
-                    }
-                    print(newOrderedTags)
-                    let selectedTags = tags.sorted()
-                    print(selectedTags)
-                    for tag in selectedTags {
-                        if newOrderedTags.contains(tag) {
-                            print("tag found!")
-                            arrayOfOpportunity.append(job)
-                        } else {
-                            for not in newOrderedTags {
-                                if not.contains(tag) {
-                                    arrayOfOpportunity.append(job)
-                                }
-                            }
-                        }
-                    }
-                }
-                delegate.jobsFiltered()
-            }
-        } catch let error as NSError {
-            print("Error when try fetch all opportunities " + error.description)
-        }
-    }
-
-    func markJobAsFavorite(_ job: Opportunity, completion: (_ success: String?) -> Void) {
-        var exists = false
-        let predicate = NSPredicate(format: "")
-        let fetchRequest: NSFetchRequest<OportunityFavorite> = OportunityFavorite.fetchRequest()
-        fetchRequest.predicate = predicate
-
-        do {
-            let filteredJob = try managedContext.fetch(fetchRequest)
-            if filteredJob.first == nil {
-                exists = false
-            } else {
-                exists = true
-            }
-        } catch let error as NSError {
-            print("Error when try fetch all filtered tags " + error.description)
-        }
-
-        if exists {
-            completion("This job already added to favorites jobs list.")
-        } else {
-            let jobToFavorite = NSEntityDescription.entity(forEntityName: "OpportunityFavorite", in: managedContext)
-            guard let jtf = jobToFavorite else {
-                return
-            }
-            let jobFavorite = OportunityFavorite(entity: jtf, insertInto: managedContext)
-            jobFavorite.position = job.position
-            jobFavorite.slug = job.slug
-            jobFavorite.id = job.id
-            jobFavorite.epoch = job.epoch
-            jobFavorite.desc = job.desc
-            jobFavorite.date = job.date
-            jobFavorite.logo = job.logo
-            jobFavorite.tags = job.tags
-            jobFavorite.company = job.company
-            jobFavorite.url = job.url
-            jobFavorite.favorite = true
-            do {
-                try managedContext.save()
-                getAllFavoriteOpportunities()
-                completion("This job was added to favorites jobs list.")
-            } catch let error as NSError {
-                print("Error when try mark opportunity as favorite opportunity " + error.description)
-            }
-        }
-    }
-
-    func removeJobFromFavorite(_ job: OportunityFavorite) {
-        managedContext.delete(job)
-        do {
-            try managedContext.save()
-        } catch let error as NSError {
-            print("Error when try delete favorite opportunity " + error.description)
-        }
-    }
-
-    func getAllFavoriteOpportunities() {
-        guard let model = managedContext.persistentStoreCoordinator?.managedObjectModel, let fetch = model.fetchRequestTemplate(forName: "allFavoriteOpportunities") as? NSFetchRequest<OportunityFavorite> else {
-            return
-        }
-
-        do {
-            arrayOfFavoriteOpportunity = try managedContext.fetch(fetch)
-            // favoriteDelegate.favoritesJobsLoaded()
-        } catch let error as NSError {
-            print("Error when try delete all favorite opportunities " + error.description)
-        }
-    }
-
-    func getJob() -> Opportunity {
-        return arrayOfOpportunity[currentJob]
-    }
-
-    func getFavoriteJob() -> OportunityFavorite {
-        return arrayOfFavoriteOpportunity[currentJobFavorite]
-    }
 }
