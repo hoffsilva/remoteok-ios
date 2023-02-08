@@ -43,25 +43,41 @@ struct JobListViewItemUI: View {
     var body: some View {
         VStack {
             HStack(alignment: .top) {
-                Text(job.companyName)
-                AsyncImage(url: URL(string: job.companyLogoURL))
-                    .frame(width: 128, height: 128)
+                AsyncImage(
+                    url: URL(string: job.companyLogoURL),
+                    content: { image in
+                        image
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 80, height: 80)
+                    },
+                    placeholder: {
+                        Image("no-photo")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 80, height: 80)
+                    }
+                )
+                .clipShape(Circle())
                 VStack(alignment: .leading, spacing: 2) {
-                    Text(job.jobTitle).bold()
-                    Text(job.tags)
+                    Text(job.companyName)
+                        .font(.system(.body))
+                        .bold()
+                    Text(job.jobTitle)
+                        .font(.system(.title3))
+                        .bold()
                 }.padding(.top, 10)
                 Spacer()
                 HStack(alignment: .bottom) {
                     AsyncImage(
-                        url: URL(string: job.companyLogoURL),
+                        url: URL(string: job.sourceLogoURL),
                         content: { image in
-                            image.resizable()
+                            image
+                                .resizable()
                                 .aspectRatio(contentMode: .fit)
-                            .frame(width: 40, height: 40)
+                                .frame(width: 40, height: 40)
                         },
-                        placeholder: {
-                            Image("no-photo")
-                        }
+                        placeholder: { }
                     )
                     .clipShape(Circle())
                     .frame(width: 40, height: 40)
