@@ -56,7 +56,8 @@ struct JobListViewItemUI: View {
                         url: URL(string: job.companyLogoURL),
                         content: { image in
                             image.resizable()
-                                .frame(width: 40, height: 40)
+                                .aspectRatio(contentMode: .fit)
+                            .frame(width: 40, height: 40)
                         },
                         placeholder: {
                             Image("no-photo")
