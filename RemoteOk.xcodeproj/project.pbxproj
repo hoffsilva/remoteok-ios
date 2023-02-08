@@ -13,6 +13,7 @@
 		0B765813298A13500075F103 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 0B765812298A13500075F103 /* Moya */; };
 		0B765816298A15970075F103 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 0B765815298A15970075F103 /* Kingfisher */; };
 		0B765819298A16280075F103 /* Hero in Frameworks */ = {isa = PBXBuildFile; productRef = 0B765818298A16280075F103 /* Hero */; };
+		0B7E86C7299319CF0046A686 /* GetFilteredJobsUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7E86C6299319CF0046A686 /* GetFilteredJobsUseCaseImpl.swift */; };
 		0BF708802990B5A100A9E015 /* JobsNetworkDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF7087F2990B5A100A9E015 /* JobsNetworkDatasource.swift */; };
 		0BF708852990B80E00A9E015 /* GetAllJobsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF708842990B80E00A9E015 /* GetAllJobsUseCase.swift */; };
 		0BF708892990B8CC00A9E015 /* JobsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF708882990B8CC00A9E015 /* JobsRepository.swift */; };
@@ -29,7 +30,6 @@
 		43487CCF2078EB4000430934 /* JobViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43487CCE2078EB4000430934 /* JobViewCell.swift */; };
 		43487CD12078EE1700430934 /* TagViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43487CD02078EE1700430934 /* TagViewCell.swift */; };
 		438C3D932086C4F300D80BB8 /* SwiftNotice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438C3D922086C4F300D80BB8 /* SwiftNotice.swift */; };
-		4399FE372072F0ED0099E529 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4399FE362072F0ED0099E529 /* LaunchScreenViewController.swift */; };
 		4399FE3D2072FF620099E529 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 4399FE3A2072FF620099E529 /* logo.png */; };
 		4399FE3E2072FF620099E529 /* launchscreen.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4399FE3B2072FF620099E529 /* launchscreen.mp4 */; };
 		4399FE3F2072FF620099E529 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 4399FE3C2072FF620099E529 /* bg.png */; };
@@ -75,6 +75,7 @@
 		0B76584B298A19060075F103 /* Opportunity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Opportunity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		0B76584C298A19060075F103 /* OportunityFavorite+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OportunityFavorite+CoreDataClass.swift"; sourceTree = "<group>"; };
 		0B76584D298A19060075F103 /* Opportunity+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Opportunity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		0B7E86C6299319CF0046A686 /* GetFilteredJobsUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFilteredJobsUseCaseImpl.swift; sourceTree = "<group>"; };
 		0BF7087F2990B5A100A9E015 /* JobsNetworkDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsNetworkDatasource.swift; sourceTree = "<group>"; };
 		0BF708842990B80E00A9E015 /* GetAllJobsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllJobsUseCase.swift; sourceTree = "<group>"; };
 		0BF708882990B8CC00A9E015 /* JobsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsRepository.swift; sourceTree = "<group>"; };
@@ -93,7 +94,6 @@
 		43487CCE2078EB4000430934 /* JobViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobViewCell.swift; sourceTree = "<group>"; };
 		43487CD02078EE1700430934 /* TagViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagViewCell.swift; sourceTree = "<group>"; };
 		438C3D922086C4F300D80BB8 /* SwiftNotice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftNotice.swift; sourceTree = "<group>"; };
-		4399FE362072F0ED0099E529 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		4399FE3A2072FF620099E529 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		4399FE3B2072FF620099E529 /* launchscreen.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = launchscreen.mp4; sourceTree = "<group>"; };
 		4399FE3C2072FF620099E529 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
@@ -199,6 +199,7 @@
 				0BF708842990B80E00A9E015 /* GetAllJobsUseCase.swift */,
 				0BF708F72991BFB300A9E015 /* GetFilteredJobsUseCase.swift */,
 				0BF708FC2991CEC700A9E015 /* GetAllJobsUseCaseImpl.swift */,
+				0B7E86C6299319CF0046A686 /* GetFilteredJobsUseCaseImpl.swift */,
 			);
 			path = usecases;
 			sourceTree = "<group>";
@@ -290,7 +291,6 @@
 		430E6D47206C5E340093EA8B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				4399FE362072F0ED0099E529 /* LaunchScreenViewController.swift */,
 				CA13F4502077F2AC007676AB /* JobsListView.swift */,
 				43487CCE2078EB4000430934 /* JobViewCell.swift */,
 				43487CD02078EE1700430934 /* TagViewCell.swift */,
@@ -457,13 +457,13 @@
 				CA678C112084DE79009B7158 /* DetailJobTableViewController.swift in Sources */,
 				430E6D51206C736F0093EA8B /* JobOportunity.swift in Sources */,
 				0B28FFB42952531800873C48 /* DataModel.swift in Sources */,
+				0B7E86C7299319CF0046A686 /* GetFilteredJobsUseCaseImpl.swift in Sources */,
 				43EE8CD82074441B005BBE76 /* JobsDataViewModel.swift in Sources */,
 				C377F8F32216F49D00539691 /* Constants.swift in Sources */,
 				0B765807298A0B940075F103 /* JobsProvider.swift in Sources */,
 				CAD06CF32080E02D00BA3625 /* FilterJobsByTagsView.swift in Sources */,
 				438C3D932086C4F300D80BB8 /* SwiftNotice.swift in Sources */,
 				439CB826207C341F00C1EF64 /* RemoteFilters.swift in Sources */,
-				4399FE372072F0ED0099E529 /* LaunchScreenViewController.swift in Sources */,
 				CADB0E292086427B005B50AD /* Extensions.swift in Sources */,
 				CA13F4512077F2AC007676AB /* JobsListView.swift in Sources */,
 				43487CD12078EE1700430934 /* TagViewCell.swift in Sources */,

@@ -12,6 +12,7 @@ protocol JobOportunityViewModel {
     
     var didLoadJobs: (() -> Void)? { get set }
     var didLoadJobsWithError: ((String) -> Void)? { get set }
+    var arrayOfOpportunity: [JobOportunity] { get set }
     
     func getOpportunities()
     func getFilteredOpportunities(by query: String)

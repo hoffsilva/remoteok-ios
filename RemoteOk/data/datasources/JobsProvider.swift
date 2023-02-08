@@ -22,9 +22,9 @@ extension JobsProvider: TargetType {
     var path: String {
         switch self {
         case .getJobsOf(let page):
-            return String(format: Constants.jobsPath, page)
+            return String(format: Constants.jobsPath, "\(page)")
         case .searchJobsBy(let query, let page):
-            return String(format: Constants.filteredJobsPath, query, page)
+            return String(format: Constants.filteredJobsPath, query, "\(page)")
         }
     }
     

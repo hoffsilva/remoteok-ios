@@ -35,7 +35,7 @@
           "value" : "light"
         }
       ],
-      "filename" : "bg.png",
+      "filename" : "ItunesArtworkWhite@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
@@ -46,7 +46,7 @@
           "value" : "dark"
         }
       ],
-      "filename" : "bg_black.png",
+      "filename" : "ItunesArtwork@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
