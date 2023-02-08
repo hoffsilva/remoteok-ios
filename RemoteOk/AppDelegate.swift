@@ -7,9 +7,22 @@
 //
 
 import UIKit
+import SwiftUI
 import CoreData
 
-@UIApplicationMain
+@main
+struct AppyApp: App {
+    
+    var body: some Scene {
+        WindowGroup {
+            NavigationView {
+                JobsListViewUI()
+            }
+        }
+    }
+}
+
+//@UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?

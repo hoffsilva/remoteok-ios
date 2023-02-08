@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 protocol JobOportunityViewModel {
     
@@ -18,7 +19,10 @@ protocol JobOportunityViewModel {
     func getFilteredOpportunities(by query: String)
 }
 
-class JobOportunityViewModelImpl: JobOportunityViewModel {
+class JobOportunityViewModelImpl: JobOportunityViewModel, ObservableObject {
+    
+    @Published var arrayOfOpportunity = [JobOportunity]()
+    
     var didLoadJobs: (() -> Void)?
     var didLoadJobsWithError: ((String) -> Void)?
     var getAllJobsUseCase: GetAllJobsUseCase
@@ -26,7 +30,6 @@ class JobOportunityViewModelImpl: JobOportunityViewModel {
     var currentPage = 1
 
     var managedContext = CoreDataStack().persistentContainer.viewContext
-    var arrayOfOpportunity = [JobOportunity]()
     
     init(getAllJobsUseCase: GetAllJobsUseCase, getFilteredJobsUseCase: GetFilteredJobsUseCase) {
         self.getAllJobsUseCase = getAllJobsUseCase
