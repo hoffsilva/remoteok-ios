@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="45a-2B-QLP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="45a-2B-QLP">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -27,12 +28,11 @@
             <objects>
                 <tabBarController storyboardIdentifier="main" id="45a-2B-QLP" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Ldj-qL-Osw"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="kvi-K5-5nB">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="kvi-K5-5nB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="selectedImageTintColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
@@ -51,12 +51,12 @@
             <objects>
                 <tableViewController id="azo-Yx-Aqz" customClass="FavoritesJobsList" customModule="RemoteOk" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="cJR-Eg-Wsl">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="469"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="jobCell" rowHeight="200" id="X3x-nI-fZ8" customClass="JobViewCell" customModule="RemoteOk" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="320" height="200"/>
+                                <rect key="frame" x="0.0" y="50" width="320" height="200"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="X3x-nI-fZ8" id="woy-15-fPk">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
@@ -191,71 +191,19 @@
         <scene sceneID="pm2-2H-5SE">
             <objects>
                 <viewController id="uFY-jT-ivR" customClass="JobsListView" customModule="RemoteOk" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="xRY-jh-YAT">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="477"/>
+                    <view key="view" contentMode="scaleToFill" misplaced="YES" id="xRY-jh-YAT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="422"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="qvM-2Z-CLF">
-                                <rect key="frame" x="0.0" y="90" width="320" height="338"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="428"/>
                             </imageView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="nJB-Eu-c5d">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
-                                <color key="backgroundColor" red="0.14509803921568629" green="0.14509803921568629" blue="0.14509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="90" id="5XC-fa-TWl"/>
-                                </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="MTk-Ci-G4u">
-                                    <size key="itemSize" width="80" height="80"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="5" minY="5" maxX="5" maxY="5"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.10000000149011612" contentMode="center" reuseIdentifier="remoteFilterCell" id="xFP-lH-ZvF" customClass="RemoteFilterCell" customModule="RemoteOk" customModuleProvider="target">
-                                        <rect key="frame" x="5" y="5" width="100" height="80"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="100" height="80"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="remote-jobs" translatesAutoresizingMaskIntoConstraints="NO" id="3ch-fA-XUQ">
-                                                    <rect key="frame" x="25" y="5" width="50" height="50"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="50" id="Vpa-eL-Ams"/>
-                                                        <constraint firstAttribute="width" constant="50" id="yvU-vd-6w0"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="TESTE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jLO-ER-8qn">
-                                                    <rect key="frame" x="4" y="57" width="92" height="16.5"/>
-                                                    <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="12"/>
-                                                    <color key="textColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </view>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstItem="jLO-ER-8qn" firstAttribute="leading" secondItem="xFP-lH-ZvF" secondAttribute="leading" constant="4" id="FtO-vn-Rjg"/>
-                                            <constraint firstAttribute="trailing" secondItem="jLO-ER-8qn" secondAttribute="trailing" constant="4" id="Hlx-4m-X3I"/>
-                                            <constraint firstItem="3ch-fA-XUQ" firstAttribute="top" secondItem="xFP-lH-ZvF" secondAttribute="top" constant="5" id="PmO-lv-fmO"/>
-                                            <constraint firstItem="jLO-ER-8qn" firstAttribute="centerX" secondItem="xFP-lH-ZvF" secondAttribute="centerX" id="Rn5-mT-J27"/>
-                                            <constraint firstItem="3ch-fA-XUQ" firstAttribute="centerX" secondItem="xFP-lH-ZvF" secondAttribute="centerX" id="pPE-ea-Ld5"/>
-                                            <constraint firstItem="jLO-ER-8qn" firstAttribute="top" secondItem="3ch-fA-XUQ" secondAttribute="bottom" constant="2" id="vEi-nR-zDd"/>
-                                        </constraints>
-                                        <size key="customSize" width="100" height="80"/>
-                                        <connections>
-                                            <outlet property="filterImageView" destination="3ch-fA-XUQ" id="gK3-Sc-mcx"/>
-                                            <outlet property="filterTitle" destination="jLO-ER-8qn" id="UWm-yC-RQf"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kca-gQ-c1T">
-                                <rect key="frame" x="0.0" y="90" width="320" height="338"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="428"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="jobCell" rowHeight="200" id="7r3-K3-dta" customClass="JobViewCell" customModule="RemoteOk" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="200"/>
+                                        <rect key="frame" x="0.0" y="50" width="320" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7r3-K3-dta" id="LoL-XN-cfV">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
@@ -372,24 +320,22 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="hBB-Vi-tE7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="hBB-Vi-tE7" firstAttribute="bottom" secondItem="kca-gQ-c1T" secondAttribute="bottom" id="37U-tM-811"/>
                             <constraint firstItem="kca-gQ-c1T" firstAttribute="leading" secondItem="hBB-Vi-tE7" secondAttribute="leading" id="71T-hm-Dcd"/>
                             <constraint firstItem="hBB-Vi-tE7" firstAttribute="trailing" secondItem="qvM-2Z-CLF" secondAttribute="trailing" id="F36-04-BzB"/>
                             <constraint firstItem="qvM-2Z-CLF" firstAttribute="leading" secondItem="hBB-Vi-tE7" secondAttribute="leading" id="Frz-8m-rg6"/>
-                            <constraint firstItem="kca-gQ-c1T" firstAttribute="top" secondItem="nJB-Eu-c5d" secondAttribute="bottom" id="HIM-OS-uRj"/>
-                            <constraint firstItem="nJB-Eu-c5d" firstAttribute="top" secondItem="hBB-Vi-tE7" secondAttribute="top" id="Vdl-TS-dCM"/>
-                            <constraint firstItem="qvM-2Z-CLF" firstAttribute="top" secondItem="nJB-Eu-c5d" secondAttribute="bottom" id="a7q-47-mhS"/>
-                            <constraint firstItem="nJB-Eu-c5d" firstAttribute="leading" secondItem="hBB-Vi-tE7" secondAttribute="leading" id="gAI-OF-JVF"/>
-                            <constraint firstItem="hBB-Vi-tE7" firstAttribute="trailing" secondItem="nJB-Eu-c5d" secondAttribute="trailing" id="kWS-E1-d7D"/>
+                            <constraint firstItem="qvM-2Z-CLF" firstAttribute="top" secondItem="xRY-jh-YAT" secondAttribute="top" id="hYP-7P-04L"/>
+                            <constraint firstItem="kca-gQ-c1T" firstAttribute="top" secondItem="hBB-Vi-tE7" secondAttribute="top" id="hww-Mk-wtK"/>
                             <constraint firstItem="hBB-Vi-tE7" firstAttribute="bottom" secondItem="qvM-2Z-CLF" secondAttribute="bottom" id="kmh-Co-VDy"/>
                             <constraint firstItem="hBB-Vi-tE7" firstAttribute="trailing" secondItem="kca-gQ-c1T" secondAttribute="trailing" id="o3S-dz-O7W"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="hBB-Vi-tE7"/>
                     </view>
                     <navigationItem key="navigationItem" title="Remote Jobs" id="Kza-LV-8ht">
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="zUr-YH-4xr">
+                            <color key="tintColor" systemColor="labelColor"/>
                             <connections>
                                 <segue destination="E2G-xi-Kjl" kind="show" id="gOl-3a-lT9"/>
                             </connections>
@@ -400,7 +346,6 @@
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="jobsListTableView" destination="kca-gQ-c1T" id="Ayh-dZ-s0q"/>
-                        <outlet property="remoteFiltersCollectionView" destination="nJB-Eu-c5d" id="n9P-Xl-C2T"/>
                         <segue destination="2D5-RS-jaW" kind="show" identifier="segueDetailJob" id="X28-Iw-JuJ"/>
                     </connections>
                 </viewController>
@@ -413,7 +358,7 @@
             <objects>
                 <viewController storyboardIdentifier="detailJob" id="2D5-RS-jaW" customClass="DetailJobViewController" customModule="RemoteOk" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rwe-td-xno">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="477"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="422"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bot-Jp-ucQ">
@@ -425,7 +370,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="PXt-xW-xN6">
                                 <rect key="frame" x="8" y="369" width="304" height="51"/>
                                 <subviews>
-                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NAh-e0-5Va">
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NAh-e0-5Va">
                                         <rect key="frame" x="0.0" y="0.0" width="146" height="51"/>
                                         <color key="backgroundColor" red="1" green="0.2784313725" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Nunito-ExtraBold" family="Nunito" pointSize="18"/>
@@ -442,7 +387,7 @@
                                             <action selector="apply" destination="2D5-RS-jaW" eventType="touchUpInside" id="4Lm-Tw-6Nj"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3v5-Ii-gyF">
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3v5-Ii-gyF">
                                         <rect key="frame" x="158" y="0.0" width="146" height="51"/>
                                         <color key="backgroundColor" red="1" green="0.2784313725" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Nunito-ExtraBold" family="Nunito" pointSize="18"/>
@@ -464,6 +409,7 @@
                                 </constraints>
                             </stackView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="eyR-zo-jTd"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="PXt-xW-xN6" firstAttribute="leading" secondItem="eyR-zo-jTd" secondAttribute="leading" constant="8" id="1Io-0s-hBB"/>
@@ -475,7 +421,6 @@
                             <constraint firstItem="bot-Jp-ucQ" firstAttribute="leading" secondItem="eyR-zo-jTd" secondAttribute="leading" id="nXm-EP-p7h"/>
                             <constraint firstItem="bot-Jp-ucQ" firstAttribute="top" secondItem="eyR-zo-jTd" secondAttribute="top" id="rPe-F5-Iwb"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="eyR-zo-jTd"/>
                     </view>
                     <navigationItem key="navigationItem" id="vmX-ak-QbH">
                         <barButtonItem key="backBarButtonItem" title="  " id="Wpq-FV-HDb"/>
@@ -505,14 +450,14 @@
                             <tableViewSection id="PeQ-Xi-h7D">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="yiP-uE-m2L">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="50" width="320" height="47.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yiP-uE-m2L" id="LVC-my-teb">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="47.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z8S-vL-zhy">
-                                                    <rect key="frame" x="16" y="10" width="288" height="24"/>
+                                                    <rect key="frame" x="16" y="10" width="288" height="27.5"/>
                                                     <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -527,7 +472,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="108" id="ede-bN-5u3">
-                                        <rect key="frame" x="0.0" y="72" width="320" height="108"/>
+                                        <rect key="frame" x="0.0" y="97.5" width="320" height="108"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ede-bN-5u3" id="Fb5-Tn-06Z">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="108"/>
@@ -570,7 +515,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="384" id="hPv-jJ-0XZ">
-                                        <rect key="frame" x="0.0" y="180" width="320" height="384"/>
+                                        <rect key="frame" x="0.0" y="205.5" width="320" height="384"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hPv-jJ-0XZ" id="Pf9-hY-R4W">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="384"/>
@@ -606,7 +551,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="108" id="eG5-cc-W8D">
-                                        <rect key="frame" x="0.0" y="564" width="320" height="108"/>
+                                        <rect key="frame" x="0.0" y="589.5" width="320" height="108"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eG5-cc-W8D" id="nTM-iO-DN0">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="108"/>
@@ -640,12 +585,12 @@
             <objects>
                 <tableViewController id="Vdx-9A-Lyd" customClass="FilterJobsByTagsView" customModule="RemoteOk" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Hvd-Ch-67p">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.14509803921568629" green="0.14509803921568629" blue="0.14509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="checkmark" indentationWidth="10" reuseIdentifier="tagsCell" id="ImN-Zd-skc" customClass="TagViewCell" customModule="RemoteOk" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="320" height="43.5"/>
+                                <rect key="frame" x="0.0" y="50" width="320" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ImN-Zd-skc" id="CAy-Ag-1Su">
                                     <rect key="frame" x="0.0" y="0.0" width="280" height="43.5"/>
@@ -695,52 +640,27 @@
             </objects>
             <point key="canvasLocation" x="3860" y="-1745.3201970443351"/>
         </scene>
-        <!--Remote-->
-        <scene sceneID="fUt-ez-V7c">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wXo-E5-L4F" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Remote" id="L4j-hL-8t1"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" largeTitles="YES" id="4Ey-xb-70Y">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="91"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" cocoaTouchSystemColor="darkTextColor"/>
-                        <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="Nunito-ExtraBold" family="Nunito" pointSize="20"/>
-                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </textAttributes>
-                        <textAttributes key="largeTitleTextAttributes">
-                            <fontDescription key="fontDescription" name="Nunito-ExtraBold" family="Nunito" pointSize="28"/>
-                            <color key="textColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
-                            <color key="textShadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="51X-H4-jBG" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-163.125" y="-781.69014084507046"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="GQz-SV-flS">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JJJ-SS-xmt" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" systemItem="search" id="f26-f3-9Nk"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" largeTitles="YES" id="2Wd-80-nyx">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="91"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="2Wd-80-nyx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="97"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <color key="tintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" systemColor="systemBackgroundColor"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="20"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <color key="textShadowColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textShadowColor" systemColor="labelColor"/>
                         </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
                             <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="30"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <color key="textShadowColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" systemColor="labelColor"/>
+                            <color key="textShadowColor" systemColor="labelColor"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -750,7 +670,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y9p-PI-5B4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="832.5" y="-1469.3661971830986"/>
+            <point key="canvasLocation" x="28" y="-1449"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="uoC-tq-OVj">
@@ -758,20 +678,20 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="axu-7N-vio" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" systemItem="favorites" id="2Sv-oA-NTW"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" largeTitles="YES" id="a5i-QV-fNj">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="a5i-QV-fNj">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="91"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" systemColor="systemBackgroundColor"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="25"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <color key="textShadowColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" systemColor="labelColor"/>
+                            <color key="textShadowColor" systemColor="labelColor"/>
                         </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
                             <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="30"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <color key="textShadowColor" red="0.91764705879999997" green="0.91764705879999997" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" systemColor="labelColor"/>
+                            <color key="textShadowColor" systemColor="labelColor"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -792,16 +712,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="99.5"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" red="0.14509803921568629" green="0.14509803921568629" blue="0.14509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" systemColor="systemBackgroundColor"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="20"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <color key="textShadowColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" systemColor="labelColor"/>
+                            <color key="textShadowColor" systemColor="labelColor"/>
                         </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
                             <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="39"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <color key="textShadowColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" systemColor="labelColor"/>
+                            <color key="textShadowColor" systemColor="labelColor"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -814,11 +734,16 @@
             <point key="canvasLocation" x="2917.5999999999999" y="-1745.3201970443351"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="bg" width="1280" height="800"/>
-        <image name="remote-jobs" width="256" height="256"/>
-    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="X28-Iw-JuJ"/>
     </inferredMetricsTieBreakers>
+    <resources>
+        <image name="bg" width="1280" height="800"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

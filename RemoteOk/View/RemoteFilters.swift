@@ -15,7 +15,7 @@ struct RemoteFilter {
 
 class RemoteFilters: UICollectionViewController {
     var arrayOfFilters = [RemoteFilter]()
-    var jobsViewModel = JobOportunityViewModel()
+//    var jobsViewModel = JobOportunityViewModel()
     var jobDataViewModel = JobsDataViewModel()
 
     override func viewDidLoad() {

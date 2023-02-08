@@ -14,28 +14,31 @@ class JobViewCell: UITableViewCell {
     @IBOutlet var companyNameLabel: UILabel!
     @IBOutlet var fakeCompanyLogoLabel: UILabel!
     @IBOutlet var postOriginLabel: UILabel!
-
-    func configCell(jobViewModel: JobOportunityViewModel) {
-        companyNameLabel.text = jobViewModel.getJob().company ?? "None"
-        positionLabel.text = jobViewModel.getJob().position ?? "None"
-        logoImageView.sd_addActivityIndicator()
-        logoImageView.sd_setShowActivityIndicatorView(true)
-        if let epoch = jobViewModel.getJob().epoch {
-            postOriginLabel.text = epoch
-        }
-        if let imageUrl = jobViewModel.getJob().logo {
-            logoImageView.sd_setImage(with: URL(string: imageUrl)) { image, _, _, _ in
-                if image == nil {
-                    self.fakeCompanyLogoLabel.isHidden = false
-                    if let fakeLogo = jobViewModel.getJob().company?.first {
-                        self.fakeCompanyLogoLabel.text = String(fakeLogo).uppercased()
-                    } else {
-                        self.fakeCompanyLogoLabel.text = "🏢".uppercased()
-                    }
+    
+    func configCell(job: JobOportunity) {
+        companyNameLabel.text = job.companyName
+        positionLabel.text = job.jobTitle
+        logoImageView.kf.setImage(with: URL(string: job.companyLogoURL)) { [weak self] result in
+            switch result {
+            case .success(let image):
+                self?.logoImageView.image = image.image
+                self?.fakeCompanyLogoLabel.isHidden = true
+            case .failure:
+                self?.fakeCompanyLogoLabel.isHidden = false
+                if let fakeLogo = job.companyName.first {
+                    self?.fakeCompanyLogoLabel.text = String(fakeLogo).uppercased()
                 } else {
-                    self.fakeCompanyLogoLabel.isHidden = true
+                    self?.fakeCompanyLogoLabel.text = "🏢".uppercased()
                 }
             }
         }
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        logoImageView.image = nil
+        companyNameLabel.text = nil
+        fakeCompanyLogoLabel.text = nil
+        positionLabel.text = nil
     }
 }

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import SDWebImage
+import Kingfisher
 import WebKit
 
 protocol DetailJobDelegate: class {
@@ -53,7 +53,7 @@ class DetailJobTableViewController: UITableViewController {
     func configureJobDetail(position: String, desc: String, logo: String?, company: String) {
         jobNameLabel.text = position
         if let imageUrl = logo {
-            companyLogoImageView.sd_setImage(with: URL(string: imageUrl)) { (image, error, cache, url) in
+            companyLogoImageView.kf.setImage(with: URL(string: imageUrl)) { (image, error) in
                 if image == nil {
                     self.fakeCompanyLogoLabel.isHidden = false
                     if let fakeLogo = company.first {
