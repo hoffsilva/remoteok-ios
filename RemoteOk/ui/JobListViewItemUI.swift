@@ -36,7 +36,7 @@ struct JobListViewItemUI: View {
                 .clipShape(Circle())
                 .padding(8)
                 VStack(alignment: .center, spacing: 2) {
-                    HStack(alignment: .center) {
+                    VStack(alignment: .center) {
                         Text(job.companyName)
                             .font(.system(.body))
                             .bold()
