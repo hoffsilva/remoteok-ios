@@ -8,9 +8,11 @@
 
 import Foundation
 
+
 final class JobOppotunityViewModelAdapter: ObservableObject {
     
     @Published var arrayOfJobs = [JobOportunity]()
+    @Published var viewDidLoad: Bool = false
     
     private var jobOpportunityViewModel: JobOportunityViewModel
     

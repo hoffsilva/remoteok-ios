@@ -9,7 +9,7 @@
 import Foundation
 
 protocol GetAllJobsUseCase {
-    var didGetJobs: (([JobOportunity]) -> Void)? { get set }
+    var didGetJobs: ((DataJob) -> Void)? { get set }
     var didGetError: ((Error) -> Void)? { get set }
     func getJobsOf(page: Int)
 }

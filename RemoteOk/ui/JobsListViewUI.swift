@@ -21,34 +21,37 @@ struct JobsListViewUI: View {
     @State private var scrollToTop: (()->Void)?
     
     var body: some View {
-        NavigationView {
-            ScrollViewReader { value in
-                ScrollView {
-                    LazyVStack {
-                        ForEach(jobsViewModel.arrayOfJobs) { job in
-                            JobListViewItemUI(job: job)
-                        }
+        
+        ScrollView {
+            LazyVStack {
+                ForEach(jobsViewModel.arrayOfJobs) { job in
+                    NavigationLink {
+                        JobDetailView()
+                    } label: {
+                        JobListViewItemUI(job: job)
+                            .onAppear {
+                                let index = jobsViewModel.arrayOfJobs.firstIndex(of: job)
+                                if index == jobsViewModel.arrayOfJobs.count - 2 {
+                                    jobsViewModel.getOpportunities()
+                                }
+                            }
                     }
-                }
-                .toolbar(content: {
-                    ToolbarItemGroup(placement: .navigationBarTrailing) {
-                        Button {
-                            value.scrollTo(0)
-                        } label: {
-                            Image(systemName: "arrow.up.doc")
-                        }
-
-                    }
-                })
-                .searchable(text: $searchTerm, prompt: Text("Search job by name..."))
-                .onSubmit(of: .search, {
-                    self.jobsViewModel.getFilteredOpportunities(by: searchTerm)
-                })
-                .navigationTitle("Abroad Jobs")
-                .onAppear {
-                    self.jobsViewModel.getOpportunities()
                 }
             }
         }
+        .searchable(text: $searchTerm, prompt: Text("Search job by name..."))
+        .onSubmit(of: .search, {
+            self.jobsViewModel.getFilteredOpportunities(by: searchTerm)
+        })
+        .navigationTitle("Abroad Jobs")
+        .onAppear {
+            if !jobsViewModel.viewDidLoad {
+                self.jobsViewModel.getOpportunities()
+                jobsViewModel.viewDidLoad = true
+            }
+        }
+        
     }
+    
 }
+

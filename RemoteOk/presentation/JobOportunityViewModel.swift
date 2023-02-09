@@ -28,6 +28,7 @@ class JobOportunityViewModelImpl: JobOportunityViewModel {
     var getAllJobsUseCase: GetAllJobsUseCase
     var getFilteredJobsUseCase: GetFilteredJobsUseCase
     var currentPage = 1
+    var numberOfPages = 1
     
     init(getAllJobsUseCase: GetAllJobsUseCase, getFilteredJobsUseCase: GetFilteredJobsUseCase) {
         self.getAllJobsUseCase = getAllJobsUseCase
@@ -36,7 +37,9 @@ class JobOportunityViewModelImpl: JobOportunityViewModel {
     }
 
     func getOpportunities() {
-        getAllJobsUseCase.getJobsOf(page: currentPage)
+        if currentPage <= numberOfPages {
+            getAllJobsUseCase.getJobsOf(page: currentPage)
+        }
     }
     
     func getFilteredOpportunities(by query: String) {
@@ -45,8 +48,13 @@ class JobOportunityViewModelImpl: JobOportunityViewModel {
     
     func setupBindings() {
         
-        getAllJobsUseCase.didGetJobs = { [weak self] jobs in
-            self?.arrayOfOpportunity = jobs
+        getAllJobsUseCase.didGetJobs = { [weak self] dataJob in
+            if self?.arrayOfOpportunity == nil {
+                self?.arrayOfOpportunity = dataJob.jobs
+            } else {
+                self?.arrayOfOpportunity! += dataJob.jobs
+            }
+            self?.numberOfPages = dataJob.numberOfPages
             self?.didLoadJobs?()
         }
         
