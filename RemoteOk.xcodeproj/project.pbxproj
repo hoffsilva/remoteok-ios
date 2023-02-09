@@ -26,7 +26,6 @@
 		0BF708FD2991CEC700A9E015 /* GetAllJobsUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF708FC2991CEC700A9E015 /* GetAllJobsUseCaseImpl.swift */; };
 		0BF708FF2991D33200A9E015 /* DataJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF708FE2991D33200A9E015 /* DataJob.swift */; };
 		430E6D32206C4FFA0093EA8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430E6D31206C4FFA0093EA8B /* AppDelegate.swift */; };
-		430E6D37206C4FFA0093EA8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 430E6D35206C4FFA0093EA8B /* Main.storyboard */; };
 		430E6D3F206C4FFA0093EA8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 430E6D3D206C4FFA0093EA8B /* LaunchScreen.storyboard */; };
 		430E6D4F206C65A90093EA8B /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430E6D4E206C65A90093EA8B /* Connection.swift */; };
 		430E6D51206C736F0093EA8B /* JobOportunity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430E6D50206C736F0093EA8B /* JobOportunity.swift */; };
@@ -81,7 +80,6 @@
 		0BF708FE2991D33200A9E015 /* DataJob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataJob.swift; sourceTree = "<group>"; };
 		430E6D2E206C4FFA0093EA8B /* RemoteOk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemoteOk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		430E6D31206C4FFA0093EA8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		430E6D36206C4FFA0093EA8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		430E6D3E206C4FFA0093EA8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		430E6D40206C4FFA0093EA8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		430E6D4E206C65A90093EA8B /* Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
@@ -261,7 +259,6 @@
 				430E6D48206C5E3F0093EA8B /* presentation */,
 				430E6D46206C5E250093EA8B /* Model */,
 				430E6D31206C4FFA0093EA8B /* AppDelegate.swift */,
-				430E6D35206C4FFA0093EA8B /* Main.storyboard */,
 				430E6D3D206C4FFA0093EA8B /* LaunchScreen.storyboard */,
 				430E6D40206C4FFA0093EA8B /* Info.plist */,
 				43A9B25C206EED76003EB208 /* Assets.xcassets */,
@@ -411,7 +408,6 @@
 				4399FE43207306730099E529 /* Pacifico.ttf in Resources */,
 				4399FE5F20730B1D0099E529 /* Nunito-SemiBold.ttf in Resources */,
 				4399FE5A20730B1D0099E529 /* Nunito-ExtraBold.ttf in Resources */,
-				430E6D37206C4FFA0093EA8B /* Main.storyboard in Resources */,
 				4399FE5820730B1D0099E529 /* Nunito-LightItalic.ttf in Resources */,
 				4399FE5420730B1D0099E529 /* Nunito-ExtraBoldItalic.ttf in Resources */,
 				4399FE5D20730B1D0099E529 /* Nunito-BlackItalic.ttf in Resources */,
@@ -456,14 +452,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		430E6D35206C4FFA0093EA8B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				430E6D36206C4FFA0093EA8B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		430E6D3D206C4FFA0093EA8B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
