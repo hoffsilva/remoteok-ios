@@ -8,28 +8,26 @@
 
 import Foundation
 import SwiftUI
+import Combine
 
 protocol JobOportunityViewModel {
     
     var didLoadJobs: (() -> Void)? { get set }
     var didLoadJobsWithError: ((String) -> Void)? { get set }
-    var arrayOfOpportunity: [JobOportunity] { get set }
+    var arrayOfOpportunity: [JobOportunity]? { get set }
     
     func getOpportunities()
     func getFilteredOpportunities(by query: String)
 }
 
-class JobOportunityViewModelImpl: JobOportunityViewModel, ObservableObject {
+class JobOportunityViewModelImpl: JobOportunityViewModel {
     
-    @Published var arrayOfOpportunity = [JobOportunity]()
-    
+    var arrayOfOpportunity: [JobOportunity]?
     var didLoadJobs: (() -> Void)?
     var didLoadJobsWithError: ((String) -> Void)?
     var getAllJobsUseCase: GetAllJobsUseCase
     var getFilteredJobsUseCase: GetFilteredJobsUseCase
     var currentPage = 1
-
-    var managedContext = CoreDataStack().persistentContainer.viewContext
     
     init(getAllJobsUseCase: GetAllJobsUseCase, getFilteredJobsUseCase: GetFilteredJobsUseCase) {
         self.getAllJobsUseCase = getAllJobsUseCase
@@ -42,10 +40,10 @@ class JobOportunityViewModelImpl: JobOportunityViewModel, ObservableObject {
     }
     
     func getFilteredOpportunities(by query: String) {
-        
+        getFilteredJobsUseCase.searchJobsBy(query: query)
     }
     
-    private func setupBindings() {
+    func setupBindings() {
         
         getAllJobsUseCase.didGetJobs = { [weak self] jobs in
             self?.arrayOfOpportunity = jobs
@@ -53,6 +51,15 @@ class JobOportunityViewModelImpl: JobOportunityViewModel, ObservableObject {
         }
         
         getAllJobsUseCase.didGetError = { [weak self] error in
+            self?.didLoadJobsWithError?(error.localizedDescription)
+        }
+        
+        getFilteredJobsUseCase.didGetJobs = { [weak self] jobs in
+            self?.arrayOfOpportunity = jobs
+            self?.didLoadJobs?()
+        }
+        
+        getFilteredJobsUseCase.didGetError = { [weak self] error in
             self?.didLoadJobsWithError?(error.localizedDescription)
         }
         

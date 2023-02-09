@@ -10,88 +10,45 @@ import SwiftUI
 import Moya
 
 struct JobsListViewUI: View {
-    @ObservedObject var jobsViewModel = JobOportunityViewModelImpl(
-        getAllJobsUseCase: GetAllJobsUseCaseImpl(
-            repository: JobsRespositoryImpl(
-                datasource: JobsNetworkDatasourceImpl(
-                    provider: MoyaProvider<JobsProvider>()))),
-        getFilteredJobsUseCase: GetFilteredJobsUseCaseImpl()
-    )
     
-    var body: some View {
-        ScrollView {
-            LazyVStack {
-                ForEach(jobsViewModel.arrayOfOpportunity) { job in
-                    JobListViewItemUI(job: job)
-                }
-            }
-        }
-        .navigationTitle("Abroad Jobs")
-        .onAppear {
-            self.jobsViewModel.getOpportunities()
-        }
-    }
-}
-
-struct JobListViewItemUI: View {
-    private var job: JobOportunity
+    @ObservedObject var jobsViewModel: JobOppotunityViewModelAdapter
     
-    init(job: JobOportunity) {
-        self.job = job
+    init(jobsViewModel: JobOppotunityViewModelAdapter) {
+        self.jobsViewModel = jobsViewModel
     }
     
+    @State private var searchTerm: String = ""
+    @State private var scrollToTop: (()->Void)?
+    
     var body: some View {
-        VStack {
-            HStack(alignment: .top) {
-                AsyncImage(
-                    url: URL(string: job.companyLogoURL),
-                    content: { image in
-                        image
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 80, height: 80)
-                    },
-                    placeholder: {
-                        Image("no-photo")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 80, height: 80)
+        NavigationView {
+            ScrollViewReader { value in
+                ScrollView {
+                    LazyVStack {
+                        ForEach(jobsViewModel.arrayOfJobs) { job in
+                            JobListViewItemUI(job: job)
+                        }
                     }
-                )
-                .clipShape(Circle())
-                VStack(alignment: .leading, spacing: 2) {
-                    Text(job.companyName)
-                        .font(.system(.body))
-                        .bold()
-                    Text(job.jobTitle)
-                        .font(.system(.title3))
-                        .bold()
-                }.padding(.top, 10)
-                Spacer()
-                HStack(alignment: .bottom) {
-                    AsyncImage(
-                        url: URL(string: job.sourceLogoURL),
-                        content: { image in
-                            image
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: 40, height: 40)
-                        },
-                        placeholder: { }
-                    )
-                    .clipShape(Circle())
-                    .frame(width: 40, height: 40)
+                }
+                .toolbar(content: {
+                    ToolbarItemGroup(placement: .navigationBarTrailing) {
+                        Button {
+                            value.scrollTo(0)
+                        } label: {
+                            Image(systemName: "arrow.up.doc")
+                        }
+
+                    }
+                })
+                .searchable(text: $searchTerm, prompt: Text("Search job by name..."))
+                .onSubmit(of: .search, {
+                    self.jobsViewModel.getFilteredOpportunities(by: searchTerm)
+                })
+                .navigationTitle("Abroad Jobs")
+                .onAppear {
+                    self.jobsViewModel.getOpportunities()
                 }
             }
-            .padding([.leading, .trailing], 10)
-            .padding([.top, .bottom], 5)
-            Divider()
         }
-    }
-}
-
-struct JobsListView_Previews: PreviewProvider {
-    static var previews: some View {
-        JobsListViewUI()
     }
 }

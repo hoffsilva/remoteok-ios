@@ -8,6 +8,7 @@
 
 import Foundation
 import Moya
+import Alamofire
 
 enum JobsProvider {
     case getJobsOf(page:Int)
@@ -23,8 +24,8 @@ extension JobsProvider: TargetType {
         switch self {
         case .getJobsOf(let page):
             return String(format: Constants.jobsPath, "\(page)")
-        case .searchJobsBy(let query, let page):
-            return String(format: Constants.filteredJobsPath, query, "\(page)")
+        case .searchJobsBy:
+            return Constants.filteredJobsPath
         }
     }
     
@@ -33,10 +34,42 @@ extension JobsProvider: TargetType {
     }
     
     var task: Moya.Task {
-        .requestPlain
+        switch self {
+        case .searchJobsBy(let query, let page):
+            return .requestParameters(parameters: ["query":query, "page":"\(page)"], encoding: QUERYEncoding.default)
+        case .getJobsOf(let page):
+            return .requestPlain
+        }
+        
     }
     
     var headers: [String : String]? {
         nil
+    }
+    
+}
+
+struct QUERYEncoding: ParameterEncoding {
+    static let `default` = QUERYEncoding()
+
+    func encode(_ urlRequest: URLRequestConvertible, with parameters: Parameters?) throws -> URLRequest {
+        var request = try urlRequest.asURLRequest()
+        
+        guard let parameters = parameters as? [String:String] else { return request }
+        
+        let queryItems = parameters.map { (key: String, value: String) in
+            URLQueryItem(name: key, value: value)
+        }
+
+        var urlComponents = URLComponents()
+        urlComponents.queryItems = queryItems
+        
+        guard let domainURL = request.url?.absoluteString else { return request }
+        
+        guard let componentsURL = urlComponents.url?.absoluteString else { return request }
+        
+        request.url = URL(string: domainURL + componentsURL)
+
+        return request
     }
 }

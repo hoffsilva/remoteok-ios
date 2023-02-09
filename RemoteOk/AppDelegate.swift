@@ -15,9 +15,7 @@ struct AppyApp: App {
     
     var body: some Scene {
         WindowGroup {
-            NavigationView {
-                JobsListViewUI()
-            }
+            JobsListViewUI(jobsViewModel: Container.makeJobsViewModel())
         }
     }
 }
