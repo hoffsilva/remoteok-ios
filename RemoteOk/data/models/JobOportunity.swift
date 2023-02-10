@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct JobOportunity: Codable {
+struct JobOportunity: Codable, Identifiable, Hashable {
+    let id = UUID()
     let applyURL: String
     let companyLogoURL: String
     let companyName: String

@@ -11,7 +11,7 @@ import Foundation
 class GetAllJobsUseCaseImpl: GetAllJobsUseCase {
     
     let repository: JobsRepository
-    var didGetJobs: (([JobOportunity]) -> Void)?
+    var didGetJobs: ((DataJob) -> Void)?
     var didGetError: ((Error) -> Void)?
     
     init(repository: JobsRepository) {
@@ -21,8 +21,8 @@ class GetAllJobsUseCaseImpl: GetAllJobsUseCase {
     func getJobsOf(page: Int) {
         repository.getJobsOf(page: page) { [weak self] result in
             switch result {
-            case .success(let dataOpportunity):
-                self?.didGetJobs?(dataOpportunity.jobs)
+            case .success(let dataJob):
+                self?.didGetJobs?(dataJob)
             case .failure(let error):
                 self?.didGetError?(error)
             }

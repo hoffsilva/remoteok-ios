@@ -13,7 +13,7 @@ enum Constants {
     static let baseURL = "https://abroad-jobs.us-3.evennode.com/"
     
     static let jobsPath = "jobs/page=%@"
-    static let filteredJobsPath = "filteredJobs?query=%@&page=%@"
+    static let filteredJobsPath = "filteredJobs"
     static let urlOfReachabilityTest = "www.google.com"
     
     //Fetch request templates

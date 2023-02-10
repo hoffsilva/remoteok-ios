@@ -18,36 +18,42 @@ final class JobsNetworkDatasourceImpl: JobsNetworkDatasource {
     
     func getJobsOf(page: Int, completion: @escaping ((Result<DataJob, Error>) -> Void)) {
         provider.request(.getJobsOf(page: page)) { result in
-            switch result {
-            case .success(let response):
-                if response.statusCode == 200 {
-                    do {
-                        let dataJob = try JSONDecoder().decode(DataJob.self, from: response.data)
-                        completion(.success(dataJob))
-                    } catch let error {
-                        completion(.failure(JobsNetworkDatasourceError.parseError(error.localizedDescription)))
-                    }
-                } else {
-                    completion(
-                        .failure(
-                            JobsNetworkDatasourceError
-                                .serverError("")
-                        )
-                    )
-                }
-            case .failure(let moyaError):
-                completion(
-                    .failure(
-                        JobsNetworkDatasourceError
-                            .requestError(moyaError.localizedDescription)
-                    )
-                )
-            }
+            self.parse(result: result, completion: completion)
         }
     }
     
     func searchJobsBy(query: String, completion: @escaping ((Result<DataJob, Error>) -> Void)) {
-//        provider.
+        provider.request(.searchJobsBy(query: query, page: 1)) { result in
+            self.parse(result: result, completion: completion)
+        }
+    }
+    
+    private func parse(result: Result<Moya.Response, MoyaError>, completion: @escaping ((Result<DataJob, Error>) -> Void)) {
+        switch result {
+        case .success(let response):
+            if response.statusCode == 200 {
+                do {
+                    let dataJob = try JSONDecoder().decode(DataJob.self, from: response.data)
+                    completion(.success(dataJob))
+                } catch let error {
+                    completion(.failure(JobsNetworkDatasourceError.parseError(error.localizedDescription)))
+                }
+            } else {
+                completion(
+                    .failure(
+                        JobsNetworkDatasourceError
+                            .serverError("")
+                    )
+                )
+            }
+        case .failure(let moyaError):
+            completion(
+                .failure(
+                    JobsNetworkDatasourceError
+                        .requestError(moyaError.localizedDescription)
+                )
+            )
+        }
     }
     
     enum JobsNetworkDatasourceError: Error {
