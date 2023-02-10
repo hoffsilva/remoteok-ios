@@ -26,7 +26,7 @@ struct JobsListViewUI: View {
             LazyVStack {
                 ForEach(jobsViewModel.arrayOfJobs) { job in
                     NavigationLink {
-                        JobDetailView()
+                        JobDetailView(job: job)
                     } label: {
                         JobListViewItemUI(job: job)
                             .onAppear {
