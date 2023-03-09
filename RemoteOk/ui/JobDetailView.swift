@@ -46,7 +46,7 @@ struct JobDetailView: View {
                             content: { image in
                                 image
                                     .resizable()
-                                    .aspectRatio(contentMode: .fill)
+                                    .aspectRatio(contentMode: .fit)
                                     .frame(width: 120, height: 120)
                             },
                             placeholder: {

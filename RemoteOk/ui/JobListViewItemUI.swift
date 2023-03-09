@@ -52,12 +52,16 @@ struct JobListViewItemUI: View {
                         image
                             .resizable()
                             .aspectRatio(contentMode: .fit)
-                            .frame(width: 100, height: 50)
+                            .frame(width: 80, height: 80)
                     },
-                    placeholder: { }
+                    placeholder: {
+                        Image("no-photo")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 80, height: 80)
+                    }
                 )
                 .clipShape(Circle())
-                .frame(width: 40, height: 40)
                 .padding(8)
             }
             .tint(.primary)

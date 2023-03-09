@@ -10,7 +10,7 @@ import Foundation
 
 enum Constants {
     
-    static let baseURL = "https://abroad-jobs.us-3.evennode.com/"
+    static let baseURL = "https://abroad-jobs-api.azurewebsites.net/"
     
     static let jobsPath = "jobs/page=%@"
     static let filteredJobsPath = "filteredJobs"
