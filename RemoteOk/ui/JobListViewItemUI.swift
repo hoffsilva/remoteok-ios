@@ -45,6 +45,7 @@ struct JobListViewItemUI: View {
                             .bold()
                     }
                 }.padding(10)
+                    .frame(maxWidth: .infinity, alignment: .center)
                 Spacer()
                 AsyncImage(
                     url: URL(string: job.sourceLogoURL),
