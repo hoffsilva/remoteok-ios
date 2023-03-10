@@ -19,35 +19,38 @@ struct JobsListViewUI: View {
     
     @State private var searchTerm: String = ""
     @State private var scrollToTop: (()->Void)?
+    @State private var isLoading = true
     
     var body: some View {
         
-        ScrollView {
-            LazyVStack {
-                ForEach(jobsViewModel.arrayOfJobs) { job in
-                    NavigationLink {
-                        JobDetailView(job: job)
-                    } label: {
-                        JobListViewItemUI(job: job)
-                            .onAppear {
-                                let index = jobsViewModel.arrayOfJobs.firstIndex(of: job)
-                                if index == jobsViewModel.arrayOfJobs.count - 2 {
-                                    jobsViewModel.getOpportunities()
+        LoadingView(isShowing: .constant(jobsViewModel.isLoading)) {
+            ScrollView {
+                LazyVStack {
+                    ForEach(jobsViewModel.arrayOfJobs) { job in
+                        NavigationLink {
+                            JobDetailView(job: job)
+                        } label: {
+                            JobListViewItemUI(job: job)
+                                .onAppear {
+                                    let index = jobsViewModel.arrayOfJobs.firstIndex(of: job)
+                                    if index == jobsViewModel.arrayOfJobs.count - 2 {
+                                        jobsViewModel.getOpportunities()
+                                    }
                                 }
-                            }
+                        }
                     }
                 }
             }
-        }
-        .searchable(text: $searchTerm, prompt: Text("Search job by name..."))
-        .onSubmit(of: .search, {
-            self.jobsViewModel.getFilteredOpportunities(by: searchTerm)
-        })
-        .navigationTitle("Abroad Jobs")
-        .onAppear {
-            if !jobsViewModel.viewDidLoad {
-                self.jobsViewModel.getOpportunities()
-                jobsViewModel.viewDidLoad = true
+            .searchable(text: $searchTerm, prompt: Text("Search job by name..."))
+            .onSubmit(of: .search, {
+                self.jobsViewModel.getFilteredOpportunities(by: searchTerm)
+            })
+            .navigationTitle("Abroad Jobs")
+            .onAppear {
+                if !jobsViewModel.viewDidLoad {
+                    self.jobsViewModel.getOpportunities()
+                    jobsViewModel.viewDidLoad = true
+                }
             }
         }
         
