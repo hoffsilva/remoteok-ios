@@ -18,6 +18,8 @@
 		0B90CE872994665000813ADF /* JobOppotunityViewModelAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B90CE862994665000813ADF /* JobOppotunityViewModelAdapter.swift */; };
 		0B90CE8929949B9600813ADF /* JobDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B90CE8829949B9600813ADF /* JobDetailView.swift */; };
 		0B94228C299322F7008272DE /* JobsListViewUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B94228B299322F7008272DE /* JobsListViewUI.swift */; };
+		0BD6189829BACAE800BFBE37 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD6189729BACAE800BFBE37 /* ActivityIndicator.swift */; };
+		0BD6189A29BACB1100BFBE37 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD6189929BACB1100BFBE37 /* LoadingView.swift */; };
 		0BF708802990B5A100A9E015 /* JobsNetworkDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF7087F2990B5A100A9E015 /* JobsNetworkDatasource.swift */; };
 		0BF708852990B80E00A9E015 /* GetAllJobsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF708842990B80E00A9E015 /* GetAllJobsUseCase.swift */; };
 		0BF708892990B8CC00A9E015 /* JobsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF708882990B8CC00A9E015 /* JobsRepository.swift */; };
@@ -69,6 +71,8 @@
 		0B90CE862994665000813ADF /* JobOppotunityViewModelAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobOppotunityViewModelAdapter.swift; sourceTree = "<group>"; };
 		0B90CE8829949B9600813ADF /* JobDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailView.swift; sourceTree = "<group>"; };
 		0B94228B299322F7008272DE /* JobsListViewUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsListViewUI.swift; sourceTree = "<group>"; };
+		0BD6189729BACAE800BFBE37 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		0BD6189929BACB1100BFBE37 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		0BF7087F2990B5A100A9E015 /* JobsNetworkDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsNetworkDatasource.swift; sourceTree = "<group>"; };
 		0BF708842990B80E00A9E015 /* GetAllJobsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllJobsUseCase.swift; sourceTree = "<group>"; };
 		0BF708882990B8CC00A9E015 /* JobsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsRepository.swift; sourceTree = "<group>"; };
@@ -137,11 +141,21 @@
 		0B94228A299322D0008272DE /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				0BD6189629BACACB00BFBE37 /* activityIndicator */,
 				0B94228B299322F7008272DE /* JobsListViewUI.swift */,
 				0B90CE8229943E9400813ADF /* JobListViewItemUI.swift */,
 				0B90CE8829949B9600813ADF /* JobDetailView.swift */,
 			);
 			path = ui;
+			sourceTree = "<group>";
+		};
+		0BD6189629BACACB00BFBE37 /* activityIndicator */ = {
+			isa = PBXGroup;
+			children = (
+				0BD6189729BACAE800BFBE37 /* ActivityIndicator.swift */,
+				0BD6189929BACB1100BFBE37 /* LoadingView.swift */,
+			);
+			path = activityIndicator;
 			sourceTree = "<group>";
 		};
 		0BF7087D2990B54B00A9E015 /* data */ = {
@@ -411,6 +425,7 @@
 				0BF708FF2991D33200A9E015 /* DataJob.swift in Sources */,
 				430E6D51206C736F0093EA8B /* JobOportunity.swift in Sources */,
 				0B90CE872994665000813ADF /* JobOppotunityViewModelAdapter.swift in Sources */,
+				0BD6189829BACAE800BFBE37 /* ActivityIndicator.swift in Sources */,
 				0B7E86C7299319CF0046A686 /* GetFilteredJobsUseCaseImpl.swift in Sources */,
 				C377F8F32216F49D00539691 /* Constants.swift in Sources */,
 				0B765807298A0B940075F103 /* JobsProvider.swift in Sources */,
@@ -424,6 +439,7 @@
 				0BF708892990B8CC00A9E015 /* JobsRepository.swift in Sources */,
 				0BF708FB2991CDBE00A9E015 /* JobsRespositoryImpl.swift in Sources */,
 				0B90CE8929949B9600813ADF /* JobDetailView.swift in Sources */,
+				0BD6189A29BACB1100BFBE37 /* LoadingView.swift in Sources */,
 				0BF708FD2991CEC700A9E015 /* GetAllJobsUseCaseImpl.swift in Sources */,
 				C377F8F52216F6AE00539691 /* Messages.swift in Sources */,
 				CA869449206D68B30099F39D /* JobOportunityViewModel.swift in Sources */,
@@ -569,7 +585,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hoffsilva.RemoteOk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -591,7 +607,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hoffsilva.RemoteOk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

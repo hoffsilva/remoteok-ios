@@ -13,6 +13,7 @@ final class JobOppotunityViewModelAdapter: ObservableObject {
     
     @Published var arrayOfJobs = [JobOportunity]()
     @Published var viewDidLoad: Bool = false
+    @Published var isLoading = true
     
     private var jobOpportunityViewModel: JobOportunityViewModel
     
@@ -24,6 +25,7 @@ final class JobOppotunityViewModelAdapter: ObservableObject {
     private func setupBindings() {
         
         jobOpportunityViewModel.didLoadJobs = {
+            self.isLoading = false
             self.arrayOfJobs = self.jobOpportunityViewModel.arrayOfOpportunity ?? [JobOportunity]()
         }
 

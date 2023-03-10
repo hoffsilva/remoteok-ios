@@ -67,7 +67,6 @@ struct JobDetailView: View {
                         .font(.body)
                         .multilineTextAlignment(.leading)
                         .lineLimit(nil)
-                    
                     HStack(spacing: 20) {
                         ShareLink(item: URL(string: job.applyURL)!, message: Text("https://apps.apple.com/us/app/abroad-jobs/id1373788180"))
                             .font(.title2)
