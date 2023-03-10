@@ -18,8 +18,6 @@ struct JobsListViewUI: View {
     }
     
     @State private var searchTerm: String = ""
-    @State private var scrollToTop: (()->Void)?
-    @State private var isLoading = true
     
     var body: some View {
         
@@ -41,9 +39,13 @@ struct JobsListViewUI: View {
                     }
                 }
             }
+            .refreshable {
+                self.loadingData()
+            }
             .searchable(text: $searchTerm, prompt: Text("Search job by name..."))
             .onSubmit(of: .search, {
-                self.jobsViewModel.getFilteredOpportunities(by: searchTerm)
+                self.jobsViewModel.isLoading = true
+                self.loadingData()
             })
             .navigationTitle("Abroad Jobs")
             .onAppear {
@@ -54,6 +56,10 @@ struct JobsListViewUI: View {
             }
         }
         
+    }
+    
+    private func loadingData() {
+        self.jobsViewModel.getFilteredOpportunities(by: searchTerm)
     }
     
 }
