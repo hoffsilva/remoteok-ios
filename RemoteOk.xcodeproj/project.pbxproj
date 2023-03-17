@@ -61,6 +61,7 @@
 /* Begin PBXFileReference section */
 		0B5700D129C3E547004EE239 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0B5700D629C3E9A8004EE239 /* RemoteOk.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RemoteOk.entitlements; sourceTree = "<group>"; };
+		0B5700D929C3F5B1004EE239 /* notification.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = notification.caf; sourceTree = "<group>"; };
 		0B765806298A0B940075F103 /* JobsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsProvider.swift; sourceTree = "<group>"; };
 		0B76580F298A115D0075F103 /* JobsNetworkDatasourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsNetworkDatasourceImpl.swift; sourceTree = "<group>"; };
 		0B76584A298A19060075F103 /* OportunityFavorite+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OportunityFavorite+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -266,6 +267,7 @@
 				43A9B25C206EED76003EB208 /* Assets.xcassets */,
 				4399FE40207300D20099E529 /* Launch.storyboard */,
 				438C3D922086C4F300D80BB8 /* SwiftNotice.swift */,
+				0B5700D929C3F5B1004EE239 /* notification.caf */,
 				0B5700D129C3E547004EE239 /* GoogleService-Info.plist */,
 			);
 			path = RemoteOk;
