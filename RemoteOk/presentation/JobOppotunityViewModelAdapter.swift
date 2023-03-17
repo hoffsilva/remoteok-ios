@@ -15,9 +15,12 @@ final class JobOppotunityViewModelAdapter: ObservableObject {
     @Published var viewDidLoad: Bool = false
     
     private var jobOpportunityViewModel: JobOportunityViewModel
+    private let pushNotificationManager: PushNotificationManager
     
-    init(jobOpportunityViewModel: JobOportunityViewModel) {
+    init(jobOpportunityViewModel: JobOportunityViewModel,
+         pushNotificationManager: PushNotificationManager) {
         self.jobOpportunityViewModel = jobOpportunityViewModel
+        self.pushNotificationManager = pushNotificationManager
         setupBindings()
     }
     
@@ -27,6 +30,10 @@ final class JobOppotunityViewModelAdapter: ObservableObject {
             self.arrayOfJobs = self.jobOpportunityViewModel.arrayOfOpportunity ?? [JobOportunity]()
         }
 
+    }
+    
+    func requestPushNotificationAuthorization() {
+        pushNotificationManager.requestAuthorization()
     }
     
     func getFilteredOpportunities(by searchTerm: String) {

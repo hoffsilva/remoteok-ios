@@ -9,6 +9,15 @@
 /* Begin PBXBuildFile section */
 		0B5700D229C3E547004EE239 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0B5700D129C3E547004EE239 /* GoogleService-Info.plist */; };
 		0B5700D529C3E5D2004EE239 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 0B5700D429C3E5D2004EE239 /* FirebaseMessaging */; };
+		0B5700DB29C3FD36004EE239 /* PushNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5700DA29C3FD36004EE239 /* PushNotificationManager.swift */; };
+		0B5700DD29C3FE2B004EE239 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5700DC29C3FE2B004EE239 /* PersistenceManager.swift */; };
+		0B5700DF29C4066A004EE239 /* PostFCMTokenUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5700DE29C4066A004EE239 /* PostFCMTokenUseCase.swift */; };
+		0B5700E129C40700004EE239 /* PostFCMTokenUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5700E029C40700004EE239 /* PostFCMTokenUseCaseImpl.swift */; };
+		0B5700E329C40733004EE239 /* FCMTokenRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5700E229C40733004EE239 /* FCMTokenRepository.swift */; };
+		0B5700E529C40781004EE239 /* FCMTokenRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5700E429C40781004EE239 /* FCMTokenRepositoryImpl.swift */; };
+		0B5700E729C407C6004EE239 /* FCMTokenNetworkDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5700E629C407C6004EE239 /* FCMTokenNetworkDatasource.swift */; };
+		0B5700E929C40866004EE239 /* FCMTokenProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5700E829C40866004EE239 /* FCMTokenProvider.swift */; };
+		0B5700EB29C40B95004EE239 /* FCMTokenNetworkDatasourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5700EA29C40B95004EE239 /* FCMTokenNetworkDatasourceImpl.swift */; };
 		0B765807298A0B940075F103 /* JobsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B765806298A0B940075F103 /* JobsProvider.swift */; };
 		0B765810298A115D0075F103 /* JobsNetworkDatasourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B76580F298A115D0075F103 /* JobsNetworkDatasourceImpl.swift */; };
 		0B765813298A13500075F103 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 0B765812298A13500075F103 /* Moya */; };
@@ -62,6 +71,15 @@
 		0B5700D129C3E547004EE239 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0B5700D629C3E9A8004EE239 /* RemoteOk.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RemoteOk.entitlements; sourceTree = "<group>"; };
 		0B5700D929C3F5B1004EE239 /* notification.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = notification.caf; sourceTree = "<group>"; };
+		0B5700DA29C3FD36004EE239 /* PushNotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationManager.swift; sourceTree = "<group>"; };
+		0B5700DC29C3FE2B004EE239 /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
+		0B5700DE29C4066A004EE239 /* PostFCMTokenUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostFCMTokenUseCase.swift; sourceTree = "<group>"; };
+		0B5700E029C40700004EE239 /* PostFCMTokenUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostFCMTokenUseCaseImpl.swift; sourceTree = "<group>"; };
+		0B5700E229C40733004EE239 /* FCMTokenRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCMTokenRepository.swift; sourceTree = "<group>"; };
+		0B5700E429C40781004EE239 /* FCMTokenRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCMTokenRepositoryImpl.swift; sourceTree = "<group>"; };
+		0B5700E629C407C6004EE239 /* FCMTokenNetworkDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCMTokenNetworkDatasource.swift; sourceTree = "<group>"; };
+		0B5700E829C40866004EE239 /* FCMTokenProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCMTokenProvider.swift; sourceTree = "<group>"; };
+		0B5700EA29C40B95004EE239 /* FCMTokenNetworkDatasourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCMTokenNetworkDatasourceImpl.swift; sourceTree = "<group>"; };
 		0B765806298A0B940075F103 /* JobsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsProvider.swift; sourceTree = "<group>"; };
 		0B76580F298A115D0075F103 /* JobsNetworkDatasourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsNetworkDatasourceImpl.swift; sourceTree = "<group>"; };
 		0B76584A298A19060075F103 /* OportunityFavorite+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OportunityFavorite+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -165,6 +183,8 @@
 			children = (
 				0BF7087F2990B5A100A9E015 /* JobsNetworkDatasource.swift */,
 				0B765806298A0B940075F103 /* JobsProvider.swift */,
+				0B5700E829C40866004EE239 /* FCMTokenProvider.swift */,
+				0B5700E629C407C6004EE239 /* FCMTokenNetworkDatasource.swift */,
 			);
 			path = datasources;
 			sourceTree = "<group>";
@@ -194,6 +214,8 @@
 				0BF708F72991BFB300A9E015 /* GetFilteredJobsUseCase.swift */,
 				0BF708FC2991CEC700A9E015 /* GetAllJobsUseCaseImpl.swift */,
 				0B7E86C6299319CF0046A686 /* GetFilteredJobsUseCaseImpl.swift */,
+				0B5700DE29C4066A004EE239 /* PostFCMTokenUseCase.swift */,
+				0B5700E029C40700004EE239 /* PostFCMTokenUseCaseImpl.swift */,
 			);
 			path = usecases;
 			sourceTree = "<group>";
@@ -202,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				0BF708882990B8CC00A9E015 /* JobsRepository.swift */,
+				0B5700E229C40733004EE239 /* FCMTokenRepository.swift */,
 			);
 			path = repositories;
 			sourceTree = "<group>";
@@ -210,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				0B76580F298A115D0075F103 /* JobsNetworkDatasourceImpl.swift */,
+				0B5700EA29C40B95004EE239 /* FCMTokenNetworkDatasourceImpl.swift */,
 			);
 			path = datasources;
 			sourceTree = "<group>";
@@ -218,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				0BF708FA2991CDBE00A9E015 /* JobsRespositoryImpl.swift */,
+				0B5700E429C40781004EE239 /* FCMTokenRepositoryImpl.swift */,
 			);
 			path = repositories;
 			sourceTree = "<group>";
@@ -269,6 +294,8 @@
 				438C3D922086C4F300D80BB8 /* SwiftNotice.swift */,
 				0B5700D929C3F5B1004EE239 /* notification.caf */,
 				0B5700D129C3E547004EE239 /* GoogleService-Info.plist */,
+				0B5700DA29C3FD36004EE239 /* PushNotificationManager.swift */,
+				0B5700DC29C3FE2B004EE239 /* PersistenceManager.swift */,
 			);
 			path = RemoteOk;
 			sourceTree = "<group>";
@@ -420,10 +447,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				0BF708802990B5A100A9E015 /* JobsNetworkDatasource.swift in Sources */,
+				0B5700DD29C3FE2B004EE239 /* PersistenceManager.swift in Sources */,
 				0BF708FF2991D33200A9E015 /* DataJob.swift in Sources */,
 				430E6D51206C736F0093EA8B /* JobOportunity.swift in Sources */,
 				0B90CE872994665000813ADF /* JobOppotunityViewModelAdapter.swift in Sources */,
 				0B7E86C7299319CF0046A686 /* GetFilteredJobsUseCaseImpl.swift in Sources */,
+				0B5700E329C40733004EE239 /* FCMTokenRepository.swift in Sources */,
+				0B5700E129C40700004EE239 /* PostFCMTokenUseCaseImpl.swift in Sources */,
 				C377F8F32216F49D00539691 /* Constants.swift in Sources */,
 				0B765807298A0B940075F103 /* JobsProvider.swift in Sources */,
 				438C3D932086C4F300D80BB8 /* SwiftNotice.swift in Sources */,
@@ -432,16 +462,22 @@
 				430E6D4F206C65A90093EA8B /* Connection.swift in Sources */,
 				0B765810298A115D0075F103 /* JobsNetworkDatasourceImpl.swift in Sources */,
 				0B90CE8529945B1400813ADF /* Container.swift in Sources */,
+				0B5700E729C407C6004EE239 /* FCMTokenNetworkDatasource.swift in Sources */,
 				0B94228C299322F7008272DE /* JobsListViewUI.swift in Sources */,
 				0BF708892990B8CC00A9E015 /* JobsRepository.swift in Sources */,
 				0BF708FB2991CDBE00A9E015 /* JobsRespositoryImpl.swift in Sources */,
 				0B90CE8929949B9600813ADF /* JobDetailView.swift in Sources */,
 				0BF708FD2991CEC700A9E015 /* GetAllJobsUseCaseImpl.swift in Sources */,
+				0B5700DB29C3FD36004EE239 /* PushNotificationManager.swift in Sources */,
 				C377F8F52216F6AE00539691 /* Messages.swift in Sources */,
 				CA869449206D68B30099F39D /* JobOportunityViewModel.swift in Sources */,
 				430E6D32206C4FFA0093EA8B /* AppDelegate.swift in Sources */,
 				0BF708852990B80E00A9E015 /* GetAllJobsUseCase.swift in Sources */,
+				0B5700E529C40781004EE239 /* FCMTokenRepositoryImpl.swift in Sources */,
+				0B5700EB29C40B95004EE239 /* FCMTokenNetworkDatasourceImpl.swift in Sources */,
+				0B5700DF29C4066A004EE239 /* PostFCMTokenUseCase.swift in Sources */,
 				43EE8CDB20759A6F005BBE76 /* RemoteOk.xcdatamodeld in Sources */,
+				0B5700E929C40866004EE239 /* FCMTokenProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
