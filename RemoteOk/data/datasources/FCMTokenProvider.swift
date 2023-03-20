@@ -11,7 +11,7 @@ import Moya
 import Alamofire
 
 enum FCMTokenProvider {
-    case saveFCMToken(token: String)
+    case saveFCMToken(token: Token)
 }
 
 extension FCMTokenProvider: TargetType {
@@ -33,9 +33,8 @@ extension FCMTokenProvider: TargetType {
     var task: Moya.Task {
         switch self {
         case .saveFCMToken(let token):
-            return .requestParameters(parameters: ["fcmtoken":token], encoding: JSONEncoding.default)
+            return .requestParameters(parameters: token.dictionary, encoding: JSONEncoding.default)
         }
-        
     }
     
     var headers: [String : String]? {

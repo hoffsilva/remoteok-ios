@@ -10,5 +10,5 @@ import Foundation
 import Moya
 
 protocol FCMTokenNetworkDatasource {
-    func saveFCMToken(token: String, completion: @escaping ((Result<String, Error>)->Void))
+    func saveFCMToken(token: Token, completion: @escaping ((Result<String, Error>)->Void))
 }

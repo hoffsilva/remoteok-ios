@@ -17,7 +17,7 @@ final class FCMTokenNetworkDatasourceImpl: FCMTokenNetworkDatasource {
         self.provider = provider
     }
     
-    func saveFCMToken(token: String, completion: @escaping ((Result<String, Error>) -> Void)) {
+    func saveFCMToken(token: Token, completion: @escaping ((Result<String, Error>) -> Void)) {
         provider.request(.saveFCMToken(token: token)) { result in
             self.parse(result: result, completion: completion)
         }
