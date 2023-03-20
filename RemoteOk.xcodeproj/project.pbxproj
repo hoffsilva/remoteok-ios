@@ -40,7 +40,6 @@
 		0BF708FF2991D33200A9E015 /* DataJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF708FE2991D33200A9E015 /* DataJob.swift */; };
 		430E6D32206C4FFA0093EA8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430E6D31206C4FFA0093EA8B /* AppDelegate.swift */; };
 		430E6D3F206C4FFA0093EA8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 430E6D3D206C4FFA0093EA8B /* LaunchScreen.storyboard */; };
-		430E6D4F206C65A90093EA8B /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430E6D4E206C65A90093EA8B /* Connection.swift */; };
 		430E6D51206C736F0093EA8B /* JobOportunity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430E6D50206C736F0093EA8B /* JobOportunity.swift */; };
 		438C3D932086C4F300D80BB8 /* SwiftNotice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438C3D922086C4F300D80BB8 /* SwiftNotice.swift */; };
 		4399FE3D2072FF620099E529 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 4399FE3A2072FF620099E529 /* logo.png */; };
@@ -71,10 +70,6 @@
 /* Begin PBXFileReference section */
 		0B765806298A0B940075F103 /* JobsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsProvider.swift; sourceTree = "<group>"; };
 		0B76580F298A115D0075F103 /* JobsNetworkDatasourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsNetworkDatasourceImpl.swift; sourceTree = "<group>"; };
-		0B76584A298A19060075F103 /* OportunityFavorite+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OportunityFavorite+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		0B76584B298A19060075F103 /* Opportunity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Opportunity+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		0B76584C298A19060075F103 /* OportunityFavorite+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OportunityFavorite+CoreDataClass.swift"; sourceTree = "<group>"; };
-		0B76584D298A19060075F103 /* Opportunity+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Opportunity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		0B7E86C6299319CF0046A686 /* GetFilteredJobsUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFilteredJobsUseCaseImpl.swift; sourceTree = "<group>"; };
 		0B90CE8229943E9400813ADF /* JobListViewItemUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListViewItemUI.swift; sourceTree = "<group>"; };
 		0B90CE8429945B1400813ADF /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
@@ -104,7 +99,6 @@
 		430E6D31206C4FFA0093EA8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		430E6D3E206C4FFA0093EA8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		430E6D40206C4FFA0093EA8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		430E6D4E206C65A90093EA8B /* Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
 		430E6D50206C736F0093EA8B /* JobOportunity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobOportunity.swift; sourceTree = "<group>"; };
 		438C3D922086C4F300D80BB8 /* SwiftNotice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftNotice.swift; sourceTree = "<group>"; };
 		4399FE3A2072FF620099E529 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
@@ -147,17 +141,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0B76583D298A18180075F103 /* CoredataClasses */ = {
-			isa = PBXGroup;
-			children = (
-				0B76584C298A19060075F103 /* OportunityFavorite+CoreDataClass.swift */,
-				0B76584A298A19060075F103 /* OportunityFavorite+CoreDataProperties.swift */,
-				0B76584D298A19060075F103 /* Opportunity+CoreDataClass.swift */,
-				0B76584B298A19060075F103 /* Opportunity+CoreDataProperties.swift */,
-			);
-			path = CoredataClasses;
-			sourceTree = "<group>";
-		};
 		0B94228A299322D0008272DE /* ui */ = {
 			isa = PBXGroup;
 			children = (
@@ -290,9 +273,7 @@
 				0BF708832990B76800A9E015 /* domain */,
 				0BF7087D2990B54B00A9E015 /* data */,
 				43096E9E2076EB01003702F0 /* Settings */,
-				0B76583D298A18180075F103 /* CoredataClasses */,
 				4399FE392072FF620099E529 /* media */,
-				430E6D4D206C63BB0093EA8B /* Network */,
 				430E6D48206C5E3F0093EA8B /* presentation */,
 				430E6D31206C4FFA0093EA8B /* AppDelegate.swift */,
 				430E6D3D206C4FFA0093EA8B /* LaunchScreen.storyboard */,
@@ -315,14 +296,6 @@
 				0B90CE862994665000813ADF /* JobOppotunityViewModelAdapter.swift */,
 			);
 			path = presentation;
-			sourceTree = "<group>";
-		};
-		430E6D4D206C63BB0093EA8B /* Network */ = {
-			isa = PBXGroup;
-			children = (
-				430E6D4E206C65A90093EA8B /* Connection.swift */,
-			);
-			path = Network;
 			sourceTree = "<group>";
 		};
 		4399FE392072FF620099E529 /* media */ = {
@@ -469,7 +442,6 @@
 				0BADC76329C8D7B100D57969 /* FCMTokenNetworkDatasourceImpl.swift in Sources */,
 				0BF708F82991BFB300A9E015 /* GetFilteredJobsUseCase.swift in Sources */,
 				0B90CE8329943E9400813ADF /* JobListViewItemUI.swift in Sources */,
-				430E6D4F206C65A90093EA8B /* Connection.swift in Sources */,
 				0B765810298A115D0075F103 /* JobsNetworkDatasourceImpl.swift in Sources */,
 				0B90CE8529945B1400813ADF /* Container.swift in Sources */,
 				0BADC76B29C8D89000D57969 /* PushNotificationManager.swift in Sources */,
