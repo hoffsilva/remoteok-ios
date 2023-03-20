@@ -28,6 +28,7 @@
 		0BADC76929C8D84C00D57969 /* FCMTokenNetworkDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BADC76829C8D84C00D57969 /* FCMTokenNetworkDatasource.swift */; };
 		0BADC76B29C8D89000D57969 /* PushNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BADC76A29C8D89000D57969 /* PushNotificationManager.swift */; };
 		0BADC76D29C8D8B400D57969 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BADC76C29C8D8B400D57969 /* PersistenceManager.swift */; };
+		0BADC76F29C8DA3600D57969 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0BADC76E29C8DA3600D57969 /* GoogleService-Info.plist */; };
 		0BD6189829BACAE800BFBE37 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD6189729BACAE800BFBE37 /* ActivityIndicator.swift */; };
 		0BD6189A29BACB1100BFBE37 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD6189929BACB1100BFBE37 /* LoadingView.swift */; };
 		0BF708802990B5A100A9E015 /* JobsNetworkDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF7087F2990B5A100A9E015 /* JobsNetworkDatasource.swift */; };
@@ -90,6 +91,7 @@
 		0BADC76829C8D84C00D57969 /* FCMTokenNetworkDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCMTokenNetworkDatasource.swift; sourceTree = "<group>"; };
 		0BADC76A29C8D89000D57969 /* PushNotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationManager.swift; sourceTree = "<group>"; };
 		0BADC76C29C8D8B400D57969 /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
+		0BADC76E29C8DA3600D57969 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0BD6189729BACAE800BFBE37 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		0BD6189929BACB1100BFBE37 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		0BF7087F2990B5A100A9E015 /* JobsNetworkDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsNetworkDatasource.swift; sourceTree = "<group>"; };
@@ -303,6 +305,7 @@
 				438C3D922086C4F300D80BB8 /* SwiftNotice.swift */,
 				0BADC76A29C8D89000D57969 /* PushNotificationManager.swift */,
 				0BADC76C29C8D8B400D57969 /* PersistenceManager.swift */,
+				0BADC76E29C8DA3600D57969 /* GoogleService-Info.plist */,
 			);
 			path = RemoteOk;
 			sourceTree = "<group>";
@@ -440,6 +443,7 @@
 				4399FE5F20730B1D0099E529 /* Nunito-SemiBold.ttf in Resources */,
 				4399FE5A20730B1D0099E529 /* Nunito-ExtraBold.ttf in Resources */,
 				4399FE5820730B1D0099E529 /* Nunito-LightItalic.ttf in Resources */,
+				0BADC76F29C8DA3600D57969 /* GoogleService-Info.plist in Resources */,
 				4399FE5420730B1D0099E529 /* Nunito-ExtraBoldItalic.ttf in Resources */,
 				4399FE5D20730B1D0099E529 /* Nunito-BlackItalic.ttf in Resources */,
 			);
