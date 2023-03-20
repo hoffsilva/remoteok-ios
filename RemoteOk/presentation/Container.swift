@@ -17,9 +17,8 @@ final class Container {
             getFilteredJobsUseCase: makeGetFilteredJobsUseCase()
         )
         return JobOppotunityViewModelAdapter(
-                     jobOpportunityViewModel: viewModel,
-                     pushNotificationManager: makePushNotificationManager()
-                 )
+                     jobOpportunityViewModel: viewModel
+            )
         
     }
     

@@ -53,7 +53,6 @@ struct JobsListViewUI: View {
                     self.jobsViewModel.getOpportunities()
                     jobsViewModel.viewDidLoad = true
                 }
-                jobsViewModel.requestPushNotificationAuthorization()
             }
         }
         

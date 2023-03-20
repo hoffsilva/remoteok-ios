@@ -15,7 +15,7 @@ final class JobsNetworkDatasourceImpl: JobsNetworkDatasource {
     init(provider: MoyaProvider<JobsProvider>) {
         self.provider = provider
     }
-    
+
     func getJobsOf(page: Int, completion: @escaping ((Result<DataJob, Error>) -> Void)) {
         provider.request(.getJobsOf(page: page)) { result in
             self.parse(result: result, completion: completion)

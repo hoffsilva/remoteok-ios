@@ -15,11 +15,13 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     
     private let persistenceManager = Container.makePersistenceManager()
     private let fcmTokenUseCase = Container.makeSaveFCMTokenUseCase()
+    private let pushNotificationManager = Container.makePushNotificationManager()
     
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         FirebaseApp.configure()
         Messaging.messaging().delegate = self
+        pushNotificationManager.requestAuthorization()
         application.registerForRemoteNotifications()
         return true
     }
@@ -29,11 +31,15 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 extension AppDelegate: MessagingDelegate {
 
     func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String?) {
-        print("Firebase registration token: \(String(describing: fcmToken))")
         guard let isPushNotificationAuthorized = persistenceManager.read(forKey: .pushNotification) as? Bool,
         let token = fcmToken,
         isPushNotificationAuthorized else { return }
         fcmTokenUseCase.saveFCMToken(token: token)
+    }
+    
+    func application(application: UIApplication,
+                     didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+      Messaging.messaging().apnsToken = deviceToken
     }
     
 }
