@@ -49,7 +49,6 @@ extension AppDelegate: MessagingDelegate {
         guard let isPushNotificationAuthorized = persistenceManager.read(forKey: .pushNotification) as? Bool,
               let token = fcmToken,
               isPushNotificationAuthorized else { return }
-        print(token)
         fcmTokenUseCase.saveFCMToken(token: token)
     }
 }
