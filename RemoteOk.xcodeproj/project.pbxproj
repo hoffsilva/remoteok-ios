@@ -63,7 +63,6 @@
 		4399FE5E20730B1D0099E529 /* Nunito-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4399FE5020730B1C0099E529 /* Nunito-BoldItalic.ttf */; };
 		4399FE5F20730B1D0099E529 /* Nunito-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4399FE5120730B1D0099E529 /* Nunito-SemiBold.ttf */; };
 		43A9B25D206EED76003EB208 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43A9B25C206EED76003EB208 /* Assets.xcassets */; };
-		43EE8CDB20759A6F005BBE76 /* RemoteOk.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 43EE8CD920759A6F005BBE76 /* RemoteOk.xcdatamodeld */; };
 		C377F8F32216F49D00539691 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C377F8F22216F49D00539691 /* Constants.swift */; };
 		C377F8F52216F6AE00539691 /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = C377F8F42216F6AE00539691 /* Messages.swift */; };
 		CA869449206D68B30099F39D /* JobOportunityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA869448206D68B30099F39D /* JobOportunityViewModel.swift */; };
@@ -128,7 +127,6 @@
 		4399FE5020730B1C0099E529 /* Nunito-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-BoldItalic.ttf"; sourceTree = "<group>"; };
 		4399FE5120730B1D0099E529 /* Nunito-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-SemiBold.ttf"; sourceTree = "<group>"; };
 		43A9B25C206EED76003EB208 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		43EE8CDA20759A6F005BBE76 /* RemoteOk.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RemoteOk.xcdatamodel; sourceTree = "<group>"; };
 		C377F8F22216F49D00539691 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C377F8F42216F6AE00539691 /* Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
 		CA869448206D68B30099F39D /* JobOportunityViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobOportunityViewModel.swift; sourceTree = "<group>"; };
@@ -292,7 +290,6 @@
 				0BF708832990B76800A9E015 /* domain */,
 				0BF7087D2990B54B00A9E015 /* data */,
 				43096E9E2076EB01003702F0 /* Settings */,
-				43EE8CD920759A6F005BBE76 /* RemoteOk.xcdatamodeld */,
 				0B76583D298A18180075F103 /* CoredataClasses */,
 				4399FE392072FF620099E529 /* media */,
 				430E6D4D206C63BB0093EA8B /* Network */,
@@ -488,7 +485,6 @@
 				430E6D32206C4FFA0093EA8B /* AppDelegate.swift in Sources */,
 				0BADC75F29C8D75000D57969 /* PostFCMTokenUseCase.swift in Sources */,
 				0BF708852990B80E00A9E015 /* GetAllJobsUseCase.swift in Sources */,
-				43EE8CDB20759A6F005BBE76 /* RemoteOk.xcdatamodeld in Sources */,
 				0BADC76729C8D81F00D57969 /* FCMTokenProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -739,19 +735,6 @@
 			productName = FirebaseMessaging;
 		};
 /* End XCSwiftPackageProductDependency section */
-
-/* Begin XCVersionGroup section */
-		43EE8CD920759A6F005BBE76 /* RemoteOk.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				43EE8CDA20759A6F005BBE76 /* RemoteOk.xcdatamodel */,
-			);
-			currentVersion = 43EE8CDA20759A6F005BBE76 /* RemoteOk.xcdatamodel */;
-			path = RemoteOk.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 430E6D26206C4FFA0093EA8B /* Project object */;
 }
