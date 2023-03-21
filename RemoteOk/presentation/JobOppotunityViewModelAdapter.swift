@@ -28,7 +28,7 @@ final class JobOppotunityViewModelAdapter: ObservableObject {
             self.isLoading = false
             self.arrayOfJobs = self.jobOpportunityViewModel.arrayOfOpportunity ?? [JobOportunity]()
         }
-
+        
     }
     
     func getFilteredOpportunities(by searchTerm: String) {

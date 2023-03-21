@@ -1,47 +1,42 @@
 //
-//  ServiceImpl.swift
+//  FCMTokenNetworkDatasourceImpl.swift
 //  RemoteOk
 //
-//  Created by Hoff Silva on 2023-01-31.
+//  Created by Hoff Silva on 2023-03-16.
 //  Copyright © 2023 Hoff Henry Pereira da Silva. All rights reserved.
 //
 
 import Foundation
 import Moya
 
-final class JobsNetworkDatasourceImpl: JobsNetworkDatasource {
-    var provider: Moya.MoyaProvider<JobsProvider>
+final class FCMTokenNetworkDatasourceImpl: FCMTokenNetworkDatasource {
     
-    init(provider: MoyaProvider<JobsProvider>) {
+    var provider: Moya.MoyaProvider<FCMTokenProvider>
+    
+    init(provider: MoyaProvider<FCMTokenProvider>) {
         self.provider = provider
     }
-
-    func getJobsOf(page: Int, completion: @escaping ((Result<DataJob, Error>) -> Void)) {
-        provider.request(.getJobsOf(page: page)) { result in
+    
+    func saveFCMToken(token: Token, completion: @escaping ((Result<String, Error>) -> Void)) {
+        provider.request(.saveFCMToken(token: token)) { result in
             self.parse(result: result, completion: completion)
         }
     }
     
-    func searchJobsBy(query: String, completion: @escaping ((Result<DataJob, Error>) -> Void)) {
-        provider.request(.searchJobsBy(query: query, page: 1)) { result in
-            self.parse(result: result, completion: completion)
-        }
-    }
-    
-    private func parse(result: Result<Moya.Response, MoyaError>, completion: @escaping ((Result<DataJob, Error>) -> Void)) {
+    private func parse(result: Result<Moya.Response, MoyaError>, completion: @escaping ((Result<String, Error>) -> Void)) {
         switch result {
         case .success(let response):
             if response.statusCode == 200 {
                 do {
                     let dataJob = try JSONDecoder().decode(DataJob.self, from: response.data)
-                    completion(.success(dataJob))
+                    completion(.success(""))
                 } catch let error {
-                    completion(.failure(JobsNetworkDatasourceError.parseError(error.localizedDescription)))
+                    completion(.failure(FCMTokenNetworkDatasourceError.parseError(error.localizedDescription)))
                 }
             } else {
                 completion(
                     .failure(
-                        JobsNetworkDatasourceError
+                        FCMTokenNetworkDatasourceError
                             .serverError("")
                     )
                 )
@@ -49,14 +44,14 @@ final class JobsNetworkDatasourceImpl: JobsNetworkDatasource {
         case .failure(let moyaError):
             completion(
                 .failure(
-                    JobsNetworkDatasourceError
+                    FCMTokenNetworkDatasourceError
                         .requestError(moyaError.localizedDescription)
                 )
             )
         }
     }
     
-    enum JobsNetworkDatasourceError: Error {
+    enum FCMTokenNetworkDatasourceError: Error {
         var metadata: String { return String(describing: self) }
         case requestError(String)
         case parseError(String)

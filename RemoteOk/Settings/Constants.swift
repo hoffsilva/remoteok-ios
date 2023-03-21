@@ -14,6 +14,7 @@ enum Constants {
     
     static let jobsPath = "jobs/page=%@"
     static let filteredJobsPath = "filteredJobs"
+    static let fcmtoken = "fcmtoken"
     static let urlOfReachabilityTest = "www.google.com"
     
     //Fetch request templates
