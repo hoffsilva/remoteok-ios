@@ -16,7 +16,9 @@ final class Container {
             getAllJobsUseCase: makeGetAllJobsUseCase(),
             getFilteredJobsUseCase: makeGetFilteredJobsUseCase()
         )
-        return JobOppotunityViewModelAdapter(jobOpportunityViewModel: viewModel)
+        return JobOppotunityViewModelAdapter(
+                     jobOpportunityViewModel: viewModel
+            )
         
     }
     
@@ -34,6 +36,26 @@ final class Container {
     
     static func makeJobsNetworkDatasource() -> JobsNetworkDatasource {
         JobsNetworkDatasourceImpl(provider: MoyaProvider<JobsProvider>())
+    }
+    
+    static func makePushNotificationManager() -> PushNotificationManager {
+        PushNotificationManager(persistenceManager: makePersistenceManager())
+    }
+    
+    static func makePersistenceManager() -> PersistenceManager {
+        PersistenceManager()
+    }
+    
+    static func makeFCMTokenRepository() -> FCMTokenRepository {
+        FCMTokenRepositoryImpl(datasource: makeFCMTokenDatasource())
+    }
+    
+    static func makeFCMTokenDatasource() -> FCMTokenNetworkDatasource {
+        FCMTokenNetworkDatasourceImpl(provider: MoyaProvider<FCMTokenProvider>())
+    }
+    
+    static func makeSaveFCMTokenUseCase() -> PostFCMTokenUseCase {
+        PostFCMTokenUseCaseImpl(repository: makeFCMTokenRepository())
     }
     
 }
