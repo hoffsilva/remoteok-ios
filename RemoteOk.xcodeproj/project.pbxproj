@@ -13,6 +13,7 @@
 		0B765816298A15970075F103 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 0B765815298A15970075F103 /* Kingfisher */; };
 		0B765819298A16280075F103 /* Hero in Frameworks */ = {isa = PBXBuildFile; productRef = 0B765818298A16280075F103 /* Hero */; };
 		0B7E86C7299319CF0046A686 /* GetFilteredJobsUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7E86C6299319CF0046A686 /* GetFilteredJobsUseCaseImpl.swift */; };
+		0B905A8A29C9E1EF003498DB /* notification.caf in Resources */ = {isa = PBXBuildFile; fileRef = 0B905A8929C91E1E003498DB /* notification.caf */; };
 		0B90CE8329943E9400813ADF /* JobListViewItemUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B90CE8229943E9400813ADF /* JobListViewItemUI.swift */; };
 		0B90CE8529945B1400813ADF /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B90CE8429945B1400813ADF /* Container.swift */; };
 		0B90CE872994665000813ADF /* JobOppotunityViewModelAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B90CE862994665000813ADF /* JobOppotunityViewModelAdapter.swift */; };
@@ -74,6 +75,7 @@
 		0B76580F298A115D0075F103 /* JobsNetworkDatasourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsNetworkDatasourceImpl.swift; sourceTree = "<group>"; };
 		0B7E86C6299319CF0046A686 /* GetFilteredJobsUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFilteredJobsUseCaseImpl.swift; sourceTree = "<group>"; };
 		0B905A8829C8FC54003498DB /* RemoteOk.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RemoteOk.entitlements; sourceTree = "<group>"; };
+		0B905A8929C91E1E003498DB /* notification.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = notification.caf; sourceTree = "<group>"; };
 		0B90CE8229943E9400813ADF /* JobListViewItemUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListViewItemUI.swift; sourceTree = "<group>"; };
 		0B90CE8429945B1400813ADF /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 		0B90CE862994665000813ADF /* JobOppotunityViewModelAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobOppotunityViewModelAdapter.swift; sourceTree = "<group>"; };
@@ -292,6 +294,7 @@
 				0B905A8829C8FC54003498DB /* RemoteOk.entitlements */,
 				0BADC76E29C8DA3600D57969 /* GoogleService-Info.plist */,
 				0BADC77329C8DDD300D57969 /* Encodable+Extensions.swift */,
+				0B905A8929C91E1E003498DB /* notification.caf */,
 			);
 			path = RemoteOk;
 			sourceTree = "<group>";
@@ -409,6 +412,7 @@
 				4399FE5620730B1D0099E529 /* Nunito-Bold.ttf in Resources */,
 				4399FE5920730B1D0099E529 /* Nunito-ExtraLightItalic.ttf in Resources */,
 				430E6D3F206C4FFA0093EA8B /* LaunchScreen.storyboard in Resources */,
+				0B905A8A29C9E1EF003498DB /* notification.caf in Resources */,
 				4399FE5720730B1D0099E529 /* Nunito-Regular.ttf in Resources */,
 				4399FE5520730B1D0099E529 /* Nunito-ExtraLight.ttf in Resources */,
 				4399FE5E20730B1D0099E529 /* Nunito-BoldItalic.ttf in Resources */,
