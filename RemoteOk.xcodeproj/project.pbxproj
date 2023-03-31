@@ -14,7 +14,6 @@
 		0B765819298A16280075F103 /* Hero in Frameworks */ = {isa = PBXBuildFile; productRef = 0B765818298A16280075F103 /* Hero */; };
 		0B7E86C7299319CF0046A686 /* GetFilteredJobsUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7E86C6299319CF0046A686 /* GetFilteredJobsUseCaseImpl.swift */; };
 		0B905A8A29C9E1EF003498DB /* notification.caf in Resources */ = {isa = PBXBuildFile; fileRef = 0B905A8929C91E1E003498DB /* notification.caf */; };
-		0B90CE8329943E9400813ADF /* JobListViewItemUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B90CE8229943E9400813ADF /* JobListViewItemUI.swift */; };
 		0B90CE8529945B1400813ADF /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B90CE8429945B1400813ADF /* Container.swift */; };
 		0B90CE872994665000813ADF /* JobOppotunityViewModelAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B90CE862994665000813ADF /* JobOppotunityViewModelAdapter.swift */; };
 		0B90CE8929949B9600813ADF /* JobDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B90CE8829949B9600813ADF /* JobDetailView.swift */; };
@@ -77,7 +76,6 @@
 		0B7E86C6299319CF0046A686 /* GetFilteredJobsUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFilteredJobsUseCaseImpl.swift; sourceTree = "<group>"; };
 		0B905A8829C8FC54003498DB /* RemoteOk.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RemoteOk.entitlements; sourceTree = "<group>"; };
 		0B905A8929C91E1E003498DB /* notification.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = notification.caf; sourceTree = "<group>"; };
-		0B90CE8229943E9400813ADF /* JobListViewItemUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListViewItemUI.swift; sourceTree = "<group>"; };
 		0B90CE8429945B1400813ADF /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 		0B90CE862994665000813ADF /* JobOppotunityViewModelAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobOppotunityViewModelAdapter.swift; sourceTree = "<group>"; };
 		0B90CE8829949B9600813ADF /* JobDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailView.swift; sourceTree = "<group>"; };
@@ -155,7 +153,6 @@
 			children = (
 				0BD6189629BACACB00BFBE37 /* activityIndicator */,
 				0B94228B299322F7008272DE /* JobsListViewUI.swift */,
-				0B90CE8229943E9400813ADF /* JobListViewItemUI.swift */,
 				0B90CE8829949B9600813ADF /* JobDetailView.swift */,
 				0BBF160029D6152800E06A98 /* JobItemView.swift */,
 			);
@@ -456,7 +453,6 @@
 				438C3D932086C4F300D80BB8 /* SwiftNotice.swift in Sources */,
 				0BADC76329C8D7B100D57969 /* FCMTokenNetworkDatasourceImpl.swift in Sources */,
 				0BF708F82991BFB300A9E015 /* GetFilteredJobsUseCase.swift in Sources */,
-				0B90CE8329943E9400813ADF /* JobListViewItemUI.swift in Sources */,
 				0B765810298A115D0075F103 /* JobsNetworkDatasourceImpl.swift in Sources */,
 				0B90CE8529945B1400813ADF /* Container.swift in Sources */,
 				0BADC77229C8DC8000D57969 /* Token.swift in Sources */,

@@ -11,12 +11,6 @@ import SwiftUI
 struct JobItemView: View {
     
     private let job: JobOportunity
-    
-    @State var show = false
-    @State var viewState = CGSize.zero
-    @State var showCard = false
-    @State var bottomState = CGSize.zero
-    @State var showFull = false
     @State var isDetailingJob = false
     
     init(job: JobOportunity, isDetailingJob: Bool) {
