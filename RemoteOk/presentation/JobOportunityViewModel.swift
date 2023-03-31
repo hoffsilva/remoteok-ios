@@ -39,6 +39,7 @@ class JobOportunityViewModelImpl: JobOportunityViewModel {
     func getOpportunities() {
         if currentPage <= numberOfPages {
             getAllJobsUseCase.getJobsOf(page: currentPage)
+            self.currentPage += 1
         }
     }
     

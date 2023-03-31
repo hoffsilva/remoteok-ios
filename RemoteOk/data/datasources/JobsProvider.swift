@@ -37,7 +37,7 @@ extension JobsProvider: TargetType {
         switch self {
         case .searchJobsBy(let query, let page):
             return .requestParameters(parameters: ["query":query, "page":"\(page)"], encoding: QUERYEncoding.default)
-        case .getJobsOf(let page):
+        case .getJobsOf:
             return .requestPlain
         }
         
