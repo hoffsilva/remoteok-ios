@@ -14,7 +14,6 @@
 		0B765819298A16280075F103 /* Hero in Frameworks */ = {isa = PBXBuildFile; productRef = 0B765818298A16280075F103 /* Hero */; };
 		0B7E86C7299319CF0046A686 /* GetFilteredJobsUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7E86C6299319CF0046A686 /* GetFilteredJobsUseCaseImpl.swift */; };
 		0B905A8A29C9E1EF003498DB /* notification.caf in Resources */ = {isa = PBXBuildFile; fileRef = 0B905A8929C91E1E003498DB /* notification.caf */; };
-		0B90CE8329943E9400813ADF /* JobListViewItemUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B90CE8229943E9400813ADF /* JobListViewItemUI.swift */; };
 		0B90CE8529945B1400813ADF /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B90CE8429945B1400813ADF /* Container.swift */; };
 		0B90CE872994665000813ADF /* JobOppotunityViewModelAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B90CE862994665000813ADF /* JobOppotunityViewModelAdapter.swift */; };
 		0B90CE8929949B9600813ADF /* JobDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B90CE8829949B9600813ADF /* JobDetailView.swift */; };
@@ -32,6 +31,7 @@
 		0BADC76F29C8DA3600D57969 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0BADC76E29C8DA3600D57969 /* GoogleService-Info.plist */; };
 		0BADC77229C8DC8000D57969 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BADC77129C8DC8000D57969 /* Token.swift */; };
 		0BADC77429C8DDD300D57969 /* Encodable+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BADC77329C8DDD300D57969 /* Encodable+Extensions.swift */; };
+		0BBF160129D6152800E06A98 /* JobItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBF160029D6152800E06A98 /* JobItemView.swift */; };
 		0BD6189829BACAE800BFBE37 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD6189729BACAE800BFBE37 /* ActivityIndicator.swift */; };
 		0BD6189A29BACB1100BFBE37 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD6189929BACB1100BFBE37 /* LoadingView.swift */; };
 		0BF708802990B5A100A9E015 /* JobsNetworkDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF7087F2990B5A100A9E015 /* JobsNetworkDatasource.swift */; };
@@ -76,7 +76,6 @@
 		0B7E86C6299319CF0046A686 /* GetFilteredJobsUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFilteredJobsUseCaseImpl.swift; sourceTree = "<group>"; };
 		0B905A8829C8FC54003498DB /* RemoteOk.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RemoteOk.entitlements; sourceTree = "<group>"; };
 		0B905A8929C91E1E003498DB /* notification.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = notification.caf; sourceTree = "<group>"; };
-		0B90CE8229943E9400813ADF /* JobListViewItemUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListViewItemUI.swift; sourceTree = "<group>"; };
 		0B90CE8429945B1400813ADF /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 		0B90CE862994665000813ADF /* JobOppotunityViewModelAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobOppotunityViewModelAdapter.swift; sourceTree = "<group>"; };
 		0B90CE8829949B9600813ADF /* JobDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailView.swift; sourceTree = "<group>"; };
@@ -93,6 +92,7 @@
 		0BADC76E29C8DA3600D57969 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0BADC77129C8DC8000D57969 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		0BADC77329C8DDD300D57969 /* Encodable+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Extensions.swift"; sourceTree = "<group>"; };
+		0BBF160029D6152800E06A98 /* JobItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobItemView.swift; sourceTree = "<group>"; };
 		0BD6189729BACAE800BFBE37 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		0BD6189929BACB1100BFBE37 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		0BF7087F2990B5A100A9E015 /* JobsNetworkDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsNetworkDatasource.swift; sourceTree = "<group>"; };
@@ -153,8 +153,8 @@
 			children = (
 				0BD6189629BACACB00BFBE37 /* activityIndicator */,
 				0B94228B299322F7008272DE /* JobsListViewUI.swift */,
-				0B90CE8229943E9400813ADF /* JobListViewItemUI.swift */,
 				0B90CE8829949B9600813ADF /* JobDetailView.swift */,
+				0BBF160029D6152800E06A98 /* JobItemView.swift */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -367,7 +367,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 1420;
 				ORGANIZATIONNAME = "Hoff Henry Pereira da Silva";
 				TargetAttributes = {
 					430E6D2D206C4FFA0093EA8B = {
@@ -453,7 +453,6 @@
 				438C3D932086C4F300D80BB8 /* SwiftNotice.swift in Sources */,
 				0BADC76329C8D7B100D57969 /* FCMTokenNetworkDatasourceImpl.swift in Sources */,
 				0BF708F82991BFB300A9E015 /* GetFilteredJobsUseCase.swift in Sources */,
-				0B90CE8329943E9400813ADF /* JobListViewItemUI.swift in Sources */,
 				0B765810298A115D0075F103 /* JobsNetworkDatasourceImpl.swift in Sources */,
 				0B90CE8529945B1400813ADF /* Container.swift in Sources */,
 				0BADC77229C8DC8000D57969 /* Token.swift in Sources */,
@@ -472,6 +471,7 @@
 				0BF708852990B80E00A9E015 /* GetAllJobsUseCase.swift in Sources */,
 				0BADC76729C8D81F00D57969 /* FCMTokenProvider.swift in Sources */,
 				0BADC77429C8DDD300D57969 /* Encodable+Extensions.swift in Sources */,
+				0BBF160129D6152800E06A98 /* JobItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,6 +503,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -510,8 +511,10 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -560,6 +563,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -567,8 +571,10 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -612,9 +618,12 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.2;
+				MARKETING_VERSION = 2.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hoffsilva.RemoteOk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -635,9 +644,12 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.2;
+				MARKETING_VERSION = 2.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hoffsilva.RemoteOk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
