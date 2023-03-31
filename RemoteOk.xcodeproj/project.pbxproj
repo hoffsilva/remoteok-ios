@@ -32,6 +32,7 @@
 		0BADC76F29C8DA3600D57969 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0BADC76E29C8DA3600D57969 /* GoogleService-Info.plist */; };
 		0BADC77229C8DC8000D57969 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BADC77129C8DC8000D57969 /* Token.swift */; };
 		0BADC77429C8DDD300D57969 /* Encodable+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BADC77329C8DDD300D57969 /* Encodable+Extensions.swift */; };
+		0BBF160129D6152800E06A98 /* JobItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBF160029D6152800E06A98 /* JobItemView.swift */; };
 		0BD6189829BACAE800BFBE37 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD6189729BACAE800BFBE37 /* ActivityIndicator.swift */; };
 		0BD6189A29BACB1100BFBE37 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD6189929BACB1100BFBE37 /* LoadingView.swift */; };
 		0BF708802990B5A100A9E015 /* JobsNetworkDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF7087F2990B5A100A9E015 /* JobsNetworkDatasource.swift */; };
@@ -93,6 +94,7 @@
 		0BADC76E29C8DA3600D57969 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0BADC77129C8DC8000D57969 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		0BADC77329C8DDD300D57969 /* Encodable+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Extensions.swift"; sourceTree = "<group>"; };
+		0BBF160029D6152800E06A98 /* JobItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobItemView.swift; sourceTree = "<group>"; };
 		0BD6189729BACAE800BFBE37 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		0BD6189929BACB1100BFBE37 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		0BF7087F2990B5A100A9E015 /* JobsNetworkDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsNetworkDatasource.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				0B94228B299322F7008272DE /* JobsListViewUI.swift */,
 				0B90CE8229943E9400813ADF /* JobListViewItemUI.swift */,
 				0B90CE8829949B9600813ADF /* JobDetailView.swift */,
+				0BBF160029D6152800E06A98 /* JobItemView.swift */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -472,6 +475,7 @@
 				0BF708852990B80E00A9E015 /* GetAllJobsUseCase.swift in Sources */,
 				0BADC76729C8D81F00D57969 /* FCMTokenProvider.swift in Sources */,
 				0BADC77429C8DDD300D57969 /* Encodable+Extensions.swift in Sources */,
+				0BBF160129D6152800E06A98 /* JobItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
