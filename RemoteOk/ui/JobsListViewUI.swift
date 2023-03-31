@@ -12,7 +12,7 @@ import Moya
 struct JobsListViewUI: View {
     
     @ObservedObject var jobsViewModel: JobOppotunityViewModelAdapter
-
+    
     @State var isDetailingJob = false
     
     init(jobsViewModel: JobOppotunityViewModelAdapter) {
@@ -28,6 +28,12 @@ struct JobsListViewUI: View {
                 LazyVStack {
                     ForEach(jobsViewModel.arrayOfJobs) { job in
                         JobItemView(job: job, isDetailingJob: self.isDetailingJob)
+                            .onAppear {
+                                let index = jobsViewModel.arrayOfJobs.firstIndex(of: job)
+                                if index == jobsViewModel.arrayOfJobs.count - 2 {
+                                    jobsViewModel.getOpportunities()
+                                }
+                            }
                     }
                 }
             }
