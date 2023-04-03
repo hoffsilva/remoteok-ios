@@ -57,14 +57,16 @@ struct JobItemView: View {
                     )
                 }
                 .padding(.horizontal, 24)
-                Text(job.jobDescription)
-                    .font(.subheadline)
-                    .foregroundColor(.primary)
-                    .multilineTextAlignment(.leading)
-                    .lineLimit(3)
-                    .padding(.horizontal, 24)
-                    .padding(.top, 0)
-                    .padding(.bottom, 8)
+                if let text = job.jobDescription.formatHTMLString() {
+                    Text(text.string)
+                        .font(.subheadline)
+                        .foregroundColor(.primary)
+                        .multilineTextAlignment(.leading)
+                        .lineLimit(3)
+                        .padding(.horizontal, 24)
+                        .padding(.top, 0)
+                        .padding(.bottom, 8)
+                }
             }
             .onTapGesture {
                 self.isDetailingJob.toggle()
