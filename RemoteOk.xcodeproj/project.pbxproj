@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B362BE529DA5CAF0004657D /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B362BE429DA5CAF0004657D /* String+Extensions.swift */; };
 		0B765807298A0B940075F103 /* JobsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B765806298A0B940075F103 /* JobsProvider.swift */; };
 		0B765810298A115D0075F103 /* JobsNetworkDatasourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B76580F298A115D0075F103 /* JobsNetworkDatasourceImpl.swift */; };
 		0B765813298A13500075F103 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 0B765812298A13500075F103 /* Moya */; };
@@ -69,6 +70,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B362BE429DA5CAF0004657D /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		0B765806298A0B940075F103 /* JobsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsProvider.swift; sourceTree = "<group>"; };
 		0B76580F298A115D0075F103 /* JobsNetworkDatasourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsNetworkDatasourceImpl.swift; sourceTree = "<group>"; };
 		0B7E86C6299319CF0046A686 /* GetFilteredJobsUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFilteredJobsUseCaseImpl.swift; sourceTree = "<group>"; };
@@ -144,9 +146,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B362BE329DA57AA0004657D /* components */ = {
+			isa = PBXGroup;
+			children = (
+				0B362BE429DA5CAF0004657D /* String+Extensions.swift */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
 		0B94228A299322D0008272DE /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				0B362BE329DA57AA0004657D /* components */,
 				0BD6189629BACACB00BFBE37 /* activityIndicator */,
 				0B94228B299322F7008272DE /* JobsListViewUI.swift */,
 				0B90CE8829949B9600813ADF /* JobDetailView.swift */,
@@ -445,6 +456,7 @@
 				438C3D932086C4F300D80BB8 /* SwiftNotice.swift in Sources */,
 				0BADC76329C8D7B100D57969 /* FCMTokenNetworkDatasourceImpl.swift in Sources */,
 				0BF708F82991BFB300A9E015 /* GetFilteredJobsUseCase.swift in Sources */,
+				0B362BE529DA5CAF0004657D /* String+Extensions.swift in Sources */,
 				0B765810298A115D0075F103 /* JobsNetworkDatasourceImpl.swift in Sources */,
 				0B90CE8529945B1400813ADF /* Container.swift in Sources */,
 				0BADC77229C8DC8000D57969 /* Token.swift in Sources */,
@@ -610,7 +622,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.3;
+				MARKETING_VERSION = 2.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hoffsilva.RemoteOk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -636,7 +648,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.3;
+				MARKETING_VERSION = 2.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hoffsilva.RemoteOk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
