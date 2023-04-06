@@ -9,6 +9,7 @@ import Foundation
 
 struct JobOportunity: Codable, Identifiable, Hashable {
     let id = UUID()
+    let identifier: Int
     let applyURL: String
     let companyLogoURL: String
     let companyName: String
@@ -16,4 +17,5 @@ struct JobOportunity: Codable, Identifiable, Hashable {
     let jobTitle: String
     let sourceLogoURL: String
     let tags: String
+    var isFavorite: Bool? = false
 }

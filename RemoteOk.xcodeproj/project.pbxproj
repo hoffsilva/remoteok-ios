@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B144ECC29DE616E00266ABE /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 0B144ECB29DE616E00266ABE /* Realm */; };
+		0B144ECE29DE616E00266ABE /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0B144ECD29DE616E00266ABE /* RealmSwift */; };
+		0B144ED029DE61C600266ABE /* FavoriteJobsDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B144ECF29DE61C600266ABE /* FavoriteJobsDatasource.swift */; };
+		0B144ED229DE62C300266ABE /* FavoriteJobsDatasourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B144ED129DE62C300266ABE /* FavoriteJobsDatasourceImpl.swift */; };
 		0B362BE529DA5CAF0004657D /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B362BE429DA5CAF0004657D /* String+Extensions.swift */; };
 		0B765807298A0B940075F103 /* JobsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B765806298A0B940075F103 /* JobsProvider.swift */; };
 		0B765810298A115D0075F103 /* JobsNetworkDatasourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B76580F298A115D0075F103 /* JobsNetworkDatasourceImpl.swift */; };
@@ -70,6 +74,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B144ECF29DE61C600266ABE /* FavoriteJobsDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteJobsDatasource.swift; sourceTree = "<group>"; };
+		0B144ED129DE62C300266ABE /* FavoriteJobsDatasourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteJobsDatasourceImpl.swift; sourceTree = "<group>"; };
 		0B362BE429DA5CAF0004657D /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		0B765806298A0B940075F103 /* JobsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsProvider.swift; sourceTree = "<group>"; };
 		0B76580F298A115D0075F103 /* JobsNetworkDatasourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsNetworkDatasourceImpl.swift; sourceTree = "<group>"; };
@@ -138,6 +144,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B144ECE29DE616E00266ABE /* RealmSwift in Frameworks */,
+				0B144ECC29DE616E00266ABE /* Realm in Frameworks */,
 				0BADC75B29C8D67800D57969 /* FirebaseMessaging in Frameworks */,
 				0B765813298A13500075F103 /* Moya in Frameworks */,
 			);
@@ -189,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				0BF7087F2990B5A100A9E015 /* JobsNetworkDatasource.swift */,
+				0B144ECF29DE61C600266ABE /* FavoriteJobsDatasource.swift */,
 				0B765806298A0B940075F103 /* JobsProvider.swift */,
 				0BADC76629C8D81F00D57969 /* FCMTokenProvider.swift */,
 				0BADC76829C8D84C00D57969 /* FCMTokenNetworkDatasource.swift */,
@@ -242,6 +251,7 @@
 			children = (
 				0B76580F298A115D0075F103 /* JobsNetworkDatasourceImpl.swift */,
 				0BADC76229C8D7B100D57969 /* FCMTokenNetworkDatasourceImpl.swift */,
+				0B144ED129DE62C300266ABE /* FavoriteJobsDatasourceImpl.swift */,
 			);
 			path = datasources;
 			sourceTree = "<group>";
@@ -360,6 +370,8 @@
 			packageProductDependencies = (
 				0B765812298A13500075F103 /* Moya */,
 				0BADC75A29C8D67800D57969 /* FirebaseMessaging */,
+				0B144ECB29DE616E00266ABE /* Realm */,
+				0B144ECD29DE616E00266ABE /* RealmSwift */,
 			);
 			productName = RemoteOk;
 			productReference = 430E6D2E206C4FFA0093EA8B /* RemoteOk.app */;
@@ -393,6 +405,7 @@
 			packageReferences = (
 				0B765811298A13500075F103 /* XCRemoteSwiftPackageReference "Moya" */,
 				0BADC75929C8D67800D57969 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				0B144ECA29DE616E00266ABE /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = 430E6D2F206C4FFA0093EA8B /* Products */;
 			projectDirPath = "";
@@ -471,10 +484,12 @@
 				C377F8F52216F6AE00539691 /* Messages.swift in Sources */,
 				CA869449206D68B30099F39D /* JobOportunityViewModel.swift in Sources */,
 				430E6D32206C4FFA0093EA8B /* AppDelegate.swift in Sources */,
+				0B144ED229DE62C300266ABE /* FavoriteJobsDatasourceImpl.swift in Sources */,
 				0BADC75F29C8D75000D57969 /* PostFCMTokenUseCase.swift in Sources */,
 				0BF708852990B80E00A9E015 /* GetAllJobsUseCase.swift in Sources */,
 				0BADC76729C8D81F00D57969 /* FCMTokenProvider.swift in Sources */,
 				0BADC77429C8DDD300D57969 /* Encodable+Extensions.swift in Sources */,
+				0B144ED029DE61C600266ABE /* FavoriteJobsDatasource.swift in Sources */,
 				0BBF160129D6152800E06A98 /* JobItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -683,6 +698,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		0B144ECA29DE616E00266ABE /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.38.0;
+			};
+		};
 		0B765811298A13500075F103 /* XCRemoteSwiftPackageReference "Moya" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Moya/Moya.git";
@@ -702,6 +725,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		0B144ECB29DE616E00266ABE /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0B144ECA29DE616E00266ABE /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		0B144ECD29DE616E00266ABE /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0B144ECA29DE616E00266ABE /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
 		0B765812298A13500075F103 /* Moya */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 0B765811298A13500075F103 /* XCRemoteSwiftPackageReference "Moya" */;
