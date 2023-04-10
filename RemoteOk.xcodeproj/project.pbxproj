@@ -11,6 +11,8 @@
 		0B144ECE29DE616E00266ABE /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0B144ECD29DE616E00266ABE /* RealmSwift */; };
 		0B144ED029DE61C600266ABE /* FavoriteJobsDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B144ECF29DE61C600266ABE /* FavoriteJobsDatasource.swift */; };
 		0B144ED229DE62C300266ABE /* FavoriteJobsDatasourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B144ED129DE62C300266ABE /* FavoriteJobsDatasourceImpl.swift */; };
+		0B144EE029E4696800266ABE /* FavoriteJobsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B144EDF29E4696800266ABE /* FavoriteJobsRepository.swift */; };
+		0B144EE229E469B400266ABE /* FavoriteJobsRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B144EE129E469B400266ABE /* FavoriteJobsRepositoryImpl.swift */; };
 		0B362BE529DA5CAF0004657D /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B362BE429DA5CAF0004657D /* String+Extensions.swift */; };
 		0B765807298A0B940075F103 /* JobsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B765806298A0B940075F103 /* JobsProvider.swift */; };
 		0B765810298A115D0075F103 /* JobsNetworkDatasourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B76580F298A115D0075F103 /* JobsNetworkDatasourceImpl.swift */; };
@@ -76,6 +78,8 @@
 /* Begin PBXFileReference section */
 		0B144ECF29DE61C600266ABE /* FavoriteJobsDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteJobsDatasource.swift; sourceTree = "<group>"; };
 		0B144ED129DE62C300266ABE /* FavoriteJobsDatasourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteJobsDatasourceImpl.swift; sourceTree = "<group>"; };
+		0B144EDF29E4696800266ABE /* FavoriteJobsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteJobsRepository.swift; sourceTree = "<group>"; };
+		0B144EE129E469B400266ABE /* FavoriteJobsRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteJobsRepositoryImpl.swift; sourceTree = "<group>"; };
 		0B362BE429DA5CAF0004657D /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		0B765806298A0B940075F103 /* JobsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsProvider.swift; sourceTree = "<group>"; };
 		0B76580F298A115D0075F103 /* JobsNetworkDatasourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsNetworkDatasourceImpl.swift; sourceTree = "<group>"; };
@@ -242,6 +246,7 @@
 			children = (
 				0BF708882990B8CC00A9E015 /* JobsRepository.swift */,
 				0BADC76029C8D77A00D57969 /* FCMTokenRepository.swift */,
+				0B144EDF29E4696800266ABE /* FavoriteJobsRepository.swift */,
 			);
 			path = repositories;
 			sourceTree = "<group>";
@@ -261,6 +266,7 @@
 			children = (
 				0BF708FA2991CDBE00A9E015 /* JobsRespositoryImpl.swift */,
 				0BADC76429C8D7F400D57969 /* FCMTokenRepositoryImpl.swift */,
+				0B144EE129E469B400266ABE /* FavoriteJobsRepositoryImpl.swift */,
 			);
 			path = repositories;
 			sourceTree = "<group>";
@@ -461,6 +467,7 @@
 				0BADC76529C8D7F400D57969 /* FCMTokenRepositoryImpl.swift in Sources */,
 				0BD6189829BACAE800BFBE37 /* ActivityIndicator.swift in Sources */,
 				0BADC76929C8D84C00D57969 /* FCMTokenNetworkDatasource.swift in Sources */,
+				0B144EE029E4696800266ABE /* FavoriteJobsRepository.swift in Sources */,
 				0B7E86C7299319CF0046A686 /* GetFilteredJobsUseCaseImpl.swift in Sources */,
 				0BADC76129C8D77A00D57969 /* FCMTokenRepository.swift in Sources */,
 				C377F8F32216F49D00539691 /* Constants.swift in Sources */,
@@ -480,6 +487,7 @@
 				0BF708FB2991CDBE00A9E015 /* JobsRespositoryImpl.swift in Sources */,
 				0B90CE8929949B9600813ADF /* JobDetailView.swift in Sources */,
 				0BD6189A29BACB1100BFBE37 /* LoadingView.swift in Sources */,
+				0B144EE229E469B400266ABE /* FavoriteJobsRepositoryImpl.swift in Sources */,
 				0BF708FD2991CEC700A9E015 /* GetAllJobsUseCaseImpl.swift in Sources */,
 				C377F8F52216F6AE00539691 /* Messages.swift in Sources */,
 				CA869449206D68B30099F39D /* JobOportunityViewModel.swift in Sources */,

@@ -17,5 +17,5 @@ struct JobOportunity: Codable, Identifiable, Hashable {
     let jobTitle: String
     let sourceLogoURL: String
     let tags: String
-    var isFavorite: Bool? = false
+    var isFavorite: Bool
 }

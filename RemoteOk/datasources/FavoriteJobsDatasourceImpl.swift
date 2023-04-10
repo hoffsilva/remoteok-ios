@@ -87,7 +87,8 @@ final class FavoriteJobsDatasourceImpl: FavoriteJobsDatasource {
                 jobDescription: locallyJob.jobDescription,
                 jobTitle: locallyJob.jobTitle,
                 sourceLogoURL: locallyJob.sourceLogoURL,
-                tags: locallyJob.tags
+                tags: locallyJob.tags,
+                isFavorite: true
             )
         }
     }

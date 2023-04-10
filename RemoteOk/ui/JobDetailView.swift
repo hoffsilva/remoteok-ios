@@ -18,7 +18,6 @@ struct JobDetailView: View {
         self.job = job
     }
     
-    
     var body: some View {
         VStack {
             VStack(alignment: .trailing) {
@@ -28,6 +27,13 @@ struct JobDetailView: View {
                         Image(systemName: "square.and.arrow.up.circle")
                             .font(.title)
                     }
+                    Button {
+                        print("star.circle")
+                    } label: {
+                        job.isFavorite ? Image(systemName: "star.circle.fill").font(.title) : Image(systemName: "star.circle")
+                            .font(.title)
+                    }
+                    
                 }
                 .padding()
             }
