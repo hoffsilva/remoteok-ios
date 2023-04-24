@@ -26,6 +26,18 @@ final class Container {
         GetAllJobsUseCaseImpl(repository: makeJobsRepository())
     }
     
+    static func makeGetFavoriteJobsUseCase() -> GetFavoritesJobsUseCase {
+        GetFavoritesJobsUseCaseImpl(repository: makeFavoriteJobsRepository())
+    }
+    
+    static func makeFavoriteJobsRepository() -> FavoriteJobsRepository {
+        FavoriteJobsRepositoryImpl(datasource: makeFavoriteJobsDataSource())
+    }
+    
+    static func makeFavoriteJobsDataSource() -> FavoriteJobsDatasource {
+        FavoriteJobsDatasourceImpl()
+    }
+    
     static func makeGetFilteredJobsUseCase() -> GetFilteredJobsUseCase {
         GetFilteredJobsUseCaseImpl(repository: makeJobsRepository())
     }
@@ -56,6 +68,11 @@ final class Container {
     
     static func makeSaveFCMTokenUseCase() -> PostFCMTokenUseCase {
         PostFCMTokenUseCaseImpl(repository: makeFCMTokenRepository())
+    }
+    
+    static func makeFavoriteJobsViewModel() -> FavoriteJobOppotunityViewModelAdapter {
+        let viewModel = FavoriteJobOpportunityViewModelImpl(getFavoriteJobsUseCase: makeGetFavoriteJobsUseCase())
+        return FavoriteJobOppotunityViewModelAdapter(favoriteJobOpportunityViewModel: viewModel)
     }
     
 }

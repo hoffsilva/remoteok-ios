@@ -60,10 +60,24 @@ struct AppyApp: App {
     
     var body: some Scene {
         WindowGroup {
-            NavigationView {
-                JobsListViewUI(jobsViewModel: Container.makeJobsViewModel())
+            TabView {
+                NavigationView {
+                    JobsListViewUI(jobsViewModel: Container.makeJobsViewModel())
+                }
+                .tint(.primary)
+                .tabItem {
+                    Image(systemName: "house.circle")
+                    Text("Home")
+                }
+                NavigationView {
+                    FavoriteJobsListViewUI(favoriteJobsViewModel:Container.makeFavoriteJobsViewModel())
+                }
+                .tint(.primary)
+                .tabItem {
+                    Image(systemName: "star.circle")
+                    Text("Home")
+                }
             }
-            .tint(.primary)
         }
     }
 }
