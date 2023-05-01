@@ -34,7 +34,7 @@ fileprivate final class LocallyJob: Object {
 
 final class FavoriteJobsDatasourceImpl: FavoriteJobsDatasource {
     
-    private let realm = try! Realm()
+    private let realm = try? Realm()
     
     var didSaveJobWithSuccess: ((String)->Void)?
     var didSaveJobWithError: ((String)->Void)?
@@ -45,13 +45,13 @@ final class FavoriteJobsDatasourceImpl: FavoriteJobsDatasource {
     init() {}
     
     func getJobs(completion: @escaping (([JobOportunity]) -> Void)) {
-//        guard let realm = realm else { return }
+        guard let realm = realm else { return }
         let locallyJobs = realm.objects(LocallyJob.self)
         completion(self.mapJobOpportunities(from: locallyJobs))
     }
     
     func saveJob(jobOportunity: JobOportunity) {
-//        guard let realm = realm else { return }
+        guard let realm = realm else { return }
         try? realm.write {
             realm.add(mapLocallyJob(from: jobOportunity))
             self.didSaveJobWithSuccess?("Job added as favorite")
@@ -59,7 +59,7 @@ final class FavoriteJobsDatasourceImpl: FavoriteJobsDatasource {
     }
     
     func deleteJob(id: Int) {
-//        guard let realm = realm else { return }
+        guard let realm = realm else { return }
         
         let locallyJobs = realm.objects(LocallyJob.self)
         

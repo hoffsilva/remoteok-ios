@@ -59,7 +59,7 @@ struct AppyApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
     var body: some Scene {
-        WindowGroup {
+        WindowGroup {   
             TabView {
                 NavigationView {
                     JobsListViewUI(jobsViewModel: Container.makeJobsViewModel())
