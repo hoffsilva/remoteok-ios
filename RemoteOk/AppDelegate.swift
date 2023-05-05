@@ -75,7 +75,7 @@ struct AppyApp: App {
                 .tint(.primary)
                 .tabItem {
                     Image(systemName: "star.circle")
-                    Text("Home")
+                    Text("Favorites")
                 }
             }
         }

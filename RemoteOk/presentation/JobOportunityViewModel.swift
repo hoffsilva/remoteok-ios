@@ -15,9 +15,11 @@ protocol JobOportunityViewModel {
     var didLoadJobs: (() -> Void)? { get set }
     var didLoadJobsWithError: ((String) -> Void)? { get set }
     var arrayOfOpportunity: [JobOportunity]? { get set }
+    var didSetAsFavorite: ((Bool) -> Void)? { get set }
     
     func getOpportunities()
     func getFilteredOpportunities(by query: String)
+    func setOpportunityAsFavorite(opportunity: JobOportunity)
 }
 
 class JobOportunityViewModelImpl: JobOportunityViewModel {
@@ -25,6 +27,7 @@ class JobOportunityViewModelImpl: JobOportunityViewModel {
     var arrayOfOpportunity: [JobOportunity]?
     var didLoadJobs: (() -> Void)?
     var didLoadJobsWithError: ((String) -> Void)?
+    var didSetAsFavorite: ((Bool) -> Void)?
     var getAllJobsUseCase: GetAllJobsUseCase
     var getFilteredJobsUseCase: GetFilteredJobsUseCase
     var currentPage = 1
@@ -71,6 +74,10 @@ class JobOportunityViewModelImpl: JobOportunityViewModel {
         getFilteredJobsUseCase.didGetError = { [weak self] error in
             self?.didLoadJobsWithError?(error.localizedDescription)
         }
+        
+    }
+    
+    func setOpportunityAsFavorite(opportunity: JobOportunity) {
         
     }
 

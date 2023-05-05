@@ -9,7 +9,7 @@
 import Foundation
 import RealmSwift
 
-fileprivate final class LocallyJob: Object {
+public final class LocallyJob: Object, ObjectKeyIdentifiable {
     @Persisted(primaryKey: true) var identifier: Int
     @Persisted var applyURL: String
     @Persisted var companyLogoURL: String
@@ -18,18 +18,6 @@ fileprivate final class LocallyJob: Object {
     @Persisted var jobTitle: String
     @Persisted var sourceLogoURL: String
     @Persisted var tags: String
-    
-    internal init(identifier: Int, applyURL: String, companyLogoURL: String, companyName: String, jobDescription: String, jobTitle: String, sourceLogoURL: String, tags: String) {
-        super.init()
-        self.identifier = identifier
-        self.applyURL = applyURL
-        self.companyLogoURL = companyLogoURL
-        self.companyName = companyName
-        self.jobDescription = jobDescription
-        self.jobTitle = jobTitle
-        self.sourceLogoURL = sourceLogoURL
-        self.tags = tags
-    }
 }
 
 final class FavoriteJobsDatasourceImpl: FavoriteJobsDatasource {
@@ -90,16 +78,7 @@ final class FavoriteJobsDatasourceImpl: FavoriteJobsDatasource {
     }
     
     private func mapLocallyJob(from: JobOportunity) -> LocallyJob {
-        LocallyJob(
-            identifier: from.identifier,
-            applyURL: from.applyURL,
-            companyLogoURL: from.companyLogoURL,
-            companyName: from.companyName,
-            jobDescription: from.jobDescription,
-            jobTitle: from.jobTitle,
-            sourceLogoURL: from.sourceLogoURL,
-            tags: from.tags
-        )
+        LocallyJob(value: from)
     }
     
 }

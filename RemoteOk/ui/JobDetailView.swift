@@ -10,12 +10,18 @@ import SwiftUI
 
 struct JobDetailView: View {
     
-    private let job: JobOportunity
+    @State var job: JobOportunity!
     
     @Environment(\.openURL) var openURL
     
-    init(job: JobOportunity) {
+    var jobsViewModel: JobOppotunityViewModelAdapter!
+    
+    init(
+        job: JobOportunity,
+        jobsViewModel: JobOppotunityViewModelAdapter
+    ) {
         self.job = job
+        self.jobsViewModel = jobsViewModel
     }
     
     var body: some View {
@@ -29,6 +35,7 @@ struct JobDetailView: View {
                     }
                     Button {
                         print("star.circle")
+                        jobsViewModel.
                     } label: {
                         job.isFavorite ? Image(systemName: "star.circle.fill").font(.title) : Image(systemName: "star.circle")
                             .font(.title)

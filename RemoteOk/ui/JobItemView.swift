@@ -12,10 +12,15 @@ struct JobItemView: View {
     
     private let job: JobOportunity
     @State var isDetailingJob = false
+    @ObservedObject var jobsViewModel: JobOppotunityViewModelAdapter
     
-    init(job: JobOportunity, isDetailingJob: Bool) {
+    init(
+        job: JobOportunity,
+        isDetailingJob: Bool,
+        jobsViewModel: JobOppotunityViewModelAdapter) {
         self.job = job
         self.isDetailingJob = isDetailingJob
+        self.jobsViewModel = jobsViewModel
     }
     
     var body: some View {
@@ -72,7 +77,7 @@ struct JobItemView: View {
                 self.isDetailingJob.toggle()
             }
             .sheet(isPresented: $isDetailingJob) {
-                JobDetailView(job: job)
+                JobDetailView(job: job, jobsViewModel: JobOppotunityViewModelAdapter)
             }
         }
         .frame(maxWidth: .infinity, maxHeight: 220)
