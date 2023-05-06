@@ -39,10 +39,14 @@ final class FavoriteJobsDatasourceImpl: FavoriteJobsDatasource {
     }
     
     func saveJob(jobOportunity: JobOportunity) {
-        guard let realm = realm else { return }
-        try? realm.write {
-            realm.add(mapLocallyJob(from: jobOportunity))
-            self.didSaveJobWithSuccess?("Job added as favorite")
+        do {
+            let realm = try Realm()
+            try realm.write {
+                realm.add(mapLocallyJob(from: jobOportunity), update: .all)
+                self.didSaveJobWithSuccess?("Job added as favorite")
+            }
+        } catch let error {
+            print(error.localizedDescription)
         }
     }
     
@@ -78,7 +82,7 @@ final class FavoriteJobsDatasourceImpl: FavoriteJobsDatasource {
     }
     
     private func mapLocallyJob(from: JobOportunity) -> LocallyJob {
-        LocallyJob(value: from)
+        LocallyJob(value: from.dictionary)
     }
     
 }

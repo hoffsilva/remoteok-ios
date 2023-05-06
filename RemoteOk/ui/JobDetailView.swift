@@ -10,7 +10,9 @@ import SwiftUI
 
 struct JobDetailView: View {
     
-    @State var job: JobOportunity!
+    var job: JobOportunity
+    
+    @State var isFavorite = false
     
     @Environment(\.openURL) var openURL
     
@@ -22,6 +24,7 @@ struct JobDetailView: View {
     ) {
         self.job = job
         self.jobsViewModel = jobsViewModel
+        self.isFavorite = job.isFavorite
     }
     
     var body: some View {
@@ -35,9 +38,10 @@ struct JobDetailView: View {
                     }
                     Button {
                         print("star.circle")
-                        jobsViewModel.
+                        isFavorite = true
+                        jobsViewModel.setOpportunityAsFavorite(job: job)
                     } label: {
-                        job.isFavorite ? Image(systemName: "star.circle.fill").font(.title) : Image(systemName: "star.circle")
+                        isFavorite ? Image(systemName: "star.circle.fill").font(.title) : Image(systemName: "star.circle")
                             .font(.title)
                     }
                     

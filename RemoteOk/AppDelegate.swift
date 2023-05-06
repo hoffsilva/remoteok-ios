@@ -70,7 +70,7 @@ struct AppyApp: App {
                     Text("Home")
                 }
                 NavigationView {
-                    FavoriteJobsListViewUI(favoriteJobsViewModel:Container.makeFavoriteJobsViewModel())
+                    FavoriteJobsListViewUI(favoriteJobsViewModel:Container.makeFavoriteJobsViewModel(), jobsViewModel: Container.makeJobsViewModel())
                 }
                 .tint(.primary)
                 .tabItem {

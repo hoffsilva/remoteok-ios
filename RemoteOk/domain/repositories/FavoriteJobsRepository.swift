@@ -9,6 +9,13 @@
 import Foundation
 
 protocol FavoriteJobsRepository {
+    
+    var didSaveJobWithSuccess: ((String)->Void)? { get set }
+    var didSaveJobWithError: ((String)->Void)? { get set }
+    
+    var didDeleteJobWithSuccess: ((String)->Void)? { get set }
+    var didDeletsJobWithError: ((String)->Void)? { get set }
+    
     func getJobs(completion: @escaping (([JobOportunity])->Void))
     func saveJob(jobOportunity: JobOportunity)
     func deleteJob(id: Int)

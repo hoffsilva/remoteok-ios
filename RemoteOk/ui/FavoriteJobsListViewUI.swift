@@ -15,8 +15,11 @@ struct FavoriteJobsListViewUI: View {
     
     @State var isDetailingJob = false
     
-    init(favoriteJobsViewModel: FavoriteJobOppotunityViewModelAdapter) {
+    var jobsViewModel: JobOppotunityViewModelAdapter
+    
+    init(favoriteJobsViewModel: FavoriteJobOppotunityViewModelAdapter, jobsViewModel: JobOppotunityViewModelAdapter) {
         self.favoriteJobsViewModel = favoriteJobsViewModel
+        self.jobsViewModel = jobsViewModel
     }
     
     var body: some View {
@@ -25,7 +28,7 @@ struct FavoriteJobsListViewUI: View {
             ScrollView {
                 LazyVStack {
                     ForEach(favoriteJobsViewModel.arrayOfJobs) { job in
-                        JobItemView(job: job, isDetailingJob: self.isDetailingJob)
+                        JobItemView(job: job, isDetailingJob: self.isDetailingJob, jobsViewModel: jobsViewModel)
                             .onAppear {
                                 let index = favoriteJobsViewModel.arrayOfJobs.firstIndex(of: job)
                                 if index == favoriteJobsViewModel.arrayOfJobs.count - 2 {

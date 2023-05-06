@@ -14,6 +14,8 @@ final class JobOppotunityViewModelAdapter: ObservableObject {
     @Published var arrayOfJobs = [JobOportunity]()
     @Published var viewDidLoad: Bool = false
     @Published var isLoading = true
+    @Published var favoriteJobAlertMessage = ""
+    @Published var isFavorite = false
     
     private var jobOpportunityViewModel: JobOportunityViewModel
     
@@ -29,6 +31,11 @@ final class JobOppotunityViewModelAdapter: ObservableObject {
             self.arrayOfJobs = self.jobOpportunityViewModel.arrayOfOpportunity ?? [JobOportunity]()
         }
         
+        jobOpportunityViewModel.didSetAsFavorite = { [weak self] isSuccess in
+            self?.favoriteJobAlertMessage = "Ola!"
+            self?.isFavorite = true
+        }
+        
     }
     
     func getFilteredOpportunities(by searchTerm: String) {
@@ -37,6 +44,10 @@ final class JobOppotunityViewModelAdapter: ObservableObject {
     
     func getOpportunities() {
         jobOpportunityViewModel.getOpportunities()
+    }
+    
+    func setOpportunityAsFavorite(job: JobOportunity) {
+        jobOpportunityViewModel.setOpportunityAsFavorite(opportunity: job)
     }
     
 }

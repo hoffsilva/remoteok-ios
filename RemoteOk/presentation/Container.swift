@@ -14,11 +14,12 @@ final class Container {
     static func makeJobsViewModel() -> JobOppotunityViewModelAdapter {
         let viewModel = JobOportunityViewModelImpl(
             getAllJobsUseCase: makeGetAllJobsUseCase(),
-            getFilteredJobsUseCase: makeGetFilteredJobsUseCase()
+            getFilteredJobsUseCase: makeGetFilteredJobsUseCase(),
+            setJobAsFavoriteUseCase: makeSetFavoriteJobUseCase()
         )
         return JobOppotunityViewModelAdapter(
-                     jobOpportunityViewModel: viewModel
-            )
+            jobOpportunityViewModel: viewModel
+        )
         
     }
     
@@ -28,6 +29,10 @@ final class Container {
     
     static func makeGetFavoriteJobsUseCase() -> GetFavoritesJobsUseCase {
         GetFavoritesJobsUseCaseImpl(repository: makeFavoriteJobsRepository())
+    }
+    
+    static func makeSetFavoriteJobUseCase() -> SetJobAsFavriteUseCase {
+        SetJobAsFavriteUseCaseImpl(repository: makeFavoriteJobsRepository())
     }
     
     static func makeFavoriteJobsRepository() -> FavoriteJobsRepository {
