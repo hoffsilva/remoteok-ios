@@ -20,6 +20,7 @@ protocol JobOportunityViewModel {
     func getOpportunities()
     func getFilteredOpportunities(by query: String)
     func setOpportunityAsFavorite(opportunity: JobOportunity)
+    func deleteOpportunityFromFavorites(opportunity: JobOportunity)
 }
 
 class JobOportunityViewModelImpl: JobOportunityViewModel {
@@ -31,16 +32,19 @@ class JobOportunityViewModelImpl: JobOportunityViewModel {
     var getAllJobsUseCase: GetAllJobsUseCase
     var getFilteredJobsUseCase: GetFilteredJobsUseCase
     var setJobAsFavoriteUseCase: SetJobAsFavriteUseCase
+    var deleteJobFromFavoritesUseCase: DeleteJobFromFavoritesUseCase
     var currentPage = 1
     var numberOfPages = 1
     
     init(
         getAllJobsUseCase: GetAllJobsUseCase,
         getFilteredJobsUseCase: GetFilteredJobsUseCase,
-        setJobAsFavoriteUseCase: SetJobAsFavriteUseCase) {
+        setJobAsFavoriteUseCase: SetJobAsFavriteUseCase,
+        deleteJobFromFavoritesUseCase: DeleteJobFromFavoritesUseCase) {
             self.getAllJobsUseCase = getAllJobsUseCase
             self.getFilteredJobsUseCase = getFilteredJobsUseCase
             self.setJobAsFavoriteUseCase = setJobAsFavoriteUseCase
+            self.deleteJobFromFavoritesUseCase = deleteJobFromFavoritesUseCase
             setupBindings()
         }
     
@@ -84,6 +88,10 @@ class JobOportunityViewModelImpl: JobOportunityViewModel {
             self?.didSetAsFavorite?(isFavorite)
         }
         
+        deleteJobFromFavoritesUseCase.didDeleteJobFromFavorites = { [weak self] didDelete in
+            
+        }
+        
     }
     
     func setOpportunityAsFavorite(opportunity: JobOportunity) {
@@ -98,6 +106,10 @@ class JobOportunityViewModelImpl: JobOportunityViewModel {
             tags: opportunity.tags,
             isFavorite: true)
         setJobAsFavoriteUseCase.setJobAsFavorite(job: newJob)
+    }
+    
+    func deleteOpportunityFromFavorites(opportunity: JobOportunity) {
+        deleteJobFromFavoritesUseCase.deleteJobFromFavorites(job: opportunity)
     }
     
 }

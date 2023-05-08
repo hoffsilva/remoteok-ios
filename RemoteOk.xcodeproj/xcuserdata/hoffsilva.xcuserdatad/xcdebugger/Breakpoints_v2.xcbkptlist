@@ -71,70 +71,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "0A2340E7-49E6-43FB-8875-A74BC1FA617A"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RemoteOk/data/repositories/FavoriteJobsRepositoryImpl.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "setupBindings()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "5827B060-CACE-4A4F-8CF1-A540FF176D55"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RemoteOk/domain/usecases/SetJobAsFavriteUseCaseImpl.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "setupBindings()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "5827B060-CACE-4A4F-8CF1-A540FF176D55 - 12ffda0f96797d09"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 (Swift.String) -&gt; () in RemoteOk.SetJobAsFavriteUseCaseImpl.setupBindings() -&gt; ()"
-                  moduleName = "RemoteOk"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/hoffsilva/Developer/personal-projects/remoteok-ios/RemoteOk/domain/usecases/SetJobAsFavriteUseCaseImpl.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28"
-                  offsetFromSymbolStart = "300">
-               </Location>
-               <Location
-                  uuid = "5827B060-CACE-4A4F-8CF1-A540FF176D55 - 12ffda0f96797d09"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 (Swift.String) -&gt; () in RemoteOk.SetJobAsFavriteUseCaseImpl.setupBindings() -&gt; ()"
-                  moduleName = "RemoteOk"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/hoffsilva/Developer/personal-projects/remoteok-ios/RemoteOk/domain/usecases/SetJobAsFavriteUseCaseImpl.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28"
-                  offsetFromSymbolStart = "68">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "30A8F6B5-BF9B-42C0-8F29-8DD821C10892"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -142,8 +78,56 @@
             filePath = "RemoteOk/presentation/JobOportunityViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
+            landmarkName = "setupBindings()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "30A8F6B5-BF9B-42C0-8F29-8DD821C10892 - ee043944b9945fc2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RemoteOk.JobOportunityViewModelImpl.setupBindings() -&gt; ()"
+                  moduleName = "RemoteOk"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hoffsilva/Developer/personal-projects/remoteok-ios/RemoteOk/presentation/JobOportunityViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "88"
+                  endingLineNumber = "88"
+                  offsetFromSymbolStart = "964">
+               </Location>
+               <Location
+                  uuid = "30A8F6B5-BF9B-42C0-8F29-8DD821C10892 - b9b01ca8723632e1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #5 (Swift.Bool) -&gt; () in RemoteOk.JobOportunityViewModelImpl.setupBindings() -&gt; ()"
+                  moduleName = "RemoteOk"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hoffsilva/Developer/personal-projects/remoteok-ios/RemoteOk/presentation/JobOportunityViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "88"
+                  endingLineNumber = "88"
+                  offsetFromSymbolStart = "72">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3811FEBF-2D00-460B-9B6D-E4D1BC6D2F31"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RemoteOk/presentation/JobOppotunityViewModelAdapter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
             landmarkName = "setupBindings()"
             landmarkType = "7">
          </BreakpointContent>
@@ -151,7 +135,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "3811FEBF-2D00-460B-9B6D-E4D1BC6D2F31"
+            uuid = "F7D08D6F-7715-4FD7-ACFC-F77D65DD3E4B"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -167,129 +151,17 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "E8FEE9F4-E7F9-4F51-BE4E-61C850209AD9"
+            uuid = "0F49202C-67AD-42CB-9DA6-40096DB244AE"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "RemoteOk/datasources/FavoriteJobsDatasourceImpl.swift"
+            filePath = "RemoteOk/domain/usecases/DeleteJobFromFavoritesUseCaseImpl.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
-            landmarkName = "saveJob(jobOportunity:)"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "deleteJobFromFavorites(job:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "919DB00A-844B-4D95-918C-968FC2BA1A88"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RemoteOk/datasources/FavoriteJobsDatasourceImpl.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
-            landmarkName = "saveJob(jobOportunity:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "919DB00A-844B-4D95-918C-968FC2BA1A88 - 6a51a3ab61ef15de"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in RemoteOk.FavoriteJobsDatasourceImpl.saveJob(jobOportunity: RemoteOk.JobOportunity) -&gt; ()"
-                  moduleName = "RemoteOk"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/hoffsilva/Developer/personal-projects/remoteok-ios/RemoteOk/datasources/FavoriteJobsDatasourceImpl.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "46"
-                  endingLineNumber = "46"
-                  offsetFromSymbolStart = "112">
-               </Location>
-               <Location
-                  uuid = "919DB00A-844B-4D95-918C-968FC2BA1A88 - 6a51a3ab61ef15de"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in RemoteOk.FavoriteJobsDatasourceImpl.saveJob(jobOportunity: RemoteOk.JobOportunity) -&gt; ()"
-                  moduleName = "RemoteOk"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/hoffsilva/Developer/personal-projects/remoteok-ios/RemoteOk/datasources/FavoriteJobsDatasourceImpl.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "46"
-                  endingLineNumber = "46"
-                  offsetFromSymbolStart = "104">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "F7D08D6F-7715-4FD7-ACFC-F77D65DD3E4B"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RemoteOk/presentation/JobOppotunityViewModelAdapter.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
-            landmarkName = "setupBindings()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "54DA5BB5-22B8-4DAC-A1A9-D70798FE7729"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RemoteOk/domain/usecases/SetJobAsFavriteUseCaseImpl.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
-            landmarkName = "setupBindings()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "54DA5BB5-22B8-4DAC-A1A9-D70798FE7729 - 95ab5351a576c88c"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.String) -&gt; () in RemoteOk.SetJobAsFavriteUseCaseImpl.setupBindings() -&gt; ()"
-                  moduleName = "RemoteOk"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/hoffsilva/Developer/personal-projects/remoteok-ios/RemoteOk/domain/usecases/SetJobAsFavriteUseCaseImpl.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "24"
-                  endingLineNumber = "24"
-                  offsetFromSymbolStart = "300">
-               </Location>
-               <Location
-                  uuid = "54DA5BB5-22B8-4DAC-A1A9-D70798FE7729 - 95ab5351a576c88c"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.String) -&gt; () in RemoteOk.SetJobAsFavriteUseCaseImpl.setupBindings() -&gt; ()"
-                  moduleName = "RemoteOk"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/hoffsilva/Developer/personal-projects/remoteok-ios/RemoteOk/domain/usecases/SetJobAsFavriteUseCaseImpl.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "24"
-                  endingLineNumber = "24"
-                  offsetFromSymbolStart = "68">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

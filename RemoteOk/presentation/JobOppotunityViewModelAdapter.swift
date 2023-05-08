@@ -16,6 +16,7 @@ final class JobOppotunityViewModelAdapter: ObservableObject {
     @Published var isLoading = true
     @Published var favoriteJobAlertMessage = ""
     @Published var isFavorite = false
+    @Published var detailedOpportunity: JobOportunity?
     
     private var jobOpportunityViewModel: JobOportunityViewModel
     
@@ -48,6 +49,10 @@ final class JobOppotunityViewModelAdapter: ObservableObject {
     
     func setOpportunityAsFavorite(job: JobOportunity) {
         jobOpportunityViewModel.setOpportunityAsFavorite(opportunity: job)
+    }
+    
+    func deleteOpportunityFromFavorites(job: JobOportunity) {
+        jobOpportunityViewModel.deleteOpportunityFromFavorites(opportunity: job)
     }
     
 }

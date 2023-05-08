@@ -37,11 +37,9 @@ struct JobDetailView: View {
                             .font(.title)
                     }
                     Button {
-                        print("star.circle")
-                        isFavorite = true
-                        jobsViewModel.setOpportunityAsFavorite(job: job)
+                        job.isFavorite ? jobsViewModel.deleteOpportunityFromFavorites(job: job) : jobsViewModel.setOpportunityAsFavorite(job: job)
                     } label: {
-                        isFavorite ? Image(systemName: "star.circle.fill").font(.title) : Image(systemName: "star.circle")
+                        job.isFavorite ? Image(systemName: "star.circle.fill").font(.title) : Image(systemName: "star.circle")
                             .font(.title)
                     }
                     

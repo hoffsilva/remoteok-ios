@@ -46,6 +46,8 @@
 		0BDFF5E529F5FC4C008A2CD8 /* FavoriteJobOpportunityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDFF5E429F5FC4C008A2CD8 /* FavoriteJobOpportunityViewModel.swift */; };
 		0BE922BD2A0676D400274A11 /* SetJobAsFavriteUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE922BC2A0676D400274A11 /* SetJobAsFavriteUseCase.swift */; };
 		0BE922BF2A06771E00274A11 /* SetJobAsFavriteUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE922BE2A06771E00274A11 /* SetJobAsFavriteUseCaseImpl.swift */; };
+		0BE922C12A08819300274A11 /* DeleteJobFromFavoritesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE922C02A08819300274A11 /* DeleteJobFromFavoritesUseCase.swift */; };
+		0BE922C32A0881CE00274A11 /* DeleteJobFromFavoritesUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE922C22A0881CE00274A11 /* DeleteJobFromFavoritesUseCaseImpl.swift */; };
 		0BF708802990B5A100A9E015 /* JobsNetworkDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF7087F2990B5A100A9E015 /* JobsNetworkDatasource.swift */; };
 		0BF708852990B80E00A9E015 /* GetAllJobsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF708842990B80E00A9E015 /* GetAllJobsUseCase.swift */; };
 		0BF708892990B8CC00A9E015 /* JobsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF708882990B8CC00A9E015 /* JobsRepository.swift */; };
@@ -119,6 +121,8 @@
 		0BDFF5E429F5FC4C008A2CD8 /* FavoriteJobOpportunityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteJobOpportunityViewModel.swift; sourceTree = "<group>"; };
 		0BE922BC2A0676D400274A11 /* SetJobAsFavriteUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetJobAsFavriteUseCase.swift; sourceTree = "<group>"; };
 		0BE922BE2A06771E00274A11 /* SetJobAsFavriteUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetJobAsFavriteUseCaseImpl.swift; sourceTree = "<group>"; };
+		0BE922C02A08819300274A11 /* DeleteJobFromFavoritesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteJobFromFavoritesUseCase.swift; sourceTree = "<group>"; };
+		0BE922C22A0881CE00274A11 /* DeleteJobFromFavoritesUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteJobFromFavoritesUseCaseImpl.swift; sourceTree = "<group>"; };
 		0BF7087F2990B5A100A9E015 /* JobsNetworkDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsNetworkDatasource.swift; sourceTree = "<group>"; };
 		0BF708842990B80E00A9E015 /* GetAllJobsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllJobsUseCase.swift; sourceTree = "<group>"; };
 		0BF708882990B8CC00A9E015 /* JobsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsRepository.swift; sourceTree = "<group>"; };
@@ -256,6 +260,8 @@
 				0BDFF5DE29F5F9EA008A2CD8 /* GetFavoritesJobsUseCaseImpl.swift */,
 				0BE922BC2A0676D400274A11 /* SetJobAsFavriteUseCase.swift */,
 				0BE922BE2A06771E00274A11 /* SetJobAsFavriteUseCaseImpl.swift */,
+				0BE922C02A08819300274A11 /* DeleteJobFromFavoritesUseCase.swift */,
+				0BE922C22A0881CE00274A11 /* DeleteJobFromFavoritesUseCaseImpl.swift */,
 			);
 			path = usecases;
 			sourceTree = "<group>";
@@ -483,12 +489,14 @@
 			files = (
 				0BF708802990B5A100A9E015 /* JobsNetworkDatasource.swift in Sources */,
 				0BF708FF2991D33200A9E015 /* DataJob.swift in Sources */,
+				0BE922C32A0881CE00274A11 /* DeleteJobFromFavoritesUseCaseImpl.swift in Sources */,
 				430E6D51206C736F0093EA8B /* JobOportunity.swift in Sources */,
 				0B90CE872994665000813ADF /* JobOppotunityViewModelAdapter.swift in Sources */,
 				0BADC76529C8D7F400D57969 /* FCMTokenRepositoryImpl.swift in Sources */,
 				0BD6189829BACAE800BFBE37 /* ActivityIndicator.swift in Sources */,
 				0BADC76929C8D84C00D57969 /* FCMTokenNetworkDatasource.swift in Sources */,
 				0B144EE029E4696800266ABE /* FavoriteJobsRepository.swift in Sources */,
+				0BE922C12A08819300274A11 /* DeleteJobFromFavoritesUseCase.swift in Sources */,
 				0BE922BF2A06771E00274A11 /* SetJobAsFavriteUseCaseImpl.swift in Sources */,
 				0BDFF5E329F5FBFA008A2CD8 /* FavoriteJobOppotunityViewModelAdapter.swift in Sources */,
 				0B7E86C7299319CF0046A686 /* GetFilteredJobsUseCaseImpl.swift in Sources */,

@@ -29,12 +29,6 @@ struct FavoriteJobsListViewUI: View {
                 LazyVStack {
                     ForEach(favoriteJobsViewModel.arrayOfJobs) { job in
                         JobItemView(job: job, isDetailingJob: self.isDetailingJob, jobsViewModel: jobsViewModel)
-                            .onAppear {
-                                let index = favoriteJobsViewModel.arrayOfJobs.firstIndex(of: job)
-                                if index == favoriteJobsViewModel.arrayOfJobs.count - 2 {
-                                    favoriteJobsViewModel.getOpportunities()
-                                }
-                            }
                     }
                 }
             }

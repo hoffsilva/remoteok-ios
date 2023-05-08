@@ -15,7 +15,8 @@ final class Container {
         let viewModel = JobOportunityViewModelImpl(
             getAllJobsUseCase: makeGetAllJobsUseCase(),
             getFilteredJobsUseCase: makeGetFilteredJobsUseCase(),
-            setJobAsFavoriteUseCase: makeSetFavoriteJobUseCase()
+            setJobAsFavoriteUseCase: makeSetFavoriteJobUseCase(),
+            deleteJobFromFavoritesUseCase: makeDeleteFromFavorites()
         )
         return JobOppotunityViewModelAdapter(
             jobOpportunityViewModel: viewModel
@@ -33,6 +34,10 @@ final class Container {
     
     static func makeSetFavoriteJobUseCase() -> SetJobAsFavriteUseCase {
         SetJobAsFavriteUseCaseImpl(repository: makeFavoriteJobsRepository())
+    }
+    
+    static func makeDeleteFromFavorites() -> DeleteJobFromFavoritesUseCase {
+        DeleteJobFromFavoritesUseCaseImpl(repository: makeFavoriteJobsRepository())
     }
     
     static func makeFavoriteJobsRepository() -> FavoriteJobsRepository {
