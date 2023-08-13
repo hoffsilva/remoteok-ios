@@ -17,7 +17,7 @@ class FCMTokenRepositoryImpl: FCMTokenRepository {
     }
     
     func saveFCMToken(token: String, completion: @escaping ((Result<String, Error>) -> Void)) {
-        let token = Token(fcmtoken: token, deviceOS: "iOS")
+        let token = Token(token: token, deviceOS: "iOS")
         datasource.saveFCMToken(token: token, completion: completion)
     }
     

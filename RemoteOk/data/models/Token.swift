@@ -9,6 +9,6 @@
 import Foundation
 
 struct Token: Encodable {
-    let fcmtoken: String
+    let token: String
     let deviceOS: String
 }
