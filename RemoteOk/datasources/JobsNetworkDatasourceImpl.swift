@@ -23,7 +23,7 @@ final class JobsNetworkDatasourceImpl: JobsNetworkDatasource {
     }
     
     func searchJobsBy(query: String, completion: @escaping ((Result<DataJob, Error>) -> Void)) {
-        provider.request(.searchJobsBy(query: query, page: 1)) { result in
+        provider.request(.searchJobsBy(page: 1, query: query)) { result in
             self.parse(result: result, completion: completion)
         }
     }

@@ -12,7 +12,7 @@ import Alamofire
 
 enum JobsProvider {
     case getJobsOf(page:Int)
-    case searchJobsBy(query:String, page:Int)
+    case searchJobsBy(page:Int, query:String)
 }
 
 extension JobsProvider: TargetType {
@@ -24,8 +24,8 @@ extension JobsProvider: TargetType {
         switch self {
         case .getJobsOf(let page):
             return String(format: Constants.jobsPath, "\(page)")
-        case .searchJobsBy:
-            return Constants.filteredJobsPath
+        case .searchJobsBy(let page, let search):
+            return String(format: Constants.filteredJobsPath, "\(page)", "\(search)")
         }
     }
     
@@ -34,12 +34,7 @@ extension JobsProvider: TargetType {
     }
     
     var task: Moya.Task {
-        switch self {
-        case .searchJobsBy(let query, let page):
-            return .requestParameters(parameters: ["query":query, "page":"\(page)"], encoding: QUERYEncoding.default)
-        case .getJobsOf:
-            return .requestPlain
-        }
+        .requestPlain
         
     }
     

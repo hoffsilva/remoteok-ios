@@ -12,6 +12,11 @@ class DataJob: Decodable {
     let jobs: [JobOportunity]
     let numberOfPages: Int
     
+    init(jobs: [JobOportunity], numberOfPages: Int) {
+        self.jobs = jobs
+        self.numberOfPages = numberOfPages
+    }
+    
     enum CodingKeys: String, CodingKey {
         case jobs = "data"
         case numberOfPages
