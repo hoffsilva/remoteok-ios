@@ -38,46 +38,48 @@ struct JobDetailView: View {
                     VStack(alignment: .center, spacing: 40) {
                         HStack(alignment: .top) {
                             VStack {
-                                AsyncImage(
-                                    url: URL(string: job.companyLogoURL),
-                                    content: { image in
-                                        image
-                                            .resizable()
-                                            .aspectRatio(contentMode: .fit)
-                                            .frame(width: 80, height: 80)
-                                    },
-                                    placeholder: {
-                                        ProgressView()
-                                            .foregroundColor(.primary)
-                                            .frame(width: 80, height: 80)
+                                AsyncImage(url: URL(string: job.companyLogoURL)) { content in
+                                        if let image = content.image {
+                                            image
+                                                .resizable()
+                                                .aspectRatio(contentMode: .fit)
+                                                .frame(width: 80, height: 80)
+                                        } else {
+                                            ProgressView()
+                                                .foregroundColor(.primary)
+                                                .frame(width: 80, height: 80)
+                                        }
+                                        
                                     }
-                                )
                                 .clipShape(Circle())
                                 Text(job.companyName)
                             }
                             .padding(8)
                             VStack {
-                                AsyncImage(
-                                    url: URL(string: job.sourceLogoURL),
-                                    content: { image in
-                                        image
-                                            .resizable()
-                                            .aspectRatio(contentMode: .fit)
-                                            .frame(width: 120, height: 120)
-                                    },
-                                    placeholder: {
-                                        Image("no-photo")
-                                            .resizable()
-                                            .aspectRatio(contentMode: .fit)
-                                            .frame(width: 120, height: 120)
+                                AsyncImage(url: URL(string: job.sourceLogoURL)) { content in
+                                        if let image = content.image {
+                                            image
+                                                .resizable()
+                                                .aspectRatio(contentMode: .fit)
+                                                .frame(width: 120, height: 120)
+                                        } else if content.error != nil {
+                                            Image(job.sourceLogoURL)
+                                                .resizable()
+                                                .aspectRatio(contentMode: .fit)
+                                                .frame(width: 120, height: 120)
+                                        } else {
+                                            ProgressView()
+                                                .foregroundColor(.primary)
+                                                .frame(width: 120, height: 120)
+                                        }
+                                        
                                     }
-                                )
                                 .clipShape(Circle())
                                 Text("")
                             }.padding(8)
                         }
                         Divider()
-                        Text(job.jobTitle)
+                        Text(job.jobTitle ?? "")
                             .font(.title)
                             .bold()
                         if let text = job.jobDescription.formatHTMLString() {
