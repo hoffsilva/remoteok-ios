@@ -33,9 +33,8 @@ struct JobItemView: View {
                     }
                     .padding(.top, 12)
                     Spacer()
-                    AsyncImage(
-                        url: URL(string: job.sourceLogoURL),
-                        content: { image in
+                    AsyncImage(url: URL(string: job.sourceLogoURL)) { phase in
+                        if let image = phase.image {
                             image
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
@@ -47,14 +46,24 @@ struct JobItemView: View {
                                 .clipShape(Circle())
                                 .padding(.top, 8)
                                 .padding(.trailing, 0)
-                            
-                        },
-                        placeholder: {
+                        } else if phase.error != nil {
+                            Image(job.sourceLogoURL)
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 40, height: 40)
+                                .overlay(content: {
+                                    RoundedRectangle(cornerRadius: 20)
+                                        .stroke(.gray, lineWidth: 2)
+                                })
+                                .clipShape(Circle())
+                                .padding(.top, 8)
+                                .padding(.trailing, 0)
+                        } else {
                             ProgressView()
                                 .foregroundColor(.primary)
                                 .frame(width: 40, height: 40)
                         }
-                    )
+                    }
                 }
                 .padding(.horizontal, 24)
                 if let text = job.jobDescription.formatHTMLString() {

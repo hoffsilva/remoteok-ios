@@ -10,10 +10,10 @@ import Foundation
 
 enum Constants {
     
-    static let baseURL = "https://abroad-jobs-api.azurewebsites.net/"
+    static let baseURL = "https://abroadjobs.azurewebsites.net/"
     
-    static let jobsPath = "jobs/page=%@"
-    static let filteredJobsPath = "filteredJobs"
+    static let jobsPath = "jobs/%@"
+    static let filteredJobsPath = "jobs/filteredJobs/%@/%@"
     static let fcmtoken = "fcmtoken"
     static let urlOfReachabilityTest = "www.google.com"
     
